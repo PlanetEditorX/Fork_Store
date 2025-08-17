@@ -331,6 +331,10 @@ func (pc *ProxyChecker) updateProxyName(res *Result, httpClient *ProxyClient, sp
 			res.Proxy["name"] = config.GlobalConfig.NodePrefix + proxyutils.Rename(res.Country)
 		} else {
 			country, _ := proxyutils.GetProxyCountry(httpClient.Client)
+			// 未获取到国家信息
+			if country == "" {
+				country = proxyutils.GetCountryFromNode(res.Proxy["name"].(string))
+			}
 			res.Proxy["name"] = config.GlobalConfig.NodePrefix + proxyutils.Rename(country)
 		}
 	}
