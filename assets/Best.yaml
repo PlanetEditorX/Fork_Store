@@ -1,231 +1,246 @@
 proxies:
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_1|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: dongtaiwang.com
-      port: "63015"
-      server: 108.181.5.130
-      skip-cert-verify: true
-      sni: apple.com
-      type: hysteria2
-      up: ""
-    - name: "\U0001F1FA\U0001F1F8US_2|YT|Github|FREE-18"
+    - name: "\U0001F1FA\U0001F1F8US_1|YT|Gemini|Github|FREE-9"
       network: ws
-      port: "8880"
-      server: 45.80.111.20
-      servername: us.laoyoutiao.link
+      port: 8880
+      server: 109.176.239.188
+      servername: Telegram-channel-WangCai2
+      skip-cert-verify: false
+      tls: false
       type: vless
       udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
       ws-opts:
         headers:
-            Host: us.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
-        path: /TelegramU0001F1E8U0001F1F3 @MxlShare @WangCai2 /?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_3|YT|GPT|Github|FREE-18"
+            Host: ip.langmanshanxi.top
+        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_2|YT|Gemini|Github|FREE-9"
       network: ws
-      port: "8880"
+      port: 8880
+      server: 185.176.24.188
+      servername: Telegram-channel-WangCai2
+      skip-cert-verify: false
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_3|YT|Gemini|Github|FREE-9"
+      network: ws
+      port: 8880
       server: 77.37.33.186
       servername: Telegram-channel-WangCai2
+      skip-cert-verify: false
+      tls: false
       type: vless
       udp: true
       uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
       ws-opts:
         headers:
             Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
         path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_4|YT|Github|FREE-18"
+    - name: "\U0001F1FA\U0001F1F8US_4|YT|Gemini|Github|FREE-9"
       network: ws
-      port: "8880"
-      server: 25.25.25.177
-      servername: Telegram-channel-WangCai2
+      port: 8880
+      server: 193.9.49.177
+      servername: ip.langmanshanxi.top
+      skip-cert-verify: false
+      tls: false
       type: vless
       udp: true
       uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
       ws-opts:
         headers:
             Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
-        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560fp=chrome
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_5|YT|Github|FREE-18"
+        path: "/Telegram\U0001F1E8\U0001F1F3@WangCai2/?ed=2560"
+    - name: "\U0001F1FA\U0001F1F8US_5|YT|Gemini|Github|FREE-9"
       network: ws
-      port: "8880"
-      server: 25.25.25.19
-      servername: hk.laoyoutiao.link
+      port: 8880
+      server: 114.129.43.7
+      servername: Telegram-channel-WangCai2
+      skip-cert-verify: false
+      tls: false
       type: vless
       udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
       ws-opts:
         headers:
-            Host: hk.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36
-        path: "/telegram\U0001F1E8\U0001F1F3 @pgkj666 /?ed=2560"
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_6|YT|Github|FREE-18"
+            Host: ip.langmanshanxi.top
+        path: /TelegramU0001F1E8U0001F1F3 @WangCai2
+    - name: "\U0001F1FA\U0001F1F8US_6|YT|Gemini|Github|FREE-9"
       network: ws
-      port: "8880"
-      server: 194.36.55.63
-      servername: jp.laoyoutiao.link
+      port: 8880
+      server: 193.9.49.188
+      servername: Telegram-channel-WangCai2
+      skip-cert-verify: false
+      tls: false
       type: vless
       udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
       ws-opts:
         headers:
-            Host: jp.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36
+            Host: ip.langmanshanxi.top
+        path: /
+    - name: "\U0001F1FA\U0001F1F8US_7|YT|Gemini|Github|FREE-9"
+      network: ws
+      port: 8880
+      server: 199.181.197.186
+      servername: Telegram-channel-WangCai2
+      skip-cert-verify: false
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_8|YT|Gemini|Github|FREE-9"
+      network: ws
+      port: 8880
+      server: 159.112.235.186
+      servername: Telegram-channel-WangCai2
+      skip-cert-verify: false
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_9|YT|Gemini|Github|FREE-9"
+      network: ws
+      port: 8880
+      server: 199.34.229.177
+      servername: Telegram-channel-WangCai2
+      skip-cert-verify: false
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
         path: "/Telegram\U0001F1E8\U0001F1F3"
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_7|YT|Github|FREE-18"
+    - name: "\U0001F1FA\U0001F1F8US_10|YT|GPT⁺|Gemini|Github|FREE-9"
       network: ws
-      port: "8880"
-      server: 45.8.211.63
-      servername: jp.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: jp.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
-        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560fp=chrome
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_8|YT|Github|FREE-18"
-      network: ws
-      port: "8880"
-      server: 185.148.107.213
-      servername: jp.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: jp.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36
-        path: /?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_9|YT|Github|FREE-18"
-      network: ws
-      port: "8880"
-      server: 5.182.84.63
-      servername: jp.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: jp.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36
-        path: /Telegram
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_10|YT|GPT|Github|FREE-18"
-      network: ws
-      port: "8880"
-      server: 88.216.69.251
+      port: 8880
+      server: 159.246.55.251
       servername: cf.d3z.net
+      skip-cert-verify: false
+      tls: false
       type: vless
       udp: true
       uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
       ws-opts:
         headers:
             Host: cf.d3z.net
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+        path: /Telegram
+    - name: "\U0001F1FA\U0001F1F8US_11|YT|GPT|Gemini|Github|FREE-9"
+      network: ws
+      port: 8880
+      server: 46.254.92.11
+      servername: cf.d3z.net
+      skip-cert-verify: false
+      tls: false
+      type: vless
+      udp: true
+      uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
+      ws-opts:
+        headers:
+            Host: cf.d3z.net
         path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_11|YT|Github|FREE-18"
+    - name: "\U0001F1FA\U0001F1F8US_12|YT|GPT|Gemini|Github|FREE-9"
       network: ws
-      port: "8880"
-      server: 92.53.188.168
-      servername: kjgx.laoyoutiao.link
+      port: 8880
+      server: 46.254.92.9
+      servername: cf.d3z.net
+      skip-cert-verify: false
+      tls: false
       type: vless
       udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+      uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
       ws-opts:
         headers:
-            Host: kjgx.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Linux; Android 5.1; A1601 Build/LMY47I) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36
-        path: /Telegram@freecodes
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_12|YT|Github|FREE-18"
-      network: ws
-      port: "8880"
-      server: 141.193.27.29
-      servername: hk.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: hk.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Linux; Android 5.1; HUAWEI CUN-L22 Build/HUAWEICUN-L22; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.0.3202.84 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_13|YT|Github|FREE-18"
-      network: ws
-      port: "8880"
-      server: 159.112.235.186
-      servername: Telegram-channel-WangCai2
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; SM-G532M Build/MMB29T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Mobile Safari/537.36
+            Host: cf.d3z.net
         path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_14|YT|Github|FREE-18"
+    - name: "\U0001F1FA\U0001F1F8US_13|YT|GPT|Gemini|Github|FREE-9"
       network: ws
-      port: "8880"
-      server: 45.159.217.123
-      servername: sg.laoyoutiao.link
+      port: 8880
+      server: 46.254.92.249
+      servername: cf.d3z.net
+      skip-cert-verify: false
+      tls: false
       type: vless
       udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+      uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
       ws-opts:
         headers:
-            Host: sg.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Linux; Android 7.0; SM-J710F Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36
-        path: /Telegram@freecodes
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_15|YT|Github|FREE-18"
+            Host: cf.d3z.net
+        path: /Join---i10VPN---Join---i10VPN---Join---i10VPN---Join---i10VPN /?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_14|YT|Gemini|Github|FREE-9"
       network: ws
-      port: "8880"
-      server: 192.0.54.213
-      servername: jp.laoyoutiao.link
+      port: 8880
+      server: 46.254.92.4
+      servername: cf.d3z.net
+      skip-cert-verify: false
+      tls: false
       type: vless
       udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+      uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
       ws-opts:
         headers:
-            Host: jp.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 6.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_16|YT|GPT|Github|FREE-18"
+            Host: cf.d3z.net
+        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_15|YT|GPT|Gemini|Github|FREE-9"
       network: ws
-      port: "8880"
-      server: 199.34.229.177
+      port: 8880
+      server: 170.114.46.251
+      servername: cf.d3z.net
+      skip-cert-verify: false
+      tls: false
+      type: vless
+      udp: true
+      uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
+      ws-opts:
+        headers:
+            Host: cf.d3z.net
+        path: /Join---i10VPN---Join---i10VPN---Join---i10VPN---Join---i10VPN
+    - name: "\U0001F1FA\U0001F1F8US_16|YT|Gemini|Github|FREE-9"
+      network: ws
+      port: 8880
+      server: 88.216.69.251
+      servername: cf.d3z.net
+      skip-cert-verify: false
+      tls: false
+      type: vless
+      udp: true
+      uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
+      ws-opts:
+        headers:
+            Host: cf.d3z.net
+        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_17|YT|Gemini|Github|FREE-9"
+      network: ws
+      port: 8880
+      server: 147.185.161.251
       servername: Telegram-channel-WangCai2
+      skip-cert-verify: false
+      tls: false
       type: vless
       udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
       ws-opts:
         headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_17|YT|Github|FREE-18"
+            Host: cf.d3z.net
+        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_18|YT|Gemini|Github|FREE-9"
       network: ws
       password: ttfang
-      port: "2096"
+      port: 2096
       server: 86.38.214.194
       skip-cert-verify: true
       sni: ttfang.fange.me
@@ -233,1076 +248,1451 @@ proxies:
       udp: true
       ws-opts:
         headers:
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36
+            Host: ttfang.fange.me
         path: /TelegramU0001F1E8U0001F1F3
-    - name: "\U0001F1FA\U0001F1F8US_18|YT|Github|FREE-18"
-      network: ws
-      port: "8880"
-      server: 63.141.128.63
-      servername: jp.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: jp.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Linux; Android 4.4.2; SM-G7102 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36
-        path: /TelegramU0001F1E8U0001F1F3
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_19|YT|GPT⁺|Github|FREE-18"
-      network: ws
-      port: "8880"
-      server: 156.238.18.106
-      servername: yd.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: yd.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.3 Safari/534.24
-        path: /TelegramU0001F1E8U0001F1F3 @MxlShare @WangCai2 /?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_20|YT|Github|FREE-18"
-      network: ws
-      port: "8880"
-      server: 46.254.92.9
-      servername: cf.d3z.net
-      type: vless
-      udp: true
-      uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
-      ws-opts:
-        headers:
-            Host: cf.d3z.net
-            User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.100 Safari/534.30
-        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_21|YT|Github|FREE-18"
-      network: ws
-      port: "8880"
-      server: 199.181.197.186
-      servername: Telegram-channel-WangCai2
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36
-        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_22|YT|Github|FREE-18"
-      network: ws
-      port: "8880"
-      server: 92.53.188.251
-      servername: cf.d3z.net
-      type: vless
-      udp: true
-      uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
-      ws-opts:
-        headers:
-            Host: cf.d3z.net
-            User-Agent: Mozilla/5.0 (X11; Datanyze; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_23|GPT|Github|FREE-12"
-      network: ws
-      port: 443
-      server: 104.18.80.243
-      servername: fv.ylka.dpdns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-      ws-opts:
-        headers:
-            host: fv.ylka.dpdns.org
-        path: /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_24|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 443
-      server: 104.17.100.185
-      servername: jv.ylka.dpdns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-      ws-opts:
-        headers:
-            host: jv.ylka.dpdns.org
-        path: /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_25|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 443
-      server: 104.17.223.37
-      servername: jv.ylka.dpdns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-      ws-opts:
-        headers:
-            host: jv.ylka.dpdns.org
-        path: /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_26|YT|Github|FREE-12"
-      network: ws
-      port: 443
-      server: 104.16.253.83
-      servername: jv.ylka.dpdns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-      ws-opts:
-        headers:
-            host: jv.ylka.dpdns.org
-        path: /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_27|YT|Github|FREE-12"
-      network: ws
-      port: 443
-      server: 198.41.208.23
-      servername: jv.ylka.dpdns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-      ws-opts:
-        headers:
-            host: jv.ylka.dpdns.org
-        path: /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_28|YT|Github|FREE-12"
-      network: ws
-      port: 443
-      server: 104.19.144.212
-      servername: fv.ylka.dpdns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-      ws-opts:
-        headers:
-            host: fv.ylka.dpdns.org
-        path: /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_29|YT|Github|FREE-12"
-      network: ws
-      port: 443
-      server: 104.18.93.7
-      servername: jv.ylka.dpdns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-      ws-opts:
-        headers:
-            host: jv.ylka.dpdns.org
-        path: /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_30|YT|Github|FREE-12"
-      network: ws
-      port: 443
-      server: 162.159.153.72
-      servername: jv.ylka.dpdns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-      ws-opts:
-        headers:
-            host: jv.ylka.dpdns.org
-        path: /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_31|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 443
-      server: 162.159.153.239
-      servername: jv.ylka.dpdns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-      ws-opts:
-        headers:
-            host: jv.ylka.dpdns.org
-        path: /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_32|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 443
-      server: join.my.telegram.channel.cmliussss.to.unlock.more.premium.nodes.cf.090227.xyz
-      servername: jv.ylka.dpdns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-      ws-opts:
-        headers:
-            host: jv.ylka.dpdns.org
-        path: /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_33|YT|Github|FREE-12"
-      network: ws
-      port: 443
-      server: 162.159.153.42
-      servername: jv.ylka.dpdns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-      ws-opts:
-        headers:
-            host: jv.ylka.dpdns.org
-        path: /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_34|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 185.174.138.177
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_35|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 103.245.229.186
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36
-        path: /TelegramU0001F1E8U0001F1F3@freecodes
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_36|YT|GPT⁺|Github|FREE-19"
-      network: ws
-      port: "443"
-      server: freevpn.ndeso.web.id
-      servername: freevpn.ndeso.web.id
-      tls: true
-      type: vless
-      udp: true
-      uuid: aaaaaaa1-bbbb-4ccc-accc-eeeeeeeeeee1
-      ws-opts:
-        headers:
-            Host: freevpn.ndeso.web.id
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
-        path: /Free-CF-Proxy-AU3
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_37|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 45.159.218.177
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; FIG-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.80 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_38|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 188.244.122.177
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Linux; Android 5.1.1; SM-J111M Build/LMY47V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - alpn:
-        - ""
-      alterId: "0"
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_39|YT|GPT⁺|Gemini|Github|FREE-19"
-      network: ws
-      port: "2083"
-      server: rak1ding.89060004.xyz
-      servername: rak1d3.988988.shop
-      skip-cert-verify: false
-      tls: true
-      type: vmess
-      udp: true
-      uuid: 75d96365-1229-4fc4-dbda-855717f876cf
-      ws-opts:
-        headers:
-            Host: rak1d3.988988.shop
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_40|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 91.193.58.207
-      servername: kjgx.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: kjgx.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Linux; Android 5.1; A1601 Build/LMY47I) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36
-        path: Telegram@freecodes/?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_41|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 185.251.80.188
-      servername: ' [By EbraSha]'
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.3 Safari/534.24
-        path: /[ByEbraSha]
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_42|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 192.200.160.177
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Linux; Android 6.0; vivo 1610 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.124 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_43|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 89.116.180.177
-      servername: ip.langmanshanxi.top
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; ANE-LX3 Build/HUAWEIANE-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-        path: /Telegram@freecodes/?ed
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_44|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 45.159.219.177
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Linux; Android 5.1; HUAWEI CUN-L22 Build/HUAWEICUN-L22; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.0.3202.84 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_45|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 89.116.250.188
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_46|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 91.193.58.84
-      servername: kjgx.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: kjgx.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Linux; Android 6.0; vivo 1610 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.124 Mobile Safari/537.36
-        path: Telegram@CoinTech2U2/?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_47|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 156.238.18.200
-      servername: sg.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: sg.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36
-        path: /Telegram@freecodes/?ed=2048
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_48|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 156.238.18.2
-      servername: kjgx.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: kjgx.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36
-        path: Telegram@freecodes/?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_49|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 91.193.58.154
-      servername: kjgx.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: kjgx.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
-        path: freecodesfreecodes
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_50|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 156.238.18.205
-      servername: kjgx.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: kjgx.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36
-        path: Telegram@freecodes/?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_51|YT|GPT⁺|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 156.238.18.197
-      servername: yd.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: yd.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_52|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 91.193.58.122
-      servername: kjgx.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: kjgx.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36
-        path: Telegram@freecodes/?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_53|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 156.238.18.71
-      servername: kjgx.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: kjgx.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36
-        path: Telegram@freecodes/?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_54|YT|GPT⁺|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 156.238.18.87
-      servername: yd.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: yd.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36
-        path: /[ByEbraSha]
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_55|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 188.42.89.186
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
-        path: /TelegramU0001F1E8U0001F1F3@freecodes
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_56|YT|GPT⁺|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 156.238.18.245
-      servername: yd.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: yd.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36
-        path: /TelegramU0001F1E8U0001F1F3
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_57|YT|GPT⁺|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 185.59.218.188
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1E8\U0001F1E6CA_1|YT|GPT⁺|Gemini|Github|FREE-19"
-      network: ws
-      port: "80"
-      server: 104.18.26.90
-      servername: blaze-can-118.blazecanada.site
-      type: vless
-      udp: true
-      uuid: 3ac2de34-47c5-4dd5-afc0-8fb4b05d4077
-      ws-opts:
-        headers:
-            Host: blaze-can-118.blazecanada.site
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_58|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 156.238.18.136
-      servername: sg.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: sg.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 6.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36
-        path: /Telegram@freecodes/
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_59|YT|Github|FREE-19"
-      network: ws
-      password: ttfang
-      port: "2096"
-      server: 45.131.210.216
-      skip-cert-verify: false
-      sni: ttfang.fange.me
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36
-        path: /Telegram
-    - name: "\U0001F1FA\U0001F1F8US_60|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 91.193.58.68
-      servername: kjgx.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: kjgx.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
-        path: Telegram@CoinTech2U2/?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_61|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 45.159.218.124
-      servername: us.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: us.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
-        path: Telegram@freecodes/?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_62|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 185.251.81.186
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_63|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 91.193.58.171
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: kjgx.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36
-        path: /Telegram@freecodes/?ed=2560
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_64|YT|GPT⁺|Gemini|Github|FREE-19"
-      network: ws
-      port: "443"
-      server: www.meter.net
-      servername: mAXNetvIpAp-cLOuD76.netKh3.siTe
-      tls: true
-      type: vless
-      udp: true
-      uuid: 1b368bf6-5aac-413c-a77c-229fb984d5ae
-      ws-opts:
-        headers:
-            Host: mAXNetvIpAp-cLOuD76.netKh3.siTe
-            User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.104 Safari/537.36
-        path: /linkws?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_65|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 103.116.7.177
-      servername: ip.langmanshanxi.top
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Linux; Android 7.1.2; Redmi 4X Build/N2G47H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Mobile Safari/537.36
-        path: /Telegram@freecodes/?ed
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_66|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 45.159.217.138
-      servername: sg.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: sg.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
-        path: Telegram@freecodes/?ed=2560
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_67|YT|Github|FREE-19"
-      network: ws
-      password: ttfang
-      port: "2096"
-      server: 31.185.108.216
-      skip-cert-verify: false
-      sni: ttfang.fange.me
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            User-Agent: Mozilla/5.0 (Linux; Android 7.1.2; Redmi Note 5A Build/N2G47H; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/63.0.3239.111 Mobile Safari/537.36
-        path: /Telegram
-    - name: "\U0001F1FA\U0001F1F8US_68|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 195.13.55.188
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.76 Safari/537.36
-        path: /Telegram@freecodes/?ed=2560
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_69|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 45.159.217.71
-      servername: sg.laoyoutiao.link
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: sg.laoyoutiao.link
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
-        path: Telegram@freecodes/?ed=2560
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_70|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "443"
-      server: 1password.com
-      servername: rAyAn-cOnFiG-TeLeGrAm-a02.rAyAn.dPdNs.oRg
-      tls: true
-      type: vless
-      udp: true
-      uuid: 1688039e-a45f-499e-b9f4-c098c87d3b32
-      ws-opts:
-        headers:
-            Host: rAyAn-cOnFiG-TeLeGrAm-a02.rAyAn.dPdNs.oRg
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
-        path: /@Rayan_Config
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_71|YT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 159.246.55.177
-      servername: ip.langmanshanxi.top
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Linux; Android 7.1.1; CPH1723 Build/N6F26Q) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_72|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 5.182.84.177
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_73|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 185.221.160.177
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_74|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 185.16.110.186
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_75|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 108.165.216.177
-      servername: ip.langmanshanxi.top
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Linux; Android 7.0; Moto G (5) Build/NPPS25.137-93-14) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-        path: /Telegram@freecodes/?ed
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_76|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 104.254.140.186
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_77|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 199.181.197.177
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36
-        path: /
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_78|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 185.238.228.177
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36
-        path: /
-      xudp: true
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1FA\U0001F1F8US_79|YT|GPT⁺|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 990
-      server: 104.192.226.106
-      type: ss
-    - name: "\U0001F1FA\U0001F1F8US_80|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 168.100.6.177
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
-        path: /
-      xudp: true
-    - cipher: rc4-md5
-      name: "\U0001F1FA\U0001F1F8US_81|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: 14fFPrbezE3HDZzsMOr6
-      port: 8080
-      server: 107.151.182.253
-      type: ss
-    - name: "\U0001F1FA\U0001F1F8US_82|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 167.68.4.188
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Linux; Android 5.1.1; A37fw Build/LMY47V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - cipher: rc4-md5
-      name: "\U0001F1FA\U0001F1F8US_83|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: 14fFPrbezE3HDZzsMOr6
-      port: 8080
-      server: 23.251.121.242
-      type: ss
     - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_84|YT|GPT⁺|Gemini|Github|FREE-21"
+      name: "\U0001F1FA\U0001F1F8US_19|YT|GPT⁺|Gemini|Github|FREE-21"
       password: shadowsocks
       port: 443
-      server: 212.102.47.130
-      type: ss
-    - name: "\U0001F1FA\U0001F1F8US_85|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 86.38.214.3
-      servername: Telegram-channel-freecodes
-      type: vless
-      udp: true
-      uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
-      ws-opts:
-        headers:
-            Host: bitget1.asdasd.click
-            User-Agent: Mozilla/5.0 (Windows NT 6.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36
-        path: /
-      xudp: true
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1FA\U0001F1F8US_86|YT|GPT⁺|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 990
-      server: 64.74.163.130
+      server: 37.19.198.160
       type: ss
     - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_87|YT|GPT⁺|Gemini|Github|FREE-21"
+      name: "\U0001F1FA\U0001F1F8US_20|YT|GPT⁺|Gemini|Github|FREE-21"
       password: shadowsocks
       port: 443
-      server: 173.244.56.9
+      server: 37.19.198.243
       type: ss
-    - name: "\U0001F1FA\U0001F1F8US_88|YT|GPT|Github|FREE-19"
-      network: ws
-      port: "8880"
-      server: 139.64.235.3
-      servername: Telegram-channel- CoinTech2U2
-      type: vless
-      udp: true
-      uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
-      ws-opts:
-        headers:
-            Host: bitget1.asdasd.click
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
-        path: /Telegram
-      xudp: true
     - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_89|YT|GPT⁺|Gemini|Github|FREE-21"
+      name: "\U0001F1FA\U0001F1F8US_21|YT|GPT⁺|Gemini|Github|FREE-21"
       password: shadowsocks
       port: 443
       server: 156.146.38.167
       type: ss
-    - cipher: aes-256-cfb
-      name: "\U0001F1FA\U0001F1F8US_90|YT|GPT⁺|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 989
-      server: 104.192.226.106
-      type: ss
-    - name: "\U0001F1F3\U0001F1F1NL_1|YT|GPT⁺|Github|FREE-19"
-      network: ws
-      port: "80"
-      server: light-presence.oneeat.co
-      servername: light-presence.oneeat.co
-      type: vless
-      udp: true
-      uuid: 7e74ff43-3a90-48b3-8372-7d92a045c2d4
-      ws-opts:
-        headers:
-            Host: light-presence.oneeat.co
-            User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36
-        path: /
-      xudp: true
     - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_91|YT|GPT⁺|Gemini|Github|FREE-21"
+      name: "\U0001F1FA\U0001F1F8US_22|YT|GPT⁺|Gemini|Github|FREE-21"
       password: shadowsocks
       port: 443
       server: 156.146.38.170
       type: ss
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_92|YT|GPT⁺|Github|FREE-21"
-      network: ws
-      port: 20086
-      server: 137.175.124.167
-      skip-cert-verify: false
-      tls: false
-      type: vmess
-      uuid: b4bce500-11fe-4f8f-a344-01ac247af9bd
-      ws-opts:
-        path: /
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1E8\U0001F1E6CA_2|YT|GPT⁺|Gemini|Github|FREE-21"
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_23|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 156.146.38.168
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_24|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 156.146.38.169
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_25|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 212.102.47.130
+      type: ss
+    - cipher: rc4-md5
+      name: "\U0001F1FA\U0001F1F8US_26|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: 14fFPrbezE3HDZzsMOr6
+      port: 8080
+      server: 107.151.182.253
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_27|YT|GPT⁺|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 173.244.56.9
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1EC\U0001F1E7GB_1|YT|GPT⁺|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 212.102.53.194
+      type: ss
+    - cipher: aes-256-cfb
+      name: "\U0001F1FA\U0001F1F8US_28|YT|GPT⁺|Github|FREE-21"
       password: f8f7aCzcPKbsF8p3
-      port: 990
+      port: 989
+      server: 104.192.226.106
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1EC\U0001F1E7GB_2|YT|GPT⁺|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 212.102.53.81
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1EC\U0001F1E7GB_3|YT|GPT⁺|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 212.102.53.79
+      type: ss
+    - cipher: aes-256-cfb
+      name: "\U0001F1E8\U0001F1E6CA_1|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: f8f7aCzcPKbsF8p3
+      port: 989
       server: 79.127.233.170
       type: ss
     - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_93|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 212.102.47.132
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_94|YT|GPT⁺|Gemini|Github|FREE-21"
+      name: "\U0001F1FA\U0001F1F8US_29|YT|GPT⁺|Gemini|Github|FREE-21"
       password: shadowsocks
       port: 443
       server: 212.102.47.131
       type: ss
     - cipher: aes-128-gcm
-      name: "\U0001F1EF\U0001F1F5JP_1|YT|GPT⁺|Gemini|Github|FREE-21"
+      name: "\U0001F1FA\U0001F1F8US_30|YT|GPT⁺|Gemini|Github|FREE-21"
       password: shadowsocks
       port: 443
-      server: 149.22.87.204
+      server: 212.102.47.132
       type: ss
-    - name: "\U0001F1FA\U0001F1F8US_95|YT|GPT|Github|FREE-17"
+    - cipher: aes-128-gcm
+      name: "\U0001F1EC\U0001F1E7GB_4|YT|GPT⁺|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 212.102.53.197
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1F3\U0001F1F1NL_1|YT|GPT⁺|Github|FREE-21"
+      password: oZIoA69Q8yhcQV8ka3Pa3A
+      port: 8080
+      server: 45.158.171.110
+      type: ss
+    - cipher: rc4-md5
+      name: "\U0001F1FA\U0001F1F8US_31|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: 14fFPrbezE3HDZzsMOr6
+      port: 8080
+      server: 23.251.121.242
+      type: ss
+    - delay: 651
+      name: "\U0001F1FA\U0001F1F8US_32|YT|Gemini|Github|FREE-16"
       network: ws
       port: 8880
-      server: 102.132.188.177
+      server: 194.152.44.177
       servername: Telegram-channel-WangCai2
+      tls: false
       type: vless
       udp: true
       uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
       ws-opts:
         headers:
             Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.75 Safari/537.36
-        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_96|YT|GPT|Github|FREE-17"
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - delay: 589
+      name: "\U0001F1FA\U0001F1F8US_33|YT|Gemini|Github|FREE-16"
       network: ws
       port: 8880
-      server: 103.245.229.177
+      server: 45.194.53.177
       servername: Telegram-channel-WangCai2
+      tls: false
       type: vless
       udp: true
       uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
       ws-opts:
         headers:
             Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36
-        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_97|YT|GPT|Github|FREE-17"
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 624
+      name: "\U0001F1FA\U0001F1F8US_34|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 216.24.57.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 647
+      name: "\U0001F1FA\U0001F1F8US_35|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 5.182.85.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 684
+      name: "\U0001F1FA\U0001F1F8US_36|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 45.85.118.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 1349
+      name: "\U0001F1FA\U0001F1F8US_37|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 5.10.214.186
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 1315
+      name: "\U0001F1FA\U0001F1F8US_38|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 66.81.247.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 1837
+      name: "\U0001F1FA\U0001F1F8US_39|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 89.116.180.186
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /
+    - client-fingerprint: chrome
+      delay: 581
+      name: "\U0001F1FA\U0001F1F8US_40|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 46.254.92.177
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /
+    - delay: 879
+      name: "\U0001F1FA\U0001F1F8US_41|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 66.45.118.177
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560fp=chrome"
+    - client-fingerprint: chrome
+      delay: 877
+      name: "\U0001F1FA\U0001F1F8US_42|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 162.120.94.177
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /
+    - delay: 588
+      name: "\U0001F1FA\U0001F1F8US_43|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 160.79.104.177
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/telegram\U0001F1E8\U0001F1F3"
+    - delay: 594
+      name: "\U0001F1FA\U0001F1F8US_44|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 104.238.68.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 1155
+      name: "\U0001F1FA\U0001F1F8US_45|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 103.245.228.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 596
+      name: "\U0001F1FA\U0001F1F8US_46|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 104.129.167.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 723
+      name: "\U0001F1FA\U0001F1F8US_47|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 92.243.74.177
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - delay: 629
+      name: "\U0001F1FA\U0001F1F8US_48|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 154.194.12.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 870
+      name: "\U0001F1FA\U0001F1F8US_49|YT|GPT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 45.85.119.251
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
+      ws-opts:
+        headers:
+            Host: cf.d3z.net
+        path: /Telegram
+    - delay: 796
+      name: "\U0001F1FA\U0001F1F8US_50|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 156.238.19.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 876
+      name: "\U0001F1FA\U0001F1F8US_51|YT|GPT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 5.182.84.251
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
+      ws-opts:
+        headers:
+            Host: cf.d3z.net
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - delay: 937
+      name: "\U0001F1FA\U0001F1F8US_52|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 185.135.9.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 935
+      name: "\U0001F1FA\U0001F1F8US_53|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 184.168.47.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 698
+      name: "\U0001F1FA\U0001F1F8US_54|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 216.24.57.3
+      tls: false
+      type: vless
+      udp: true
+      uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
+      ws-opts:
+        headers:
+            Host: bitget1.asdasd.click
+        path: /TelegramU0001F1E8U0001F1F3
+    - delay: 2276
+      name: "\U0001F1FA\U0001F1F8US_55|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 184.174.80.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 638
+      name: "\U0001F1FA\U0001F1F8US_56|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 185.16.110.186
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 637
+      name: "\U0001F1FA\U0001F1F8US_57|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 185.238.228.177
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - delay: 810
+      name: "\U0001F1FA\U0001F1F8US_58|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 188.164.159.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 597
+      name: "\U0001F1FA\U0001F1F8US_59|YT|GPT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 45.159.219.251
+      tls: false
+      type: vless
+      udp: true
+      uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
+      ws-opts:
+        headers:
+            Host: cf.d3z.net
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 2905
+      name: "\U0001F1FA\U0001F1F8US_60|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 190.93.244.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 784
+      name: "\U0001F1FA\U0001F1F8US_61|YT|GPT⁺|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 46.254.92.8
+      servername: cf.d3z.net
+      tls: false
+      type: vless
+      udp: true
+      uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
+      ws-opts:
+        headers:
+            Host: cf.d3z.net
+        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+    - delay: 940
+      name: "\U0001F1FA\U0001F1F8US_62|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 192.0.54.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 1319
+      name: "\U0001F1FA\U0001F1F8US_63|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 192.0.54.177
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2"
+    - delay: 637
+      name: "\U0001F1FA\U0001F1F8US_64|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 25.26.27.186
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: /Telegram @WangCai2 /
+    - delay: 642
+      name: "\U0001F1FA\U0001F1F8US_65|YT|GPT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 167.68.4.3
+      tls: false
+      type: vless
+      udp: true
+      uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
+      ws-opts:
+        headers:
+            Host: bitget1.asdasd.click
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - delay: 642
+      name: "\U0001F1FA\U0001F1F8US_66|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 31.43.179.177
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: /Telegram@WangCai2/
+    - delay: 813
+      name: "\U0001F1FA\U0001F1F8US_67|YT|GPT⁺|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 167.68.5.3
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
+      ws-opts:
+        headers:
+            Host: bitget1.asdasd.click
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - delay: 643
+      name: "\U0001F1FA\U0001F1F8US_68|YT|GPT⁺|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 190.93.244.3
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
+      ws-opts:
+        headers:
+            Host: bitget1.asdasd.click
+        path: /Telegram
+    - delay: 1795
+      name: "\U0001F1FA\U0001F1F8US_69|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 14.102.228.7
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 615
+      name: "\U0001F1FA\U0001F1F8US_70|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 159.242.242.7
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 801
+      name: "\U0001F1FA\U0001F1F8US_71|YT|GPT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 185.16.110.251
+      tls: false
+      type: vless
+      udp: true
+      uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
+      ws-opts:
+        headers:
+            Host: cf.d3z.net
+        path: /
+    - delay: 814
+      name: "\U0001F1FA\U0001F1F8US_72|YT|GPT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 92.53.190.251
+      tls: false
+      type: vless
+      udp: true
+      uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
+      ws-opts:
+        headers:
+            Host: cf.d3z.net
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 894
+      name: "\U0001F1FA\U0001F1F8US_73|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 188.42.145.7
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 888
+      name: "\U0001F1FA\U0001F1F8US_74|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 185.170.166.7
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 932
+      name: "\U0001F1FA\U0001F1F8US_75|YT|GPT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 185.18.184.251
+      tls: false
+      type: vless
+      udp: true
+      uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
+      ws-opts:
+        headers:
+            Host: cf.d3z.net
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560fp=chrome"
+    - delay: 711
+      name: "\U0001F1FA\U0001F1F8US_76|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 45.12.30.7
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 1621
+      name: "\U0001F1FA\U0001F1F8US_77|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 195.26.229.7
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 1082
+      name: "\U0001F1FA\U0001F1F8US_78|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 45.131.5.7
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 731
+      name: "\U0001F1FA\U0001F1F8US_79|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 45.8.211.7
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 1006
+      name: "\U0001F1FA\U0001F1F8US_80|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 63.141.128.216
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%252525F0%2525259F%25252587%252525A8%252525F0%2525259F%25252587%252525B3
+    - delay: 1229
+      name: "\U0001F1FA\U0001F1F8US_81|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 46.254.92.7
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 2653
+      name: "\U0001F1FA\U0001F1F8US_82|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 45.80.110.216
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%252525F0%2525259F%25252587%252525A8%252525F0%2525259F%25252587%252525B3
+    - delay: 810
+      name: "\U0001F1FA\U0001F1F8US_83|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 89.116.161.216
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%252525F0%2525259F%25252587%252525A8%252525F0%2525259F%25252587%252525B3
+    - delay: 1446
+      name: "\U0001F1FA\U0001F1F8US_84|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 45.131.6.216
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%252525F0%2525259F%25252587%252525A8%252525F0%2525259F%25252587%252525B3
+    - delay: 1374
+      name: "\U0001F1FA\U0001F1F8US_85|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 89.116.180.216
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%252525F0%2525259F%25252587%252525A8%252525F0%2525259F%25252587%252525B3
+    - delay: 781
+      name: "\U0001F1FA\U0001F1F8US_86|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 80.93.202.216
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%252525F0%2525259F%25252587%252525A8%252525F0%2525259F%25252587%252525B3
+    - delay: 810
+      name: "\U0001F1FA\U0001F1F8US_87|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 5.10.245.194
+      sni: ttfang.fange.me
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: /Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 2447
+      name: "\U0001F1FA\U0001F1F8US_88|YT|GPT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 45.130.125.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1903
+      name: "\U0001F1FA\U0001F1F8US_89|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 14.102.228.194
+      sni: ttfang.fange.me
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: /Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1142
+      name: "\U0001F1FA\U0001F1F8US_90|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 5.182.85.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1970
+      name: "\U0001F1FA\U0001F1F8US_91|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 31.43.179.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1878
+      name: "\U0001F1FA\U0001F1F8US_92|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 25.25.25.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1800
+      name: "\U0001F1FA\U0001F1F8US_93|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 31.185.108.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1968
+      name: "\U0001F1FA\U0001F1F8US_94|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 45.8.211.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 2087
+      name: "\U0001F1FA\U0001F1F8US_95|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 45.128.76.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1583
+      name: "\U0001F1FA\U0001F1F8US_96|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 45.131.208.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1781
+      name: "\U0001F1FA\U0001F1F8US_97|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 45.149.12.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 2686
+      name: "\U0001F1FA\U0001F1F8US_98|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 45.159.216.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1526
+      name: "\U0001F1FA\U0001F1F8US_99|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 45.159.218.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1597
+      name: "\U0001F1FA\U0001F1F8US_100|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 50.62.88.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 2623
+      name: "\U0001F1FA\U0001F1F8US_101|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 50.62.90.194
+      sni: ttfang.fange.me
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: /Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1723
+      name: "\U0001F1FA\U0001F1F8US_102|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 50.62.172.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1081
+      name: "\U0001F1FA\U0001F1F8US_103|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 50.62.173.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 573
+      name: "\U0001F1FA\U0001F1F8US_104|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 167.68.5.177
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: /freecodes蘇小檸 | 華東電訊 | 解鎖Netflix
+    - delay: 1066
+      name: "\U0001F1FA\U0001F1F8US_105|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 88.216.69.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 943
+      name: "\U0001F1FA\U0001F1F8US_106|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 5.10.214.177
+      servername: ip.langmanshanxi.top
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed"
+    - delay: 1265
+      name: "\U0001F1FA\U0001F1F8US_107|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 66.225.252.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 850
+      name: "\U0001F1FA\U0001F1F8US_108|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 63.141.128.7
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 1070
+      name: "\U0001F1FA\U0001F1F8US_109|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 72.167.241.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1256
+      name: "\U0001F1FA\U0001F1F8US_110|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 77.75.199.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 839
+      name: "\U0001F1FA\U0001F1F8US_111|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 185.18.250.7
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 834
+      name: "\U0001F1FA\U0001F1F8US_112|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 74.49.214.7
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 2645
+      name: "\U0001F1FA\U0001F1F8US_113|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 5.182.85.7
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 1120
+      name: "\U0001F1FA\U0001F1F8US_114|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 91.124.127.194
+      sni: ttfang.fange.me
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: /Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1106
+      name: "\U0001F1FA\U0001F1F8US_115|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 103.116.7.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 590
+      name: "\U0001F1FA\U0001F1F8US_116|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 167.68.11.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 406
+      name: "\U0001F1FA\U0001F1F8US_117|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 170.114.46.186
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        early-data-header-name: Sec-WebSocket-Protocol
+        headers:
+            Host: ip.langmanshanxi.top
+        max-early-data: 2560
+        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /
+    - delay: 583
+      name: "\U0001F1FA\U0001F1F8US_118|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 130.250.137.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 621
+      name: "\U0001F1FA\U0001F1F8US_119|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 170.114.46.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 1113
+      name: "\U0001F1FA\U0001F1F8US_120|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 92.53.191.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1102
+      name: "\U0001F1FA\U0001F1F8US_121|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 92.53.190.194
+      sni: ttfang.fange.me
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: /Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 587
+      name: "\U0001F1FA\U0001F1F8US_122|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 45.192.222.87
+      servername: Telegram-channel-WangCai2
+      tls: false
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /"
+    - delay: 1928
+      name: "\U0001F1FA\U0001F1F8US_123|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 103.160.204.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1129
+      name: "\U0001F1FA\U0001F1F8US_124|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 103.133.1.194
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 2197
+      name: "\U0001F1FA\U0001F1F8US_125|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 45.159.216.216
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: '%25252FTelegram'
+    - client-fingerprint: chrome
+      delay: 936
+      name: "\U0001F1FA\U0001F1F8US_126|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 185.221.160.3
+      tls: false
+      type: vless
+      udp: true
+      uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
+      ws-opts:
+        headers:
+            Host: bitget1.asdasd.click
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - delay: 909
+      name: "\U0001F1FA\U0001F1F8US_127|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 94.247.142.216
+      sni: ttfang.fange.me
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: /Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 2153
+      name: "\U0001F1FA\U0001F1F8US_128|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 103.116.7.216
+      sni: ttfang.fange.me
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: ttfang.fange.me
+        path: /Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - client-fingerprint: chrome
+      delay: 1994
+      name: "\U0001F1FA\U0001F1F8US_129|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: ttfang
+      port: 2096
+      server: 92.243.75.216
+      skip-cert-verify: true
+      sni: ttfang.fange.me
+      type: trojan
+      ws-opts:
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - delay: 603
+      name: "\U0001F1FA\U0001F1F8US_130|YT|Gemini|Github|FREE-16"
+      network: ws
+      port: 8880
+      server: 185.148.104.3
+      servername: Telegram-channel-freecodes
+      tls: false
+      type: vless
+      udp: true
+      uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
+      ws-opts:
+        headers:
+            Host: bitget1.asdasd.click
+        path: /
+    - name: "\U0001F1FA\U0001F1F8US_131|YT|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: unlimited.spauu.web.id
+      servername: unlimited.spauu.web.id
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 4b921362-35a7-4bd5-8323-338de6f7f8bb
+      ws-opts:
+        headers:
+            host: unlimited.spauu.web.id
+        path: /
+    - name: "\U0001F1FA\U0001F1F8US_132|YT|Github|FREE-17"
       network: ws
       port: 8880
       server: 104.129.166.177
@@ -1316,7 +1706,21 @@ proxies:
             User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.76 Safari/537.36
         path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
       xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_98|YT|Github|FREE-17"
+    - name: "\U0001F1FA\U0001F1F8US_133|YT|Github|FREE-17"
+      network: ws
+      port: 8880
+      server: 156.225.72.177
+      servername: Telegram-channel-WangCai2
+      type: vless
+      udp: true
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+      ws-opts:
+        headers:
+            Host: ip.langmanshanxi.top
+            User-Agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/533.2 (KHTML, like Gecko) Chrome/5.0.342.1 Safari/533.2
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+      xudp: true
+    - name: "\U0001F1FA\U0001F1F8US_134|YT|Github|FREE-17"
       network: ws
       port: 8880
       server: 170.114.46.177
@@ -1330,10 +1734,10 @@ proxies:
             User-Agent: Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
         path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
       xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_99|YT|GPT|Github|FREE-17"
+    - name: "\U0001F1FA\U0001F1F8US_135|YT|Github|FREE-17"
       network: ws
       port: 8880
-      server: 168.100.6.177
+      server: 185.59.218.177
       servername: Telegram-channel-WangCai2
       type: vless
       udp: true
@@ -1341,107 +1745,10 @@ proxies:
       ws-opts:
         headers:
             Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
+            User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
         path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
       xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_100|YT|GPT⁺|Github|FREE-17"
-      network: ws
-      port: 8880
-      server: 185.159.247.177
-      servername: Telegram-channel-WangCai2
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
-        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_101|YT|Github|FREE-17"
-      network: ws
-      port: 8880
-      server: 193.227.99.177
-      servername: Telegram-channel-WangCai2
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
-        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_102|YT|Github|FREE-17"
-      network: ws
-      port: 8880
-      server: 188.42.145.177
-      servername: Telegram-channel-WangCai2
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36
-        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_103|YT|GPT|Github|FREE-17"
-      network: ws
-      port: 8880
-      server: 195.85.23.177
-      servername: Telegram-channel-WangCai2
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
-        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_104|YT|Github|FREE-17"
-      network: ws
-      port: 8880
-      server: 198.62.62.177
-      servername: Telegram-channel-WangCai2
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Linux; Android 7.1; vivo 1716 Build/N2G47H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36
-        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_105|YT|Github|FREE-17"
-      network: ws
-      port: 8880
-      server: 45.159.217.177
-      servername: Telegram-channel-WangCai2
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36
-        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_106|YT|Github|FREE-17"
-      network: ws
-      port: 8880
-      server: 185.238.228.39
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Linux; Android 6.0; vivo 1606 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.124 Mobile Safari/537.36
-        path: "/Telegram\U0001F1E8\U0001F1F3 @MxlShare @WangCai2 /"
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_107|YT|Github|FREE-17"
+    - name: "\U0001F1FA\U0001F1F8US_136|YT|Github|FREE-17"
       network: ws
       port: 8880
       server: 185.193.30.177
@@ -1455,10 +1762,10 @@ proxies:
             User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36
         path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
       xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_108|YT|GPT⁺|Github|FREE-17"
+    - name: "\U0001F1FA\U0001F1F8US_137|YT|Github|FREE-17"
       network: ws
       port: 8880
-      server: 66.45.118.177
+      server: 185.159.247.177
       servername: Telegram-channel-WangCai2
       type: vless
       udp: true
@@ -1466,24 +1773,10 @@ proxies:
       ws-opts:
         headers:
             Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Linux; Android 6.0; CAM-L21 Build/HUAWEICAM-L21; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.0.3202.84 Mobile Safari/537.36
+            User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
         path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
       xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_109|YT|Github|FREE-17"
-      network: ws
-      port: 8880
-      server: 5.10.247.177
-      servername: Telegram-channel-WangCai2
-      type: vless
-      udp: true
-      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-      ws-opts:
-        headers:
-            Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36
-        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_110|YT|Github|FREE-17"
+    - name: "\U0001F1FA\U0001F1F8US_138|YT|Github|FREE-17"
       network: ws
       port: 8880
       server: 185.162.231.177
@@ -1497,10 +1790,10 @@ proxies:
             User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36
         path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
       xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_111|YT|GPT|Github|FREE-17"
+    - name: "\U0001F1FA\U0001F1F8US_139|YT|Github|FREE-17"
       network: ws
       port: 8880
-      server: 5.182.84.177
+      server: 193.227.99.177
       servername: Telegram-channel-WangCai2
       type: vless
       udp: true
@@ -1508,13 +1801,13 @@ proxies:
       ws-opts:
         headers:
             Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36
+            User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
         path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
       xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_112|YT|GPT|Github|FREE-17"
+    - name: "\U0001F1FA\U0001F1F8US_140|YT|Github|FREE-17"
       network: ws
       port: 8880
-      server: 92.53.188.177
+      server: 209.46.30.177
       servername: Telegram-channel-WangCai2
       type: vless
       udp: true
@@ -1522,13 +1815,13 @@ proxies:
       ws-opts:
         headers:
             Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
         path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
       xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_113|YT|GPT⁺|Github|FREE-17"
+    - name: "\U0001F1FA\U0001F1F8US_141|YT|Github|FREE-17"
       network: ws
       port: 8880
-      server: 88.216.67.177
+      server: 45.131.211.177
       servername: Telegram-channel-WangCai2
       type: vless
       udp: true
@@ -1536,13 +1829,13 @@ proxies:
       ws-opts:
         headers:
             Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/533.2 (KHTML, like Gecko) Chrome/5.0.342.1 Safari/533.2
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36
         path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
       xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_114|YT|Github|FREE-17"
+    - name: "\U0001F1FA\U0001F1F8US_142|YT|Github|FREE-17"
       network: ws
       port: 8880
-      server: 89.116.180.177
+      server: 45.159.217.177
       servername: Telegram-channel-WangCai2
       type: vless
       udp: true
@@ -1550,175 +1843,42 @@ proxies:
       ws-opts:
         headers:
             Host: ip.langmanshanxi.top
-            User-Agent: Mozilla/5.0 (Windows NT 6.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36
         path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
       xudp: true
-    - alpn:
-        - h2
-        - http/1.1
-      client-fingerprint: chrome
-      name: "\U0001F1F3\U0001F1F1NL_2|YT|GPT⁺|Github|FREE-17"
-      network: ws
-      port: 443
-      server: 172.67.134.196
-      servername: avid.gorbe.store
-      tls: true
-      type: vless
-      udp: true
-      uuid: 59b3242f-6e1b-45f7-a57d-183192cc87fe
-      ws-opts:
-        headers:
-            Host: avid.gorbe.store
-            User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36
-        path: /random
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_115|YT|GPT⁺|Github|FREE-24"
+    - name: "\U0001F1FA\U0001F1F8US_143|YT|Github|FREE-17"
       network: ws
       port: 8880
-      server: 154.83.2.188
+      server: 5.10.247.177
       servername: Telegram-channel-WangCai2
-      tls: false
       type: vless
       udp: true
       uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
       ws-opts:
         headers:
             Host: ip.langmanshanxi.top
-        path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_116|YT|GPT|Github|FREE-24"
+            User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+      xudp: true
+    - name: "\U0001F1FA\U0001F1F8US_144|YT|Github|FREE-17"
       network: ws
       port: 8880
-      server: 92.53.188.3
-      tls: false
+      server: 45.159.216.177
+      servername: Telegram-channel-WangCai2
       type: vless
       udp: true
-      uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
+      uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
       ws-opts:
         headers:
-            Host: bitget1.asdasd.click
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_117|YT|Github|FREE-24"
-      network: ws
-      port: 80
-      server: 141.193.213.249
-      servername: cs.laoyoutiao.link
-      tls: false
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: cs.laoyoutiao.link
-        path: /TelegramU0001F1E8U0001F1F3
-    - name: "\U0001F1FA\U0001F1F8US_118|GPT⁺|Gemini|Github|FREE-24"
-      network: ws
-      password: 1afe0d9e-e5a0-4e75-a2c6-cd1b07adb303
-      port: 8443
-      server: tj.cpddx.club
-      skip-cert-verify: true
-      sni: tj.cpddx.club
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: tj.cpddx.club
-        path: ""
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_119|YT|Github|FREE-24"
-      network: ws
-      port: 8880
-      server: 14.102.228.213
-      servername: jp.laoyoutiao.link
-      tls: false
-      type: vless
-      udp: true
-      uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-      ws-opts:
-        headers:
-            Host: jp.laoyoutiao.link
-        path: /
-    - name: "\U0001F1FA\U0001F1F8US_120|YT|Github|FREE-24"
+            Host: ip.langmanshanxi.top
+            User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+      xudp: true
+    - name: "\U0001F1FA\U0001F1F8US_145|YT|Gemini|Github|FREE-11"
       network: ws
       password: ttfang
       port: 2096
-      server: 184.174.80.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_121|YT|Github|FREE-24"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 45.149.12.194
-      sni: ttfang.fange.me
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
-    - name: "\U0001F1FA\U0001F1F8US_122|YT|Github|FREE-24"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 45.130.125.194
-      sni: ttfang.fange.me
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
-    - name: "\U0001F1FA\U0001F1F8US_123|YT|Github|FREE-24"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 45.85.119.194
-      sni: ttfang.fange.me
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
-    - name: "\U0001F1FA\U0001F1F8US_124|YT|Github|FREE-24"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 185.193.30.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_125|YT|Github|FREE-24"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 185.133.35.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_126|YT|GPT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 209.94.90.194
+      server: 216.24.57.194
       skip-cert-verify: true
       sni: ttfang.fange.me
       type: trojan
@@ -1726,55 +1886,7 @@ proxies:
         headers:
             Host: ttfang.fange.me
         path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_127|YT|Github|FREE-24"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 45.67.215.194
-      sni: ttfang.fange.me
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
-    - name: "\U0001F1FA\U0001F1F8US_128|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 199.68.156.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_129|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 213.182.199.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_130|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 212.183.88.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_131|YT|Github|FREE-11"
+    - name: "\U0001F1FA\U0001F1F8US_146|YT|Gemini|Github|FREE-11"
       network: ws
       password: ttfang
       port: 2096
@@ -1786,11 +1898,11 @@ proxies:
         headers:
             Host: ttfang.fange.me
         path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_132|YT|Github|FREE-11"
+    - name: "\U0001F1FA\U0001F1F8US_147|YT|Gemini|Github|FREE-11"
       network: ws
       password: ttfang
       port: 2096
-      server: 198.202.211.194
+      server: 199.34.230.194
       skip-cert-verify: true
       sni: ttfang.fange.me
       type: trojan
@@ -1798,359 +1910,11 @@ proxies:
         headers:
             Host: ttfang.fange.me
         path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_133|YT|Github|FREE-11"
+    - name: "\U0001F1FA\U0001F1F8US_148|YT|Gemini|Github|FREE-11"
       network: ws
       password: ttfang
       port: 2096
-      server: 198.71.233.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_134|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 198.71.191.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_135|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 198.62.62.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_136|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 198.71.188.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_137|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 198.12.145.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_138|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 198.12.144.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_139|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 195.26.229.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_140|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 195.13.54.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_141|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 193.124.18.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_142|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 188.244.122.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_143|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 190.93.246.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_144|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 190.93.244.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_145|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 188.164.158.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_146|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 185.251.82.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_147|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 185.207.197.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_148|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 185.207.199.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_149|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 185.193.31.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_150|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 185.207.198.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_151|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 185.193.28.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_152|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 185.193.29.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_153|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 185.170.166.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_154|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 185.176.24.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_155|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 185.162.230.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_156|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 185.162.229.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_157|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 185.158.133.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_158|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 185.148.107.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_159|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 185.59.218.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_160|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 181.214.1.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_161|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 167.68.42.194
-      skip-cert-verify: true
-      sni: ttfang.fange.me
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ttfang.fange.me
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_162|YT|Github|FREE-11"
-      network: ws
-      password: ttfang
-      port: 2096
-      server: 168.100.6.194
+      server: 199.34.229.194
       skip-cert-verify: true
       sni: ttfang.fange.me
       type: trojan
