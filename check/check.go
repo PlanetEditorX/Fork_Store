@@ -114,15 +114,15 @@ func Check(proxyType string) ([]Result, error) {
 		// 加载上次失败的代理及其剩余次数
 		previousFailures, err := loadFailedProxies()
 		if err != nil {
-			slog.Warn(fmt.Sprintf("Failed to load failed proxies: %v", err))
+			slog.Warn(fmt.Sprintf("加载上次失败节点失败: %v", err))
 		}
 
 		// 过滤掉失败次数未用完的代理
 		if len(previousFailures) > 0 {
 			var filteredProxies []map[string]any
 			for _, p := range proxies {
-				if server, ok := p["server"].(string); ok {
-					if count, exists := previousFailures[server]; !exists || count <= 0 {
+				if name, ok := p["name"].(string); ok {
+					if count, exists := previousFailures[name]; !exists || count <= 0 {
 						filteredProxies = append(filteredProxies, p)
 					}
 				}
@@ -667,7 +667,6 @@ var FAILEDPROXIESPATH = "output/Failed_Proxies.txt"
 
 // 存储失败节点,并更新它们的失败次数,会覆盖现有文件
 func saveFailedProxies(proxies []map[string]any, results []Result, previousFailures map[string]int) {
-	// 使用 os.Create 模式来覆盖文件,而不是追加
 	file, err := os.Create(FAILEDPROXIESPATH)
 	if err != nil {
 		slog.Error(fmt.Sprintf("Failed to create file %s: %v", FAILEDPROXIESPATH, err))
@@ -675,47 +674,42 @@ func saveFailedProxies(proxies []map[string]any, results []Result, previousFailu
 	}
 	defer file.Close()
 
-	// 标记本次成功的节点服务器 IP
-	successfulServers := make(map[string]struct{})
+	// 标记本次成功的节点名称
+	successfulNames := make(map[string]struct{})
 	for _, result := range results {
-		if server, ok := result.Proxy["server"].(string); ok {
-			// 只有成功返回的才算成功
+		if name, ok := result.Proxy["name"].(string); ok {
 			if result.Google || result.Cloudflare {
-				successfulServers[server] = struct{}{}
+				successfulNames[name] = struct{}{}
 			}
 		}
 	}
-	// 存储最终需要写入的失败节点及其次数
+
 	updatedFailures := make(map[string]int)
-	// 1. 更新上次失败的节点：如果本次仍然失败，则计数减 1
-	for server, count := range previousFailures {
-		if _, exists := successfulServers[server]; !exists {
-			// 如果上次失败的节点本次仍然失败
+
+	for name, count := range previousFailures {
+		if _, exists := successfulNames[name]; !exists {
 			if count > 1 {
-				updatedFailures[server] = count - 1
+				updatedFailures[name] = count - 1
 			}
-			// 如果计数为 1，它将变为 0，在下一次运行中将被视为一个新 IP
 		}
 	}
-	// 添加本次新失败的节点：如果一个节点本次失败，且上次没有记录，则添加它并赋予初始次数
+
 	for _, proxy := range proxies {
-		if server, ok := proxy["server"].(string); ok {
-			if _, isSuccessful := successfulServers[server]; !isSuccessful {
-				// 如果这个节点本次失败，并且不在上次失败的列表中
-				if _, wasPreviousFailure := previousFailures[server]; !wasPreviousFailure {
-					// 生成一个在 MIN_RETRY_COUNT 和 MAX_RETRY_COUNT 之间的随机数
-					updatedFailures[server] = rand.Intn(MAX_RETRY_COUNT-MIN_RETRY_COUNT+1) + MIN_RETRY_COUNT
+		if name, ok := proxy["name"].(string); ok {
+			if _, isSuccessful := successfulNames[name]; !isSuccessful {
+				if _, wasPreviousFailure := previousFailures[name]; !wasPreviousFailure {
+					updatedFailures[name] = rand.Intn(MAX_RETRY_COUNT-MIN_RETRY_COUNT+1) + MIN_RETRY_COUNT
 				}
 			}
 		}
 	}
-	// 将最终的失败列表写入文件
-	for server, count := range updatedFailures {
-		if _, err := file.WriteString(fmt.Sprintf("%s %d\n", server, count)); err != nil {
+
+	for name, count := range updatedFailures {
+		if _, err := file.WriteString(fmt.Sprintf("%s %d\n", name, count)); err != nil {
 			slog.Error(fmt.Sprintf("Failed to write to file %s: %v", FAILEDPROXIESPATH, err))
 		}
 	}
-	slog.Info("Failed proxy servers with updated counts saved to file.", "file", FAILEDPROXIESPATH)
+	slog.Info("更新失败节点到文件.", "file", FAILEDPROXIESPATH)
 }
 
 // loadFailedProxies 加载上次失败的服务器 IP
@@ -741,17 +735,18 @@ func loadFailedProxies() (map[string]int, error) {
 		if len(parts) != 2 {
 			continue
 		}
-		ip := parts[0]
+		name := parts[0]
 		count, err := strconv.Atoi(parts[1])
 		if err != nil {
 			continue
 		}
-		failedProxies[ip] = count
+		failedProxies[name] = count
 	}
 
 	if err := scanner.Err(); err != nil {
 		return nil, fmt.Errorf("error reading file: %w", err)
 	}
 
+	slog.Info(fmt.Sprintf("读取到失败的节点，数量: %d", len(failedProxies)))
 	return failedProxies, nil
 }
