@@ -7,6 +7,7 @@ import (
 	"io"
 	"log/slog"
 	"math"
+	"math/rand"
 	"net"
 	"net/http"
 	"os"
@@ -658,14 +659,14 @@ func (s *StatsTransport) RoundTrip(req *http.Request) (*http.Response, error) {
 	return resp, nil
 }
 
-// 初始失败重试次数
-const INITIAL_RETRY_COUNT = 3
+// 初始失败重试数的最小和最大值
+const MIN_RETRY_COUNT = 3
+const MAX_RETRY_COUNT = 20
 
-// saveFailedProxies 存储失败节点，并更新它们的失败次数
-// 这个函数会覆盖现有文件
+// 存储失败节点,并更新它们的失败次数,会覆盖现有文件
 func saveFailedProxies(proxies []map[string]any, results []Result, previousFailures map[string]int) {
 	fileName := "output/Failed_Proxies.txt"
-	// 使用 os.Create 模式来覆盖文件，而不是追加
+	// 使用 os.Create 模式来覆盖文件,而不是追加
 	file, err := os.Create(fileName)
 	if err != nil {
 		slog.Error(fmt.Sprintf("Failed to create file %s: %v", fileName, err))
@@ -694,6 +695,7 @@ func saveFailedProxies(proxies []map[string]any, results []Result, previousFailu
 			if count > 1 {
 				updatedFailures[server] = count - 1
 			}
+			// 如果计数为 1，它将变为 0，在下一次运行中将被视为一个新 IP
 		}
 	}
 
@@ -703,7 +705,8 @@ func saveFailedProxies(proxies []map[string]any, results []Result, previousFailu
 			if _, isSuccessful := successfulServers[server]; !isSuccessful {
 				// 如果这个节点本次失败，并且不在上次失败的列表中
 				if _, wasPreviousFailure := previousFailures[server]; !wasPreviousFailure {
-					updatedFailures[server] = INITIAL_RETRY_COUNT
+					// 生成一个在 MIN_RETRY_COUNT 和 MAX_RETRY_COUNT 之间的随机数
+					updatedFailures[server] = rand.Intn(MAX_RETRY_COUNT-MIN_RETRY_COUNT+1) + MIN_RETRY_COUNT
 				}
 			}
 		}
@@ -713,7 +716,6 @@ func saveFailedProxies(proxies []map[string]any, results []Result, previousFailu
 	for server, count := range updatedFailures {
 		if _, err := file.WriteString(fmt.Sprintf("%s %d\n", server, count)); err != nil {
 			slog.Error(fmt.Sprintf("Failed to write to file %s: %v", fileName, err))
-			// 继续写入，不中断
 		}
 	}
 
