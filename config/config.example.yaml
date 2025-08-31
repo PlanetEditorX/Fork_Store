@@ -78,6 +78,8 @@ exclude-nodes:
 # 保留之前测试成功的节点
 # 如果为true，则保留之前测试成功的节点，这样就不会因为上游链接更新，导致可用的节点被清除掉
 keep-success-proxies: true
+# 如果为true，只保留免费的节点
+keep-free-proxies: true
 
 # 是否开启订阅检查
 # 如果为false，则不会检查订阅链接的可用性，直接使用配置文件中的订阅链接

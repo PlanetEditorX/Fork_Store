@@ -310,6 +310,9 @@ func GetGlobalProxies(proxyType string) ([]map[string]any, error) {
 	if config.GlobalConfig.KeepSuccessProxies {
 		switch proxyType {
 		case "SubUrls":
+			if config.GlobalConfig.KeepFreeProxies {
+				return nil, nil
+			}
 			proxys := config.GlobalProxies.SubUrls
 			// 重置全局节点
 			config.GlobalProxies.SubUrls = make([]map[string]any, 0)

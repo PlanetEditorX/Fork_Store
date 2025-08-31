@@ -267,7 +267,9 @@ func SetGlobalProxies(proxyType string, allResults []check.Result) error {
 			if result.Proxy != nil {
 				switch proxyType {
 					case "SubUrls":
-						config.GlobalProxies.SubUrls = append(config.GlobalProxies.SubUrls, result.Proxy)
+						if !config.GlobalConfig.KeepFreeProxies {
+							config.GlobalProxies.SubUrls = append(config.GlobalProxies.SubUrls, result.Proxy)
+						}
 					case "FreeSubUrls":
 						config.GlobalProxies.FreeSubUrls = append(config.GlobalProxies.FreeSubUrls, result.Proxy)
 					}
