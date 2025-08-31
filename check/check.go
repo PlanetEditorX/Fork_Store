@@ -108,8 +108,31 @@ func Check(proxyType string) ([]Result, error) {
 	proxies = proxyutils.DeduplicateProxies(proxies)
 	slog.Info(fmt.Sprintf("去重后节点数量: %d", len(proxies)))
 
-	checker := NewProxyChecker(len(proxies))
-	return checker.run(proxies, proxyType)
+	if proxyType == "FreeSubUrls" {
+		failedProxies, err := loadFailedProxies()
+		if err != nil {
+			slog.Warn(fmt.Sprintf("Failed to load failed proxies: %v", err))
+		} else if len(failedProxies) > 0 {
+			var filteredProxies []map[string]any
+			for _, p := range proxies {
+				if server, ok := p["server"].(string); ok {
+					if _, exists := failedProxies[server]; !exists {
+						filteredProxies = append(filteredProxies, p)
+					}
+				}
+			}
+			proxies = filteredProxies
+			slog.Info(fmt.Sprintf("已排除上次失败的节点，当前节点数量: %d", len(proxies)))
+		}
+		checker := NewProxyChecker(len(proxies))
+		results, err := checker.run(proxies, proxyType)
+
+		saveFailedProxies(proxies, results)
+		return results, err
+	} else {
+		checker := NewProxyChecker(len(proxies))
+		return  checker.run(proxies, proxyType)
+	}
 }
 
 // Run 运行检测流程
@@ -625,4 +648,65 @@ func (s *StatsTransport) RoundTrip(req *http.Request) (*http.Response, error) {
 		counter:    &s.BytesRead,
 	}
 	return resp, nil
+}
+
+// 存储失败节点
+// saveFailedProxies 存储失败节点，按服务器 IP 区分
+func saveFailedProxies(proxies []map[string]any, results []Result) {
+	fileName := "output/Failed_Proxies.txt"
+	file, err := os.OpenFile(fileName, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		slog.Error(fmt.Sprintf("Failed to open file %s: %v", fileName, err))
+		return
+	}
+	defer file.Close()
+
+	// 标记成功的节点服务器 IP
+	successfulServers := make(map[string]struct{})
+	for _, result := range results {
+		if server, ok := result.Proxy["server"].(string); ok {
+			successfulServers[server] = struct{}{}
+		}
+	}
+
+	// 遍历所有节点，将失败的服务器 IP 写入文件
+	for _, proxy := range proxies {
+		if server, ok := proxy["server"].(string); ok {
+			if _, exists := successfulServers[server]; !exists {
+				if _, err := file.WriteString(server + "\n"); err != nil {
+					slog.Error(fmt.Sprintf("Failed to write to file %s: %v", fileName, err))
+				}
+			}
+		}
+	}
+	slog.Info("Failed proxy servers saved to file.", "file", fileName)
+}
+
+// loadFailedProxies 加载上次失败的服务器 IP
+func loadFailedProxies() (map[string]struct{}, error) {
+	fileName := "output/Failed_Proxies.txt"
+	failedProxies := make(map[string]struct{})
+
+	file, err := os.Open(fileName)
+	if err != nil {
+		if os.IsNotExist(err) {
+			return failedProxies, nil // 文件不存在，正常情况
+		}
+		return nil, fmt.Errorf("failed to open failed proxies file: %w", err)
+	}
+	defer file.Close()
+
+	content, err := io.ReadAll(file)
+	if err != nil {
+		return nil, fmt.Errorf("failed to read failed proxies file: %w", err)
+	}
+
+	lines := strings.Split(string(content), "\n")
+	for _, line := range lines {
+		trimmedLine := strings.TrimSpace(line)
+		if trimmedLine != "" {
+			failedProxies[trimmedLine] = struct{}{}
+		}
+	}
+	return failedProxies, nil
 }
