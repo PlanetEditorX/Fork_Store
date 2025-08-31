@@ -1,6 +1,7 @@
 package check
 
 import (
+	"bufio"
 	"context"
 	"fmt"
 	"io"
@@ -109,14 +110,18 @@ func Check(proxyType string) ([]Result, error) {
 	slog.Info(fmt.Sprintf("去重后节点数量: %d", len(proxies)))
 
 	if proxyType == "FreeSubUrls" {
-		failedProxies, err := loadFailedProxies()
+		// 加载上次失败的代理及其剩余次数
+		previousFailures, err := loadFailedProxies()
 		if err != nil {
 			slog.Warn(fmt.Sprintf("Failed to load failed proxies: %v", err))
-		} else if len(failedProxies) > 0 {
+		}
+
+		// 过滤掉失败次数未用完的代理
+		if len(previousFailures) > 0 {
 			var filteredProxies []map[string]any
 			for _, p := range proxies {
 				if server, ok := p["server"].(string); ok {
-					if _, exists := failedProxies[server]; !exists {
+					if count, exists := previousFailures[server]; !exists || count <= 0 {
 						filteredProxies = append(filteredProxies, p)
 					}
 				}
@@ -124,15 +129,18 @@ func Check(proxyType string) ([]Result, error) {
 			proxies = filteredProxies
 			slog.Info(fmt.Sprintf("已排除上次失败的节点，当前节点数量: %d", len(proxies)))
 		}
+
 		checker := NewProxyChecker(len(proxies))
 		results, err := checker.run(proxies, proxyType)
 
-		saveFailedProxies(proxies, results)
+		// 保存失败的代理，并更新它们的失败次数
+		saveFailedProxies(proxies, results, previousFailures)
 		return results, err
 	} else {
 		checker := NewProxyChecker(len(proxies))
-		return  checker.run(proxies, proxyType)
+		return checker.run(proxies, proxyType)
 	}
+	// === END MODIFICATION ===
 }
 
 // Run 运行检测流程
@@ -650,63 +658,103 @@ func (s *StatsTransport) RoundTrip(req *http.Request) (*http.Response, error) {
 	return resp, nil
 }
 
-// 存储失败节点
-// saveFailedProxies 存储失败节点，按服务器 IP 区分
-func saveFailedProxies(proxies []map[string]any, results []Result) {
+// 初始失败重试次数
+const INITIAL_RETRY_COUNT = 3
+
+// saveFailedProxies 存储失败节点，并更新它们的失败次数
+// 这个函数会覆盖现有文件
+func saveFailedProxies(proxies []map[string]any, results []Result, previousFailures map[string]int) {
 	fileName := "output/Failed_Proxies.txt"
-	file, err := os.OpenFile(fileName, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	// 使用 os.Create 模式来覆盖文件，而不是追加
+	file, err := os.Create(fileName)
 	if err != nil {
-		slog.Error(fmt.Sprintf("Failed to open file %s: %v", fileName, err))
+		slog.Error(fmt.Sprintf("Failed to create file %s: %v", fileName, err))
 		return
 	}
 	defer file.Close()
 
-	// 标记成功的节点服务器 IP
+	// 标记本次成功的节点服务器 IP
 	successfulServers := make(map[string]struct{})
 	for _, result := range results {
 		if server, ok := result.Proxy["server"].(string); ok {
-			successfulServers[server] = struct{}{}
+			// 只有成功返回的才算成功
+			if result.Google || result.Cloudflare {
+				successfulServers[server] = struct{}{}
+			}
 		}
 	}
 
-	// 遍历所有节点，将失败的服务器 IP 写入文件
+	// 存储最终需要写入的失败节点及其次数
+	updatedFailures := make(map[string]int)
+
+	// 1. 更新上次失败的节点：如果本次仍然失败，则计数减 1
+	for server, count := range previousFailures {
+		if _, exists := successfulServers[server]; !exists {
+			// 如果上次失败的节点本次仍然失败
+			if count > 1 {
+				updatedFailures[server] = count - 1
+			}
+		}
+	}
+
+	// 2. 添加本次新失败的节点：如果一个节点本次失败，且上次没有记录，则添加它并赋予初始次数
 	for _, proxy := range proxies {
 		if server, ok := proxy["server"].(string); ok {
-			if _, exists := successfulServers[server]; !exists {
-				if _, err := file.WriteString(server + "\n"); err != nil {
-					slog.Error(fmt.Sprintf("Failed to write to file %s: %v", fileName, err))
+			if _, isSuccessful := successfulServers[server]; !isSuccessful {
+				// 如果这个节点本次失败，并且不在上次失败的列表中
+				if _, wasPreviousFailure := previousFailures[server]; !wasPreviousFailure {
+					updatedFailures[server] = INITIAL_RETRY_COUNT
 				}
 			}
 		}
 	}
-	slog.Info("Failed proxy servers saved to file.", "file", fileName)
+
+	// 3. 将最终的失败列表写入文件
+	for server, count := range updatedFailures {
+		if _, err := file.WriteString(fmt.Sprintf("%s %d\n", server, count)); err != nil {
+			slog.Error(fmt.Sprintf("Failed to write to file %s: %v", fileName, err))
+			// 继续写入，不中断
+		}
+	}
+
+	slog.Info("Failed proxy servers with updated counts saved to file.", "file", fileName)
 }
 
 // loadFailedProxies 加载上次失败的服务器 IP
-func loadFailedProxies() (map[string]struct{}, error) {
+func loadFailedProxies() (map[string]int, error) {
 	fileName := "output/Failed_Proxies.txt"
-	failedProxies := make(map[string]struct{})
+	failedProxies := make(map[string]int)
 
 	file, err := os.Open(fileName)
 	if err != nil {
 		if os.IsNotExist(err) {
-			return failedProxies, nil // 文件不存在，正常情况
+			return failedProxies, nil
 		}
 		return nil, fmt.Errorf("failed to open failed proxies file: %w", err)
 	}
 	defer file.Close()
 
-	content, err := io.ReadAll(file)
-	if err != nil {
-		return nil, fmt.Errorf("failed to read failed proxies file: %w", err)
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if line == "" {
+			continue
+		}
+		parts := strings.Fields(line)
+		if len(parts) != 2 {
+			continue
+		}
+		ip := parts[0]
+		count, err := strconv.Atoi(parts[1])
+		if err != nil {
+			continue
+		}
+		failedProxies[ip] = count
 	}
 
-	lines := strings.Split(string(content), "\n")
-	for _, line := range lines {
-		trimmedLine := strings.TrimSpace(line)
-		if trimmedLine != "" {
-			failedProxies[trimmedLine] = struct{}{}
-		}
+	if err := scanner.Err(); err != nil {
+		return nil, fmt.Errorf("error reading file: %w", err)
 	}
+
 	return failedProxies, nil
 }
