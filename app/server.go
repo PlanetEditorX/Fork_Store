@@ -38,6 +38,8 @@ func (app *App) initHttpServer() error {
 	router.StaticFile("/bdg.yaml", saver.OutputPath+"/bdg.yaml")
 
 	router.Static("/sub/", saver.OutputPath)
+	// 设置失败节点输出路径
+	check.FAILEDPROXIESPATH = saver.OutputPath+"/Failed_Proxies.txt"
 
 	// 根据配置决定是否启用Web控制面板
 	if config.GlobalConfig.EnableWebUI {

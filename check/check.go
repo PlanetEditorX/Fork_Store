@@ -611,7 +611,6 @@ func CreateClient(mapping map[string]any) *ProxyClient {
 	}
 }
 
-// Close closes the proxy client and cleans up resources
 // 防止底层库有一些泄露，所以这里手动关闭
 func (pc *ProxyClient) Close() {
 	if pc.Client != nil {
@@ -663,13 +662,15 @@ func (s *StatsTransport) RoundTrip(req *http.Request) (*http.Response, error) {
 const MIN_RETRY_COUNT = 3
 const MAX_RETRY_COUNT = 20
 
+// 失败节点路径
+var FAILEDPROXIESPATH = "output/Failed_Proxies.txt"
+
 // 存储失败节点,并更新它们的失败次数,会覆盖现有文件
 func saveFailedProxies(proxies []map[string]any, results []Result, previousFailures map[string]int) {
-	fileName := "output/Failed_Proxies.txt"
 	// 使用 os.Create 模式来覆盖文件,而不是追加
-	file, err := os.Create(fileName)
+	file, err := os.Create(FAILEDPROXIESPATH)
 	if err != nil {
-		slog.Error(fmt.Sprintf("Failed to create file %s: %v", fileName, err))
+		slog.Error(fmt.Sprintf("Failed to create file %s: %v", FAILEDPROXIESPATH, err))
 		return
 	}
 	defer file.Close()
@@ -684,10 +685,8 @@ func saveFailedProxies(proxies []map[string]any, results []Result, previousFailu
 			}
 		}
 	}
-
 	// 存储最终需要写入的失败节点及其次数
 	updatedFailures := make(map[string]int)
-
 	// 1. 更新上次失败的节点：如果本次仍然失败，则计数减 1
 	for server, count := range previousFailures {
 		if _, exists := successfulServers[server]; !exists {
@@ -698,8 +697,7 @@ func saveFailedProxies(proxies []map[string]any, results []Result, previousFailu
 			// 如果计数为 1，它将变为 0，在下一次运行中将被视为一个新 IP
 		}
 	}
-
-	// 2. 添加本次新失败的节点：如果一个节点本次失败，且上次没有记录，则添加它并赋予初始次数
+	// 添加本次新失败的节点：如果一个节点本次失败，且上次没有记录，则添加它并赋予初始次数
 	for _, proxy := range proxies {
 		if server, ok := proxy["server"].(string); ok {
 			if _, isSuccessful := successfulServers[server]; !isSuccessful {
@@ -711,23 +709,20 @@ func saveFailedProxies(proxies []map[string]any, results []Result, previousFailu
 			}
 		}
 	}
-
-	// 3. 将最终的失败列表写入文件
+	// 将最终的失败列表写入文件
 	for server, count := range updatedFailures {
 		if _, err := file.WriteString(fmt.Sprintf("%s %d\n", server, count)); err != nil {
-			slog.Error(fmt.Sprintf("Failed to write to file %s: %v", fileName, err))
+			slog.Error(fmt.Sprintf("Failed to write to file %s: %v", FAILEDPROXIESPATH, err))
 		}
 	}
-
-	slog.Info("Failed proxy servers with updated counts saved to file.", "file", fileName)
+	slog.Info("Failed proxy servers with updated counts saved to file.", "file", FAILEDPROXIESPATH)
 }
 
 // loadFailedProxies 加载上次失败的服务器 IP
 func loadFailedProxies() (map[string]int, error) {
-	fileName := "output/Failed_Proxies.txt"
 	failedProxies := make(map[string]int)
 
-	file, err := os.Open(fileName)
+	file, err := os.Open(FAILEDPROXIESPATH)
 	if err != nil {
 		if os.IsNotExist(err) {
 			return failedProxies, nil
