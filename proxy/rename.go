@@ -47,6 +47,9 @@ var countryPatterns = map[string]*regexp.Regexp{
 	"US": regexp.MustCompile(`(?i)(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United\s?States|ChatGPT)`),
 	"JP": regexp.MustCompile(`(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|日|JP|Japan|🇯🇵)`),
 	"TW": regexp.MustCompile(`(?i)(台|新北|彰化|TW|Taiwan)`),
+	"KR": regexp.MustCompile(`(?i)(韩国|首尔|KR|Korea)`),
+	"NL": regexp.MustCompile(`(?i)(荷兰|NL|Netherlands)`),
+	"TR": regexp.MustCompile(`(?i)(土耳其|TR|Turkey)`),
 }
 
 // 从节点名获取
