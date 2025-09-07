@@ -1,288 +1,5 @@
 proxies:
-    - name: "\U0001F1FA\U0001F1F8US_1|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 194.76.18.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_2|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 188.164.248.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_3|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 185.16.110.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_4|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 185.7.240.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_5|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 195.26.229.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_6|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 185.156.19.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_7|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 199.34.229.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_8|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 188.42.88.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_9|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 185.251.80.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_10|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 188.244.122.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_11|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 199.68.156.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_12|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 188.42.89.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_13|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 209.94.90.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_14|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 185.176.24.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_15|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 193.9.49.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_16|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 192.200.160.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_17|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 185.148.106.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_18|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 192.0.54.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_19|YT|GPT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 199.181.197.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_20|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 199.34.230.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_21|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 199.68.156.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_22|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 185.238.228.195
-      skip-cert-verify: false
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_23|YT|Github|FREE-11"
+    - name: "\U0001F1FA\U0001F1F8US_1|YT|Gemini|Github|FREE-9"
       network: ws
       password: slch2024
       port: 2096
@@ -295,35 +12,11 @@ proxies:
         headers:
             Host: ocost-dy.wmlefl.cc
         path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_24|YT|Github|FREE-11"
+    - name: "\U0001F1FA\U0001F1F8US_2|YT|Gemini|Github|FREE-9"
       network: ws
       password: slch2024
       port: 2096
-      server: 209.46.30.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_25|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 205.233.181.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_26|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 185.148.104.195
+      server: 185.251.81.195
       skip-cert-verify: false
       sni: ocost-dy.wmlefl.cc
       type: trojan
@@ -332,376 +25,369 @@ proxies:
         headers:
             Host: ocost-dy.wmlefl.cc
         path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_27|YT|Github|FREE-11"
+    - name: "\U0001F1FA\U0001F1F8US_3|YT|Gemini|Github|FREE-9"
       network: ws
       password: slch2024
       port: 2096
-      server: 209.94.90.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_28|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 198.71.232.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_29|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 213.241.198.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_30|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 198.71.233.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_31|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 198.202.211.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_32|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 198.71.188.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_33|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 198.71.189.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_34|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 198.71.191.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_35|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 193.124.224.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_36|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 192.169.222.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_37|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 198.62.62.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_38|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 195.85.59.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_39|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 192.169.223.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_40|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 193.124.18.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_41|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 194.36.55.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_42|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 195.85.23.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_43|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 192.169.221.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_44|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 195.13.45.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_45|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 193.227.99.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_46|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 192.200.160.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_47|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 192.65.217.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_48|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 188.164.159.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_49|YT|Gemini|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 190.93.247.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_50|YT|Gemini|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 190.93.246.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_51|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 188.42.145.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_52|YT|Github|FREE-11"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 188.164.248.87
-      skip-cert-verify: true
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: "Telegram\U0001F1E8\U0001F1F3"
-    - auth: 7fd98159-a3e7-440f-b29a-6185c04f14e9
-      client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_53|YT|GPT⁺|Github|FREE-14"
-      password: 7fd98159-a3e7-440f-b29a-6185c04f14e9
-      port: 37771
-      server: rb1.xiaohuolongjc.top
+      server: 188.244.122.195
       skip-cert-verify: false
-      sni: rb1.xiaohuolongjc.top
-      type: hysteria2
-    - auth: 0c061897-06f8-4211-a767-693412892270
-      client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_54|YT|GPT⁺|Gemini|Github|FREE-14"
-      password: 0c061897-06f8-4211-a767-693412892270
-      port: 37771
-      server: rb1.xiaohuolongjc.top
-      skip-cert-verify: false
-      sni: rb1.xiaohuolongjc.top
-      type: hysteria2
-    - name: "\U0001F1FA\U0001F1F8US_55|YT|GPT⁺|Gemini|Github|FREE-14"
-      password: hMAEPF
-      port: 34099
-      server: 38.34.22.220
-      type: http
-      username: kZXMC3Z1
-    - auth: 8b3723ac-00a4-4f6c-bf4e-ea3c6f6eef9f
-      client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_56|YT|GPT⁺|Gemini|Github|FREE-14"
-      password: 8b3723ac-00a4-4f6c-bf4e-ea3c6f6eef9f
-      port: 37771
-      server: rb1.xiaohuolongjc.top
-      skip-cert-verify: false
-      sni: rb1.xiaohuolongjc.top
-      type: hysteria2
-    - name: "\U0001F1FA\U0001F1F8US_57|YT|GPT⁺|Gemini|Github|FREE-14"
-      password: xwR9Y4
-      port: 49183
-      server: 38.34.28.188
-      type: http
-      username: kZXMC3Z1
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_58|YT|GPT⁺|Gemini|Github|FREE-19"
-      network: ws
-      password: f282b878-8711-45a1-8c69-5564172123c1
-      port: "443"
-      server: 172.67.181.173
-      skip-cert-verify: false
-      sni: vpn.stupidworld.web.id
+      sni: ocost-dy.wmlefl.cc
       type: trojan
       udp: true
       ws-opts:
         headers:
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
-        path: /Stupid-World/103.106.228.126-2053?@V2rayBaaz---@V2rayBaaz---@V2rayBaaz---@V2rayBaaz---@V2rayBaaz---@V2rayBaaz---@V2rayBaaz---@V2rayBaaz---@V2rayBaaz---@V2rayBaaz
+            Host: ocost-dy.wmlefl.cc
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_4|YT|Gemini|Github|FREE-9"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 188.42.89.195
+      skip-cert-verify: false
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_5|YT|Gemini|Github|FREE-9"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 185.59.218.195
+      skip-cert-verify: false
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_6|YT|Gemini|Github|FREE-9"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 188.42.145.195
+      skip-cert-verify: false
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_7|YT|Gemini|Github|FREE-9"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 209.94.90.195
+      skip-cert-verify: false
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_8|YT|Gemini|Github|FREE-9"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 195.13.45.195
+      skip-cert-verify: false
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - delay: 1971
+      name: "\U0001F1FA\U0001F1F8US_9|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 195.13.55.195
+      skip-cert-verify: false
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - delay: 1101
+      name: "\U0001F1FA\U0001F1F8US_10|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 185.221.160.195
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: ""
+    - delay: 2055
+      name: "\U0001F1FA\U0001F1F8US_11|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 205.233.181.195
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - delay: 1716
+      name: "\U0001F1FA\U0001F1F8US_12|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 199.34.229.195
+      skip-cert-verify: false
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_13|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 37.19.198.243
+      type: ss
+    - delay: 1672
+      name: "\U0001F1FA\U0001F1F8US_14|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 216.24.57.195
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: Telegram%252525F0%2525259F%25252587%252525A8%252525F0%2525259F%25252587%252525B3
+    - delay: 2102
+      name: "\U0001F1FA\U0001F1F8US_15|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 192.65.217.195
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_16|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 37.19.198.160
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_17|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 156.146.38.169
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_18|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 156.146.38.167
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_19|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 156.146.38.168
+      type: ss
+    - delay: 817
+      name: "\U0001F1FA\U0001F1F8US_20|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 199.181.197.195
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_21|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 156.146.38.170
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_22|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 212.102.47.131
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_23|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 173.244.56.9
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1E8\U0001F1E6CA_1|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: f8f7aCzcPKbsF8p3
+      port: 990
+      server: 79.127.233.170
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_24|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 212.102.47.130
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1F3\U0001F1F1NL_1|YT|GPT⁺|Github|FREE-21"
+      password: QCXDxuDlTTMD7jtgHUjIoj
+      port: 8080
+      server: 45.158.171.146
+      type: ss
+    - cipher: rc4-md5
+      name: "\U0001F1FA\U0001F1F8US_25|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: 14fFPrbezE3HDZzsMOr6
+      port: 8080
+      server: 23.251.121.242
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1F3\U0001F1F1NL_2|YT|GPT⁺|Github|FREE-21"
+      password: QCXDxuDlTTMD7jtgHUjIoj
+      port: 8080
+      server: 151.242.251.147
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_26|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 212.102.47.132
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1EC\U0001F1E7GB_1|YT|GPT⁺|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 212.102.53.194
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1EC\U0001F1E7GB_2|YT|GPT⁺|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 212.102.53.197
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1EC\U0001F1E7GB_3|YT|GPT⁺|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 212.102.53.79
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1EC\U0001F1E7GB_4|YT|GPT⁺|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 212.102.53.195
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1EC\U0001F1E7GB_5|YT|GPT⁺|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 212.102.53.81
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1EC\U0001F1E7GB_6|YT|GPT⁺|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 212.102.53.198
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1F3\U0001F1F1NL_3|YT|GPT⁺|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 149.34.244.68
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1FA\U0001F1F8US_27|YT|GPT⁺|Github|FREE-21"
+      password: f8f7aCzcPKbsF8p3
+      port: 990
+      server: 64.74.163.130
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1E8\U0001F1E6CA_2|YT|GPT⁺|Github|FREE-21"
+      password: Kuiqk2cP0BMWrgme9IfEvp
+      port: 443
+      server: 38.180.211.126
+      type: ss
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_28|YT|GPT⁺|Gemini|Github|FREE-21"
+      network: ws
+      port: 20086
+      server: 137.175.124.167
+      skip-cert-verify: false
+      tls: false
+      type: vmess
+      uuid: b4bce500-11fe-4f8f-a344-01ac247af9bd
+      ws-opts:
+        path: /
+    - cipher: rc4-md5
+      name: "\U0001F1FA\U0001F1F8US_29|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: 14fFPrbezE3HDZzsMOr6
+      port: 8080
+      server: 107.151.182.253
+      type: ss
+    - auth: 13ee6524-1579-451b-bb6a-9b6d5d74ac6a
+      client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_30|YT|GPT⁺|Github|FREE-14"
+      password: 13ee6524-1579-451b-bb6a-9b6d5d74ac6a
+      port: 37771
+      server: dg1.xiaohuolongjc.top
+      skip-cert-verify: false
+      sni: dg1.xiaohuolongjc.top
+      type: hysteria2
+    - auth: 92c6a80e-1566-4f15-a4d8-8a9d17e0c12c
+      client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_31|YT|GPT⁺|Gemini|Github|FREE-14"
+      password: 92c6a80e-1566-4f15-a4d8-8a9d17e0c12c
+      port: 37771
+      server: rb1.xiaohuolongjc.top
+      skip-cert-verify: false
+      sni: rb1.xiaohuolongjc.top
+      type: hysteria2
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_32|YT|GPT⁺|Github|FREE-19"
+      network: ws
+      port: "443"
+      server: 172.67.130.204
+      servername: HHhhhHhhhhH.777198.xYz
+      tls: true
+      type: vless
+      udp: true
+      uuid: c226ac5d-65e9-4379-95c3-fb542bc242d8
+      ws-opts:
+        headers:
+            Host: hhhhhhhhhhh.777198.xyz
+            User-Agent: Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
+        path: /OjdW89Bpg4ykd4O
+      xudp: true
     - alpn:
         - ""
       alterId: "0"
       cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_59|YT|GPT⁺|Github|FREE-19"
+      name: "\U0001F1FA\U0001F1F8US_33|YT|GPT⁺|Github|FREE-19"
       network: ws
       port: "80"
       server: bBbbbbbBb.222769.XYZ
@@ -716,10 +402,26 @@ proxies:
             Host: bbbbbbbbb.222769.xyz
         path: /f6taOMcOSZb9TPR
       xudp: true
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_34|YT|GPT⁺|Github|FREE-19"
+      network: ws
+      port: "443"
+      server: 172.67.130.204
+      servername: ddDDdDDdDDF.777198.XyZ
+      tls: true
+      type: vless
+      udp: true
+      uuid: c226ac5d-65e9-4379-95c3-fb542bc242d8
+      ws-opts:
+        headers:
+            Host: ddDDdDDdDDF.777198.XyZ
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+        path: /OjdW89Bpg4ykd4O
+      xudp: true
     - alpn:
         - http/1.1
       client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_60|YT|GPT⁺|Github|FREE-19"
+      name: "\U0001F1FA\U0001F1F8US_35|YT|GPT⁺|Github|FREE-19"
       network: ws
       port: "443"
       server: tttttttttttt.222769.xyz
@@ -731,33 +433,14 @@ proxies:
       ws-opts:
         headers:
             Host: tttttttttttt.222769.xyz
-            User-Agent: Mozilla/5.0 (Linux; Android 7.1; vivo 1716 Build/N2G47H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36
         path: /sMrAaoCaOSZb9TPR
       xudp: true
     - alpn:
         - ""
       alterId: "0"
       cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_61|YT|GPT⁺|Github|FREE-19"
-      network: ws
-      port: "80"
-      server: gggggggggggggg.222769.xyz
-      servername: gggggggggggggg.222769.xyz
-      skip-cert-verify: false
-      tls: false
-      type: vmess
-      udp: true
-      uuid: 2e65577e-8fdb-4bb1-a495-96f3122099a7
-      ws-opts:
-        headers:
-            Host: gggggggggggggg.222769.xyz
-        path: /f6taOMcOSZb9TPR
-      xudp: true
-    - alpn:
-        - ""
-      alterId: "0"
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_62|YT|GPT⁺|Github|FREE-19"
+      name: "\U0001F1FA\U0001F1F8US_36|YT|GPT⁺|Github|FREE-19"
       network: ws
       port: "443"
       server: FFFFfFFvvBgnh.iRAn2035.DpDnS.OrG
@@ -773,39 +456,23 @@ proxies:
         path: /CjJ9A46ZRHvgWvVcmjyiKVby2Lp
       xudp: true
     - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_63|YT|GPT⁺|Github|FREE-19"
+      name: "\U0001F1FA\U0001F1F8US_37|YT|GPT⁺|Github|FREE-19"
       network: ws
       port: "443"
-      server: 172.67.220.32
-      servername: RRRFGhY7.999836.xyZ
+      server: 104.21.9.71
+      servername: ddDDdDDdDDF.777198.XyZ
       tls: true
       type: vless
       udp: true
-      uuid: a4291a2a-d62c-4eb9-ac7a-ac7355d1eda2
+      uuid: c226ac5d-65e9-4379-95c3-fb542bc242d8
       ws-opts:
         headers:
-            Host: rrrfghy7.999836.xyz
-            User-Agent: Mozilla/5.0 (Linux; Android 7.1.2; Redmi Note 5A Build/N2G47H; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/63.0.3239.111 Mobile Safari/537.36
-        path: /MIrEVIUviSe8ydvnmRKWDa8
+            Host: ddDDdDDdDDF.777198.XyZ
+            User-Agent: Mozilla/5.0 (Linux; Android 5.1; HUAWEI CUN-L22 Build/HUAWEICUN-L22; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.0.3202.84 Mobile Safari/537.36
+        path: /OjdW89Bpg4ykd4O
       xudp: true
     - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_64|YT|GPT⁺|Gemini|Github|FREE-19"
-      network: ws
-      port: "443"
-      server: 104.18.13.145
-      servername: usa.rtot.me
-      tls: true
-      type: vless
-      udp: true
-      uuid: f19ed531-81cb-433e-8746-1a69e009f9df
-      ws-opts:
-        headers:
-            Host: usa.rtot.me
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36
-        path: /bing
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_65|YT|GPT⁺|Github|FREE-19"
+      name: "\U0001F1FA\U0001F1F8US_38|YT|GPT⁺|Github|FREE-19"
       network: ws
       port: "443"
       server: 172.67.187.28
@@ -820,11 +487,43 @@ proxies:
             User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36
         path: /xeg9Fvgzc4aVkracmjyiKVby2Lp
       xudp: true
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_39|YT|GPT⁺|Github|FREE-19"
+      network: ws
+      port: "443"
+      server: 172.67.220.32
+      servername: RRRFGhY7.999836.xyZ
+      tls: true
+      type: vless
+      udp: true
+      uuid: a4291a2a-d62c-4eb9-ac7a-ac7355d1eda2
+      ws-opts:
+        headers:
+            Host: rrrfghy7.999836.xyz
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36
+        path: /MIrEVIUviSe8ydvnmRKWDa8
+      xudp: true
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_40|YT|GPT⁺|Gemini|Github|FREE-19"
+      network: ws
+      port: "443"
+      server: 104.18.13.145
+      servername: usa.rtot.me
+      tls: true
+      type: vless
+      udp: true
+      uuid: f19ed531-81cb-433e-8746-1a69e009f9df
+      ws-opts:
+        headers:
+            Host: usa.rtot.me
+            User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+        path: /bing
+      xudp: true
     - alpn:
         - ""
       alterId: "0"
       cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_66|YT|GPT⁺|Github|FREE-19"
+      name: "\U0001F1FA\U0001F1F8US_41|YT|GPT⁺|Github|FREE-19"
       network: ws
       port: "443"
       server: DdDDdddddDFrrrrrrRRy.IRan2035.dPDns.ORG
@@ -840,7 +539,23 @@ proxies:
         path: /CjJ9A46ZRHvgWvVcmjyiKVby2Lp
       xudp: true
     - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_67|YT|GPT⁺|Github|FREE-19"
+      name: "\U0001F1FA\U0001F1F8US_42|YT|GPT⁺|Github|FREE-19"
+      network: ws
+      port: "443"
+      server: backus1.dh03.shop
+      servername: backus1.dh03.shop
+      tls: true
+      type: vless
+      udp: true
+      uuid: 71504eaf-29ac-4190-89d1-dd9ce2c9ee14
+      ws-opts:
+        headers:
+            Host: backus1.dh03.shop
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36
+        path: /higate
+      xudp: true
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_43|YT|GPT⁺|Github|FREE-19"
       network: ws
       port: "443"
       server: 104.21.24.195
@@ -852,184 +567,309 @@ proxies:
       ws-opts:
         headers:
             Host: 9999uuuu.999836.xyz
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.76 Safari/537.36
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
         path: /MIrEVIUviSe8ydvnmRKWDa8
       xudp: true
-    - delay: 817
-      name: "\U0001F1FA\U0001F1F8US_68|YT|Github|FREE-16"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_44|YT|GPT⁺|Gemini|Github|FREE-19"
       network: ws
-      password: slch2024
-      port: 2096
-      server: 199.181.197.195
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
+      port: "443"
+      server: zula.ir
+      servername: yutwm.gregory-sportage.info
+      tls: true
+      type: vless
+      udp: true
+      uuid: cd2e9541-3fce-4d95-9bec-919d884f911e
       ws-opts:
         headers:
-            Host: ocost-dy.wmlefl.cc
-        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
-    - delay: 1371
-      name: "\U0001F1FA\U0001F1F8US_69|YT|Github|FREE-16"
+            Host: yutwm.gregory-sportage.info
+            User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; vivo 1603 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.83 Mobile Safari/537.36
+        path: /tiger
+      xudp: true
+    - name: "\U0001F1F3\U0001F1F1NL_4|YT|GPT⁺|Github|FREE-19"
       network: ws
-      password: slch2024
-      port: 2096
-      server: 209.46.30.195
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
+      port: "80"
+      server: light-presence.oneeat.co
+      servername: light-presence.oneeat.co
+      type: vless
+      udp: true
+      uuid: 7e74ff43-3a90-48b3-8372-7d92a045c2d4
       ws-opts:
         headers:
-            Host: ocost-dy.wmlefl.cc
-        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
-    - delay: 2055
-      name: "\U0001F1FA\U0001F1F8US_70|YT|Github|FREE-16"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 205.233.181.195
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3
-    - delay: 1672
-      name: "\U0001F1FA\U0001F1F8US_71|YT|Github|FREE-16"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 216.24.57.195
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: Telegram%252525F0%2525259F%25252587%252525A8%252525F0%2525259F%25252587%252525B3
-    - delay: 981
-      name: "\U0001F1FA\U0001F1F8US_72|YT|Github|FREE-16"
-      network: ws
-      password: slch2024
-      port: 2096
-      server: 198.62.62.195
-      sni: ocost-dy.wmlefl.cc
-      type: trojan
-      ws-opts:
-        headers:
-            Host: ocost-dy.wmlefl.cc
-        path: Telegram%252525F0%2525259F%25252587%252525A8%252525F0%2525259F%25252587%252525B3
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_73|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 156.146.38.170
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_74|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 156.146.38.169
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_75|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 37.19.198.160
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_76|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 37.19.198.243
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_77|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 156.146.38.168
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_78|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 156.146.38.167
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_79|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 212.102.47.130
-      type: ss
-    - cipher: aes-256-cfb
-      name: "\U0001F1E8\U0001F1E6CA_1|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 989
-      server: 79.127.233.170
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_80|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 212.102.47.132
-      type: ss
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_81|YT|GPT⁺|Github|FREE-21"
-      network: ws
-      port: 20086
-      server: 173.249.209.146
-      skip-cert-verify: false
-      tls: false
-      type: vmess
-      uuid: 3935c2dc-dbb0-43f7-b367-fe89abe87fdf
-      ws-opts:
+            Host: light-presence.oneeat.co
+            User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.30 (KHTML, like Gecko) Slackware/Chrome/12.0.742.100 Safari/534.30
         path: /
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_82|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 173.244.56.9
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_83|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 212.102.47.131
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1FA\U0001F1F8US_84|YT|GPT⁺|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 990
-      server: 64.74.163.130
-      type: ss
-    - alterId: 0
-      cipher: auto
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_85|YT|GPT⁺|Gemini|Github|FREE-40"
+      xudp: true
+    - name: "\U0001F1FA\U0001F1F8US_45|YT|Gemini|Github|FREE-34"
       network: ws
-      port: 6666
-      server: 142.171.194.105
-      type: vmess
-      uuid: 3eb8b7ad-19b6-4ad8-8eaf-ccc3564c8eb3
+      password: slch2024
+      port: 2096
+      server: 213.241.198.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
       ws-opts:
-        path: /sbb
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_46|YT|Gemini|Github|FREE-34"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 209.94.90.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_47|YT|Gemini|Github|FREE-34"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 198.71.190.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_48|YT|Gemini|Github|FREE-34"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 198.71.191.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_49|YT|Gemini|Github|FREE-34"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 198.71.189.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_50|YT|Gemini|Github|FREE-34"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 198.12.144.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_51|YT|Gemini|Github|FREE-34"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 195.13.55.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_52|YT|Gemini|Github|FREE-34"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 193.227.99.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_53|YT|Gemini|Github|FREE-34"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 194.36.55.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_54|YT|Gemini|Github|FREE-34"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 192.169.223.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_55|YT|Gemini|Github|FREE-34"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 193.124.18.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_56|YT|Gemini|Github|FREE-34"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 190.93.246.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_57|YT|Gemini|Github|FREE-34"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 190.93.245.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_58|YT|Gemini|Github|FREE-34"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 188.244.122.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_59|YT|Gemini|Github|FREE-34"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 190.93.244.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_60|YT|Gemini|Github|FREE-34"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 188.164.248.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_61|YT|Gemini|Github|FREE-34"
+      network: ws
+      password: slch2024
+      port: 2096
+      server: 188.42.145.87
+      skip-cert-verify: true
+      sni: ocost-dy.wmlefl.cc
+      type: trojan
+      ws-opts:
+        headers:
+            Host: ocost-dy.wmlefl.cc
+        path: "Telegram\U0001F1E8\U0001F1F3"
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_62|YT|GPT⁺|Gemini|Github|FREE-1"
+      password: shadowsocks
+      port: 443
+      server: 37.19.198.236
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_63|YT|GPT⁺|Gemini|Github|FREE-1"
+      password: shadowsocks
+      port: 443
+      server: 212.102.47.129
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_64|YT|GPT⁺|Gemini|Github|FREE-1"
+      password: shadowsocks
+      port: 443
+      server: 173.244.56.6
+      type: ss
+    - alpn:
+        - http/1.1
+      client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_65|YT|GPT⁺|Gemini|Github|FREE-1"
+      network: ws
+      password: bce0c7cb-08d1-46a7-b77b-7bff8b46252f
+      port: 443
+      server: 104.21.91.180
+      skip-cert-verify: false
+      sni: XXXXxxXxXc.666461.xyZ
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            User-Agent: Mozilla/5.0 (Linux; Android 5.1; HUAWEI CUN-L22 Build/HUAWEICUN-L22; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.0.3202.84 Mobile Safari/537.36
+        path: /x9F83IcyjcEyBXZBROjL3Q5vTymr
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1E6\U0001F1F9 AT"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_66|YT|GPT⁺|Github|FREE-40"
+      network: tcp
+      port: 32158
+      server: 152.53.165.218
+      skip-cert-verify: true
+      type: vmess
+      uuid: b44ecf62-d313-4f32-8e77-62c0d8dd18ce
     - alterId: 0
       cipher: auto
       h2-opts: {}
       http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_86|YT|GPT⁺|Github|FREE-40"
+      name: "\U0001F1FA\U0001F1F8US_67|YT|GPT⁺|Github|FREE-40"
       port: 443
       server: 165.140.216.141
       type: vmess
       uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
     - alterId: 0
       cipher: auto
+      country: "\U0001F1E8\U0001F1E6 CA"
       h2-opts: {}
       http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_87|YT|GPT⁺|Gemini|Github|FREE-40"
-      port: 16416
-      server: 172.233.171.224
+      name: "\U0001F1E8\U0001F1E6CA_3|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: none
+      port: 2201
+      server: 23.162.200.125
       type: vmess
-      udp: true
-      uuid: 8c1b9bea-cb51-43bb-a65c-0af31bbbf145
+      uuid: 86eab4ac-dbe2-4e2f-a490-4fccade87c35
     - alterId: 0
       cipher: auto
       h2-opts: {}
@@ -1046,37 +886,26 @@ proxies:
         headers:
             Host: BLaZE-fRA-64.BLaZECLOuD.sitE
         path: /linkvkwss
-    - cipher: rc4-md5
-      country: "\U0001F1FA\U0001F1F8 US"
-      name: "\U0001F1FA\U0001F1F8US_88|YT|GPT⁺|Gemini|Github|FREE-40"
-      password: 14fFPrbezE3HDZzsMOr6
+    - cipher: chacha20-ietf-poly1305
+      country: "\U0001F1F1\U0001F1F9 LT"
+      name: "\U0001F1F3\U0001F1F1NL_5|YT|GPT⁺|Github|FREE-40"
+      password: 1RWwXhwfAB5gAEozU4G2Pg
       port: 8080
-      server: 23.251.121.242
+      server: 45.87.175.164
       type: ss
-    - cipher: aes-128-gcm
-      country: "\U0001F1FA\U0001F1F8US"
-      name: "\U0001F1FA\U0001F1F8US_89|YT|GPT⁺|Gemini|Github|FREE-40"
-      password: shadowsocks
-      port: 443
-      server: 37.19.198.236
+    - cipher: chacha20-ietf-poly1305
+      country: "\U0001F1F3\U0001F1F1 NL"
+      name: "\U0001F1F3\U0001F1F1NL_6|YT|GPT⁺|Github|FREE-40"
+      password: cvII85TrW6n0OGyfpHVS1u
+      port: 8080
+      server: beesyar.org
       type: ss
     - alterId: 0
       cipher: auto
       country: "\U0001F1FA\U0001F1F8 US"
       h2-opts: {}
       http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_90|YT|GPT⁺|Gemini|Github|FREE-40"
-      network: none
-      port: 36299
-      server: 66.253.5.158
-      type: vmess
-      uuid: 4ada72ac-46b4-4080-aa1e-c81999725ba5
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1FA\U0001F1F8 US"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1E8\U0001F1E6CA_2|YT|GPT⁺|Gemini|Github|FREE-40"
+      name: "\U0001F1E8\U0001F1E6CA_4|YT|GPT⁺|Gemini|Github|FREE-40"
       network: ws
       port: 443
       server: 15.235.50.172
@@ -1094,7 +923,7 @@ proxies:
       country: "\U0001F1FA\U0001F1F8 US"
       h2-opts: {}
       http-opts: {}
-      name: "\U0001F1E8\U0001F1E6CA_3|YT|GPT⁺|Gemini|Github|FREE-40"
+      name: "\U0001F1E8\U0001F1E6CA_5|YT|GPT⁺|Gemini|Github|FREE-40"
       network: ws
       port: 443
       server: 15.235.83.227
@@ -1107,19 +936,12 @@ proxies:
         headers:
             HOST: mankadmu.com
         path: /linkvws
-    - cipher: aes-128-gcm
-      country: "\U0001F1FA\U0001F1F8US"
-      name: "\U0001F1FA\U0001F1F8US_91|YT|GPT⁺|Gemini|Github|FREE-40"
-      password: shadowsocks
-      port: 443
-      server: 212.102.47.129
-      type: ss
     - alterId: 0
       cipher: auto
       country: "\U0001F1FA\U0001F1F8 US"
       h2-opts: {}
       http-opts: {}
-      name: "\U0001F1E8\U0001F1E6CA_4|YT|GPT⁺|Gemini|Github|FREE-40"
+      name: "\U0001F1E8\U0001F1E6CA_6|YT|GPT⁺|Gemini|Github|FREE-40"
       network: ws
       port: 443
       server: 15.235.83.228
@@ -1132,14 +954,57 @@ proxies:
         headers:
             HOST: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
         path: /linkvws
-    - cipher: aes-128-gcm
+    - alterId: 0
+      cipher: auto
       country: "\U0001F1FA\U0001F1F8US"
-      name: "\U0001F1FA\U0001F1F8US_92|YT|GPT⁺|Gemini|Github|FREE-40"
-      password: shadowsocks
-      port: 443
-      server: 173.244.56.6
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_68|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: ws
+      port: 20086
+      server: 3.149.233.188
+      skip-cert-verify: true
+      type: vmess
+      uuid: 158ee47c-c5f6-4892-8662-8fc113fb3d6b
+      ws-opts:
+        path: /
+    - cipher: chacha20-ietf-poly1305
+      country: "\U0001F1FA\U0001F1F8US"
+      name: "\U0001F1F3\U0001F1F1NL_7|YT|GPT⁺|Github|FREE-40"
+      password: 4a2rfixophdjffa8KVA4Aa
+      port: 8080
+      server: 45.158.171.150
       type: ss
-    - name: "\U0001F1FA\U0001F1F8US_93|YT|Github|FREE-29"
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_69|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: ws
+      port: 20086
+      server: 70.39.196.85
+      skip-cert-verify: true
+      type: vmess
+      uuid: e38fd8d3-c6b4-4d6d-9088-792107b0dc9b
+      ws-opts:
+        path: /
+    - alterId: 1
+      cipher: auto
+      name: "\U0001F1EB\U0001F1F7FR_2|YT|GPT⁺|Github|FREE-6"
+      network: ws
+      port: 443
+      server: lammaland.org
+      servername: lammaland.org
+      skip-cert-verify: false
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        headers:
+            Host: lammaland.org
+        path: linkvws
+    - name: "\U0001F1FA\U0001F1F8US_70|YT|Gemini|Github|FREE-29"
       network: ws
       password: slch2024
       port: 2096
@@ -1151,54 +1016,3 @@ proxies:
         headers:
             Host: ocost-dy.wmlefl.cc
         path: "/Telegram\U0001F1E8\U0001F1F3"
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_94|YT|GPT⁺|Gemini|Github|FREE-24"
-      network: tcp
-      port: 34045
-      reality-opts:
-        public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
-        short-id: e8ab71d0
-      server: 172.233.201.93
-      servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
-      tls: true
-      type: vless
-      udp: true
-      uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
-    - alpn:
-        - http/1.1
-      client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_95|YT|GPT⁺|Gemini|Github|FREE-1"
-      network: ws
-      password: bce0c7cb-08d1-46a7-b77b-7bff8b46252f
-      port: 443
-      server: 104.21.91.180
-      skip-cert-verify: false
-      sni: XXXXxxXxXc.666461.xyZ
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            User-Agent: Mozilla/5.0 (Linux; Android 5.1; HUAWEI CUN-L22 Build/HUAWEICUN-L22; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.0.3202.84 Mobile Safari/537.36
-        path: /x9F83IcyjcEyBXZBROjL3Q5vTymr
-    - cipher: aes-128-cfb
-      name: "\U0001F1E8\U0001F1E6CA_5|YT|GPT⁺|Github|FREE-6"
-      obfs: http_post
-      obfs-param: ""
-      password: $$Turb0VPN$$
-      port: 443
-      protocol: auth_aes128_md5
-      protocol-param: ""
-      server: ssca.irundns.net
-      type: ssr
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_96|YT|GPT⁺|Gemini|Github|FREE-6"
-      network: ws
-      port: 40982
-      server: 107.149.134.165
-      skip-cert-verify: false
-      tls: false
-      type: vmess
-      uuid: b9474847-8724-491a-a042-cfc245d36024
-      ws-opts:
-        path: /arki?ed=2048
