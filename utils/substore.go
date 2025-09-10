@@ -22,10 +22,10 @@ type sub struct {
 	Process []map[string]any `json:"process"`
 }
 
-type subResult struct {
-	Data   sub    `json:"data"`
-	Status string `json:"status"`
-}
+// type subResult struct {
+// 	Data   sub    `json:"data"`
+// 	Status string `json:"status"`
+// }
 
 type args struct {
 	Content string `json:"content"`

@@ -36,7 +36,8 @@ func (app *App) initHttpServer() error {
 	router.StaticFile("/ACL4SSR_Online_Full.yaml", saver.OutputPath+"/ACL4SSR_Online_Full.yaml")
 	// CM佬用的布丁狗
 	router.StaticFile("/bdg.yaml", saver.OutputPath+"/bdg.yaml")
-
+	// vps
+	router.StaticFile("/vps.yaml", saver.OutputPath+"/vps.yaml")
 	router.Static("/sub/", saver.OutputPath)
 	// 设置失败节点输出路径
 	check.FAILEDPROXIESPATH = saver.OutputPath+"/Failed_Proxies.txt"

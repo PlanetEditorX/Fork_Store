@@ -25,6 +25,7 @@ import (
 	"github.com/juju/ratelimit"
 	"github.com/metacubex/mihomo/adapter"
 	"github.com/metacubex/mihomo/constant"
+	"gopkg.in/yaml.v3"
 )
 
 // Result 存储节点检测结果
@@ -109,7 +110,25 @@ func Check(proxyType string) ([]Result, error) {
 
 	proxies = proxyutils.DeduplicateProxies(proxies)
 	slog.Info(fmt.Sprintf("去重后节点数量: %d", len(proxies)))
+	if proxyType == "SingleNodes" {
+		// 构造 Clash 配置结构
+		config := map[string]interface{}{
+			"proxies": tmp,
+		}
 
+		// 写入 YAML 文件
+		file, err := os.Create("output/vps.yaml")
+		if err != nil {
+			panic(err)
+		}
+		defer file.Close()
+
+		encoder := yaml.NewEncoder(file)
+		encoder.SetIndent(2)
+		if err := encoder.Encode(config); err != nil {
+			panic(err)
+		}
+	}
 	if proxyType == "FreeSubUrls" {
 		// 加载上次失败的代理及其剩余次数
 		previousFailures, err := loadFailedProxies()
