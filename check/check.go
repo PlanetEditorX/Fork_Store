@@ -252,6 +252,12 @@ func (pc *ProxyChecker) checkProxy(proxy map[string]any, proxyType string) *Resu
 				return nil
 			}
 		}
+		for _, kw := range config.GlobalConfig.UncheckNodes {
+			if strings.Contains(name, kw) {
+				slog.Debug(fmt.Sprintf("跳过检测包含关键词 [%s] 的节点: %v", kw, name))
+				return res
+			}
+		}
 	}
 
 	httpClient := CreateClient(proxy)
