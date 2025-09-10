@@ -17,18 +17,35 @@ import (
 )
 
 func GetProxies(proxyType string) ([]map[string]any, error) {
-	var proxyUrls []string
+    // 处理单个节点
+    if proxyType == "SingleNodes" {
+        var results []map[string]any
+        for _, node := range config.GlobalConfig.SingleNodes {
+            proxy, err := utils.ParseSingleNode(node)
+            if err != nil {
+                slog.Warn(fmt.Sprintf("节点解析失败: %v", err))
+                continue
+            }
+            proxyMap := utils.ClashProxyToMap(proxy)
+            proxyMap["sub_url"] = node
+            proxyMap["sub_tag"] = proxy.SubTag
+            results = append(results, proxyMap)
+        }
+        return results, nil
+    }
 
-	switch proxyType {
-	case "SubUrls":
-		proxyUrls = config.GlobalConfig.SubUrls
-	case "FreeSubUrls":
-		for i, url := range config.GlobalConfig.FreeSubUrls {
-			proxyUrls = append(proxyUrls, fmt.Sprintf("%s#FREE-%d", url, i+1))
-		}
-	default:
-		slog.Warn(fmt.Sprintf("未知的代理类型: %s", proxyType))
-	}
+    // 处理订阅链接
+    var proxyUrls []string
+    switch proxyType {
+    case "SubUrls":
+        proxyUrls = config.GlobalConfig.SubUrls
+    case "FreeSubUrls":
+        for i, url := range config.GlobalConfig.FreeSubUrls {
+            proxyUrls = append(proxyUrls, fmt.Sprintf("%s#FREE-%d", url, i+1))
+        }
+    default:
+        slog.Warn(fmt.Sprintf("未知的代理类型: %s", proxyType))
+    }
 
 	var wg sync.WaitGroup
 	proxyChan := make(chan map[string]any, 1)                              // 缓冲通道存储解析的代理

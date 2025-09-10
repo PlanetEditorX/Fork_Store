@@ -198,6 +198,9 @@ sub-urls:
   # - https://example.com/sub?token=43fa8f0dc9bb00dcfec2afb21b14378a?flag=clash.meta
   # - https://example.com/sub.txt#我是备注我是备注
 # 免费订阅链接：https://raw.githubusercontent.com/cmliu/cmliu/main/SubsCheck-URLs
+# 单个节点连接
+single-nodes:
+  # - "vless://example.com"
 free-sub-urls:
   - "https://raw.githubusercontent.com/PlanetEditorX/subs-check/refs/heads/dev/assets/Best.yaml"
   - "https://cdn.jsdelivr.net/gh/peasoft/NoMoreWalls@master/list.meta.yml"

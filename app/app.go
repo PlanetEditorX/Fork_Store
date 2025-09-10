@@ -237,6 +237,17 @@ func (app *App) checkProxies() error {
 		allResults = append(allResults, results...)
 		SetGlobalProxies("SubUrls", results)
 	}
+	if len(config.GlobalConfig.SingleNodes) == 0 {
+		slog.Warn("没有配置单个节点链接")
+	} else {
+		slog.Info(fmt.Sprintf("当前设置单个节点链接数量: %d", len(config.GlobalConfig.SingleNodes)))
+		results, err := CheckProxy("SingleNodes")
+		if err != nil {
+			return fmt.Errorf("检测代理失败: %w", err)
+		}
+		allResults = append(allResults, results...)
+		SetGlobalProxies("SingleNodes", results)
+	}
 	if len(config.GlobalConfig.FreeSubUrls) == 0 {
 		slog.Warn("没有配置免费订阅链接")
 	} else {
@@ -280,12 +291,13 @@ func SetGlobalProxies(proxyType string, allResults []check.Result) error {
 }
 
 func CheckProxy(proxyType string) ([]check.Result, error) {
-	results, err := check.Check(proxyType)
-	if err != nil {
-		return nil, fmt.Errorf("检测代理失败: %w", err)
-	}
-	return results, nil
+    results, err := check.Check(proxyType)
+    if err != nil {
+        return nil, fmt.Errorf("检测代理失败: %w", err)
+    }
+    return results, nil
 }
+
 
 func TempLog() string {
 	return filepath.Join(os.TempDir(), "subs-check.log")
