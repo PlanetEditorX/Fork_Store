@@ -314,7 +314,7 @@ func WarpUrl(url string, mode ...string) string {
     }
 
     localPath := "output/clash_template.yaml"
-    localURL := "http://127.0.0.1:8199/sub/clash_template.yaml"
+    localURL := "http://127.0.0.1:8199/clash_template.yaml"
     downURL := config.GlobalConfig.MihomoOverwriteUrl
 
     os.MkdirAll("output", os.ModePerm)
