@@ -219,7 +219,7 @@ func createfile() error {
 		Process: []Operator{
 			{
 				Args: args{
-					Content: WarpUrl(config.GlobalConfig.MihomoOverwriteUrl),
+					Content: WarpUrl(config.GlobalConfig.MihomoOverwriteUrl, "overwrite"),
 					Mode:    "link",
 				},
 				Disabled: false,
@@ -253,7 +253,7 @@ func updatefile() error {
 		Process: []Operator{
 			{
 				Args: args{
-					Content: WarpUrl(config.GlobalConfig.MihomoOverwriteUrl),
+					Content: WarpUrl(config.GlobalConfig.MihomoOverwriteUrl, "overwrite"),
 					Mode:    "link",
 				},
 				Disabled: false,
@@ -297,14 +297,47 @@ func formatPort(port string) string {
 	return ":" + port
 }
 
-func WarpUrl(url string) string {
-	url = formatTimePlaceholders(url, time.Now())
+func WarpUrl(url string, mode ...string) string {
+    currentMode := "sub"
+    if len(mode) > 0 && mode[0] != "" {
+        currentMode = mode[0]
+    }
+    slog.Debug("当前 WarpURL 模式: " + currentMode)
 
-	// 如果url中以https://raw.githubusercontent.com开头，那么就使用github代理
-	if strings.HasPrefix(url, "https://raw.githubusercontent.com") {
-		return config.GlobalConfig.GithubProxy + url
-	}
-	return url
+    url = formatTimePlaceholders(url, time.Now())
+
+    if currentMode == "sub" {
+        if strings.HasPrefix(url, "https://raw.githubusercontent.com") {
+            return config.GlobalConfig.GithubProxy + url
+        }
+        return url
+    }
+
+    localPath := "output/Smart.yaml"
+    localURL := "http://127.0.0.1:8199/sub/Smart.yaml"
+    downURL := config.GlobalConfig.MihomoOverwriteUrl
+
+    os.MkdirAll("output", os.ModePerm)
+
+    finalURL := downURL // 默认使用原始 URL
+
+    if err := DownloadOverwriteYaml(downURL, localPath); err == nil {
+        slog.Info("远程订阅下载成功，使用本地 Smart.yaml")
+        finalURL = localURL
+    } else {
+        slog.Warn("远程订阅下载失败: " + err.Error())
+        if strings.HasPrefix(downURL, "https://raw.githubusercontent.com") {
+            proxyURL := config.GlobalConfig.GithubProxy + downURL
+            if err := DownloadOverwriteYaml(proxyURL, localPath); err == nil {
+                slog.Info("GitHub 代理下载成功，使用本地 Smart.yaml")
+                finalURL = localURL
+            } else {
+                slog.Warn("GitHub 代理下载失败: " + err.Error())
+            }
+        }
+    }
+
+    return finalURL
 }
 
 // 动态时间占位符
@@ -325,4 +358,27 @@ func formatTimePlaceholders(url string, t time.Time) string {
 		"{Y-m-d}", t.Format("2006-01-02"),
 	)
 	return replacer.Replace(url)
+}
+
+// 下载模板文件
+func DownloadOverwriteYaml(url, localPath string) error {
+    client := &http.Client{Timeout: 10 * time.Second}
+    resp, err := client.Get(url)
+    if err != nil {
+        return err
+    }
+    defer resp.Body.Close()
+
+    if resp.StatusCode != http.StatusOK {
+        return fmt.Errorf("下载失败，状态码: %d", resp.StatusCode)
+    }
+
+    out, err := os.Create(localPath)
+    if err != nil {
+        return err
+    }
+    defer out.Close()
+
+    _, err = io.Copy(out, resp.Body)
+    return err
 }
