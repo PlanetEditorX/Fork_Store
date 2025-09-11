@@ -38,6 +38,8 @@ func (app *App) initHttpServer() error {
 	router.StaticFile("/bdg.yaml", saver.OutputPath+"/bdg.yaml")
 	// vps
 	router.StaticFile("/vps.yaml", saver.OutputPath+"/vps.yaml")
+	// clash模板文件
+	router.StaticFile("/clash_template.yaml", saver.OutputPath+"/clash_template.yaml")
 	router.Static("/sub/", saver.OutputPath)
 	// 设置失败节点输出路径
 	check.FAILEDPROXIESPATH = saver.OutputPath+"/Failed_Proxies.txt"

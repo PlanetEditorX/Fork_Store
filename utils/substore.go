@@ -313,8 +313,8 @@ func WarpUrl(url string, mode ...string) string {
         return url
     }
 
-    localPath := "output/Smart.yaml"
-    localURL := "http://127.0.0.1:8199/sub/Smart.yaml"
+    localPath := "output/clash_template.yaml"
+    localURL := "http://127.0.0.1:8199/sub/clash_template.yaml"
     downURL := config.GlobalConfig.MihomoOverwriteUrl
 
     os.MkdirAll("output", os.ModePerm)
@@ -322,14 +322,14 @@ func WarpUrl(url string, mode ...string) string {
     finalURL := downURL // 默认使用原始 URL
 
     if err := DownloadOverwriteYaml(downURL, localPath); err == nil {
-        slog.Info("远程订阅下载成功，使用本地 Smart.yaml")
+        slog.Info("远程模板下载成功，保存为：clash_template.yaml")
         finalURL = localURL
     } else {
-        slog.Warn("远程订阅下载失败: " + err.Error())
+        slog.Warn("远程模板下载失败: " + err.Error())
         if strings.HasPrefix(downURL, "https://raw.githubusercontent.com") {
             proxyURL := config.GlobalConfig.GithubProxy + downURL
             if err := DownloadOverwriteYaml(proxyURL, localPath); err == nil {
-                slog.Info("GitHub 代理下载成功，使用本地 Smart.yaml")
+                slog.Info("使用GitHub 代理下载模板成功，保存为：clash_template.yaml")
                 finalURL = localURL
             } else {
                 slog.Warn("GitHub 代理下载失败: " + err.Error())
