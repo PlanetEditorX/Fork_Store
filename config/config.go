@@ -59,6 +59,7 @@ type Config struct {
 	YoutubeCountry       bool     `yaml:"youtube-country"`
 	ExcludeNodes         []string `yaml:"exclude-nodes"`
 	UncheckNodes         []string `yaml:"uncheck-nodes"`
+	SkipCertVerify       bool     `yaml:"skip-cert-verify"`
 	SuccessLimit         int32    `yaml:"success-limit"`
 	NodePrefix           string   `yaml:"node-prefix"`
 	EnableWebUI          bool     `yaml:"enable-web-ui"`

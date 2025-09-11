@@ -79,6 +79,9 @@ exclude-nodes:
 uncheck-nodes:
   - "落地"
 
+# 跳过证书验证
+skip-cert-verify: true
+
 # 保留之前测试成功的节点
 # 如果为true，则保留之前测试成功的节点，这样就不会因为上游链接更新，导致可用的节点被清除掉
 keep-success-proxies: true

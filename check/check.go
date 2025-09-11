@@ -260,6 +260,9 @@ func (pc *ProxyChecker) checkProxy(proxy map[string]any, proxyType string) *Resu
 		}
 	}
 
+	// 跳过证书验证：从配置中读取
+	proxy["skip-cert-verify"] = config.GlobalConfig.SkipCertVerify
+
 	httpClient := CreateClient(proxy)
 	if httpClient == nil {
 		slog.Debug(fmt.Sprintf("创建代理Client失败: %v", proxy["name"]))
