@@ -238,7 +238,7 @@ func (app *App) checkProxies() error {
 		SetGlobalProxies("SubUrls", results)
 	}
 	if len(config.GlobalConfig.SingleNodes) == 0 {
-		slog.Warn("没有配置单个节点链接")
+		slog.Info("没有配置单个节点链接")
 	} else {
 		slog.Info(fmt.Sprintf("当前设置单个节点链接数量: %d", len(config.GlobalConfig.SingleNodes)))
 		results, err := CheckProxy("SingleNodes")

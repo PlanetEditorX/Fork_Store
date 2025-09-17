@@ -42,15 +42,20 @@ func CountryCodeToFlag(code string) string {
 }
 
 var countryPatterns = map[string]*regexp.Regexp{
-	"HK": regexp.MustCompile(`(?i)(港|HK|Hong\s?Kong|深港)`),
-	"SG": regexp.MustCompile(`(?i)(新加坡|坡|狮城|SG|Singapore)`),
-	"US": regexp.MustCompile(`(?i)(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United\s?States|ChatGPT)`),
-	"JP": regexp.MustCompile(`(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|日|JP|Japan|🇯🇵)`),
-	"TW": regexp.MustCompile(`(?i)(台|新北|彰化|TW|Taiwan)`),
-	"KR": regexp.MustCompile(`(?i)(韩国|首尔|KR|Korea)`),
-	"NL": regexp.MustCompile(`(?i)(荷兰|NL|Netherlands)`),
-	"TR": regexp.MustCompile(`(?i)(土耳其|TR|Turkey)`),
+	"TW": regexp.MustCompile(`(?i)(台湾|台|tw|taiwan|新北|彰化|hinet)`),
+	"HK": regexp.MustCompile(`(?i)(香港|港|深港|hk|hong\s?kong)`),
+	"SG": regexp.MustCompile(`(?i)(新加坡|坡|狮城|sg|singapore)`),
+	"JP": regexp.MustCompile(`(?i)(日本|东京|大阪|埼玉|川日|泉日|沪日|深日|jp|japan|🇯🇵)`),
+	"KR": regexp.MustCompile(`(?i)(韩国|首尔|kr|korea)`),
+	"US": regexp.MustCompile(`(?i)(美国|美|us|united\s?states|chatgpt|洛杉矶|达拉斯|芝加哥|硅谷|圣何塞|圣克拉拉|西雅图|凤凰城|波特兰|费利蒙|拉斯维加斯|纽约|new\s?york|california)`),
+	"CA": regexp.MustCompile(`(?i)(加拿大|ca|canada|toronto|vancouver|montreal)`),
+	"GB": regexp.MustCompile(`(?i)(英国|uk|gb|britain|london|manchester|cambridge)`),
+	"DE": regexp.MustCompile(`(?i)(德国|de|germany|柏林|法兰克福|慕尼黑)`),
+	"NL": regexp.MustCompile(`(?i)(荷兰|nl|netherlands|阿姆斯特丹)`),
+	"TR": regexp.MustCompile(`(?i)(土耳其|tr|turkey|伊斯坦布尔)`),
+	"MV": regexp.MustCompile(`(?i)(马来|malaysia|mv)`),
 }
+
 
 // 从节点名获取
 func GetCountryFromNode(name string) string {
