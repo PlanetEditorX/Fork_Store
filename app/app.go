@@ -249,7 +249,7 @@ func (app *App) checkProxies() error {
 		SetGlobalProxies("SingleNodes", results)
 	}
 	if len(config.GlobalConfig.FreeSubUrls) == 0 {
-		slog.Warn("没有配置免费订阅链接")
+		slog.Info("没有配置免费订阅链接")
 	} else {
 		slog.Info(fmt.Sprintf("当前设置免费订阅链接数量: %d", len(config.GlobalConfig.FreeSubUrls)))
 		results, err := CheckProxy("FreeSubUrls")
