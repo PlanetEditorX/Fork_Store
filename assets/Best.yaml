@@ -1,25 +1,133 @@
 proxies:
-    - delay: 1689
-      name: "\U0001F1FA\U0001F1F8US_1|YT|GPT|Github|FREE-16"
-      network: ws
-      port: 2096
-      server: 88.216.69.32
-      servername: kejiland.freewarp.eu.org
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_1|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 156.146.38.167
       skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_2|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 156.146.38.170
+      skip-cert-verify: true
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_3|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 156.146.38.168
+      skip-cert-verify: true
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_4|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 156.146.38.169
+      skip-cert-verify: true
+      type: ss
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_5|YT|GPT⁺|Gemini|Github|FREE-21"
+      network: ws
+      port: 20086
+      server: 198.23.174.168
+      skip-cert-verify: true
+      tls: false
+      type: vmess
+      uuid: 2b36304b-4f88-4ff5-9033-f4d57dbb5490
       ws-opts:
-        headers:
-            Host: kejiland.freewarp.eu.org
-        path: /snippets
-    - country: "\U0001F1F7\U0001F1FARU"
-      delay: 1059
-      name: "\U0001F1FA\U0001F1F8US_2|YT|GPT|Github|FREE-16"
+        path: /
+    - cipher: aes-256-cfb
+      name: "\U0001F1E8\U0001F1E6CA_1|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: f8f7aCzcPKbsF8p3
+      port: 989
+      server: 79.127.233.170
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1F3\U0001F1F1NL_1|YT|GPT⁺|Github|FREE-21"
+      password: 4a2rfixophdjffa8KVA4Aa
+      port: 8080
+      server: 151.242.251.144
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1F3\U0001F1F1NL_2|YT|GPT⁺|Github|FREE-21"
+      password: 4a2rfixophdjffa8KVA4Aa
+      port: 8080
+      server: 45.87.175.181
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1F3\U0001F1F1NL_3|YT|GPT⁺|Github|FREE-21"
+      password: oZIoA69Q8yhcQV8ka3Pa3A
+      port: 8080
+      server: 45.158.171.110
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1F3\U0001F1F1NL_4|YT|GPT⁺|Github|FREE-21"
+      password: QCXDxuDlTTMD7jtgHUjIoj
+      port: 8080
+      server: 151.242.251.153
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1F3\U0001F1F1NL_5|YT|GPT⁺|Github|FREE-21"
+      password: 4a2rfixophdjffa8KVA4Aa
+      port: 8080
+      server: 45.87.175.192
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1F3\U0001F1F1NL_6|YT|GPT⁺|Github|FREE-21"
+      password: QCXDxuDlTTMD7jtgHUjIoj
+      port: 8080
+      server: 151.242.251.147
+      skip-cert-verify: true
+      type: ss
+    - cipher: aes-256-cfb
+      name: "\U0001F1FA\U0001F1F8US_6|YT|GPT⁺|Github|FREE-21"
+      password: f8f7aCzcPKbsF8p3
+      port: 989
+      server: 104.192.226.106
+      skip-cert-verify: true
+      type: ss
+    - cipher: aes-128-cfb
+      name: "\U0001F1F3\U0001F1F1NL_7|YT|GPT⁺|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 109.201.152.181
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1E8\U0001F1E6CA_2|YT|GPT⁺|Github|FREE-21"
+      password: JIhN6rBKkaEboLNXVSv5rq
+      port: 80
+      server: ca225.vpnbook.com
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1E8\U0001F1E6CA_3|YT|GPT⁺|Github|FREE-21"
+      password: JIhN6rBKkaEboLNXVSv5rq
+      port: 80
+      server: 142.4.216.225
+      skip-cert-verify: true
+      type: ss
+    - cipher: rc4-md5
+      name: "\U0001F1FA\U0001F1F8US_7|YT|Gemini|Github|FREE-21"
+      password: 14fFPrbezE3HDZzsMOr6
+      port: 8080
+      server: 107.151.182.253
+      skip-cert-verify: true
+      type: ss
+    - delay: 1971
+      name: "\U0001F1FA\U0001F1F8US_8|YT|GPT⁺|Gemini|Github|FREE-16"
       network: ws
       port: 2096
-      server: 194.76.18.32
+      server: 188.42.145.32
       servername: kejiland.freewarp.eu.org
       skip-cert-verify: true
       tls: true
@@ -32,7 +140,7 @@ proxies:
         path: /snippets
     - country: "\U0001F1F1\U0001F1FALU"
       delay: 2261
-      name: "\U0001F1FA\U0001F1F8US_3|YT|GPT⁺|Github|FREE-16"
+      name: "\U0001F1FA\U0001F1F8US_9|YT|GPT⁺|Gemini|Github|FREE-16"
       network: ws
       port: 2096
       server: 188.42.89.32
@@ -46,8 +154,40 @@ proxies:
         headers:
             Host: kejiland.freewarp.eu.org
         path: /snippets
+    - country: "\U0001F1FA\U0001F1F8US"
+      delay: 1349
+      name: "\U0001F1FA\U0001F1F8US_10|YT|GPT⁺|Gemini|Github|FREE-16"
+      network: ws
+      port: 2096
+      server: 209.94.90.32
+      servername: kejiland.freewarp.eu.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
+      ws-opts:
+        headers:
+            Host: kejiland.freewarp.eu.org
+        path: /snippets
+    - country: "\U0001F1FA\U0001F1F8US"
+      delay: 814
+      name: "\U0001F1FA\U0001F1F8US_11|YT|GPT⁺|Gemini|Github|FREE-16"
+      network: ws
+      port: 2096
+      server: 166.62.111.32
+      servername: kejiland.freewarp.eu.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
+      ws-opts:
+        headers:
+            Host: kejiland.freewarp.eu.org
+        path: /snippets
     - delay: 1002
-      name: "\U0001F1FA\U0001F1F8US_4|YT|GPT⁺|Github|FREE-16"
+      name: "\U0001F1FA\U0001F1F8US_12|YT|GPT⁺|Gemini|Github|FREE-16"
       network: ws
       port: 2096
       server: 167.68.5.32
@@ -62,11 +202,11 @@ proxies:
             Host: kejiland.freewarp.eu.org
         path: /snippets
     - country: "\U0001F1FA\U0001F1F8US"
-      delay: 799
-      name: "\U0001F1FA\U0001F1F8US_5|YT|GPT⁺|Github|FREE-16"
+      delay: 838
+      name: "\U0001F1FA\U0001F1F8US_13|YT|GPT⁺|Gemini|Github|FREE-16"
       network: ws
       port: 2096
-      server: 104.238.69.32
+      server: 198.177.56.32
       servername: kejiland.freewarp.eu.org
       skip-cert-verify: true
       tls: true
@@ -78,11 +218,11 @@ proxies:
             Host: kejiland.freewarp.eu.org
         path: /snippets
     - country: "\U0001F1FA\U0001F1F8US"
-      delay: 798
-      name: "\U0001F1FA\U0001F1F8US_6|YT|GPT⁺|Github|FREE-16"
+      delay: 958
+      name: "\U0001F1FA\U0001F1F8US_14|YT|GPT⁺|Gemini|Github|FREE-16"
       network: ws
       port: 2096
-      server: 199.34.228.32
+      server: 108.165.152.32
       servername: kejiland.freewarp.eu.org
       skip-cert-verify: true
       tls: true
@@ -94,11 +234,43 @@ proxies:
             Host: kejiland.freewarp.eu.org
         path: /snippets
     - country: "\U0001F1FA\U0001F1F8US"
-      delay: 1869
-      name: "\U0001F1FA\U0001F1F8US_7|YT|GPT⁺|Github|FREE-16"
+      delay: 954
+      name: "\U0001F1FA\U0001F1F8US_15|YT|GPT⁺|Gemini|Github|FREE-16"
       network: ws
       port: 2096
-      server: 216.205.52.32
+      server: 72.167.230.32
+      servername: kejiland.freewarp.eu.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
+      ws-opts:
+        headers:
+            Host: kejiland.freewarp.eu.org
+        path: /snippets
+    - country: "\U0001F1FA\U0001F1F8US"
+      delay: 964
+      name: "\U0001F1FA\U0001F1F8US_16|YT|GPT⁺|Gemini|Github|FREE-16"
+      network: ws
+      port: 2096
+      server: 205.233.181.32
+      servername: kejiland.freewarp.eu.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
+      ws-opts:
+        headers:
+            Host: kejiland.freewarp.eu.org
+        path: /snippets
+    - country: "\U0001F1FA\U0001F1F8US"
+      delay: 822
+      name: "\U0001F1FA\U0001F1F8US_17|YT|GPT⁺|Gemini|Github|FREE-16"
+      network: ws
+      port: 2096
+      server: 192.0.54.32
       servername: kejiland.freewarp.eu.org
       skip-cert-verify: true
       tls: true
@@ -110,7 +282,7 @@ proxies:
             Host: kejiland.freewarp.eu.org
         path: /snippets
     - delay: 1948
-      name: "\U0001F1FA\U0001F1F8US_8|YT|GPT⁺|Github|FREE-16"
+      name: "\U0001F1FA\U0001F1F8US_18|YT|GPT⁺|Gemini|Github|FREE-16"
       network: ws
       port: 2096
       server: 193.124.18.32
@@ -124,8 +296,24 @@ proxies:
         headers:
             Host: kejiland.freewarp.eu.org
         path: /snippets
+    - country: "\U0001F1FA\U0001F1F8US"
+      delay: 1869
+      name: "\U0001F1FA\U0001F1F8US_19|YT|GPT⁺|Gemini|Github|FREE-16"
+      network: ws
+      port: 2096
+      server: 216.205.52.32
+      servername: kejiland.freewarp.eu.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
+      ws-opts:
+        headers:
+            Host: kejiland.freewarp.eu.org
+        path: /snippets
     - delay: 1493
-      name: "\U0001F1FA\U0001F1F8US_9|YT|GPT|Github|FREE-16"
+      name: "\U0001F1FA\U0001F1F8US_20|YT|GPT⁺|Gemini|Github|FREE-16"
       network: ws
       port: 2096
       server: 94.247.142.32
@@ -139,54 +327,8 @@ proxies:
         headers:
             Host: kejiland.freewarp.eu.org
         path: /snippets
-    - country: "\U0001F1EB\U0001F1F7FR"
-      delay: 1811
-      name: "\U0001F1FA\U0001F1F8US_10|YT|GPT|Github|FREE-16"
-      network: ws
-      port: 2096
-      server: 185.7.240.32
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
-      ws-opts:
-        headers:
-            Host: kejiland.freewarp.eu.org
-        path: /snippets
-    - delay: 1574
-      name: "\U0001F1FA\U0001F1F8US_11|YT|GPT⁺|Github|FREE-16"
-      network: ws
-      port: 2096
-      server: 185.135.9.32
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
-      ws-opts:
-        headers:
-            Host: kejiland.freewarp.eu.org
-        path: /snippets
-    - delay: 1127
-      name: "\U0001F1FA\U0001F1F8US_12|YT|GPT⁺|Github|FREE-16"
-      network: ws
-      port: 2096
-      server: 77.75.199.32
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
-      ws-opts:
-        headers:
-            Host: kejiland.freewarp.eu.org
-        path: /snippets
     - delay: 1483
-      name: "\U0001F1FA\U0001F1F8US_13|YT|GPT⁺|Github|FREE-16"
+      name: "\U0001F1FA\U0001F1F8US_21|YT|GPT⁺|Gemini|Github|FREE-16"
       network: ws
       port: 2096
       server: 155.46.213.32
@@ -200,9 +342,56 @@ proxies:
         headers:
             Host: kejiland.freewarp.eu.org
         path: /snippets
+    - delay: 1574
+      name: "\U0001F1FA\U0001F1F8US_22|YT|GPT|Gemini|Github|FREE-16"
+      network: ws
+      port: 2096
+      server: 185.135.9.32
+      servername: kejiland.freewarp.eu.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
+      ws-opts:
+        headers:
+            Host: kejiland.freewarp.eu.org
+        path: /snippets
+    - country: "\U0001F1ED\U0001F1F0HK"
+      delay: 1693
+      name: "\U0001F1FA\U0001F1F8US_23|YT|GPT⁺|Gemini|Github|FREE-16"
+      network: ws
+      port: 2096
+      server: 156.225.72.32
+      servername: kejiland.freewarp.eu.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
+      ws-opts:
+        headers:
+            Host: kejiland.freewarp.eu.org
+        path: /snippets
+    - country: "\U0001F1EB\U0001F1F7FR"
+      delay: 1811
+      name: "\U0001F1FA\U0001F1F8US_24|YT|GPT⁺|Gemini|Github|FREE-16"
+      network: ws
+      port: 2096
+      server: 185.7.240.32
+      servername: kejiland.freewarp.eu.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
+      ws-opts:
+        headers:
+            Host: kejiland.freewarp.eu.org
+        path: /snippets
     - country: "\U0001F1EE\U0001F1E9ID"
       delay: 1759
-      name: "\U0001F1FA\U0001F1F8US_14|YT|GPT⁺|Github|FREE-16"
+      name: "\U0001F1FA\U0001F1F8US_25|YT|GPT⁺|Gemini|Github|FREE-16"
       network: ws
       port: 2096
       server: 154.194.12.32
@@ -218,7 +407,7 @@ proxies:
         path: /snippets
     - country: "\U0001F1EF\U0001F1F5JP"
       delay: 1718
-      name: "\U0001F1FA\U0001F1F8US_15|YT|GPT|Github|FREE-16"
+      name: "\U0001F1FA\U0001F1F8US_26|YT|GPT⁺|Gemini|Github|FREE-16"
       network: ws
       port: 2096
       server: 103.245.229.32
@@ -232,22 +421,111 @@ proxies:
         headers:
             Host: kejiland.freewarp.eu.org
         path: /snippets
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_16|YT|GPT⁺|Github|FREE-3"
+    - alpn:
+        - h3
+      client-fingerprint: random
+      name: "\U0001F1FA\U0001F1F8US_27|YT|GPT⁺|Gemini|Github|FREE-14"
       network: ws
-      port: 2096
-      server: 199.68.156.32
-      servername: kejiland.freewarp.eu.org
+      port: 2083
+      server: 162.159.142.252
+      servername: fei.634676.xyz
       skip-cert-verify: true
       tls: true
       type: vless
-      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
+      udp: true
+      uuid: d2965257-0536-4811-a0d5-cdce54e90326
       ws-opts:
         headers:
-            Host: kejiland.freewarp.eu.org
-        path: /snippets
+            Host: fei.634676.xyz
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1F8\U0001F1EASE_1|GPT⁺|Github|FREE-14"
+      network: ws
+      port: 443
+      server: kifpool.me
+      servername: nkang2replace.airlineshoma.com
+      skip-cert-verify: true
+      tfo: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: b754b53a-aaf5-475c-eeed-46806c2aa63f
+      ws-opts:
+        headers:
+            Host: nkang2replace.airlineshoma.com
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+        path: /
+    - name: "\U0001F1FA\U0001F1F8US_28|YT|GPT⁺|Gemini|Github|FREE-14"
+      password: TDBLtJz
+      port: 46415
+      server: 38.34.24.232
+      skip-cert-verify: true
+      type: http
+      username: kZXMC3Z1
+    - client-fingerprint: randomized
+      name: "\U0001F1F8\U0001F1EASE_2|YT|GPT⁺|Github|FREE-14"
+      network: ws
+      port: 443
+      server: openai.com
+      servername: nkAnG2rEpLACE.airlineSHoma.Com
+      skip-cert-verify: true
+      tfo: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 101e6a7d-7d10-4859-a626-8a76daab4547
+      ws-opts:
+        headers:
+            Host: nkAnG2rEpLACE.airlineSHoma.Com
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+        path: /?ed=2560
+    - alterId: 0
+      cipher: auto
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1EB\U0001F1F7FR_1|YT|GPT⁺|Github|FREE-30"
+      network: ws
+      port: 443
+      server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+      servername: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+      ws-opts:
+        headers:
+            HOST: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+        path: /azumase.ren
     - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_17|YT|GPT⁺|Github|FREE-3"
+      name: "\U0001F1FA\U0001F1F8US_29|YT|GPT⁺|Gemini|Github|FREE-3"
+      network: ws
+      port: 2096
+      server: 212.183.88.49
+      servername: getsub.saas.classelivre.eu.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 12345678-1234-1234-1234-123456789123
+      ws-opts:
+        headers:
+            Host: getsub.saas.classelivre.eu.org
+        path: /snippets&freecodes@节点狂魔/?ed=2560
+    - encryption: none
+      name: "\U0001F1FA\U0001F1F8US_30|YT|GPT|Gemini|Github|FREE-3"
+      network: ws
+      port: 2096
+      server: 62.72.166.49
+      servername: getsub.saas.classelivre.eu.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 12345678-1234-1234-1234-123456789123
+      ws-opts:
+        headers:
+            Host: getsub.saas.classelivre.eu.org
+        path: /snippets&freecodes@节点狂魔/?ed=2560
+    - encryption: none
+      name: "\U0001F1FA\U0001F1F8US_31|YT|GPT|Gemini|Github|FREE-3"
       network: ws
       port: 2096
       server: 185.156.19.49
@@ -261,21 +539,21 @@ proxies:
             Host: getsub.saas.classelivre.eu.org
         path: /snippets&freecodes@节点狂魔/?ed=2560
     - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_18|YT|GPT⁺|Github|FREE-3"
+      name: "\U0001F1FA\U0001F1F8US_32|YT|GPT⁺|Gemini|Github|FREE-3"
       network: ws
       port: 2096
-      server: 204.93.210.49
-      servername: getsub.saas.classelivre.eu.org
+      server: 185.207.196.44
+      servername: kejiland.freewarp.eu.org
       skip-cert-verify: true
       tls: true
       type: vless
       uuid: 12345678-1234-1234-1234-123456789123
       ws-opts:
         headers:
-            Host: getsub.saas.classelivre.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
+            Host: kejiland.freewarp.eu.org
+        path: /snippets
     - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_19|YT|GPT⁺|Github|FREE-3"
+      name: "\U0001F1FA\U0001F1F8US_33|YT|GPT⁺|Gemini|Github|FREE-3"
       network: ws
       port: 2096
       server: 192.200.160.43
@@ -289,21 +567,21 @@ proxies:
             Host: kejiland.freewarp.eu.org
         path: /snippets&freecodes@节点狂魔/?ed=2560
     - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_20|YT|GPT⁺|Github|FREE-3"
+      name: "\U0001F1FA\U0001F1F8US_34|YT|GPT⁺|Gemini|Github|FREE-3"
       network: ws
       port: 2096
-      server: 109.176.239.43
-      servername: kejiland.freewarp.eu.org
+      server: 154.206.12.49
+      servername: getsub.saas.classelivre.eu.org
       skip-cert-verify: true
       tls: true
       type: vless
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
+      uuid: 12345678-1234-1234-1234-123456789123
       ws-opts:
         headers:
-            Host: kejiland.freewarp.eu.org
-        path: /snippets
+            Host: getsub.saas.classelivre.eu.org
+        path: /snippets&freecodes@节点狂魔/?ed=2560
     - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_21|YT|GPT|Github|FREE-3"
+      name: "\U0001F1FA\U0001F1F8US_35|YT|GPT⁺|Gemini|Github|FREE-3"
       network: ws
       port: 2096
       server: 185.16.110.49
@@ -317,7 +595,7 @@ proxies:
             Host: getsub.saas.classelivre.eu.org
         path: /snippets&freecodes@节点狂魔/?ed=2560
     - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_22|YT|GPT⁺|Github|FREE-3"
+      name: "\U0001F1FA\U0001F1F8US_36|YT|GPT⁺|Gemini|Github|FREE-3"
       network: ws
       port: 2096
       server: 192.200.160.49
@@ -331,1186 +609,50 @@ proxies:
             Host: getsub.saas.classelivre.eu.org
         path: /snippets&freecodes@节点狂魔/?ed=2560
     - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_23|YT|GPT⁺|Github|FREE-3"
+      name: "\U0001F1FA\U0001F1F8US_37|YT|Gemini|Github|FREE-3"
       network: ws
       port: 2096
-      server: 141.11.203.49
-      servername: getsub.saas.classelivre.eu.org
+      server: 195.26.229.41
+      servername: vless.keepfuck.me
       skip-cert-verify: true
       tls: true
       type: vless
-      uuid: 12345678-1234-1234-1234-123456789123
+      uuid: 563608cd-f135-4e64-938d-d9eb3be1ba77
       ws-opts:
         headers:
-            Host: getsub.saas.classelivre.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
-    - alterId: "0"
-      cipher: auto
-      name: "\U0001F1EB\U0001F1F7FR_1|YT|GPT⁺|Github|FREE-18"
-      network: ws
-      port: 443
-      server: 57.128.189.240
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      udp: true
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers: {}
-        path: /linkvws
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_24|YT|GPT⁺|Gemini|Github|FREE-14"
-      password: TDBLtJz
-      port: 46415
-      server: 38.34.24.232
-      skip-cert-verify: true
-      type: http
-      username: kZXMC3Z1
-    - name: "\U0001F1FA\U0001F1F8US_25|YT|GPT⁺|Gemini|Github|FREE-14"
-      password: 3Wpj66
-      port: 64363
-      server: 216.151.168.188
-      skip-cert-verify: true
-      type: http
-      username: kZXMC3Z1
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: "\U0001F1FA\U0001F1F8US_26|YT|GPT⁺|Gemini|Github|FREE-14"
-      port: 30227
-      reality-opts:
-        public-key: y0QO-mD8hrDE3rV7C8BX-gQiCANoasGKQlq2ReIVXkI
-      server: 216.133.149.235
-      servername: aws.amazon.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 9a54bad8-538d-4744-b7bc-640629840490
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1E8\U0001F1E6CA_1|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 990
-      server: 79.127.233.170
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1FA\U0001F1F8US_27|YT|GPT⁺|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 990
-      server: 64.74.163.130
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-256-cfb
-      name: "\U0001F1E8\U0001F1E6CA_2|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 989
-      server: 79.127.233.170
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_1|YT|GPT⁺|Github|FREE-21"
-      password: 1RWwXhwfAB5gAEozU4G2Pg
-      port: 8080
-      server: 45.87.175.178
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_2|YT|GPT⁺|Github|FREE-21"
-      password: 4a2rfixophdjffa8KVA4Aa
-      port: 8080
-      server: 45.87.175.154
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_3|YT|GPT⁺|Github|FREE-21"
-      password: oZIoA69Q8yhcQV8ka3Pa3A
-      port: 8080
-      server: 193.29.139.235
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-cfb
-      name: "\U0001F1F3\U0001F1F1NL_4|YT|GPT⁺|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 109.201.152.181
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_5|YT|GPT⁺|Github|FREE-21"
-      password: 4a2rfixophdjffa8KVA4Aa
-      port: 8080
-      server: 193.29.139.157
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-256-cfb
-      name: "\U0001F1FA\U0001F1F8US_28|YT|GPT⁺|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 989
-      server: 104.192.226.106
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1E8\U0001F1E6CA_3|YT|GPT⁺|Github|FREE-21"
-      password: JIhN6rBKkaEboLNXVSv5rq
-      port: 80
-      server: 142.4.216.225
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1E8\U0001F1E6CA_4|YT|GPT⁺|Github|FREE-21"
-      password: JIhN6rBKkaEboLNXVSv5rq
-      port: 80
-      server: ca225.vpnbook.com
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_6|YT|GPT⁺|Github|FREE-21"
-      password: QCXDxuDlTTMD7jtgHUjIoj
-      port: 8080
-      server: 193.29.139.189
-      skip-cert-verify: true
-      type: ss
+            Host: vless.keepfuck.me
+        path: /snippets
     - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_29|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 156.146.38.168
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_30|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 156.146.38.167
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_31|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 156.146.38.169
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_32|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 156.146.38.170
-      skip-cert-verify: true
-      type: ss
-    - name: "\U0001F1FA\U0001F1F8US_33|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.162.229.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_34|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 167.68.5.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_35|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.159.218.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_36|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 194.59.5.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_37|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 204.93.210.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_38|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 193.227.99.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_39|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 170.114.45.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_40|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.251.83.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_41|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.131.6.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_42|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.80.108.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_43|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.251.83.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_44|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 198.177.57.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_45|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.59.218.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_46|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 194.152.44.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_47|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.18.184.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_48|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.149.135.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_49|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 5.10.215.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_50|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.149.135.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_51|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 156.243.83.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_52|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 89.116.161.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_53|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 77.75.199.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_54|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 141.11.203.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_55|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 62.72.166.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_56|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.207.198.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_57|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.40.148.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_58|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 190.93.244.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_59|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.192.222.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_60|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.12.30.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_61|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 190.93.246.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_62|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 154.198.173.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_63|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 8.34.70.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_64|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 50.62.195.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_65|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.40.145.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_66|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 190.93.246.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_67|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 190.93.247.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_68|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 5.182.84.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_69|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 155.46.213.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_70|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 198.71.188.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_71|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 92.60.74.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_72|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 108.165.216.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_73|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 91.206.71.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_74|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.85.118.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_75|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 103.245.229.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_76|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 170.114.46.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_77|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 103.133.1.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_78|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 181.214.1.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_79|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.162.231.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_80|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 91.209.253.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_81|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 160.153.168.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_82|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.149.12.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_83|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 167.68.11.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_84|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 25.25.25.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_85|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.12.30.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_86|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 154.197.75.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_87|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 74.49.215.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_88|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.148.104.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_89|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 154.197.121.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_90|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.148.104.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_91|YT|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.158.133.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_92|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 154.81.141.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_93|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 147.185.161.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_94|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 77.232.140.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_95|YT|GPT|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 147.78.140.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_96|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 167.68.4.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_97|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 195.85.23.44
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: kejiland.freewarp.eu.org
-        path: /snippets&freecodes @节点狂魔 /?ed=2560
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_98|YT|GPT⁺|Gemini|Github|FREE-1"
-      password: shadowsocks
-      port: 443
-      server: 173.244.56.9
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_99|YT|GPT⁺|Gemini|Github|FREE-1"
+      name: "\U0001F1FA\U0001F1F8US_38|YT|GPT⁺|Gemini|Github|FREE-1"
       password: shadowsocks
       port: 443
       server: 37.19.198.160
       skip-cert-verify: true
       type: ss
     - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_100|YT|GPT⁺|Gemini|Github|FREE-1"
+      name: "\U0001F1FA\U0001F1F8US_39|YT|GPT⁺|Gemini|Github|FREE-1"
+      password: shadowsocks
+      port: 443
+      server: 37.19.198.236
+      skip-cert-verify: true
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_40|YT|GPT⁺|Gemini|Github|FREE-1"
       password: shadowsocks
       port: 443
       server: 173.244.56.6
       skip-cert-verify: true
       type: ss
     - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_101|YT|GPT⁺|Gemini|Github|FREE-1"
+      name: "\U0001F1FA\U0001F1F8US_41|YT|GPT|Github|FREE-1"
       password: shadowsocks
       port: 443
-      server: 37.19.198.236
+      server: 173.244.56.9
       skip-cert-verify: true
       type: ss
-    - grpc-opts:
-        grpc-mode: gun
-        grpc-service-name: ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON
-      name: "\U0001F1EB\U0001F1F7FR_2|YT|GPT⁺|Github|FREE-24"
-      network: grpc
-      port: 59995
-      server: 141.227.162.18
-      skip-cert-verify: true
-      tls: false
-      type: vless
-      udp: true
-      uuid: 7467739e-fe86-43a4-93ae-1669886e80d5
-    - alpn:
-        - ""
-      alterId: "0"
-      cipher: auto
-      name: "\U0001F1EC\U0001F1E7GB_1|YT|GPT⁺|Github|FREE-1"
-      network: ws
-      port: "80"
-      server: test2.flha.ru
-      servername: test2.flha.ru
-      skip-cert-verify: true
-      tls: false
-      type: vmess
-      udp: true
-      uuid: 15f62abf-8cc9-4598-8d57-e4df7b499a84
-      ws-opts:
-        headers:
-            Host: test2.flha.ru
-        path: /15f62abf-8cc9-4598-8d57-e4df7b499a84-vmess
-      xudp: true
     - alterId: 0
       cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_102|YT|GPT⁺|Gemini|Github|FREE-24"
-      network: ws
-      port: 444
-      server: 154.26.176.94
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      udp: true
-      uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
-      ws-opts:
-        headers:
-            Host: us.nbee.pp.ua
-        path: /aa
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_103|YT|GPT⁺|Github|FREE-28"
-      network: ws
-      port: 443
-      server: ssssssssssssfffffffgh.2032.pp.ua
-      servername: ssssssssssssfffffffgh.2032.pp.ua
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 4174b95d-115e-4d39-add6-1f8db95bb860
-      ws-opts:
-        headers:
-            Host: ssssssssssssfffffffgh.2032.pp.ua
-        path: /6We3U9Df1WGxgFnoFPw1
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_104|YT|GPT⁺|Github|FREE-11"
-      network: tcp
-      port: 6506
-      server: 193.124.24.247
-      skip-cert-verify: true
-      tfo: true
-      type: vmess
-      udp: true
-      uuid: c53d41d1-7d56-43ce-9994-408780c6476a
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_105|YT|GPT⁺|Github|FREE-11"
+      name: "\U0001F1FA\U0001F1F8US_42|YT|GPT⁺|Github|FREE-11"
       network: tcp
       port: 443
       server: 165.140.216.141
@@ -1521,7 +663,7 @@ proxies:
       uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
     - alterId: 0
       cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_106|YT|GPT⁺|Github|FREE-11"
+      name: "\U0001F1FA\U0001F1F8US_43|YT|GPT⁺|Github|FREE-11"
       network: ws
       port: 443
       server: ssssssssssssfffffffgh.2032.pp.ua
@@ -1535,7 +677,7 @@ proxies:
         path: /6We3U9Df1WGxgFnoFPw1
     - alterId: 0
       cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_107|YT|GPT⁺|Github|FREE-11"
+      name: "\U0001F1FA\U0001F1F8US_44|YT|GPT⁺|Github|FREE-11"
       network: ws
       port: 443
       server: sssssssxxxx.2032.pp.ua
@@ -1548,7 +690,82 @@ proxies:
             Host: sssssssxxxx.2032.pp.ua
         path: /6We3U9Df1WGxgFnoFPw1
     - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_108|YT|GPT⁺|Github|FREE-11"
+      name: "\U0001F1F8\U0001F1EASE_3|YT|GPT⁺|Github|FREE-11"
+      network: ws
+      port: 2096
+      server: zula.ir
+      servername: frAgteSt.JaHANGiRKh.eU.orG
+      skip-cert-verify: true
+      tfo: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 97909ffd-6da0-4893-9d63-00e72ad55256
+      ws-opts:
+        headers:
+            Host: frAgteSt.JaHANGiRKh.eU.orG
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_45|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 2096
+      server: 92.53.191.32
+      servername: kejiland.freewarp.eu.org
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
+      ws-opts:
+        headers:
+            Host: kejiland.freewarp.eu.org
+        path: /snippets
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_46|YT|GPT|Gemini|Github|FREE-11"
+      network: ws
+      port: 2096
+      server: 154.218.15.44
+      servername: kejiland.freewarp.eu.org
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      uuid: 12345678-1234-1234-1234-123456789123
+      ws-opts:
+        headers:
+            Host: kejiland.freewarp.eu.org
+        path: /snippets&freecodes
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_47|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 2096
+      server: 45.80.110.44
+      servername: kejiland.freewarp.eu.org
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      uuid: 12345678-1234-1234-1234-123456789123
+      ws-opts:
+        headers:
+            Host: kejiland.freewarp.eu.org
+        path: /snippets&freecodes
+    - name: "\U0001F1FA\U0001F1F8US_48|YT|Gemini|Github|FREE-11"
+      network: ws
+      port: 2095
+      server: 172.67.161.104
+      skip-cert-verify: true
+      tfo: false
+      tls: false
+      type: vless
+      uuid: 8169cd18-e824-47a4-a4d4-96433b1a519d
+      ws-opts:
+        headers:
+            Host: testdvpnhub69.95f425b718.workers.dev
+        path: /?ed=2048
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_49|YT|GPT⁺|Gemini|Github|FREE-11"
       network: ws
       port: 2096
       server: 154.197.64.43
@@ -1562,24 +779,8 @@ proxies:
         headers:
             Host: kejiland.freewarp.eu.org
         path: /snippets&freecodes
-    - client-fingerprint: random
-      name: "\U0001F1FA\U0001F1F8US_109|YT|GPT⁺|Gemini|Github|FREE-11"
-      network: ws
-      port: 8443
-      server: 104.129.167.255
-      servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
-      skip-cert-verify: true
-      tfo: false
-      tls: true
-      type: vless
-      udp: true
-      uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a
-      ws-opts:
-        headers:
-            Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
-        path: /snippets?ip=proxyip:port(443)
     - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_110|YT|GPT⁺|Gemini|Github|FREE-11"
+      name: "\U0001F1FA\U0001F1F8US_50|YT|GPT⁺|Gemini|Github|FREE-11"
       network: ws
       port: 443
       server: 104.26.12.31
@@ -1595,7 +796,23 @@ proxies:
             Host: 000091gm0s8g08211s2q.rjp.3jrlr9edbfkg.s0add.dl24k.ghz.krcipuw0kx.vztx9qx.1luaw5rro.4sztyya.guarx48okfdavgn0i245is5g86r359.neib.cn
         path: /snippets?ip=proxyip:port(443)
     - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_111|YT|GPT⁺|Gemini|Github|FREE-11"
+      name: "\U0001F1FA\U0001F1F8US_51|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 2053
+      server: snipaste2.speedip.eu.org
+      servername: 0000hjy8lwav04sl2bam.f5v.dcib.kfyqir9k51q.0lzeh9c.ksq1ja.ysnpmxy.g4ad8cnyig.cg47svy4kk3.f88andoo3yo.x52b94wzbt4a3anadxajy.neib.cn
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 019972bd-c57a-9287-cf81-83e8b6a4ae81
+      ws-opts:
+        headers:
+            Host: 0000hjy8lwav04sl2bam.f5v.dcib.kfyqir9k51q.0lzeh9c.ksq1ja.ysnpmxy.g4ad8cnyig.cg47svy4kk3.f88andoo3yo.x52b94wzbt4a3anadxajy.neib.cn
+        path: /snippets?ip=proxyip:port(443)
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_52|YT|GPT⁺|Gemini|Github|FREE-11"
       network: ws
       port: 2053
       server: snipaste1.speedip.eu.org
@@ -1610,7 +827,23 @@ proxies:
         headers:
             Host: 0000hckhxlvib1h4xk7f.n24.jci8uetubmkp.xb71x63c8vp.yzjyv1cj.m4pekb.44im9lt1u.cdlq6qkqh.m7ql78c.d8ls4sr.p2elzz2rm57d112wt3w.neib.cn
         path: /snippets?ip=proxyip:port(443)
-    - name: "\U0001F1F3\U0001F1F1NL_7|GPT⁺|Gemini|Github|FREE-11"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_53|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 8443
+      server: snipaste2.speedip.eu.org
+      servername: 0000azjycqzx0k1f4zfi.ulk.uobnni.14l3.j5lkw.4n78egq2un.5a0.gl8z.zcbx448m.zxbrhh5zykdh.1da9gkyonadedxfy069mz0wc9kjkhuzwyzfv.neib.cn
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 01996a60-6dc4-2d0e-0dee-5832827589b4
+      ws-opts:
+        headers:
+            Host: 0000azjycqzx0k1f4zfi.ulk.uobnni.14l3.j5lkw.4n78egq2un.5a0.gl8z.zcbx448m.zxbrhh5zykdh.1da9gkyonadedxfy069mz0wc9kjkhuzwyzfv.neib.cn
+        path: /snippets?ip=proxyip:port(443)
+    - name: "\U0001F1FA\U0001F1F8US_54|YT|GPT⁺|Gemini|Github|FREE-11"
       network: ws
       port: 2096
       server: 185.193.31.253
@@ -1625,38 +858,53 @@ proxies:
         headers:
             Host: fast01.0860852.xyz
         path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_112|YT|GPT⁺|Gemini|Github|FREE-11"
+    - name: "\U0001F1FA\U0001F1F8US_55|YT|GPT⁺|Gemini|Github|FREE-11"
       network: ws
-      port: 2096
-      server: 185.207.197.253
-      servername: vlesspro.llengcugit.sbs
+      port: 443
+      server: 104.21.67.60
+      servername: 4g.zippza404abp.webredirect.org
       skip-cert-verify: true
       tfo: false
       tls: true
       type: vless
       udp: true
-      uuid: 6e433a29-22ac-4061-ae8b-f1731715d0d9
+      uuid: 2737c5a4-50d5-46a2-9c8c-86920088b8c7
       ws-opts:
         headers:
-            Host: vlesspro.llengcugit.sbs
-        path: /Telegram
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_113|YT|GPT⁺|Github|FREE-11"
+            Host: 4g.zippza404abp.webredirect.org
+        path: /?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_56|YT|GPT⁺|Github|FREE-11"
       network: ws
-      port: 21275
-      server: 45.45.218.166
-      servername: ula347.tiri-viri.com
+      port: 443
+      server: ssssssssssssfffffffgh.2032.pp.ua
+      servername: ssssssssssssfffffffgh.2032.pp.ua
       skip-cert-verify: true
       tfo: false
       tls: true
       type: vless
       udp: true
-      uuid: 678a8311-6184-4a1f-a651-84be3cc82e37
+      uuid: 4174b95d-115e-4d39-add6-1f8db95bb860
       ws-opts:
         headers:
-            Host: ula347.tiri-viri.com
-        path: /
-    - name: "\U0001F1FA\U0001F1F8US_114|YT|Gemini|Github|FREE-11"
+            Host: ssssssssssssfffffffgh.2032.pp.ua
+        path: /eAbAcRHV1QuhyXWGxgFnoFPw1
+    - client-fingerprint: random
+      name: "\U0001F1FA\U0001F1F8US_57|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: 188.114.98.213
+      servername: pumpkinsinfo.top
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 83e1bfe8-d5a0-41b1-aad3-c95507f6f8f9
+      ws-opts:
+        headers:
+            Host: pumpkinsinfo.top
+        path: /?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_58|YT|Gemini|Github|FREE-11"
       network: ws
       port: 2096
       server: 185.148.107.41
@@ -1672,74 +920,10 @@ proxies:
             Host: vless.keepfuck.me
         path: /snippets
     - client-fingerprint: random
-      name: "\U0001F1FA\U0001F1F8US_115|GPT⁺|Gemini|Github|FREE-11"
+      name: "\U0001F1FA\U0001F1F8US_59|YT|GPT⁺|Gemini|Github|FREE-11"
       network: ws
-      port: 443
-      server: 104.24.205.9
-      servername: pumpkinsinfo.top
-      skip-cert-verify: true
-      tfo: false
-      tls: true
-      type: vless
-      udp: true
-      uuid: 83e1bfe8-d5a0-41b1-aad3-c95507f6f8f9
-      ws-opts:
-        headers:
-            Host: pumpkinsinfo.top
-        path: /?ed=2560
-    - client-fingerprint: random
-      name: "\U0001F1FA\U0001F1F8US_116|YT|GPT⁺|Gemini|Github|FREE-11"
-      network: ws
-      port: 443
-      server: 104.24.93.20
-      servername: pumpkinsinfo.top
-      skip-cert-verify: true
-      tfo: false
-      tls: true
-      type: vless
-      udp: true
-      uuid: 83e1bfe8-d5a0-41b1-aad3-c95507f6f8f9
-      ws-opts:
-        headers:
-            Host: pumpkinsinfo.top
-        path: /?ed=2560
-    - client-fingerprint: random
-      name: "\U0001F1FA\U0001F1F8US_117|YT|GPT⁺|Gemini|Github|FREE-11"
-      network: ws
-      port: 443
-      server: 188.114.98.213
-      servername: pumpkinsinfo.top
-      skip-cert-verify: true
-      tfo: false
-      tls: true
-      type: vless
-      udp: true
-      uuid: 83e1bfe8-d5a0-41b1-aad3-c95507f6f8f9
-      ws-opts:
-        headers:
-            Host: pumpkinsinfo.top
-        path: /?ed=2560
-    - client-fingerprint: random
-      name: "\U0001F1FA\U0001F1F8US_118|YT|GPT⁺|Gemini|Github|FREE-11"
-      network: ws
-      port: 443
-      server: gur.gov.ua
-      servername: azadnet3-9do.pages.dev
-      skip-cert-verify: true
-      tfo: false
-      tls: true
-      type: vless
-      udp: true
-      uuid: 90cd4a77-141a-43c9-991b-08263cfe9c10
-      ws-opts:
-        headers:
-            Host: azadnet3-9do.pages.dev
-        path: /?ed
-    - client-fingerprint: random
-      name: "\U0001F1FA\U0001F1F8US_119|YT|GPT⁺|Gemini|Github|FREE-11"
-      network: ws
-      port: 2087
-      server: 104.16.177.186
+      port: 2053
+      server: 104.16.142.255
       servername: yannis3987.us.kg
       skip-cert-verify: true
       tfo: false
@@ -1751,38 +935,7 @@ proxies:
         headers:
             Host: yannis3987.us.kg
         path: /?ed=2560
-    - client-fingerprint: random
-      name: "\U0001F1FA\U0001F1F8US_120|YT|GPT⁺|Gemini|Github|FREE-11"
-      network: ws
-      port: 2083
-      server: 104.16.239.42
-      servername: yannis3987.us.kg
-      skip-cert-verify: true
-      tfo: false
-      tls: true
-      type: vless
-      udp: true
-      uuid: 975e9639-c685-4a95-a93b-9914b780646d
-      ws-opts:
-        headers:
-            Host: yannis3987.us.kg
-        path: /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_121|YT|GPT|Github|FREE-11"
-      network: ws
-      port: 8443
-      server: 92.243.74.239
-      servername: saas.cfliu.filegear-sg.me
-      skip-cert-verify: true
-      tfo: false
-      tls: true
-      type: vless
-      udp: true
-      uuid: 8d5911d9-f9f9-484f-8f67-5729ab5fd1af
-      ws-opts:
-        headers:
-            Host: saas.cfliu.filegear-sg.me
-        path: /snippets?ip=tw.tp81.netlib.re:81
-    - name: "\U0001F1FA\U0001F1F8US_122|YT|Github|FREE-11"
+    - name: "\U0001F1F9\U0001F1FCTW_1|YT|Gemini|Github|FREE-11"
       network: ws
       port: 2083
       server: 103.116.7.103
@@ -1797,11 +950,27 @@ proxies:
         headers:
             Host: saas.cfliu.filegear-sg.me
         path: /snippets?ip=tw.tp81.netlib.re:81
-    - name: "\U0001F1FA\U0001F1F8US_123|YT|GPT⁺|Github|FREE-11"
+    - name: "\U0001F1FA\U0001F1F8US_60|YT|GPT|Gemini|Github|FREE-11"
+      network: ws
+      port: 2096
+      server: 108.165.152.29
+      servername: saas.cfliu.filegear-sg.me
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 8d5911d9-f9f9-484f-8f67-5729ab5fd1af
+      ws-opts:
+        headers:
+            Host: saas.cfliu.filegear-sg.me
+        path: /snippets?ip=tw.tp81.netlib.re:81
+    - flow: ""
+      name: "\U0001F1FA\U0001F1F8US_61|YT|Gemini|Github|FREE-11"
       network: ws
       port: 443
-      server: cf.0sm.com
-      servername: baipiao.CMLiussss.abrdns.com
+      server: wetest.xn--vip-ob6fs36j.cloudflare.182682.xyz
+      servername: xn--kwr11l51ffzytxy.CMLiussss.dedyn.io
       skip-cert-verify: true
       tfo: false
       tls: true
@@ -1810,10 +979,10 @@ proxies:
       uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
       ws-opts:
         headers:
-            Host: baipiao.CMLiussss.abrdns.com
-        path: /snippets/ip=tw.tp81.netlib.re:81vless:/0c6b0284-77b9-48c8-969a-4be6b18b10d3
+            Host: xn--kwr11l51ffzytxy.CMLiussss.dedyn.io
+        path: /snippets/ip=tw.tp81.netlib.re:81?ed=2560
     - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_124|YT|GPT|Github|FREE-11"
+      name: "\U0001F1FA\U0001F1F8US_62|YT|GPT⁺|Gemini|Github|FREE-11"
       network: ws
       port: 443
       server: 141.101.120.5
@@ -1828,7 +997,7 @@ proxies:
         headers:
             Host: xn--kwr11l51ffzytxy.CMLiussss.dedyn.io
         path: /snippets/ip=tw.tp81.netlib.re:81?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_125|YT|GPT⁺|Github|FREE-11"
+    - name: "\U0001F1FA\U0001F1F8US_63|YT|Gemini|Github|FREE-11"
       network: ws
       port: 443
       server: xn--ktff-jt6hr36l.tencentapp.cn
@@ -1844,23 +1013,7 @@ proxies:
             Host: What.The.Fxxk.cloudns.org
         path: /snippets/ip=tw.tp81.netlib.re:81?ed=2560?ed=2048
     - client-fingerprint: random
-      name: "\U0001F1FA\U0001F1F8US_126|YT|GPT⁺|Github|FREE-11"
-      network: ws
-      port: 8443
-      server: 104.16.249.99
-      servername: 52yunwang.dpdns.org
-      skip-cert-verify: true
-      tfo: false
-      tls: true
-      type: vless
-      udp: true
-      uuid: ed740927-b839-4a33-a831-5dddfc5ad31b
-      ws-opts:
-        headers:
-            Host: 52yunwang.dpdns.org
-        path: /?ed=2560
-    - client-fingerprint: random
-      name: "\U0001F1FA\U0001F1F8US_127|YT|GPT⁺|Github|FREE-11"
+      name: "\U0001F1FA\U0001F1F8US_64|YT|GPT|Gemini|Github|FREE-11"
       network: ws
       port: 443
       server: 104.24.0.180
@@ -1876,10 +1029,10 @@ proxies:
             Host: 52yunwang.dpdns.org
         path: /?ed=2560
     - client-fingerprint: random
-      name: "\U0001F1FA\U0001F1F8US_128|YT|GPT⁺|Github|FREE-11"
+      name: "\U0001F1FA\U0001F1F8US_65|GPT⁺|Gemini|Github|FREE-11"
       network: ws
-      port: 443
-      server: 162.159.153.166
+      port: 2087
+      server: 190.93.244.102
       servername: 52yunwang.dpdns.org
       skip-cert-verify: true
       tfo: false
@@ -1891,25 +1044,57 @@ proxies:
         headers:
             Host: 52yunwang.dpdns.org
         path: /?ed=2560
-    - client-fingerprint: chrome
-      name: "\U0001F1E9\U0001F1EADE_1|YT|GPT⁺|Github|FREE-11"
+    - client-fingerprint: random
+      name: "\U0001F1FA\U0001F1F8US_66|GPT|Gemini|Github|FREE-11"
       network: ws
       port: 8443
-      server: 172.66.40.99
-      servername: D0dTpVg4Z3.sOlEnTrAa.InFo
+      server: 104.16.249.99
+      servername: 52yunwang.dpdns.org
       skip-cert-verify: true
       tfo: false
       tls: true
       type: vless
       udp: true
-      uuid: e999db7a-1b17-4da6-bc37-c9fa24af2e93
+      uuid: ed740927-b839-4a33-a831-5dddfc5ad31b
       ws-opts:
         headers:
-            Host: D0dTpVg4Z3.sOlEnTrAa.InFo
+            Host: 52yunwang.dpdns.org
+        path: /?ed=2560
+    - client-fingerprint: randomized
+      name: "\U0001F1EF\U0001F1F5JP_1|YT|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: Www.speedtest.net
+      servername: spring-dream-2210.votapi4213.workers.dev
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: ed7f3703-29d7-42ca-b8bd-a4b291422921
+      ws-opts:
+        headers:
+            Host: spring-dream-2210.votapi4213.workers.dev
+        path: /tr----EXPRESSVPN_420---Join----EXPRESSVPN_420---Join---EXPRESSVPN_420---Join----EXPRESSVPN_420---Join---EXPRESSVPN_420/?ed=2048
+    - client-fingerprint: chrome
+      name: "\U0001F1EA\U0001F1F8ES_1|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: 172.66.45.24
+      servername: reAl-madrID9248.pagEs.dEv
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: f744c2dc-1359-494c-9808-d81ce7665d58
+      ws-opts:
+        headers:
+            Host: reAl-madrID9248.pagEs.dEv
         path: /
     - alterId: 0
       cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_129|YT|GPT⁺|Gemini|Github|FREE-11"
+      name: "\U0001F1FA\U0001F1F8US_67|YT|GPT⁺|Gemini|Github|FREE-11"
       network: tcp
       port: 41100
       server: 15.204.234.200
@@ -1918,7 +1103,7 @@ proxies:
       uuid: c7f169a3-2e9a-4894-ba53-7b2fa6fd08b4
     - alterId: 64
       cipher: auto
-      name: "\U0001F1E8\U0001F1E6CA_5|YT|GPT⁺|Gemini|Github|FREE-11"
+      name: "\U0001F1E8\U0001F1E6CA_4|YT|GPT⁺|Gemini|Github|FREE-11"
       network: ws
       port: 443
       server: 15.235.83.228
@@ -1930,21 +1115,7 @@ proxies:
         headers:
             Host: lammaland.org
         path: linkvws
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_130|YT|GPT⁺|Github|FREE-11"
-      network: ws
-      port: 443
-      server: klo.986986.shop
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: b75c9731-408d-4aa6-8ae9-3857205113a1
-      ws-opts:
-        headers:
-            Host: klo.986986.shop
-        path: /nvjx6j7kbDQIQMZvbeVA9
-    - name: "\U0001F1FA\U0001F1F8US_131|YT|Gemini|Github|FREE-11"
+    - name: "\U0001F1FA\U0001F1F8US_68|YT|Gemini|Github|FREE-11"
       network: ws
       port: 2096
       server: 185.225.195.41
@@ -1959,15 +1130,22 @@ proxies:
         headers:
             Host: vless.keepfuck.me
         path: /snippets
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_132|YT|GPT⁺|Gemini|Github|FREE-11"
-      network: tcp
-      port: 15361
-      server: 15.204.11.190
+    - client-fingerprint: random
+      name: "\U0001F1FA\U0001F1F8US_69|YT|GPT⁺|Gemini|FREE-11"
+      network: ws
+      port: 443
+      server: 188.114.98.151
+      servername: xw0083.dpdns.org
       skip-cert-verify: true
-      type: vmess
-      uuid: 5d7bf9e3-415c-40f3-c66d-a54ea0fd860e
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 45c0483a-eef1-4447-9607-49d789e20c7d
+      ws-opts:
+        headers:
+            Host: xw0083.dpdns.org
+        path: /?ed=2560
     - client-fingerprint: chrome
       name: "\U0001F1F3\U0001F1F1NL_8|YT|GPT⁺|Github|FREE-11"
       network: ws
@@ -1986,29 +1164,411 @@ proxies:
         path: /
     - alterId: 0
       cipher: auto
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_133|YT|GPT⁺|Gemini|Github|FREE-40"
+      name: "\U0001F1FA\U0001F1F8US_70|YT|GPT⁺|Gemini|Github|FREE-11"
       network: ws
       port: 443
-      server: cpp007-2.facai20250909.com
-      servername: cpp007-2.facai20250909.com
+      server: HHhjjMKi.457.PP.Ua
       skip-cert-verify: true
       tls: true
       type: vmess
-      uuid: e134b5e9-4b16-4d50-b3d9-eaef652660b0
+      uuid: 9f1673a0-688a-4f31-85fa-af40b03c708a
       ws-opts:
-        path: /e134b5e9
+        headers:
+            Host: HHhjjMKi.457.PP.Ua
+        path: /hepNwpzuxszIxZMQZRJ
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_71|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: HhHjJMki.457.pP.uA
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: da7e8bcf-b195-4d69-a667-24f9a7673a11
+      ws-opts:
+        headers:
+            Host: HhHjJMki.457.pP.uA
+        path: /hepNwpzuxszIxZMQZRJ
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1EB\U0001F1F7FR_2|YT|GPT⁺|Github|FREE-11"
+      network: ws
+      port: 443
+      server: 57.128.189.253
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        headers:
+            Host: kapelleng.com
+        path: /linkvws
     - alterId: 0
       cipher: auto
       h2-opts: {}
       http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_134|YT|GPT⁺|Gemini|Github|FREE-40"
-      network: ws
-      port: 45979
-      server: 38.92.10.226
+      name: "\U0001F1FA\U0001F1F8US_72|YT|GPT⁺|Gemini|Github|FREE-40"
+      port: 16416
+      server: 172.233.171.224
       skip-cert-verify: true
       type: vmess
-      uuid: 23bdf6df-c482-46d0-c0f4-5a98d534ea11
+      udp: true
+      uuid: 8c1b9bea-cb51-43bb-a65c-0af31bbbf145
+    - alterId: 0
+      cipher: auto
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_73|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: ws
+      port: 443
+      server: xsj009-0.facai2024.com
+      servername: xsj009-0.facai2024.com
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 748f631c-0ce0-4762-aadc-32d8fb2e412b
       ws-opts:
-        path: /test
+        path: /748f631c
+    - alterId: 0
+      cipher: auto
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_74|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: ws
+      port: 443
+      server: 157.254.231.31
+      servername: yjcm003.dtkj0328.com
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 56380b67-e2fe-49d1-a9dd-6c3a422b8e8c
+      ws-opts:
+        path: yjcm1234
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1E7\U0001F1EABE"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1E9\U0001F1EADE_1|YT|GPT⁺|Github|FREE-40"
+      network: ws
+      port: 443
+      server: 57.129.28.215
+      servername: serkat.org
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        headers:
+            HOST: serkat.org
+        path: linkvws
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1E8\U0001F1E6CA"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1E8\U0001F1E6CA_5|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: ws
+      port: 443
+      server: 15.235.85.156
+      servername: kampong.org
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        headers:
+            HOST: kampong.org
+        path: linkvws
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1E7\U0001F1EABE"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1EB\U0001F1F7FR_3|YT|GPT⁺|Github|FREE-40"
+      network: ws
+      port: 443
+      server: 57.128.189.143
+      servername: lammaland.org
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        headers:
+            HOST: lammaland.org
+        path: linkvws
+    - cipher: chacha20-ietf-poly1305
+      country: "\U0001F1F1\U0001F1F9 LT"
+      name: "\U0001F1F3\U0001F1F1NL_9|YT|GPT⁺|Github|FREE-40"
+      password: 4a2rfixophdjffa8KVA4Aa
+      port: 8080
+      server: beesyar.org
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      country: "\U0001F1F1\U0001F1F9 LT"
+      name: "\U0001F1F3\U0001F1F1NL_10|YT|GPT⁺|Github|FREE-40"
+      password: 1RWwXhwfAB5gAEozU4G2Pg
+      port: 8080
+      server: 45.87.175.181
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      country: "\U0001F1F1\U0001F1F9 LT"
+      name: "\U0001F1F3\U0001F1F1NL_11|YT|GPT⁺|Github|FREE-40"
+      password: 1RWwXhwfAB5gAEozU4G2Pg
+      port: 8080
+      server: 45.87.175.164
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      country: "\U0001F1F1\U0001F1F9 LT"
+      name: "\U0001F1F3\U0001F1F1NL_12|YT|GPT⁺|Github|FREE-40"
+      password: 4a2rfixophdjffa8KVA4Aa
+      port: 8080
+      server: 45.87.175.154
+      skip-cert-verify: true
+      type: ss
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_75|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: none
+      port: 43966
+      server: 209.54.104.219
+      skip-cert-verify: true
+      type: vmess
+      uuid: 0e3606ae-321a-4d0b-85ec-5f4352f4bc24
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts:
+        method: GET
+        path:
+            - /
+      name: "\U0001F1FA\U0001F1F8US_76|YT|GPT⁺|Github|FREE-40"
+      network: http
+      port: 32301
+      server: 104.168.94.41
+      skip-cert-verify: true
+      type: vmess
+      uuid: a2235b72-fd9c-404f-be5a-53b2de0cb798
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1E8\U0001F1E6CA_6|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: ws
+      port: 443
+      server: 15.235.83.227
+      servername: mankadmu.com
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        headers:
+            HOST: mankadmu.com
+        path: /linkvws
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_77|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: none
+      port: 11450
+      server: 47.253.70.234
+      skip-cert-verify: true
+      type: vmess
+      uuid: 53660c51-47dc-41d1-cae8-f07be5b0fdd2
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_78|YT|GPT|Github|FREE-40"
+      network: none
+      port: 33606
+      server: 192.3.233.216
+      skip-cert-verify: true
+      type: vmess
+      uuid: 19d74f4a-e9a8-4942-9061-53f53af0c024
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1E8\U0001F1E6CA_7|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: ws
+      port: 443
+      server: 15.235.50.172
+      servername: baradiha.com
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        headers:
+            HOST: baradiha.com
+        path: /linkvws
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_79|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: none
+      port: 59674
+      server: 43.162.114.137
+      skip-cert-verify: true
+      type: vmess
+      uuid: 6a4ce5b9-0d60-4a21-a8fe-897798019500
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_80|GPT⁺|Gemini|Github|FREE-40"
+      network: ws
+      port: 443
+      server: 38.99.82.193
+      servername: tilebani.com
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        headers:
+            HOST: tilebani.com
+        path: /linkvws
+    - cipher: aes-128-gcm
+      country: "\U0001F1FA\U0001F1F8US"
+      name: "\U0001F1FA\U0001F1F8US_81|YT|GPT⁺|Gemini|Github|FREE-40"
+      password: shadowsocks
+      port: 443
+      server: 37.19.198.243
+      skip-cert-verify: true
+      type: ss
+    - alterId: 1
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1E8\U0001F1E6CA_8|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: ws
+      port: 443
+      server: seribus.org
+      servername: seribus.org
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        headers:
+            HOST: seribus.org
+        path: linkvws
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_82|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: ws
+      port: 443
+      server: 15.204.103.7
+      servername: lammaland.org
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        headers:
+            HOST: lammaland.org
+        path: linkvws
+    - alterId: 1
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_83|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: ws
+      port: 443
+      server: 15.204.64.211
+      servername: kampong.org
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        headers:
+            HOST: kampong.org
+        path: linkvws
+    - name: "\U0001F1FA\U0001F1F8US_84|YT|GPT⁺|Gemini|Github|FREE-29"
+      network: ws
+      port: 2096
+      server: 185.16.110.32
+      servername: kejiland.freewarp.eu.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
+      ws-opts:
+        headers:
+            Host: kejiland.freewarp.eu.org
+        path: /snippetsfp=chrome
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1EB\U0001F1F7FR_4|YT|GPT⁺|Github|FREE-40"
+      network: ws
+      port: 443
+      server: 172.67.200.13
+      servername: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+      ws-opts:
+        headers:
+            HOST: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+        path: /azumase.ren
+    - cipher: aes-128-cfb
+      name: "\U0001F1E8\U0001F1E6CA_9|YT|GPT⁺|Github|FREE-6"
+      obfs: http_post
+      obfs-param: ""
+      password: $$Turb0VPN$$
+      port: 443
+      protocol: auth_aes128_md5
+      protocol-param: ""
+      server: ssca.irundns.net
+      skip-cert-verify: true
+      type: ssr
+    - cipher: aes-256-cfb
+      name: "\U0001F1FA\U0001F1F8US_85|YT|GPT⁺|Gemini|Github|FREE-6"
+      password: gYCYXfkUQEs2TaJQ
+      port: 9038
+      server: 194.116.173.21
+      skip-cert-verify: true
+      type: ss
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1E8\U0001F1E6CA_10|YT|GPT⁺|Gemini|Github|FREE-6"
+      network: ws
+      port: 443
+      server: 15.235.83.228
+      servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        path: /linkvws
