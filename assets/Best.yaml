@@ -1,19 +1,6 @@
 proxies:
     - client-fingerprint: chrome
-      name: "\U0001F1EB\U0001F1F7FR_1|YT|GPT⁺|Github|FREE-7"
-      port: 8080
-      reality-opts:
-        public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
-        short-id: 27cfa05000c23cc4
-      server: 45.95.233.8
-      servername: yandex.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_1|YT|GPT⁺|Gemini|Github|FREE-7"
+      name: "\U0001F1FA\U0001F1F8US_1|YT|GPT⁺|Gemini|Github|FREE-9"
       port: 8080
       reality-opts:
         public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
@@ -25,226 +12,88 @@ proxies:
       type: vless
       udp: true
       uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_2|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 156.146.38.168
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1FA\U0001F1F8US_3|YT|GPT⁺|Github|FREE-21"
+    - cipher: aes-256-cfb
+      name: "\U0001F1FA\U0001F1F8US_2|YT|GPT⁺|Github|FREE-4"
       password: f8f7aCzcPKbsF8p3
-      port: 990
-      server: 64.74.163.130
+      port: 989
+      server: 104.192.226.106
       skip-cert-verify: true
       type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_4|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
+    - name: "\U0001F1EB\U0001F1F7FR_1|YT|GPT⁺|Github|FREE-9"
+      network: ws
+      port: 80
+      server: mstr.fastly80.hosting-ip.com
+      servername: Gn8656.io
+      skip-cert-verify: true
+      tls: false
+      type: vless
+      udp: true
+      uuid: 857b7905-8b11-4987-994d-09bcbf7979df
+      ws-opts:
+        headers:
+            Host: Gn8656.io
+        path: /admin
+    - alpn:
+        - http%2F1.1
+      client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_3|YT|GPT⁺|Gemini|Github|FREE-14"
+      network: ws
       port: 443
-      server: 156.146.38.167
+      server: 104.21.71.83
+      servername: a32e1893-496a-5d3e-d34f-a8674b22b993.777162.xyz
       skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_5|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 156.146.38.170
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_6|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 156.146.38.169
-      skip-cert-verify: true
-      type: ss
+      tfo: false
+      tls: true
+      type: vless
+      uuid: 3c2f5010-bc17-46d7-a5d3-7489f3a8dded
+      ws-opts:
+        headers:
+            Host: a32e1893-496a-5d3e-d34f-a8674b22b993.777162.xyz
+        path: /GJuqYfsZSA3HxKLVmdalbjJm7kb1B
     - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: "\U0001F1EE\U0001F1EAIE_1|YT|GPT⁺|Gemini|Github|FREE-7"
-      port: 36678
+      name: "\U0001F1E8\U0001F1E6CA_1|YT|GPT⁺|Github|FREE-14"
+      port: 8080
       reality-opts:
-        public-key: rrGm0NemTtGQ8Vrd2AzB7pSoW_kYtqYvhRxsx_MtwG0
-        short-id: 5d20
-      server: 192.210.183.136
-      servername: swdist.apple.com
+        public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
+        short-id: 27cfa05000c23cc4
+      server: 81.19.140.20
+      servername: yandex.com
       skip-cert-verify: true
       tls: true
       type: vless
       udp: true
-      uuid: bf9b316d-31ac-42ee-b8a5-8dc795118917
-    - cipher: aes-256-cfb
-      name: "\U0001F1E8\U0001F1E6CA_1|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 989
-      server: 79.127.233.170
+      uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37
+    - name: "\U0001F1FA\U0001F1F8US_4|YT|GPT⁺|Gemini|Github|FREE-14"
+      password: 3Wpj66
+      port: 64363
+      server: 216.151.168.188
       skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1E8\U0001F1E6CA_2|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 990
-      server: 79.127.233.170
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_1|YT|GPT⁺|Github|FREE-21"
-      password: 4a2rfixophdjffa8KVA4Aa
-      port: 8080
-      server: 193.29.139.157
-      skip-cert-verify: true
-      type: ss
-    - alterId: 0
+      type: http
+      username: kZXMC3Z1
+    - alpn:
+        - ""
+      alterId: "64"
       cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_7|YT|GPT⁺|Github|FREE-21"
+      name: "\U0001F1FA\U0001F1F8US_5|YT|GPT⁺|Gemini|Github|FREE-17"
       network: ws
-      port: 20086
-      server: 173.249.209.146
+      port: 45555
+      server: 67.21.75.40
+      servername: www.38530229.xyz
       skip-cert-verify: true
-      tls: false
+      tls: true
       type: vmess
-      uuid: 3935c2dc-dbb0-43f7-b367-fe89abe87fdf
-      ws-opts:
-        path: /
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_2|YT|GPT⁺|Github|FREE-21"
-      password: cvII85TrW6n0OGyfpHVS1u
-      port: 8080
-      server: 45.158.171.146
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_3|YT|GPT⁺|Github|FREE-21"
-      password: 4a2rfixophdjffa8KVA4Aa
-      port: 8080
-      server: 45.87.175.171
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_4|YT|GPT⁺|Github|FREE-21"
-      password: QCXDxuDlTTMD7jtgHUjIoj
-      port: 8080
-      server: 151.242.251.153
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_5|YT|GPT⁺|Github|FREE-21"
-      password: QCXDxuDlTTMD7jtgHUjIoj
-      port: 8080
-      server: 45.87.175.154
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_6|YT|GPT⁺|Github|FREE-21"
-      password: cvII85TrW6n0OGyfpHVS1u
-      port: 8080
-      server: 45.87.175.164
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-256-cfb
-      name: "\U0001F1EB\U0001F1F7FR_2|YT|GPT⁺|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 989
-      server: 195.154.185.174
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_7|YT|GPT⁺|Github|FREE-21"
-      password: 1RWwXhwfAB5gAEozU4G2Pg
-      port: 8080
-      server: 45.87.175.178
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_8|YT|GPT⁺|Github|FREE-21"
-      password: oZIoA69Q8yhcQV8ka3Pa3A
-      port: 8080
-      server: 45.87.175.58
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1E8\U0001F1E6CA_3|YT|GPT⁺|Github|FREE-21"
-      password: JIhN6rBKkaEboLNXVSv5rq
-      port: 80
-      server: 142.4.216.225
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-256-cfb
-      name: "\U0001F1F3\U0001F1F1NL_9|YT|GPT⁺|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 989
-      server: 51.15.17.169
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1E8\U0001F1E6CA_4|YT|GPT⁺|Github|FREE-21"
-      password: JIhN6rBKkaEboLNXVSv5rq
-      port: 80
-      server: ca225.vpnbook.com
-      skip-cert-verify: true
-      type: ss
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_8|YT|GPT⁺|Gemini|Github|FREE-3"
-      network: ws
-      port: 2096
-      server: 62.72.166.49
-      servername: getsub.saas.classelivre.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 12345678-1234-1234-1234-123456789123
+      udp: true
+      uuid: b12c4f8d-1aaa-4333-98e6-ec939292c580
       ws-opts:
         headers:
-            Host: getsub.saas.classelivre.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
+            Host: www.38530229.xyz
+        path: /path/1751026269450
+      xudp: true
     - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_9|YT|GPT⁺|Gemini|Github|FREE-3"
+      name: "\U0001F1FA\U0001F1F8US_6|YT|GPT⁺|Gemini|Github|FREE-3"
       network: ws
       port: 2096
-      server: 212.183.88.49
-      servername: getsub.saas.classelivre.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            Host: getsub.saas.classelivre.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_10|YT|GPT⁺|Gemini|Github|FREE-3"
-      network: ws
-      port: 2096
-      server: 109.176.239.43
-      servername: kejiland.freewarp.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
-      ws-opts:
-        headers:
-            Host: kejiland.freewarp.eu.org
-        path: /snippets
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_11|YT|GPT⁺|Gemini|Github|FREE-3"
-      network: ws
-      port: 2096
-      server: 204.93.210.49
-      servername: getsub.saas.classelivre.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            Host: getsub.saas.classelivre.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_12|YT|GPT⁺|Gemini|Github|FREE-3"
-      network: ws
-      port: 2096
-      server: 166.62.111.32
+      server: 199.68.156.32
       servername: kejiland.freewarp.eu.org
       skip-cert-verify: true
       tls: true
@@ -255,21 +104,21 @@ proxies:
             Host: kejiland.freewarp.eu.org
         path: /snippets
     - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_13|YT|GPT⁺|Gemini|Github|FREE-3"
+      name: "\U0001F1FA\U0001F1F8US_7|YT|GPT⁺|Gemini|Github|FREE-3"
       network: ws
       port: 2096
-      server: 185.16.110.49
-      servername: getsub.saas.classelivre.eu.org
+      server: 192.200.160.43
+      servername: kejiland.freewarp.eu.org
       skip-cert-verify: true
       tls: true
       type: vless
-      uuid: 12345678-1234-1234-1234-123456789123
+      uuid: 01997b9d-a1f7-e188-981a-c665b723cfef
       ws-opts:
         headers:
-            Host: getsub.saas.classelivre.eu.org
+            Host: kejiland.freewarp.eu.org
         path: /snippets&freecodes@节点狂魔/?ed=2560
     - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_14|YT|GPT⁺|Gemini|Github|FREE-3"
+      name: "\U0001F1FA\U0001F1F8US_8|YT|GPT⁺|Gemini|Github|FREE-3"
       network: ws
       port: 2096
       server: 45.67.215.49
@@ -283,49 +132,7 @@ proxies:
             Host: getsub.saas.classelivre.eu.org
         path: /snippets&freecodes@节点狂魔/?ed=2560
     - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_15|YT|GPT⁺|Gemini|Github|FREE-3"
-      network: ws
-      port: 2096
-      server: 45.149.12.49
-      servername: getsub.saas.classelivre.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            Host: getsub.saas.classelivre.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_16|YT|GPT⁺|Gemini|Github|FREE-3"
-      network: ws
-      port: 2096
-      server: 166.62.111.49
-      servername: getsub.saas.classelivre.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            Host: getsub.saas.classelivre.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_17|YT|GPT⁺|Gemini|Github|FREE-3"
-      network: ws
-      port: 2096
-      server: 192.200.160.49
-      servername: getsub.saas.classelivre.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            Host: getsub.saas.classelivre.eu.org
-        path: /snippets&freecodes@节点狂魔/?ed=2560
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_18|YT|GPT⁺|Gemini|Github|FREE-3"
+      name: "\U0001F1FA\U0001F1F8US_9|YT|GPT⁺|Gemini|Github|FREE-3"
       network: ws
       port: 2096
       server: 185.7.240.32
@@ -339,7 +146,7 @@ proxies:
             Host: kejiland.freewarp.eu.org
         path: /snippets
     - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_19|YT|GPT⁺|Gemini|Github|FREE-3"
+      name: "\U0001F1FA\U0001F1F8US_10|YT|GPT⁺|Gemini|Github|FREE-3"
       network: ws
       port: 2096
       server: 141.11.203.49
@@ -352,180 +159,91 @@ proxies:
         headers:
             Host: getsub.saas.classelivre.eu.org
         path: /snippets&freecodes@节点狂魔/?ed=2560
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_20|YT|Gemini|Github|FREE-3"
-      network: ws
-      port: 2096
-      server: 160.153.168.41
-      servername: vless.keepfuck.me
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1E8\U0001F1E6CA_2|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: f8f7aCzcPKbsF8p3
+      port: 990
+      server: 79.127.233.170
       skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 563608cd-f135-4e64-938d-d9eb3be1ba77
-      ws-opts:
-        headers:
-            Host: vless.keepfuck.me
-        path: /snippets
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_21|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_11|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
       port: 443
-      server: 104.16.246.85
-      servername: juzi.634676.xyz
+      server: 156.146.38.169
       skip-cert-verify: true
-      tfo: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 0c0537c3-f0fb-40e6-bd59-f5038e1855ed
-      ws-opts:
-        headers:
-            Host: juzi.634676.xyz
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-        path: /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_22|YT|GPT⁺|Gemini|Github|FREE-14"
-      password: 3Wpj66
-      port: 64363
-      server: 216.151.168.188
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1FA\U0001F1F8US_12|YT|GPT⁺|Github|FREE-21"
+      password: f8f7aCzcPKbsF8p3
+      port: 990
+      server: 104.192.226.106
       skip-cert-verify: true
-      type: http
-      username: kZXMC3Z1
-    - alpn:
-        - h3
-      client-fingerprint: random
-      name: "\U0001F1FA\U0001F1F8US_23|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2083
-      server: 162.159.142.252
-      servername: fei.634676.xyz
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_13|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 156.146.38.170
       skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: d2965257-0536-4811-a0d5-cdce54e90326
-      ws-opts:
-        headers:
-            Host: fei.634676.xyz
-        path: /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_24|YT|GPT⁺|Gemini|Github|FREE-14"
-      password: TDBLtJz
-      port: 46415
-      server: 38.34.24.232
-      skip-cert-verify: true
-      type: http
-      username: kZXMC3Z1
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1EB\U0001F1F7FR_3|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: 1fdb6b30-5371-4ff8-a001-efdc4b43d79b
-      port: "52368"
-      server: 172.252.236.213
-      skip-cert-verify: true
-      sni: real.getafreenode.sbs
-      type: hysteria2
-      up: ""
+      type: ss
     - cipher: aes-256-cfb
-      country: "\U0001F1EC\U0001F1E7 GB"
-      name: "\U0001F1EC\U0001F1E7GB_1|GPT⁺|Github|FREE-14"
-      obfs: plain
+      name: "\U0001F1E8\U0001F1E6CA_3|YT|GPT⁺|Gemini|Github|FREE-21"
       password: f8f7aCzcPKbsF8p3
       port: 989
-      protocol: origin
-      server: 62.100.205.48
-      skip-cert-verify: true
-      type: ssr
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_25|YT|GPT⁺|Gemini|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: miaoge110
-      port: "40112"
-      server: 45.58.38.153
-      skip-cert-verify: true
-      sni: www.bing.com
-      type: hysteria2
-      up: ""
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_26|YT|GPT⁺|Gemini|Github|FREE-1"
-      password: shadowsocks
-      port: 443
-      server: 37.19.198.236
+      server: 79.127.233.170
       skip-cert-verify: true
       type: ss
     - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_27|YT|GPT⁺|Gemini|Github|FREE-1"
+      name: "\U0001F1FA\U0001F1F8US_14|YT|GPT⁺|Gemini|Github|FREE-21"
       password: shadowsocks
       port: 443
-      server: 37.19.198.160
+      server: 156.146.38.168
       skip-cert-verify: true
       type: ss
-    - name: "\U0001F1FA\U0001F1F8US_28|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.207.197.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_29|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.251.80.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_30|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 193.124.18.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
     - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_31|YT|GPT⁺|Gemini|Github|FREE-1"
+      name: "\U0001F1FA\U0001F1F8US_15|YT|GPT|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 156.146.38.167
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1E8\U0001F1E6CA_4|YT|GPT⁺|Github|FREE-21"
+      password: JIhN6rBKkaEboLNXVSv5rq
+      port: 80
+      server: ca225.vpnbook.com
+      skip-cert-verify: true
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_16|YT|GPT⁺|Gemini|Github|FREE-1"
       password: shadowsocks
       port: 443
       server: 173.244.56.9
       skip-cert-verify: true
       type: ss
-    - name: "\U0001F1FA\U0001F1F8US_32|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 103.245.229.52
-      servername: saas.git.cloudns.org
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_17|YT|GPT⁺|Gemini|Github|FREE-1"
+      password: shadowsocks
+      port: 443
+      server: 173.244.56.6
       skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_33|YT|GPT⁺|Gemini|Github|FREE-12"
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_18|YT|GPT⁺|Gemini|Github|FREE-1"
+      password: shadowsocks
+      port: 443
+      server: 37.19.198.160
+      skip-cert-verify: true
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_19|YT|GPT⁺|Gemini|Github|FREE-1"
+      password: shadowsocks
+      port: 443
+      server: 37.19.198.236
+      skip-cert-verify: true
+      type: ss
+    - name: "\U0001F1FA\U0001F1F8US_20|YT|GPT⁺|Gemini|Github|FREE-12"
       network: ws
       port: 2096
       server: 185.18.184.50
@@ -539,10 +257,10 @@ proxies:
         headers:
             host: saas.sosocn.abrdns.com
         path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_34|YT|GPT⁺|Gemini|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_21|YT|GPT⁺|Gemini|Github|FREE-12"
       network: ws
       port: 2096
-      server: 205.233.181.52
+      server: 62.72.166.52
       servername: saas.git.cloudns.org
       skip-cert-verify: true
       tls: true
@@ -552,11 +270,11 @@ proxies:
       ws-opts:
         headers:
             host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_35|YT|GPT⁺|Gemini|Github|FREE-12"
+        path: /snippets&freecodes@节点狂魔/?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_22|YT|GPT⁺|Gemini|Github|FREE-12"
       network: ws
       port: 2096
-      server: 154.211.8.52
+      server: 46.254.92.52
       servername: saas.git.cloudns.org
       skip-cert-verify: true
       tls: true
@@ -566,11 +284,11 @@ proxies:
       ws-opts:
         headers:
             host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_36|YT|GPT⁺|Gemini|Github|FREE-12"
+        path: /snippets&freecodes@节点狂魔/?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_23|YT|GPT⁺|Gemini|Github|FREE-12"
       network: ws
       port: 2096
-      server: 155.46.167.52
+      server: 185.193.28.52
       servername: saas.git.cloudns.org
       skip-cert-verify: true
       tls: true
@@ -580,11 +298,11 @@ proxies:
       ws-opts:
         headers:
             host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_37|YT|GPT⁺|Gemini|Github|FREE-12"
+        path: /snippets&freecodes@节点狂魔/?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_24|YT|GPT⁺|Gemini|Github|FREE-12"
       network: ws
       port: 2096
-      server: 185.148.106.52
+      server: 89.116.180.52
       servername: saas.git.cloudns.org
       skip-cert-verify: true
       tls: true
@@ -594,951 +312,8 @@ proxies:
       ws-opts:
         headers:
             host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_38|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 80.93.202.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_39|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 155.46.167.36
-      servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a
-      ws-opts:
-        headers:
-            host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
-        path: /snippets&hongkong @freecodes2 /?ed=2560
-    - alpn:
-        - ""
-      alterId: "0"
-      cipher: auto
-      name: "\U0001F1EC\U0001F1E7GB_2|GPT⁺|Github|FREE-1"
-      network: ws
-      port: "80"
-      server: test2.flha.ru
-      servername: test2.flha.ru
-      skip-cert-verify: true
-      tls: false
-      type: vmess
-      udp: true
-      uuid: 15f62abf-8cc9-4598-8d57-e4df7b499a84
-      ws-opts:
-        headers:
-            Host: test2.flha.ru
-        path: /15f62abf-8cc9-4598-8d57-e4df7b499a84-vmess
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_40|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 89.116.46.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_41|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 141.11.203.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_42|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 91.209.253.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_43|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 198.202.211.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_44|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 164.38.155.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_45|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 103.116.7.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_46|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 154.197.121.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_47|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 188.164.158.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_48|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 199.181.197.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_49|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 5.10.245.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_50|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 92.53.189.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_51|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 184.174.80.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_52|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 103.133.1.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_53|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 25.25.25.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_54|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.59.218.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_55|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 198.177.56.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_56|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 77.75.199.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_57|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 184.174.80.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_58|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.135.9.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_59|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 195.13.45.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_60|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.162.229.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_61|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 77.105.163.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_62|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 5.10.214.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_63|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 170.114.45.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_64|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.251.82.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_65|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 69.84.182.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_66|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 154.198.173.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_67|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 193.227.99.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_68|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 77.37.33.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_69|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 209.46.30.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_70|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.85.118.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_71|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 181.214.1.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_72|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 194.36.55.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_73|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.8.211.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_74|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.148.104.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_75|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.170.166.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_76|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 77.74.228.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_77|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 104.129.167.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_78|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.162.231.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_79|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 159.246.55.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_80|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.251.81.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_81|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 198.62.62.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_82|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 31.185.108.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_83|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.158.133.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_84|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 5.10.215.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_85|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.207.198.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_86|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.40.146.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_87|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.40.151.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_88|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 209.94.90.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_89|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 166.62.107.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_90|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 104.238.71.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_91|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.133.35.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_92|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 198.71.190.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_93|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 135.84.76.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_94|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 198.71.191.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_95|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.133.35.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_96|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 212.183.88.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_97|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.225.195.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_98|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 166.62.112.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_99|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 198.12.144.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_100|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 185.16.110.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_101|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 104.238.70.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_102|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.40.153.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_103|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 198.71.190.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_104|YT|GPT⁺|Gemini|Github|FREE-12"
+        path: /snippets&freecodes@节点狂魔/?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_25|YT|GPT⁺|Gemini|Github|FREE-12"
       network: ws
       port: 2096
       server: 192.169.223.52
@@ -1551,11 +326,11 @@ proxies:
       ws-opts:
         headers:
             host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_105|YT|GPT⁺|Gemini|Github|FREE-12"
+        path: /snippets&freecodes@节点狂魔/?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_26|YT|GPT⁺|Gemini|Github|FREE-12"
       network: ws
       port: 2096
-      server: 198.12.145.52
+      server: 72.167.25.52
       servername: saas.git.cloudns.org
       skip-cert-verify: true
       tls: true
@@ -1565,8 +340,50 @@ proxies:
       ws-opts:
         headers:
             host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_106|YT|GPT⁺|Gemini|Github|FREE-12"
+        path: /snippets&freecodes@节点狂魔/?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_27|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 155.46.213.52
+      servername: saas.git.cloudns.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 12345678-1234-1234-1234-123456789123
+      ws-opts:
+        headers:
+            host: saas.git.cloudns.org
+        path: /snippets&freecodes@节点狂魔/?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_28|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 185.162.231.52
+      servername: saas.git.cloudns.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 12345678-1234-1234-1234-123456789123
+      ws-opts:
+        headers:
+            host: saas.git.cloudns.org
+        path: /snippets&freecodes@节点狂魔/?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_29|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 185.149.135.50
+      servername: saas.sosocn.abrdns.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 12345678-1234-1234-1234-123456789123
+      ws-opts:
+        headers:
+            host: saas.sosocn.abrdns.com
+        path: /snippets
+    - name: "\U0001F1FA\U0001F1F8US_30|YT|GPT⁺|Gemini|Github|FREE-12"
       network: ws
       port: 2096
       server: 185.225.195.50
@@ -1580,10 +397,118 @@ proxies:
         headers:
             host: saas.sosocn.abrdns.com
         path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_107|YT|GPT⁺|Gemini|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_31|YT|GPT⁺|Gemini|Github|FREE-12"
       network: ws
       port: 2096
-      server: 199.68.156.50
+      server: 103.133.1.52
+      servername: saas.git.cloudns.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 12345678-1234-1234-1234-123456789123
+      ws-opts:
+        headers:
+            host: saas.git.cloudns.org
+        path: /snippets&freecodes@节点狂魔/?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_32|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: cloudflare.182682.xyz
+      servername: 01.91md.fun
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06
+      ws-opts:
+        headers:
+            host: 01.91md.fun
+        path: /?ed=2048
+    - name: "\U0001F1FA\U0001F1F8US_33|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 20274
+      server: 142.171.147.201
+      servername: 01.91md.fun
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06
+      ws-opts:
+        headers:
+            host: 01.91md.fun
+        path: /?ed=2048
+    - name: "\U0001F1FA\U0001F1F8US_34|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 30488
+      server: 129.159.37.19
+      servername: 01.91md.fun
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06
+      ws-opts:
+        headers:
+            host: 01.91md.fun
+        path: /?ed=2048
+    - name: "\U0001F1FA\U0001F1F8US_35|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 9933
+      server: 142.171.52.104
+      servername: 01.91md.fun
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06
+      ws-opts:
+        headers:
+            host: 01.91md.fun
+        path: /?ed=2048
+    - name: "\U0001F1FA\U0001F1F8US_36|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 11002
+      server: 132.145.217.215
+      servername: 01.91md.fun
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06
+      ws-opts:
+        headers:
+            host: 01.91md.fun
+        path: /?ed=2048
+    - grpc-opts:
+        grpc-mode: gun
+        grpc-service-name: ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON
+      name: "\U0001F1EB\U0001F1F7FR_2|YT|GPT⁺|Github|FREE-24"
+      network: grpc
+      port: 42817
+      server: 141.227.132.199
+      skip-cert-verify: true
+      tls: false
+      type: vless
+      udp: true
+      uuid: f7df6c83-e527-4bb2-bae1-ea743edaffcd
+    - grpc-opts:
+        grpc-mode: gun
+        grpc-service-name: ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON
+      name: "\U0001F1EB\U0001F1F7FR_3|YT|GPT⁺|Github|FREE-24"
+      network: grpc
+      port: 11716
+      server: 141.227.136.11
+      skip-cert-verify: true
+      tls: false
+      type: vless
+      udp: true
+      uuid: 98b988ba-fe55-402e-824a-6f7bb3436f22
+    - name: "\U0001F1FA\U0001F1F8US_37|YT|GPT⁺|Gemini|Github|FREE-24"
+      network: ws
+      port: 2096
+      server: 198.71.191.50
       servername: saas.sosocn.abrdns.com
       skip-cert-verify: true
       tls: true
@@ -1592,68 +517,12 @@ proxies:
       uuid: 12345678-1234-1234-1234-123456789123
       ws-opts:
         headers:
-            host: saas.sosocn.abrdns.com
+            Host: saas.sosocn.abrdns.com
         path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_108|YT|GPT⁺|Gemini|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_38|YT|GPT⁺|Gemini|Github|FREE-24"
       network: ws
       port: 2096
-      server: 194.76.18.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_109|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.40.150.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_110|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 160.153.137.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_111|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 50.62.89.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_112|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 198.177.57.50
+      server: 216.205.52.50
       servername: saas.sosocn.abrdns.com
       skip-cert-verify: true
       tls: true
@@ -1662,26 +531,12 @@ proxies:
       uuid: 12345678-1234-1234-1234-123456789123
       ws-opts:
         headers:
-            host: saas.sosocn.abrdns.com
+            Host: saas.sosocn.abrdns.com
         path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_113|YT|GPT⁺|Gemini|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_39|YT|GPT⁺|Gemini|Github|FREE-24"
       network: ws
       port: 2096
-      server: 192.0.63.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_114|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 194.152.44.50
+      server: 198.12.144.50
       servername: saas.sosocn.abrdns.com
       skip-cert-verify: true
       tls: true
@@ -1690,12 +545,12 @@ proxies:
       uuid: 12345678-1234-1234-1234-123456789123
       ws-opts:
         headers:
-            host: saas.sosocn.abrdns.com
+            Host: saas.sosocn.abrdns.com
         path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_115|YT|GPT⁺|Gemini|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_40|YT|GPT⁺|Gemini|Github|FREE-24"
       network: ws
       port: 2096
-      server: 192.169.221.50
+      server: 198.202.211.50
       servername: saas.sosocn.abrdns.com
       skip-cert-verify: true
       tls: true
@@ -1704,40 +559,12 @@ proxies:
       uuid: 12345678-1234-1234-1234-123456789123
       ws-opts:
         headers:
-            host: saas.sosocn.abrdns.com
+            Host: saas.sosocn.abrdns.com
         path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_116|YT|GPT⁺|Gemini|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_41|YT|GPT⁺|Gemini|Github|FREE-24"
       network: ws
       port: 2096
-      server: 94.247.142.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_117|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 160.153.1.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_118|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 193.227.99.50
+      server: 190.93.245.50
       servername: saas.sosocn.abrdns.com
       skip-cert-verify: true
       tls: true
@@ -1746,26 +573,27 @@ proxies:
       uuid: 12345678-1234-1234-1234-123456789123
       ws-opts:
         headers:
-            host: saas.sosocn.abrdns.com
+            Host: saas.sosocn.abrdns.com
         path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_119|YT|GPT⁺|Gemini|Github|FREE-12"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_42|YT|GPT⁺|Github|FREE-24"
       network: ws
       port: 2096
-      server: 45.67.215.52
-      servername: saas.git.cloudns.org
+      server: 104.26.12.31
+      servername: vless-10.webn.cc
       skip-cert-verify: true
       tls: true
       type: vless
       udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
+      uuid: 6877b96c-a092-4f90-8e46-cbb4cad2bb9f
       ws-opts:
         headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_120|YT|GPT⁺|Gemini|Github|FREE-12"
+            Host: vless-10.webn.cc
+        path: /snippets?ip=proxyip:port(443)&nat64=6to4
+    - name: "\U0001F1FA\U0001F1F8US_43|YT|GPT⁺|Gemini|Github|FREE-24"
       network: ws
       port: 2096
-      server: 194.59.5.50
+      server: 185.207.196.50
       servername: saas.sosocn.abrdns.com
       skip-cert-verify: true
       tls: true
@@ -1774,26 +602,12 @@ proxies:
       uuid: 12345678-1234-1234-1234-123456789123
       ws-opts:
         headers:
-            host: saas.sosocn.abrdns.com
+            Host: saas.sosocn.abrdns.com
         path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_121|YT|GPT⁺|Gemini|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_44|YT|GPT⁺|Gemini|Github|FREE-24"
       network: ws
       port: 2096
-      server: 86.38.214.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_122|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 188.164.158.50
+      server: 170.114.45.50
       servername: saas.sosocn.abrdns.com
       skip-cert-verify: true
       tls: true
@@ -1802,51 +616,9 @@ proxies:
       uuid: 12345678-1234-1234-1234-123456789123
       ws-opts:
         headers:
-            host: saas.sosocn.abrdns.com
+            Host: saas.sosocn.abrdns.com
         path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_123|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 188.164.248.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_124|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 193.9.49.50
-      servername: saas.sosocn.abrdns.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_125|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 216.24.57.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_126|YT|GPT⁺|Gemini|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_45|YT|GPT⁺|Gemini|Github|FREE-24"
       network: ws
       port: 2096
       server: 185.251.82.50
@@ -1858,173 +630,855 @@ proxies:
       uuid: 12345678-1234-1234-1234-123456789123
       ws-opts:
         headers:
-            host: saas.sosocn.abrdns.com
+            Host: saas.sosocn.abrdns.com
         path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_127|YT|GPT⁺|Gemini|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_46|YT|Gemini|Github|FREE-24"
+      network: ws
+      port: 2083
+      server: 103.116.7.103
+      servername: saas.cfliu.filegear-sg.me
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 8d5911d9-f9f9-484f-8f67-5729ab5fd1af
+      ws-opts:
+        headers:
+            Host: saas.cfliu.filegear-sg.me
+        path: /snippets?ip=tw.tp81.netlib.re:81
+    - alterId: 0
+      cipher: auto
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1EB\U0001F1F7FR_4|YT|GPT⁺|Github|FREE-30"
+      network: ws
+      port: 443
+      server: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+      servername: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+      ws-opts:
+        headers:
+            HOST: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top
+        path: /azumase.ren
+    - delay: 672
+      http-opts:
+        headers: {}
+        path:
+            - /
+      name: "\U0001F1FA\U0001F1F8US_47|YT|GPT⁺|Github|FREE-16"
+      network: tcp
+      port: 15253
+      server: 5.78.52.105
+      skip-cert-verify: true
+      type: vless
+      udp: true
+      uuid: 84566df5-a979-4194-94a2-720552440025
+      xudp: true
+    - client-fingerprint: chrome
+      delay: 2222
+      name: "\U0001F1FA\U0001F1F8US_48|YT|GPT⁺|Github|FREE-16"
       network: ws
       port: 2096
-      server: 167.68.11.50
+      server: 188.244.122.36
+      servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a
+      ws-opts:
+        headers:
+            Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+            User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+        path: /snippets
+      xudp: true
+    - client-fingerprint: chrome
+      delay: 1204
+      name: "\U0001F1FA\U0001F1F8US_49|YT|GPT⁺|Github|FREE-16"
+      network: ws
+      port: 2096
+      server: 94.140.0.36
+      servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a
+      ws-opts:
+        headers:
+            Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+            User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+        path: /snippets
+      xudp: true
+    - delay: 2429
+      name: "\U0001F1FA\U0001F1F8US_50|YT|GPT⁺|Github|FREE-16"
+      network: ws
+      port: 443
+      server: snipaste1.speedip.eu.org
+      servername: 0000a3jqgnbe1kqszgj8.mf7z.uzkj9fc.vc5se3p.rtcso.lhyo0h17bay.ekqctmd3.itl.vi5o6fa54.39tu.68d506nf53m05oznndpsdto46z4gnq6m6.neib.cn
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 0199699c-a5d9-a685-dba9-c6475658b302
+      ws-opts:
+        headers:
+            Host: 0000a3jqgnbe1kqszgj8.mf7z.uzkj9fc.vc5se3p.rtcso.lhyo0h17bay.ekqctmd3.itl.vi5o6fa54.39tu.68d506nf53m05oznndpsdto46z4gnq6m6.neib.cn
+        path: /snippets?ip=proxyip:port(443)
+    - client-fingerprint: chrome
+      delay: 1804
+      name: "\U0001F1FA\U0001F1F8US_51|YT|GPT⁺|Github|FREE-16"
+      network: ws
+      port: 8443
+      server: 92.243.74.3
+      servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a
+      ws-opts:
+        headers:
+            Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+        path: /snippets?ip=proxyip:port(443)&nat64=6to4
+      xudp: true
+    - client-fingerprint: chrome
+      delay: 1692
+      name: "\U0001F1FA\U0001F1F8US_52|YT|GPT⁺|Github|FREE-16"
+      network: ws
+      port: 2096
+      server: 192.0.54.36
+      servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a
+      ws-opts:
+        early-data-header-name: Sec-WebSocket-Protocol
+        headers:
+            Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36
+        max-early-data: 2560
+        path: /snippets&HongKong@freecodes2/
+      xudp: true
+    - client-fingerprint: chrome
+      delay: 1269
+      name: "\U0001F1FA\U0001F1F8US_53|YT|GPT⁺|Github|FREE-16"
+      network: ws
+      port: 2096
+      server: 166.62.106.36
+      servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a
+      ws-opts:
+        headers:
+            Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36
+        path: /snippets
+      xudp: true
+    - client-fingerprint: chrome
+      delay: 2752
+      name: "\U0001F1FA\U0001F1F8US_54|YT|GPT⁺|Github|FREE-16"
+      network: ws
+      port: 2096
+      server: 66.235.200.36
+      servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a
+      ws-opts:
+        early-data-header-name: Sec-WebSocket-Protocol
+        headers:
+            Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+            User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
+        max-early-data: 2560
+        path: /snippets&HongKong@freecodes2/
+      xudp: true
+    - client-fingerprint: chrome
+      delay: 2272
+      name: "\U0001F1FA\U0001F1F8US_55|YT|GPT⁺|Github|FREE-16"
+      network: ws
+      port: 2096
+      server: 185.159.247.36
+      servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a
+      ws-opts:
+        early-data-header-name: Sec-WebSocket-Protocol
+        headers:
+            Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn
+            User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; ANE-LX3 Build/HUAWEIANE-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
+        max-early-data: 2560
+        path: /snippets&HongKong@freecodes2/
+      xudp: true
+    - client-fingerprint: chrome
+      delay: 1431
+      name: "\U0001F1FA\U0001F1F8US_56|YT|GPT|Gemini|Github|FREE-16"
+      network: ws
+      password: 8r<[9'l6hAO#8ZQi
+      port: 8443
+      server: koma-yt.pages.dev
+      skip-cert-verify: true
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      udp: true
+      ws-opts:
+        early-data-header-name: Sec-WebSocket-Protocol
+        headers:
+            User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36
+        max-early-data: 2560
+        path: /tro8sFW1S91B6sZrM1
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_57|YT|GPT⁺|Github|FREE-11"
+      network: tcp
+      port: 443
+      server: 165.140.216.141
+      skip-cert-verify: true
+      tfo: true
+      type: vmess
+      udp: true
+      uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_58|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 48503
+      server: 148.135.110.150
+      servername: kejiland.freewarp.eu.org
+      skip-cert-verify: true
+      tfo: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
+      ws-opts:
+        headers:
+            Host: kejiland.freewarp.eu.org
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+        path: /snippets/ip=proxyip.fxxk.dedyn.io:443?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_59|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 2096
+      server: 166.62.106.32
+      servername: kejiland.freewarp.eu.org
+      skip-cert-verify: true
+      tfo: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
+      ws-opts:
+        headers:
+            Host: kejiland.freewarp.eu.org
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+        path: /snippets
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_60|YT|GPT⁺|Github|FREE-11"
+      network: tcp
+      port: 6506
+      server: 193.124.24.247
+      skip-cert-verify: true
+      tfo: true
+      type: vmess
+      udp: true
+      uuid: c53d41d1-7d56-43ce-9994-408780c6476a
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_61|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: sssssssxxxx.2032.pp.ua
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 4174b95d-115e-4d39-add6-1f8db95bb860
+      ws-opts:
+        headers:
+            Host: sssssssxxxx.2032.pp.ua
+        path: /6We3U9Df1WGxgFnoFPw1
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_62|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: ssssssssssssfffffffgh.2032.pp.ua
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 4174b95d-115e-4d39-add6-1f8db95bb860
+      ws-opts:
+        headers:
+            Host: ssssssssssssfffffffgh.2032.pp.ua
+        path: /6We3U9Df1WGxgFnoFPw1
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_63|YT|GPT⁺|Github|FREE-11"
+      network: ws
+      port: 80
+      server: bbbbbbbbb.222769.xyz
+      skip-cert-verify: true
+      tls: false
+      type: vmess
+      uuid: 2e65577e-8fdb-4bb1-a495-96f3122099a7
+      ws-opts:
+        headers:
+            Host: bbbbbbbbb.222769.xyz
+        path: /f6taOMcOSZb9TPR
+    - name: "\U0001F1FA\U0001F1F8US_64|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 2096
+      server: 185.193.31.253
+      servername: fast01.0860852.xyz
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 2456f90c-5183-476d-b069-16ae74ce120f
+      ws-opts:
+        headers:
+            Host: fast01.0860852.xyz
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - name: "\U0001F1FA\U0001F1F8US_65|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: 104.21.67.60
+      servername: 4g.zippza404abp.webredirect.org
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 2737c5a4-50d5-46a2-9c8c-86920088b8c7
+      ws-opts:
+        headers:
+            Host: 4g.zippza404abp.webredirect.org
+        path: /?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_66|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: ssssssssssssfffffffgh.2032.pp.ua
+      servername: ssssssssssssfffffffgh.2032.pp.ua
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 4174b95d-115e-4d39-add6-1f8db95bb860
+      ws-opts:
+        headers:
+            Host: ssssssssssssfffffffgh.2032.pp.ua
+        path: /eAbAcRHV1QuhyXWGxgFnoFPw1
+    - name: "\U0001F1FA\U0001F1F8US_67|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: backus1.dh03.shop
+      servername: backus1.dh03.shop
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 71504eaf-29ac-4190-89d1-dd9ce2c9ee14
+      ws-opts:
+        headers:
+            Host: backus1.dh03.shop
+        path: /higate
+    - name: "\U0001F1FA\U0001F1F8US_68|YT|Gemini|Github|FREE-11"
+      network: ws
+      port: 2096
+      server: 185.148.107.41
+      servername: vless.keepfuck.me
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 563608cd-f135-4e64-938d-d9eb3be1ba77
+      ws-opts:
+        headers:
+            Host: vless.keepfuck.me
+        path: /snippets
+    - name: "\U0001F1FA\U0001F1F8US_69|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: cf.0sm.com
+      servername: baipiao.CMLiussss.abrdns.com
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+      ws-opts:
+        headers:
+            Host: baipiao.CMLiussss.abrdns.com
+        path: /snippets/ip=tw.tp81.netlib.re:81vless:/0c6b0284-77b9-48c8-969a-4be6b18b10d3
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_70|YT|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: 141.101.120.5
+      servername: xn--kwr11l51ffzytxy.CMLiussss.dedyn.io
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+      ws-opts:
+        headers:
+            Host: xn--kwr11l51ffzytxy.CMLiussss.dedyn.io
+        path: /snippets/ip=tw.tp81.netlib.re:81?ed=2560
+    - alterId: 64
+      cipher: auto
+      name: "\U0001F1E8\U0001F1E6CA_5|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: 15.235.83.228
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        headers:
+            Host: lammaland.org
+        path: linkvws
+    - flow: ""
+      name: "\U0001F1FA\U0001F1F8US_71|YT|GPT⁺|Github|FREE-11"
+      network: ws
+      port: 443
+      server: baidu.sosorg.nyc.mn
+      servername: msttes.citess.ggff.net
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 01998eee-009b-fad3-17c1-5d0999b53f54
+      ws-opts:
+        headers:
+            Host: msttes.citess.ggff.net
+        path: /snippets?ip=kr.tp50000.netlib.re:50000
+    - name: "\U0001F1FA\U0001F1F8US_72|YT|Gemini|Github|FREE-11"
+      network: ws
+      port: 2096
+      server: 209.46.30.41
+      servername: vless.keepfuck.me
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      uuid: 563608cd-f135-4e64-938d-d9eb3be1ba77
+      ws-opts:
+        headers:
+            Host: vless.keepfuck.me
+        path: /snippets
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_73|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: tcp
+      port: 15361
+      server: 15.204.11.190
+      skip-cert-verify: true
+      type: vmess
+      uuid: 5d7bf9e3-415c-40f3-c66d-a54ea0fd860e
+    - client-fingerprint: random
+      name: "\U0001F1FA\U0001F1F8US_74|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: 104.16.54.234
+      servername: xw0083.dpdns.org
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 45c0483a-eef1-4447-9607-49d789e20c7d
+      ws-opts:
+        headers:
+            Host: xw0083.dpdns.org
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_75|YT|GPT⁺|Github|FREE-11"
+      network: ws
+      port: 443
+      server: 104.21.9.71
+      servername: ddDDdDDdDDF.777198.XyZ
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: c226ac5d-65e9-4379-95c3-fb542bc242d8
+      ws-opts:
+        headers:
+            Host: ddDDdDDdDDF.777198.XyZ
+        path: /OjdW89Bpg4ykd4O
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_76|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 2096
+      server: 50.62.194.52
+      servername: saas.git.cloudns.org
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      uuid: 12345678-1234-1234-1234-123456789123
+      ws-opts:
+        headers:
+            Host: saas.git.cloudns.org
+        path: /snippets&freecodes
+    - name: "\U0001F1FA\U0001F1F8US_77|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 2096
+      server: 91.209.253.52
+      servername: saas.git.cloudns.org
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      uuid: 12345678-1234-1234-1234-123456789123
+      ws-opts:
+        headers:
+            Host: saas.git.cloudns.org
+        path: /snippets&freecodes+
+    - name: "\U0001F1FA\U0001F1F8US_78|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 2096
+      server: 185.135.9.50
       servername: saas.sosocn.abrdns.com
       skip-cert-verify: true
+      tfo: false
       tls: true
       type: vless
-      udp: true
       uuid: 12345678-1234-1234-1234-123456789123
       ws-opts:
         headers:
-            host: saas.sosocn.abrdns.com
+            Host: saas.sosocn.abrdns.com
         path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_128|YT|GPT⁺|Gemini|Github|FREE-12"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_79|YT|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: 104.20.30.132
+      servername: gamang.gpj2.dpdns.org
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 41b55c53-7776-4727-b05d-1ccf9cc409a5
+      ws-opts:
+        headers:
+            Host: gamang.gpj2.dpdns.org
+        path: /Free-VPN-Geo-Project/91.187.93.166-443
+    - name: "\U0001F1FA\U0001F1F8US_80|YT|GPT⁺|Gemini|Github|FREE-11"
       network: ws
       port: 2096
-      server: 195.26.229.50
+      server: 185.158.133.50
       servername: saas.sosocn.abrdns.com
       skip-cert-verify: true
+      tfo: false
       tls: true
       type: vless
       udp: true
       uuid: 12345678-1234-1234-1234-123456789123
       ws-opts:
         headers:
-            host: saas.sosocn.abrdns.com
+            Host: saas.sosocn.abrdns.com
         path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_129|YT|GPT⁺|Gemini|Github|FREE-12"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_81|GPT|Github|FREE-11"
       network: ws
-      port: 2096
-      server: 185.159.247.52
-      servername: saas.git.cloudns.org
+      port: 443
+      server: 104.17.210.171
+      servername: vless10-9sc.pages.dev
       skip-cert-verify: true
+      tfo: false
       tls: true
       type: vless
       udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
+      uuid: c98a16e4-0dc5-42f0-b3db-30f04525c123
       ws-opts:
         headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_130|YT|GPT⁺|Gemini|Github|FREE-12"
+            Host: vless10-9sc.pages.dev
+    - name: "\U0001F1FA\U0001F1F8US_82|YT|GPT⁺|Gemini|Github|FREE-29"
       network: ws
       port: 2096
-      server: 192.65.217.52
-      servername: saas.git.cloudns.org
+      server: 199.34.229.32
+      servername: kejiland.freewarp.eu.org
       skip-cert-verify: true
       tls: true
       type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
+      uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
       ws-opts:
         headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_131|YT|GPT⁺|Gemini|Github|FREE-12"
+            Host: kejiland.freewarp.eu.org
+        path: /snippetsfp=chrome
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_83|YT|GPT⁺|FREE-6"
       network: ws
-      port: 2096
-      server: 198.71.189.50
-      servername: saas.sosocn.abrdns.com
+      port: 38533
+      server: 154.64.243.19
+      skip-cert-verify: true
+      tls: false
+      type: vmess
+      uuid: 9bc23ccf-4769-4e9a-b278-2dfa8d9ef425
+      ws-opts:
+        path: /
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_84|YT|GPT⁺|Gemini|Github|FREE-6"
+      network: ws
+      port: 443
+      server: 38.99.82.193
+      servername: tilebani.com
       skip-cert-verify: true
       tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
       ws-opts:
-        headers:
-            host: saas.sosocn.abrdns.com
-        path: /snippets
-    - name: "\U0001F1FA\U0001F1F8US_132|YT|GPT⁺|Gemini|Github|FREE-12"
+        path: /linkvws
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1E8\U0001F1E6CA_6|YT|GPT⁺|Gemini|Github|FREE-6"
       network: ws
-      port: 2096
-      server: 5.182.34.52
-      servername: saas.git.cloudns.org
+      port: 443
+      server: 15.235.83.228
+      servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
       skip-cert-verify: true
       tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
       ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_133|YT|GPT⁺|Gemini|Github|FREE-12"
+        path: /linkvws
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1E8\U0001F1E6CA_7|YT|GPT⁺|Gemini|Github|FREE-6"
       network: ws
-      port: 2096
-      server: 195.85.23.52
-      servername: saas.git.cloudns.org
+      port: 443
+      server: 15.235.83.227
+      servername: mankadmu.com
       skip-cert-verify: true
       tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
       ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_134|YT|GPT⁺|Gemini|Github|FREE-12"
+        path: /linkvws
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1E8\U0001F1E6CA_8|YT|GPT⁺|Gemini|Github|FREE-6"
       network: ws
-      port: 2096
-      server: 66.45.118.52
-      servername: saas.git.cloudns.org
+      port: 443
+      server: 15.235.50.172
+      servername: baradiha.com
       skip-cert-verify: true
       tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
       ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_135|YT|GPT⁺|Gemini|Github|FREE-12"
+        path: /linkvws
+    - cipher: aes-256-cfb
+      name: "\U0001F1FA\U0001F1F8US_85|YT|GPT⁺|Gemini|Github|FREE-40"
+      password: gYCYXfkUQEs2TaJQ
+      port: 9038
+      server: 194.116.173.21
+      skip-cert-verify: true
+      type: ss
+    - alterId: 0
+      cipher: auto
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_86|YT|GPT⁺|Gemini|Github|FREE-40"
+      port: 16416
+      server: 172.233.171.224
+      skip-cert-verify: true
+      type: vmess
+      udp: true
+      uuid: 8c1b9bea-cb51-43bb-a65c-0af31bbbf145
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1F7\U0001F1FARU"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_87|YT|GPT|Github|FREE-40"
       network: ws
-      port: 2096
-      server: 159.112.235.52
-      servername: saas.git.cloudns.org
+      port: 80
+      server: 45.8.146.129
+      skip-cert-verify: true
+      type: vmess
+      uuid: 0704016f-5435-4655-be6a-771a5aba52c3
+      ws-opts:
+        path: /vmess/
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_88|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: none
+      port: 6503
+      server: 193.124.24.230
+      skip-cert-verify: true
+      type: vmess
+      uuid: ade0486c-fe64-4815-9895-78de66553a2c
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_89|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: none
+      port: 59674
+      server: 43.162.114.137
+      skip-cert-verify: true
+      type: vmess
+      uuid: 6a4ce5b9-0d60-4a21-a8fe-897798019500
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_90|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: none
+      port: 43966
+      server: 209.54.104.219
+      skip-cert-verify: true
+      type: vmess
+      uuid: 0e3606ae-321a-4d0b-85ec-5f4352f4bc24
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_91|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: none
+      port: 6514
+      server: 193.124.24.230
+      skip-cert-verify: true
+      type: vmess
+      uuid: cecc9594-e9bd-40ab-9d82-65418694630f
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_92|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: none
+      port: 33398
+      server: 38.93.203.176
+      skip-cert-verify: true
+      type: vmess
+      uuid: 2f378fd1-6d10-4073-86d6-4d0be300cf48
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_93|YT|GPT⁺|Github|FREE-40"
+      network: none
+      port: 6513
+      server: 193.124.24.247
+      skip-cert-verify: true
+      type: vmess
+      uuid: 5cf7fcbc-e2c1-42c4-d0d7-79c45a7d588d
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_94|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: none
+      port: 6502
+      server: 193.124.24.230
+      skip-cert-verify: true
+      type: vmess
+      uuid: 44e32afd-714e-4d60-f6bc-5d7a1d34080b
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_95|YT|GPT⁺|Github|FREE-40"
+      network: none
+      port: 12299
+      server: 154.29.158.139
+      skip-cert-verify: true
+      type: vmess
+      uuid: cccfe679-fbd0-4402-caf2-67e919db436f
+    - cipher: aes-128-gcm
+      country: "\U0001F1FA\U0001F1F8US"
+      name: "\U0001F1FA\U0001F1F8US_96|YT|GPT⁺|Gemini|Github|FREE-40"
+      password: shadowsocks
+      port: 443
+      server: 37.19.198.243
+      skip-cert-verify: true
+      type: ss
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_97|YT|GPT⁺|Github|FREE-40"
+      network: ws
+      port: 20086
+      server: 38.59.241.39
+      skip-cert-verify: true
+      type: vmess
+      uuid: e240e088-238f-4ee2-ba5c-d3da8aeabb2a
+      ws-opts:
+        path: /
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1E9\U0001F1EADE_1|GPT⁺|Github|FREE-40"
+      network: ws
+      port: 443
+      server: b-v1.888988866.xyz
+      servername: b-v1.888988866.xyz
       skip-cert-verify: true
       tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
+      type: vmess
+      uuid: ab007933-7981-4267-9f33-fbc9c2575756
       ws-opts:
         headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_136|YT|GPT⁺|Gemini|Github|FREE-12"
+            HOST: b-v1.888988866.xyz
+        path: /ab007933-7981-4267-9f33-fbc9c2575756
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F3C1ZZ"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1F8\U0001F1ECSG_1|YT|GPT⁺|Gemini|Github|FREE-40"
       network: ws
-      port: 2096
-      server: 216.205.52.52
-      servername: saas.git.cloudns.org
+      port: 443
+      server: y-v1.888988866.xyz
+      servername: y-v1.888988866.xyz
       skip-cert-verify: true
       tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
+      type: vmess
+      uuid: a397bd18-5a5f-4a5a-bf03-ed5bc1a990eb
       ws-opts:
         headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_137|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 46.202.30.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_138|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 45.80.111.52
-      servername: saas.git.cloudns.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            host: saas.git.cloudns.org
-        path: /snippets&freecodes+@节点狂魔+/?ed=2560
+            HOST: y-v1.888988866.xyz
+        path: /a397bd18-5a5f-4a5a-bf03-ed5bc1a990eb
