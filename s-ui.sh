@@ -295,7 +295,7 @@ show_log() {
 }
 
 update_shell() {
-    wget -O /usr/bin/s-ui -N --no-check-certificate https://github.com/PlanetEditorX/s-ui/raw/main/s-ui.sh
+    wget -O /usr/bin/s-ui -N --no-check-certificate https://github.com/PlanetEditorX/s-ui/raw/dev/s-ui.sh
     if [[ $? != 0 ]]; then
         echo ""
         LOGE "Failed to download script, Please check whether the machine can connect Github"
