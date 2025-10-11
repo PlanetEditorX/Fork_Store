@@ -98,7 +98,7 @@ custom_version() {
     exit 1
     fi
 
-    download_link="https://raw.githubusercontent.com/PlanetEditorX/s-ui/master/install.sh"
+    download_link="https://raw.githubusercontent.com/PlanetEditorX/s-ui/refs/heads/dev/install.sh"
 
     install_command="bash <(curl -Ls $download_link) $panel_version"
 
