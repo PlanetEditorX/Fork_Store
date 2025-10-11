@@ -40,14 +40,14 @@
         </v-select>
       </v-col>
       <v-col cols="12" sm="6" v-if="optionProtocol">
-        <v-combobox
+        <v-select
           v-model="rule.protocol"
-          :items="['http','tls', 'quic', 'stun', 'dns']"
+          :items="protocols"
           :label="$t('protocol')"
           multiple
           chips
           hide-details
-        ></v-combobox>
+        ></v-select>
       </v-col>
     </v-row>
     <v-row v-if="optionDomain">
@@ -230,6 +230,18 @@ export default {
       portOption: 'port',
       srcIPOption: 'source_ip_cidr',
       srcPortOption: 'source_port',
+      protocols: [
+        { title: 'HTTP', value: 'http' },
+        { title: 'TLS', value: 'tls' },
+        { title: 'QUIC', value: 'quic' },
+        { title: 'STUN', value: 'stun' },
+        { title: 'DNS', value: 'dns' },
+        { title: 'BitTorrent', value: 'bittorrent' },
+        { title: 'DTLS', value: 'dtls' },
+        { title: 'SSH', value: 'ssh' },
+        { title: 'RDP', value: 'rdp' },
+        { title: 'NTP', value: 'ntp' },
+      ],
     }
   },
   methods: {
@@ -269,7 +281,7 @@ export default {
     },
     optionDomain: {
       get() { return Object.keys(this.$props.rule).some(r => this.domainKeys.includes(r)) },
-      set(v:boolean) { 
+      set(v:boolean) {
         if (v) {
           this.$props.rule.domain = []
         } else {
@@ -280,7 +292,7 @@ export default {
     },
     optionPort: {
       get() { return Object.keys(this.$props.rule).some(r => this.portKeys.includes(r)) },
-      set(v:boolean) { 
+      set(v:boolean) {
         if (v) {
           this.$props.rule.port = []
         } else {
@@ -291,7 +303,7 @@ export default {
     },
     optionSrcIP: {
       get() { return Object.keys(this.$props.rule).some(r => this.srcIPKeys.includes(r)) },
-      set(v:boolean) { 
+      set(v:boolean) {
         if (v) {
           this.$props.rule.source_ip_cidr = []
         } else {
@@ -302,7 +314,7 @@ export default {
     },
     optionSrcPort: {
       get() { return Object.keys(this.$props.rule).some(r => this.srcPortKeys.includes(r)) },
-      set(v:boolean) { 
+      set(v:boolean) {
         if (v) {
           this.$props.rule.source_port = []
         } else {
@@ -313,7 +325,7 @@ export default {
     },
     optionRuleSet: {
       get() { return this.$props.rule.rule_set != undefined },
-      set(v:boolean) { 
+      set(v:boolean) {
         if (v) {
           this.$props.rule.rule_set = []
           this.$props.rule.rule_set_ip_cidr_match_source = false
