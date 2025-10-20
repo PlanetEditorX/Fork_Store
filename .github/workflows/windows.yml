@@ -5,8 +5,8 @@ on:
   release:
     types: [published]
   push:
-    branches:
-      - main
+    tags:
+      - "*"
     paths:
       - '.github/workflows/windows.yml'
       - 'frontend/**'
@@ -16,7 +16,7 @@ on:
       - 'windows/**'
 
 jobs:
-  build-windows:    
+  build-windows:
     runs-on: windows-latest
     steps:
       - name: Checkout repository
@@ -65,14 +65,14 @@ jobs:
           export CGO_ENABLED=1
           export GOOS=windows
           export GOARCH=amd64
-          
+
           echo "Building for Windows amd64"
           go version
-          
+
           ### Build s-ui
           go build -ldflags="-w -s" -tags "with_quic,with_grpc,with_utls,with_acme,with_gvisor" -o sui.exe main.go
           file sui.exe
-          
+
           mkdir s-ui-windows
           cp sui.exe s-ui-windows/
           cp -r windows/* s-ui-windows/
@@ -89,83 +89,38 @@ jobs:
           path: ./s-ui-windows-amd64.zip
           retention-days: 30
 
+      - name: Check if release exists
+        id: check_release
+        shell: bash
+        run: |
+          TAG="${{ github.ref_name }}"
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/releases/tags/$TAG)
+          echo "Release status code: $STATUS"
+          if [ "$STATUS" == "404" ]; then
+            echo "create_release=true" >> $GITHUB_OUTPUT
+          else
+            echo "create_release=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Release
+        if: steps.check_release.outputs.create_release == 'true'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Upload to Release
         uses: svenstaro/upload-release-action@v2
-        if: github.event_name == 'release' && github.event.action == 'published'
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.ref }}
+          tag: ${{ github.ref_name }}
           file: s-ui-windows-amd64.zip
           asset_name: s-ui-windows-amd64.zip
-          prerelease: true
           overwrite: true
 
-  build-windows-arm64:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v5.0.0
-        with:
-          submodules: recursive
-          fetch-depth: 0
-
-      - name: Setup Go
-        uses: actions/setup-go@v6
-        with:
-          cache: false
-          go-version-file: go.mod
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v5
-        with:
-          node-version: '22'
-          registry-url: 'https://registry.npmjs.org'
-
-      - name: Build frontend
-        run: |
-          cd frontend
-          npm install
-          npm run build
-          cd ..
-          mv frontend/dist web/html
-          rm -fr frontend
-
-      - name: Build s-ui for ARM64
-        run: |
-          export CGO_ENABLED=0
-          export GOOS=windows
-          export GOARCH=arm64
-          
-          echo "Building for Windows ARM64 (32-bit)"
-          go version
-          go env GOOS GOARCH
-          
-          ### Build s-ui without CGO for ARM64
-          go build -ldflags="-w -s" -tags "with_quic,with_grpc,with_utls,with_acme,with_gvisor" -o sui.exe main.go
-          file sui.exe
-          
-          mkdir s-ui-windows
-          cp sui.exe s-ui-windows/
-          cp -r windows/* s-ui-windows/
-
-      - name: Package ARM64
-        run: |
-          zip -r "s-ui-windows-arm64.zip" s-ui-windows
-
-      - name: Upload ARM64 files to Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: s-ui-windows-arm64
-          path: ./s-ui-windows-arm64.zip
-          retention-days: 30
-
-      - name: Upload ARM64 to Release
-        uses: svenstaro/upload-release-action@v2
-        if: github.event_name == 'release' && github.event.action == 'published'
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.ref }}
-          file: s-ui-windows-arm64.zip
-          asset_name: s-ui-windows-arm64.zip
-          prerelease: true
-          overwrite: true

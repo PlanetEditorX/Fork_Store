@@ -5,8 +5,8 @@ on:
   release:
     types: [published]
   push:
-    branches:
-      - main
+    tags:
+      - "*"
     paths:
       - '.github/workflows/release.yml'
       - 'frontend/**'
@@ -101,13 +101,37 @@ jobs:
           path: ./s-ui-linux-${{ matrix.platform }}.tar.gz
           retention-days: 30
 
+      - name: Check if release exists
+        id: check_release
+        run: |
+          TAG="${{ github.ref_name }}"
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/releases/tags/$TAG)
+          echo "Release status code: $STATUS"
+          if [ "$STATUS" == "404" ]; then
+            echo "create_release=true" >> $GITHUB_OUTPUT
+          else
+            echo "create_release=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Release
+        if: steps.check_release.outputs.create_release == 'true'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Upload to Release
         uses: svenstaro/upload-release-action@v2
-        if: github.event_name == 'release' && github.event.action == 'published'
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.ref }}
+          tag: ${{ github.ref_name }}
           file: s-ui-linux-${{ matrix.platform }}.tar.gz
           asset_name: s-ui-linux-${{ matrix.platform }}.tar.gz
-          prerelease: true
           overwrite: true
+
