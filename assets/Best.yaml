@@ -1,108 +1,83 @@
 proxies:
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_1|YT|Gemini|Github|FREE-12"
-      network: ws
-      port: 2087
-      server: 162.159.46.158
-      servername: www.x-aniu-j-p.netlib.re
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_1|YT|GPT⁺|Github|FREE-7"
+      port: 59807
+      server: 38.14.99.179
+      servername: 38.14.99.179
       skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: e258977b-e413-4718-a3af-02d75492c349
-      ws-opts:
-        headers:
-            Host: www.x-aniu-j-p.netlib.re
-        path: /?ed=2560
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_2|YT|Gemini|Github|FREE-12"
-      network: ws
-      port: 2087
-      server: 172.64.148.29
-      servername: www.x-aniu-j-p.netlib.re
+      tls: false
+      type: vmess
+      udp: true
+      uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_2|YT|GPT⁺|Github|FREE-7"
+      port: 59807
+      server: 38.14.99.163
+      servername: 38.14.99.163
       skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: e258977b-e413-4718-a3af-02d75492c349
-      ws-opts:
-        headers:
-            Host: www.x-aniu-j-p.netlib.re
-        path: /?ed=2560
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_3|YT|Gemini|Github|FREE-12"
-      network: ws
-      port: 443
-      server: 104.17.254.211
-      servername: www.x-aniu-j-p.netlib.re
+      tls: false
+      type: vmess
+      udp: true
+      uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_3|YT|GPT⁺|Github|FREE-7"
+      port: 59807
+      server: 38.14.99.179
       skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: e258977b-e413-4718-a3af-02d75492c349
-      ws-opts:
-        headers:
-            Host: www.x-aniu-j-p.netlib.re
-        path: /?ed=2560
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_4|YT|Gemini|Github|FREE-12"
-      network: ws
-      port: 2087
-      server: 172.64.150.206
-      servername: www.x-aniu----tw.netlib.re
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: e258977b-e413-4718-a3af-02d75492c349
-      ws-opts:
-        headers:
-            Host: www.x-aniu----tw.netlib.re
-        path: /?ed=2560
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_5|YT|Gemini|Github|FREE-12"
-      network: ws
-      port: 443
-      server: 104.16.143.215
-      servername: www.x-aniu----tw.netlib.re
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: e258977b-e413-4718-a3af-02d75492c349
-      ws-opts:
-        headers:
-            Host: www.x-aniu----tw.netlib.re
-        path: /?ed=2560
-    - name: "\U0001F1FA\U0001F1F8US_6|YT|GPT⁺|Gemini|Github|FREE-14"
+      tls: false
+      type: vmess
+      udp: true
+      uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    - name: "\U0001F1FA\U0001F1F8US_4|YT|GPT⁺|Gemini|Github|FREE-14"
       password: http
       port: 8080
       server: 107.173.31.37
       skip-cert-verify: true
       type: http
       username: http
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1FA\U0001F1F8US"
-      delay: 1567
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1EA\U0001F1F8ES_1|YT|GPT⁺|Github|FREE-16"
-      network: none
-      port: 27092
-      server: 208.76.223.218
-      skip-cert-verify: true
-      type: vmess
-      uuid: a0596ba6-72a3-4366-8992-77088da65bd8
-    - cipher: rc4-md5
-      name: "\U0001F1E8\U0001F1E6CA_1|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: 14fFPrbezE3HDZzsMOr6
-      port: 8080
-      server: 137.184.174.93
+    - cipher: aes-256-gcm
+      name: "\U0001F1FA\U0001F1F8US_5|YT|GPT⁺|Gemini|Github|FREE-15"
+      password: 57dtozbdQRZT9MaL
+      port: 26351
+      server: 67.209.177.69
       skip-cert-verify: true
       type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1FA\U0001F1F8US_7|YT|GPT⁺|Github|FREE-21"
-      password: ODfxioK0VkKxTdpVQJ4rv8HglAu0vzv6
+    - alpn:
+        - http/1.1
+      client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_6|YT|GPT⁺|Github|FREE-17"
+      network: ws
       port: 443
-      server: 146.19.49.251
+      server: 172.67.162.50
+      servername: 444RRrt5.7777155.xYZ
       skip-cert-verify: true
-      type: ss
+      tls: true
+      type: vless
+      udp: true
+      uuid: e4cbe8b8-37db-4aaa-8469-b84f34c51ebc
+      ws-opts:
+        headers:
+            Host: 444rrrt5.7777155.xyz
+            User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; FIG-LX3 Build/HUAWEIFIG-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
+        path: /6OWLjRc26b0nHYr5hYXD
+      xudp: true
+    - encryption: none
+      name: "\U0001F1FA\U0001F1F8US_7|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2087
+      server: 104.18.39.30
+      servername: www.x-aniu-j-p.netlib.re
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: e258977b-e413-4718-a3af-02d75492c349
+      ws-opts:
+        headers:
+            Host: www.x-aniu-j-p.netlib.re
+        path: /?ed=2560
     - cipher: aes-128-gcm
       name: "\U0001F1FA\U0001F1F8US_8|YT|GPT⁺|Gemini|Github|FREE-21"
       password: shadowsocks
@@ -124,18 +99,11 @@ proxies:
       server: 156.146.38.168
       skip-cert-verify: true
       type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_11|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 156.146.38.170
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1FA\U0001F1F8US_12|YT|GPT⁺|Github|FREE-21"
-      password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-      port: 990
-      server: 173.234.29.2
+    - cipher: aes-256-cfb
+      name: "\U0001F1E8\U0001F1E6CA_1|YT|GPT⁺|Github|FREE-21"
+      password: f8f7aCzcPKbsF8p3
+      port: 989
+      server: 79.127.233.170
       skip-cert-verify: true
       type: ss
     - cipher: chacha20-ietf-poly1305
@@ -146,193 +114,108 @@ proxies:
       skip-cert-verify: true
       type: ss
     - cipher: aes-256-cfb
-      name: "\U0001F1FA\U0001F1F8US_13|YT|GPT⁺|Github|FREE-21"
+      name: "\U0001F1FA\U0001F1F8US_11|YT|GPT⁺|Github|FREE-21"
       password: f8f7aCzcPKbsF8p3
       port: 989
       server: 104.192.226.106
       skip-cert-verify: true
       type: ss
     - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_1|YT|GPT⁺|Github|FREE-21"
-      password: k1dBOmOB4oqi7Ump37a1bQ
-      port: 8080
-      server: 82.38.31.214
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_2|YT|GPT⁺|Github|FREE-21"
-      password: 4a2rfixophdjffa8KVA4Aa
-      port: 8080
-      server: 151.242.251.144
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_3|YT|GPT⁺|Github|FREE-21"
-      password: k1dBOmOB4oqi7Ump37a1bQ
-      port: 8080
-      server: 151.242.251.152
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-256-cfb
-      name: "\U0001F1E8\U0001F1E6CA_3|YT|GPT⁺|Github|FREE-21"
+      name: "\U0001F1FA\U0001F1F8US_12|YT|GPT⁺|Github|FREE-21"
       password: f8f7aCzcPKbsF8p3
-      port: 989
-      server: 79.127.233.170
+      port: 990
+      server: 104.192.226.106
       skip-cert-verify: true
       type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_4|YT|GPT⁺|Github|FREE-21"
-      password: k1dBOmOB4oqi7Ump37a1bQ
+    - cipher: rc4-md5
+      name: "\U0001F1E8\U0001F1E6CA_3|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: 14fFPrbezE3HDZzsMOr6
       port: 8080
-      server: 82.38.31.218
+      server: 137.184.174.93
       skip-cert-verify: true
       type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_5|YT|GPT⁺|Github|FREE-21"
-      password: QCXDxuDlTTMD7jtgHUjIoj
-      port: 8080
-      server: 45.87.175.181
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_6|YT|GPT⁺|Github|FREE-21"
-      password: QCXDxuDlTTMD7jtgHUjIoj
-      port: 8080
-      server: 151.242.251.131
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_7|YT|GPT⁺|Github|FREE-21"
-      password: k1dBOmOB4oqi7Ump37a1bQ
-      port: 8080
-      server: 151.242.251.133
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1E8\U0001F1E6CA_4|YT|GPT⁺|Github|FREE-21"
-      password: JIhN6rBKkaEboLNXVSv5rq
-      port: 80
-      server: 142.4.216.225
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1E7\U0001F1ECBG_1|YT|GPT⁺|Github|FREE-21"
-      password: SDaFISr3Gfm6YkBSSrFIEwwWjEEU7Xbo
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_13|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
       port: 443
-      server: 95.164.10.228
+      server: 156.146.38.170
       skip-cert-verify: true
       type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_8|YT|GPT⁺|Github|FREE-21"
-      password: k1dBOmOB4oqi7Ump37a1bQ
+    - cipher: rc4-md5
+      name: "\U0001F1FA\U0001F1F8US_14|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: 14fFPrbezE3HDZzsMOr6
       port: 8080
-      server: 45.87.175.174
+      server: 107.151.182.253
       skip-cert-verify: true
       type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_9|YT|GPT⁺|Github|FREE-21"
-      password: 1RWwXhwfAB5gAEozU4G2Pg
-      port: 8080
-      server: 45.87.175.188
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_10|YT|GPT⁺|Github|FREE-21"
-      password: cvII85TrW6n0OGyfpHVS1u
-      port: 8080
-      server: 45.87.175.193
-      skip-cert-verify: true
-      type: ss
-    - alpn:
-        - http/1.1
-      client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_14|YT|GPT⁺|Github|FREE-17"
-      network: ws
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_15|YT|GPT⁺|Gemini|Github|FREE-1"
+      password: shadowsocks
       port: 443
-      server: 172.67.162.50
-      servername: 444RRrt5.7777155.xYZ
+      server: 173.244.56.6
       skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: e4cbe8b8-37db-4aaa-8469-b84f34c51ebc
-      ws-opts:
-        headers:
-            Host: 444rrrt5.7777155.xyz
-            User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; FIG-LX3 Build/HUAWEIFIG-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-        path: /6OWLjRc26b0nHYr5hYXD
-      xudp: true
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_16|YT|GPT⁺|Gemini|Github|FREE-1"
+      password: shadowsocks
+      port: 443
+      server: 173.244.56.9
+      skip-cert-verify: true
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_17|YT|GPT⁺|Gemini|Github|FREE-1"
+      password: shadowsocks
+      port: 443
+      server: 37.19.198.160
+      skip-cert-verify: true
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_18|YT|GPT⁺|Gemini|Github|FREE-1"
+      password: shadowsocks
+      port: 443
+      server: 37.19.198.236
+      skip-cert-verify: true
+      type: ss
     - client-fingerprint: chrome
       name: "\U0001F1E8\U0001F1FECY_1|YT|GPT⁺|Github|FREE-18"
       network: ws
       port: "443"
-      server: clyde.ns.cloudflare.com
-      servername: 639002442881637239.supra-amsir.info
+      server: cosmin.ns.cloudflare.com
+      servername: 639003456256484486.giulia-amsis.info
       skip-cert-verify: true
       tls: true
       type: vless
       udp: true
-      uuid: 55d198a1-a5f5-4a96-9e4a-70950ea166a8
+      uuid: 4f590914-6d75-4f1d-a361-2fddb3cdf669
       ws-opts:
         headers:
-            Host: 639002442881637239.supra-amsir.info
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36
-        path: /pvoxsaws
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1F7\U0001F1FARU_1|YT|GPT|Github|FREE-18"
-      network: ws
-      port: "443"
-      server: delilah.ns.cloudflare.com
-      servername: 639003456253079909.defender-amsis.info
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 134563d7-f835-4110-a36b-e0db5d262ae0
-      ws-opts:
-        headers:
-            Host: 639003456253079909.defender-amsis.info
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36
-        path: /dupbatws
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1EB\U0001F1F7FR_1|YT|GPT⁺|Github|FREE-18"
-      network: ws
-      port: "443"
-      server: norman.ns.cloudflare.com
-      servername: 639001966536690941.prius-amsiq.info
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 53f0bca8-f170-4ef7-8031-c7d441189dbf
-      ws-opts:
-        headers:
-            Host: 639001966536690941.prius-amsiq.info
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36
-        path: /cahttingws
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_15|YT|GPT|Github|FREE-18"
-      network: ws
-      port: "443"
-      server: delilah.ns.cloudflare.com
-      servername: 639002592262919469.sentra-amsir.info
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 5b687f17-0176-495e-84a1-0835f8feec91
-      ws-opts:
-        headers:
-            Host: 639002592262919469.sentra-amsir.info
-            User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36
-        path: /egakxows
+            Host: 639003456256484486.giulia-amsis.info
+            User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36
+        path: /ccemutws
       xudp: true
     - client-fingerprint: chrome
       flow: xtls-rprx-vision
-      name: "\U0001F1FA\U0001F1F8US_16|YT|GPT⁺|Gemini|Github|FREE-18"
+      http-opts:
+        headers: {}
+        path:
+            - /
+      name: "\U0001F1FA\U0001F1F8US_19|YT|GPT⁺|Github|FREE-18"
+      network: tcp
+      port: "443"
+      reality-opts:
+        public-key: H56cOJhw0xw76lDEpt7IuJJmVGemK6_CK34KtHwDMX8
+        short-id: ""
+      server: 47.251.25.74
+      servername: www.amazon.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 18805ff3-b420-45de-af18-93be14024ae8
+      xudp: true
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1FA\U0001F1F8US_20|YT|GPT⁺|Gemini|Github|FREE-18"
       network: tcp
       port: "33873"
       reality-opts:
@@ -345,6 +228,22 @@ proxies:
       type: vless
       udp: true
       uuid: ffb5a850-edbc-4831-ad0b-e29483949ea8
+      xudp: true
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1FA\U0001F1F8US_21|YT|GPT⁺|Gemini|Github|FREE-18"
+      network: tcp
+      port: "28899"
+      reality-opts:
+        public-key: UcJ-s55xl9msAtzJcBghDUTSnyilzB6d7NpUfkHoQmY
+        short-id: ""
+      server: 64.227.93.102
+      servername: s0.awsstatic.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: f61d9aee-63b8-439e-bebf-afaa53c015fd
       xudp: true
     - client-fingerprint: chrome
       name: "\U0001F1E9\U0001F1EADE_1|YT|GPT⁺|Github|FREE-18"
@@ -360,98 +259,26 @@ proxies:
       ws-opts:
         headers:
             Host: kalam.mrconfigur.site
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36
         path: /
       xudp: true
-    - grpc-opts:
-        grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON
-      name: "\U0001F1EA\U0001F1F8ES_2|YT|GPT⁺|Github|FREE-18"
-      network: grpc
-      port: "41291"
-      server: 141.227.128.24
-      skip-cert-verify: true
-      type: vless
-      udp: true
-      uuid: 6fc624eb-0ddb-4f96-891e-1cd96222e665
-      xudp: true
     - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: "\U0001F1FA\U0001F1F8US_17|YT|GPT⁺|Gemini|Github|FREE-18"
-      network: tcp
-      port: "28899"
-      reality-opts:
-        public-key: UcJ-s55xl9msAtzJcBghDUTSnyilzB6d7NpUfkHoQmY
-        short-id: ""
-      server: 64.227.93.102
-      servername: s0.awsstatic.com
+      name: "\U0001F1FA\U0001F1F8US_22|YT|GPT⁺|Gemini|Github|FREE-18"
+      network: ws
+      password: 8r<[9'l6hAO#8ZQi
+      port: "8443"
+      server: koma-yt.pages.dev
       skip-cert-verify: true
-      tls: true
-      type: vless
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
       udp: true
-      uuid: f61d9aee-63b8-439e-bebf-afaa53c015fd
-      xudp: true
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: "\U0001F1EC\U0001F1E7GB_1|YT|GPT⁺|Github|FREE-18"
-      network: tcp
-      port: "28899"
-      reality-opts:
-        public-key: UcJ-s55xl9msAtzJcBghDUTSnyilzB6d7NpUfkHoQmY
-        short-id: ""
-      server: 144.126.196.165
-      servername: s0.awsstatic.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: f61d9aee-63b8-439e-bebf-afaa53c015fd
-      xudp: true
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F2\U0001F1E9MD_1|YT|GPT⁺|Github|FREE-18"
-      password: 6VAcll4P8xPTUVVtHeST3onRmLoVIBSU
-      port: "443"
-      server: 94.131.104.147
-      skip-cert-verify: true
-      type: ss
-      udp: true
-    - grpc-opts:
-        grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON
-      name: "\U0001F1EB\U0001F1F7FR_2|YT|GPT⁺|Github|FREE-18"
-      network: grpc
-      port: "34718"
-      server: 141.227.178.176
-      skip-cert-verify: true
-      type: vless
-      udp: true
-      uuid: 9cea414e-fe28-41ff-ae56-b5817aa03473
-      xudp: true
+      ws-opts:
+        headers:
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
+        path: /tro8sFW1S91B6sZrM1?ed=2560
     - down: ""
       fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_18|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: 0114339c-488d-11ee-8792-f23c9164ca5d
-      port: "443"
-      server: 00ee471a-t6ngg0-tbpkla-1otc2.us.hyhuawei.com
-      skip-cert-verify: true
-      sni: 00ee471a-t6ngg0-tbpkla-1otc2.us.hyhuawei.com
-      type: hysteria2
-      up: ""
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_19|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: 861726bb-c61a-b0e0-99fa-5ddfdcf21902
-      port: "443"
-      server: c2909779-t59gg0-ta5nd4-e06r.us.hyhuawei.com
-      skip-cert-verify: true
-      sni: c2909779-t59gg0-ta5nd4-e06r.us.hyhuawei.com
-      type: hysteria2
-      up: ""
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_20|YT|GPT⁺|Github|FREE-18"
+      name: "\U0001F1FA\U0001F1F8US_23|YT|GPT⁺|Gemini|Github|FREE-18"
       obfs: ""
       obfs-password: ""
       password: ba4b1f2e-c985-11ed-9c0c-f23c913c8d2b
@@ -463,19 +290,7 @@ proxies:
       up: ""
     - down: ""
       fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_21|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: bd515574-3b10-11ee-ac14-f23c9164ca5d
-      port: "443"
-      server: 04decd98-t55r40-tb016b-1m7l4.us.hyhuawei.com
-      skip-cert-verify: true
-      sni: 04decd98-t55r40-tb016b-1m7l4.us.hyhuawei.com
-      type: hysteria2
-      up: ""
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_22|YT|GPT⁺|Github|FREE-18"
+      name: "\U0001F1FA\U0001F1F8US_24|YT|GPT⁺|Github|FREE-18"
       obfs: ""
       obfs-password: ""
       password: dongtaiwang.com
@@ -485,33 +300,9 @@ proxies:
       sni: "\U0001F512"
       type: hysteria2
       up: ""
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1EB\U0001F1F7FR_3|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: dongtaiwang.com
-      port: "33880"
-      server: 195.154.206.231
-      skip-cert-verify: true
-      sni: apple.com
-      type: hysteria2
-      up: ""
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1EB\U0001F1F7FR_4|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: dongtaiwang.com
-      port: "5355"
-      server: 51.159.111.32
-      skip-cert-verify: true
-      sni: www.bing.com
-      type: hysteria2
-      up: ""
     - client-fingerprint: chrome
       fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_23|YT|GPT⁺|Gemini|Github|FREE-38"
+      name: "\U0001F1FA\U0001F1F8US_25|YT|GPT⁺|Gemini|Github|FREE-38"
       network: ws
       port: 2096
       server: 190.93.244.253
@@ -527,7 +318,23 @@ proxies:
         path: /Telegram@ShadowProxy66
     - client-fingerprint: chrome
       fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_24|YT|GPT⁺|Gemini|Github|FREE-38"
+      name: "\U0001F1FA\U0001F1F8US_26|YT|GPT⁺|Gemini|Github|FREE-38"
+      network: ws
+      port: 2096
+      server: 159.246.55.253
+      servername: gaosir.unfeeling.sbs
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: false
+      uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+      ws-opts:
+        headers:
+            host: gaosir.unfeeling.sbs
+        path: /?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_27|YT|GPT|Gemini|Github|FREE-38"
       network: ws
       port: 443
       server: 66.81.247.225
@@ -541,92 +348,259 @@ proxies:
         headers:
             host: gaosir.unfeeling.sbs
         path: "/Telegram\U0001F1E8\U0001F1F3@WangCai2/?ed=2560"
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_25|YT|GPT⁺|Gemini|Github|FREE-1"
-      password: shadowsocks
-      port: 443
-      server: 173.244.56.9
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_26|YT|GPT⁺|Gemini|Github|FREE-1"
-      password: shadowsocks
-      port: 443
-      server: 37.19.198.236
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_27|YT|GPT⁺|Gemini|Github|FREE-1"
-      password: shadowsocks
-      port: 443
-      server: 37.19.198.160
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_28|YT|GPT⁺|Gemini|Github|FREE-1"
-      password: shadowsocks
-      port: 443
-      server: 173.244.56.6
-      skip-cert-verify: true
-      type: ss
-    - auth: 02fe8dae-73b7-4f1d-a992-f0e226a98f27
-      name: "\U0001F1FA\U0001F1F8US_29|YT|GPT⁺|Gemini|Github|FREE-24"
-      password: 02fe8dae-73b7-4f1d-a992-f0e226a98f27
-      port: 35000
-      ports: 35000-39000
-      server: 134.195.101.191
-      skip-cert-verify: true
-      sni: www.apple.com
-      type: hysteria2
-      udp: true
     - alterId: 0
       cipher: auto
-      name: "\U0001F1EB\U0001F1F7FR_5|YT|GPT⁺|Github|FREE-39"
+      name: "\U0001F1FA\U0001F1F8US_28|YT|GPT⁺|Github|FREE-11"
+      network: tcp
+      port: 443
+      server: 165.140.216.141
+      skip-cert-verify: true
+      tfo: true
+      type: vmess
+      udp: true
+      uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+    - encryption: none
+      name: "\U0001F1FA\U0001F1F8US_29|YT|GPT⁺|Gemini|Github|FREE-11"
       network: ws
       port: 443
-      server: 0g0ub8.zeeoomboom.de
+      server: 104.21.30.167
+      servername: ssssssssssssfffffffgh.2032.pp.ua
       skip-cert-verify: true
       tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      type: vless
+      uuid: 4174b95d-115e-4d39-add6-1f8db95bb860
       ws-opts:
         headers:
-            host: 0g0ub8.zeeoomboom.de
-        path: /video/z7xqpktt.m3u8
+            Host: ssssssssssssfffffffgh.2032.pp.ua
+        path: /eAbAcRHV1QuhyXWGxgFnoFPw1
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_30|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: medium.com
+      servername: rAyAn-007.mAxImA.DpDnS.OrG
+      skip-cert-verify: true
+      tfo: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: f2a73750-3087-48ff-a763-1348c15dce68
+      ws-opts:
+        headers:
+            Host: rAyAn-007.mAxImA.DpDnS.OrG
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+        path: /?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_31|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 2096
+      server: 185.193.31.253
+      servername: fast01.0860852.xyz
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 2456f90c-5183-476d-b069-16ae74ce120f
+      ws-opts:
+        headers:
+            Host: fast01.0860852.xyz
+        path: "/Telegram\U0001F1E8\U0001F1F3"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_32|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: 188.114.96.7
+      servername: 1mcijea74uykccq2mzrx-mnghducyf0b.damav48375.workers.dev
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 5050e255-4919-4d7f-96c8-30b13d06fdf6
+      ws-opts:
+        headers:
+            Host: 1mcijea74uykccq2mzrx-mnghducyf0b.damav48375.workers.dev
+        path: /nXWz3i2XoxHvOGI4?ed
+    - name: "\U0001F1FA\U0001F1F8US_33|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: ssssssssssssfffffffgh.2032.pp.ua
+      servername: ssssssssssssfffffffgh.2032.pp.ua
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 4174b95d-115e-4d39-add6-1f8db95bb860
+      ws-opts:
+        headers:
+            Host: ssssssssssssfffffffgh.2032.pp.ua
+        path: /eAbAcRHV1QuhyXWGxgFnoFPw1
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_34|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: 104.18.86.131
+      servername: vless5-edu.pages.dev
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: c98a16e4-0dc5-42f0-b3db-30f04525c123
+      ws-opts:
+        headers:
+            Host: vless5-edu.pages.dev
+        path: /?ed
+    - client-fingerprint: randomized
+      name: "\U0001F1FA\U0001F1F8US_35|YT|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: Www.speedtest.net
+      servername: spring-dream-2210.votapi4213.workers.dev
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: ed7f3703-29d7-42ca-b8bd-a4b291422921
+      ws-opts:
+        headers:
+            Host: spring-dream-2210.votapi4213.workers.dev
+        path: /tr----EXPRESSVPN_420---Join----EXPRESSVPN_420---Join---EXPRESSVPN_420---Join----EXPRESSVPN_420---Join---EXPRESSVPN_420/?ed=2048
+    - name: "\U0001F1FA\U0001F1F8US_36|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 2096
+      server: 72.167.25.253
+      servername: gaosir.unfeeling.sbs
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+      ws-opts:
+        headers:
+            Host: gaosir.unfeeling.sbs
+        path: /Telegram
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_37|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 80
+      server: bBbbbbbBb.222769.XYZ
+      skip-cert-verify: true
+      tls: false
+      type: vmess
+      uuid: 2e65577e-8fdb-4bb1-a495-96f3122099a7
+      ws-opts:
+        headers:
+            Host: bbbbbbbbb.222769.xyz
+        path: /f6taOMcOSZb9TPR
+    - name: "\U0001F1FA\U0001F1F8US_38|YT|Gemini|Github|FREE-11"
+      network: ws
+      port: 8080
+      server: 198.41.208.211
+      skip-cert-verify: true
+      tfo: false
+      tls: false
+      type: vless
+      uuid: d01a40f5-4e6f-4279-b0a9-0f2a268ab03c
+      ws-opts:
+        headers:
+            Host: worker-falling-snow-ffd7.test61.workers.dev
+        path: /?ed=2048
+    - client-fingerprint: chrome
+      name: "\U0001F1F8\U0001F1ECSG_1|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 2096
+      server: news.zoom.us
+      servername: free-server.techsonic.cloud
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 7ec108c5-5c08-4a9f-ad1b-bf60328792d4
+      ws-opts:
+        headers:
+            Host: free-server.techsonic.cloud
+        path: /free-server.techsonic.cloud
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_39|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 443
+      server: 017.electrocellco-cf-017.workers.dev
+      servername: 017.electrocellco-cf-017.workers.dev
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: b74bbaca-8bbe-41e1-9af9-18d467836282
+      ws-opts:
+        headers:
+            Host: 017.electrocellco-cf-017.workers.dev
+        path: /eyJqdW5rIjoibnhUbllUVXY1OWIiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_40|YT|GPT⁺|Gemini|Github|FREE-11"
+      network: ws
+      port: 2096
+      server: 188.42.145.253
+      servername: gaosir.unfeeling.sbs
+      skip-cert-verify: true
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+      ws-opts:
+        headers:
+            Host: gaosir.unfeeling.sbs
+        path: "/Telegram\U0001F1E8\U0001F1F3"
     - alterId: 0
       cipher: auto
       name: "\U0001F1E9\U0001F1EADE_2|YT|GPT⁺|Github|FREE-39"
       network: ws
       port: 443
-      server: j4658e.teeoomboom.de
+      server: d7t3ny.keeoomboom.de
       skip-cert-verify: true
       tls: true
       type: vmess
       uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
       ws-opts:
         headers:
-            host: j4658e.teeoomboom.de
-        path: /video/k0uzb.m3u8
-    - client-fingerprint: firefox
-      encryption: none
-      name: "\U0001F1E9\U0001F1EADE_3|YT|GPT⁺|Github|FREE-40"
-      network: tcp
-      port: 3696
-      reality-opts:
-        public-key: Jsvqk8hSyL-JT5-sasABrFsbQmafOp-wMy85Y8Xm1T0
-        short-id: 33552dae47b33e54
-        spider-x: /example
-      server: 2.pandaserver654.ir
-      servername: www.stackoverflow.com
+            host: d7t3ny.keeoomboom.de
+        path: /video/1jcyq.m3u8
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1E8\U0001F1E6CA_4|YT|GPT⁺|Github|FREE-39"
+      network: ws
+      port: 443
+      server: 15.235.83.228
       skip-cert-verify: true
       tls: true
-      type: vless
-      uuid: 4df10efe-824a-4579-ab85-50f088f456d4
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        headers:
+            host: lammaland.org
+        path: linkvws
     - alterId: 0
       cipher: auto
       h2-opts: {}
       http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_30|YT|GPT⁺|Gemini|Github|FREE-40"
+      name: "\U0001F1FA\U0001F1F8US_41|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: none
+      port: 12056
+      server: 47.253.197.26
+      skip-cert-verify: true
+      type: vmess
+      uuid: dd7be7f1-38ff-45e6-f1e5-b20c2190f527
+    - alterId: 0
+      cipher: auto
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_42|YT|GPT⁺|Gemini|Github|FREE-40"
       network: ws
       port: 443
       server: 107.173.31.37
@@ -639,33 +613,16 @@ proxies:
         path: /video
     - alterId: 0
       cipher: auto
+      country: "\U0001F1E8\U0001F1F3CN"
       h2-opts: {}
       http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_31|YT|GPT⁺|Gemini|Github|FREE-40"
+      name: "\U0001F1FA\U0001F1F8US_43|YT|GPT⁺|Gemini|Github|FREE-40"
       network: none
-      port: 12056
-      server: 47.253.197.26
+      port: 59674
+      server: 43.162.114.137
       skip-cert-verify: true
       type: vmess
-      uuid: dd7be7f1-38ff-45e6-f1e5-b20c2190f527
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1E7\U0001F1EABE"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1E9\U0001F1EADE_4|YT|GPT⁺|Github|FREE-40"
-      network: ws
-      port: 443
-      server: 57.129.28.63
-      servername: fapeng.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            HOST: fapeng.org
-        path: linkvws
+      uuid: 6a4ce5b9-0d60-4a21-a8fe-897798019500
     - alterId: 0
       cipher: auto
       country: "\U0001F1E8\U0001F1E6CA"
@@ -686,78 +643,6 @@ proxies:
         path: /linkvws
     - alterId: 0
       cipher: auto
-      country: "\U0001F1E7\U0001F1EABE"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1EB\U0001F1F7FR_6|YT|GPT⁺|Github|FREE-40"
-      network: ws
-      port: 443
-      server: 57.128.189.211
-      servername: yichueng.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            HOST: yichueng.org
-        path: linkvws
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1E7\U0001F1EABE"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1E9\U0001F1EADE_5|YT|GPT⁺|Github|FREE-40"
-      network: ws
-      port: 443
-      server: 57.129.59.193
-      servername: serkat.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            HOST: serkat.org
-        path: /linkvws
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1E7\U0001F1EABE"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1E9\U0001F1EADE_6|YT|GPT⁺|Github|FREE-40"
-      network: ws
-      port: 443
-      server: 57.129.28.216
-      servername: fapeng.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            HOST: fapeng.org
-        path: linkvws
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1E7\U0001F1EABE"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1E9\U0001F1EADE_7|YT|GPT⁺|Github|FREE-40"
-      network: ws
-      port: 443
-      server: 57.129.28.215
-      servername: serkat.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            HOST: serkat.org
-        path: linkvws
-    - alterId: 0
-      cipher: auto
       country: "\U0001F1E8\U0001F1E6CA"
       h2-opts: {}
       http-opts: {}
@@ -774,18 +659,6 @@ proxies:
         headers:
             HOST: kampong.org
         path: linkvws
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1E8\U0001F1F3CN"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_32|YT|GPT⁺|Gemini|Github|FREE-40"
-      network: none
-      port: 59674
-      server: 43.162.114.137
-      skip-cert-verify: true
-      type: vmess
-      uuid: 6a4ce5b9-0d60-4a21-a8fe-897798019500
     - alterId: 0
       cipher: auto
       country: "\U0001F1E8\U0001F1E6CA"
@@ -806,108 +679,10 @@ proxies:
         path: linkvws
     - alterId: 0
       cipher: auto
-      country: "\U0001F1E9\U0001F1EA DE"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1EB\U0001F1F7FR_7|YT|GPT⁺|Github|FREE-40"
-      network: ws
-      port: 443
-      server: 141.95.126.134
-      servername: jamekk.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            HOST: jamekk.org
-        path: linkvws
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1EB\U0001F1F7FR"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1EB\U0001F1F7FR_8|YT|GPT⁺|Github|FREE-40"
-      network: ws
-      port: 443
-      server: 91.134.8.100
-      servername: kampong.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            HOST: kampong.org
-        path: linkvws
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1EB\U0001F1F7FR"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1EB\U0001F1F7FR_9|YT|GPT⁺|Github|FREE-40"
-      network: ws
-      port: 443
-      server: 91.134.8.88
-      servername: lammaland.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            HOST: lammaland.org
-        path: linkvws
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1EB\U0001F1F7FR"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1EB\U0001F1F7FR_10|YT|GPT⁺|Github|FREE-40"
-      network: ws
-      port: 443
-      server: 91.134.8.92
-      servername: yichueng.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            HOST: yichueng.org
-        path: linkvws
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1EB\U0001F1F7FR"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1EB\U0001F1F7FR_11|YT|GPT⁺|Github|FREE-40"
-      network: ws
-      port: 443
-      server: 91.134.8.93
-      servername: pelang.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            HOST: pelang.org
-        path: linkvws
-    - cipher: chacha20-ietf-poly1305
-      country: "\U0001F1F1\U0001F1F9 LT"
-      name: "\U0001F1F3\U0001F1F1NL_11|YT|GPT⁺|Github|FREE-40"
-      password: 1RWwXhwfAB5gAEozU4G2Pg
-      port: 8080
-      server: 45.87.175.178
-      skip-cert-verify: true
-      type: ss
-    - alterId: 0
-      cipher: auto
       country: "\U0001F1F2\U0001F1FD MX"
       h2-opts: {}
       http-opts: {}
-      name: "\U0001F1F2\U0001F1FDMX_1|YT|GPT⁺|Gemini|Github|FREE-40"
+      name: "\U0001F1F2\U0001F1FDMX_1|YT|GPT⁺|Github|FREE-40"
       network: none
       port: 57283
       server: 216.238.89.53
@@ -916,28 +691,22 @@ proxies:
       uuid: 1a5aafc0-6482-451d-fe76-6875b7818579
     - alterId: 0
       cipher: auto
-      country: "\U0001F1F3\U0001F1F4 NO"
+      country: "\U0001F1FA\U0001F1F8US"
       h2-opts: {}
       http-opts: {}
-      name: "\U0001F1EB\U0001F1F7FR_12|YT|GPT⁺|Github|FREE-40"
-      network: ws
-      port: 443
-      server: 146.59.55.50
-      servername: o.metuji.com
+      name: "\U0001F1FA\U0001F1F8US_44|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: none
+      port: 43966
+      server: 209.54.104.219
       skip-cert-verify: true
-      tls: true
       type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            HOST: o.metuji.com
-        path: /linkvws
+      uuid: 0e3606ae-321a-4d0b-85ec-5f4352f4bc24
     - alterId: 0
       cipher: auto
       country: "\U0001F1FA\U0001F1F8US"
       h2-opts: {}
       http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_33|YT|GPT⁺|Gemini|Github|FREE-40"
+      name: "\U0001F1FA\U0001F1F8US_45|YT|GPT⁺|Gemini|Github|FREE-40"
       network: tcp
       port: 10001
       server: 172.235.33.114
@@ -949,49 +718,57 @@ proxies:
       country: "\U0001F1FA\U0001F1F8US"
       h2-opts: {}
       http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_34|YT|GPT⁺|Gemini|Github|FREE-40"
-      network: none
-      port: 43966
-      server: 209.54.104.219
+      name: "\U0001F1FA\U0001F1F8US_46|YT|GPT⁺|Github|FREE-40"
+      network: ws
+      port: 20086
+      server: 173.249.209.146
       skip-cert-verify: true
       type: vmess
-      uuid: 0e3606ae-321a-4d0b-85ec-5f4352f4bc24
+      uuid: 3935c2dc-dbb0-43f7-b367-fe89abe87fdf
+      ws-opts:
+        path: /
     - alterId: 0
       cipher: auto
       country: "\U0001F1FA\U0001F1F8 US"
       h2-opts: {}
       http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_35|YT|GPT⁺|Github|FREE-40"
-      network: tcp
-      port: 443
-      server: 165.140.216.141
-      skip-cert-verify: true
-      type: vmess
-      uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1FA\U0001F1F8US"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_36|YT|GPT⁺|Github|FREE-40"
+      name: "\U0001F1E8\U0001F1E6CA_8|YT|GPT⁺|Github|FREE-40"
       network: ws
       port: 443
-      server: 15.204.103.7
-      servername: lammaland.org
+      server: 15.235.83.227
+      servername: mankadmu.com
       skip-cert-verify: true
       tls: true
       type: vmess
       uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
       ws-opts:
         headers:
-            HOST: lammaland.org
-        path: linkvws
+            HOST: mankadmu.com
+        path: /linkvws
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1E8\U0001F1E6CA_9|YT|GPT⁺|Github|FREE-40"
+      network: ws
+      port: 443
+      server: 15.235.50.172
+      servername: baradiha.com
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        headers:
+            HOST: baradiha.com
+        path: /linkvws
     - alterId: 1
       cipher: auto
       country: "\U0001F1FA\U0001F1F8US"
       h2-opts: {}
       http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_37|YT|GPT⁺|Github|FREE-40"
+      name: "\U0001F1FA\U0001F1F8US_47|YT|GPT⁺|Github|FREE-40"
       network: ws
       port: 443
       server: 15.204.64.211
@@ -1004,261 +781,33 @@ proxies:
         headers:
             HOST: kampong.org
         path: linkvws
-    - name: "\U0001F1E9\U0001F1EADE_8|YT|GPT⁺|Github|FREE-29"
+    - name: "\U0001F1FA\U0001F1F8US_48|YT|GPT⁺|Gemini|Github|FREE-29"
+      network: tcp
+      port: 443
+      server: zorox-net.senu-zer.online
+      servername: zorox-net.senu-zer.online
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 224629c2-342b-4e54-bb75-b56cb7dabf30
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_49|YT|GPT⁺|Github|FREE-6"
       network: ws
       port: 443
-      server: www.speedtest.net
-      servername: piaz.mrconfigur.site
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 88538870-5626-4cd7-9cda-1e0b6253c9ce
-      ws-opts:
-        headers:
-            Host: piaz.mrconfigur.site
-        path: /
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_38|YT|Gemini|Github|FREE-34"
-      network: ws
-      port: 2096
-      server: 198.202.211.61
-      servername: vless.hubp.de
-      skip-cert-verify: true
-      tfo: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12345678-1234-1234-1234-123456789123
-      ws-opts:
-        headers:
-            Host: vless.hubp.de
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-        path: /snippets
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_39|YT|GPT⁺|Gemini|Github|FREE-34"
-      network: ws
-      port: 80
-      server: bbbbbbbbb.222769.xyz
-      skip-cert-verify: true
-      tls: false
-      type: vmess
-      uuid: 2e65577e-8fdb-4bb1-a495-96f3122099a7
-      ws-opts:
-        headers:
-            Host: bbbbbbbbb.222769.xyz
-        path: /f6taOMcOSZb9TPR
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_40|YT|GPT⁺|Gemini|Github|FREE-34"
-      network: ws
-      port: 443
-      server: ssssssssssssfffffffgh.2032.pp.ua
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 4174b95d-115e-4d39-add6-1f8db95bb860
-      ws-opts:
-        headers:
-            Host: ssssssssssssfffffffgh.2032.pp.ua
-        path: /6We3U9Df1WGxgFnoFPw1
-    - name: "\U0001F1FA\U0001F1F8US_41|YT|GPT⁺|Gemini|Github|FREE-34"
-      network: ws
-      port: 2096
-      server: 185.193.31.253
-      servername: fast01.0860852.xyz
-      skip-cert-verify: true
-      tfo: false
-      tls: true
-      type: vless
-      udp: true
-      uuid: 2456f90c-5183-476d-b069-16ae74ce120f
-      ws-opts:
-        headers:
-            Host: fast01.0860852.xyz
-        path: "/Telegram\U0001F1E8\U0001F1F3"
-    - name: "\U0001F1FA\U0001F1F8US_42|YT|GPT⁺|Gemini|Github|FREE-34"
-      network: ws
-      port: 443
-      server: ssssssssssssfffffffgh.2032.pp.ua
-      servername: ssssssssssssfffffffgh.2032.pp.ua
-      skip-cert-verify: true
-      tfo: false
-      tls: true
-      type: vless
-      udp: true
-      uuid: 4174b95d-115e-4d39-add6-1f8db95bb860
-      ws-opts:
-        headers:
-            Host: ssssssssssssfffffffgh.2032.pp.ua
-        path: /eAbAcRHV1QuhyXWGxgFnoFPw1
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_43|YT|GPT⁺|Gemini|Github|FREE-34"
-      network: ws
-      port: 80
-      server: bBbbbbbBb.222769.XYZ
-      skip-cert-verify: true
-      tls: false
-      type: vmess
-      uuid: 2e65577e-8fdb-4bb1-a495-96f3122099a7
-      ws-opts:
-        headers:
-            Host: bbbbbbbbb.222769.xyz
-        path: /f6taOMcOSZb9TPR
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_44|YT|GPT⁺|Gemini|Github|FREE-34"
-      network: ws
-      port: 80
-      server: GgGgGGgGggggGg.222769.XYZ
-      skip-cert-verify: true
-      tls: false
-      type: vmess
-      uuid: 2e65577e-8fdb-4bb1-a495-96f3122099a7
-      ws-opts:
-        headers:
-            Host: gggggggggggggg.222769.xyz
-        path: /f6taOMcOSZb9TPR
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_45|YT|GPT⁺|Gemini|Github|FREE-34"
-      network: ws
-      port: 80
-      server: nnnnnnnnnnnnnn.222769.xyz
-      skip-cert-verify: true
-      tls: false
-      type: vmess
-      uuid: 2e65577e-8fdb-4bb1-a495-96f3122099a7
-      ws-opts:
-        headers:
-            Host: nnnnnnnnnnnnnn.222769.xyz
-        path: /f6taOMcOSZb9TPR
-    - name: "\U0001F1FA\U0001F1F8US_46|YT|Gemini|Github|FREE-34"
-      network: ws
-      port: 8080
-      server: 198.41.208.211
-      skip-cert-verify: true
-      tfo: false
-      tls: false
-      type: vless
-      uuid: d01a40f5-4e6f-4279-b0a9-0f2a268ab03c
-      ws-opts:
-        headers:
-            Host: worker-falling-snow-ffd7.test61.workers.dev
-        path: /?ed=2048
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_47|YT|GPT⁺|Gemini|Github|FREE-34"
-      network: ws
-      port: 2087
-      server: 188.114.97.11
-      servername: Xlz767V2Ray.PAGEs.DEv
-      skip-cert-verify: true
-      tfo: false
-      tls: true
-      type: vless
-      udp: true
-      uuid: b9b8cf4c-29a3-4288-9c6c-8811dc37beec
-      ws-opts:
-        headers:
-            Host: Xlz767V2Ray.PAGEs.DEv
-        path: /bethzrzkz5ljs32v?ed=2560
-    - client-fingerprint: chrome
-      name: "\U0001F1F8\U0001F1ECSG_1|YT|GPT⁺|Gemini|Github|FREE-34"
-      network: ws
-      port: 2096
-      server: news.zoom.us
-      servername: free-server.techsonic.cloud
-      skip-cert-verify: true
-      tfo: false
-      tls: true
-      type: vless
-      udp: true
-      uuid: 7ec108c5-5c08-4a9f-ad1b-bf60328792d4
-      ws-opts:
-        headers:
-            Host: free-server.techsonic.cloud
-        path: /free-server.techsonic.cloud
-    - client-fingerprint: randomized
-      name: "\U0001F1FA\U0001F1F8US_48|YT|GPT|Gemini|Github|FREE-34"
-      network: ws
-      port: 2095
-      server: blog.cloudflare.com
-      skip-cert-verify: true
-      tfo: false
-      tls: false
-      type: vless
-      uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-      ws-opts:
-        headers:
-            Host: freedom.pusytroller.cf
-        path: /
-    - cipher: aes-128-cfb
-      name: "\U0001F1E8\U0001F1E6CA_8|YT|GPT⁺|FREE-6"
-      obfs: http_post
-      obfs-param: ""
-      password: $$Turb0VPN$$
-      port: 443
-      protocol: auth_aes128_md5
-      protocol-param: ""
-      server: ssca.irundns.net
-      skip-cert-verify: true
-      type: ssr
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1E9\U0001F1EADE_9|YT|GPT⁺|Github|FREE-6"
-      network: ws
-      port: 443
-      server: 57.129.64.157
+      server: 15.204.103.7
       servername: lammaland.org
       skip-cert-verify: true
       tls: true
       type: vmess
       uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
       ws-opts:
+        headers:
+            Host: lammaland.org
         path: linkvws
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1E8\U0001F1E6CA_9|YT|GPT⁺|Github|FREE-6"
-      network: ws
-      port: 443
-      server: 15.235.50.172
-      servername: baradiha.com
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        path: /linkvws
     - alterId: 0
       cipher: auto
       name: "\U0001F1E8\U0001F1E6CA_10|YT|GPT⁺|Github|FREE-6"
-      network: ws
-      port: 443
-      server: 15.235.83.227
-      servername: mankadmu.com
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        path: /linkvws
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1EB\U0001F1F7FR_13|YT|GPT⁺|Github|FREE-6"
-      network: ws
-      port: 443
-      server: 141.94.155.224
-      servername: fapeng.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        path: linkvws
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1E8\U0001F1E6CA_11|YT|GPT⁺|Github|FREE-6"
       network: ws
       port: 443
       server: 148.113.153.109
@@ -1273,82 +822,7 @@ proxies:
         path: linkvws
     - alterId: 0
       cipher: auto
-      name: "\U0001F1E9\U0001F1EADE_10|YT|GPT⁺|Github|FREE-6"
-      network: ws
-      port: 443
-      server: 57.129.28.69
-      servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            Host: baradiha.com
-        path: /linkvws
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1EB\U0001F1F7FR_14|YT|GPT⁺|Github|FREE-6"
-      network: ws
-      port: 443
-      server: 57.128.189.222
-      servername: lammaland.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            Host: lammaland.org
-        path: linkvws
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1EB\U0001F1F7FR_15|YT|GPT⁺|Github|FREE-6"
-      network: ws
-      port: 443
-      server: 91.134.8.102
-      servername: serkat.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            Host: serkat.org
-        path: linkvws
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1E8\U0001F1E6CA_12|YT|GPT⁺|Github|FREE-6"
-      network: ws
-      port: 443
-      server: 15.235.83.227
-      servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            Host: mankadmu.com
-        path: /linkvws
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1EB\U0001F1F7FR_16|YT|GPT⁺|Github|FREE-6"
-      network: ws
-      port: 443
-      server: 91.134.8.101
-      servername: fapeng.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            Host: fapeng.org
-        path: linkvws
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_49|YT|GPT⁺|Github|FREE-6"
+      name: "\U0001F1FA\U0001F1F8US_50|YT|GPT⁺|Github|FREE-6"
       network: ws
       port: 443
       server: 15.204.64.214
@@ -1363,10 +837,10 @@ proxies:
         path: linkvws
     - alterId: 0
       cipher: auto
-      name: "\U0001F1EB\U0001F1F7FR_17|YT|GPT⁺|Github|FREE-6"
+      name: "\U0001F1E8\U0001F1E6CA_11|YT|GPT⁺|Github|FREE-6"
       network: ws
       port: 443
-      server: 146.59.55.50
+      server: 15.235.83.227
       servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
       skip-cert-verify: true
       tls: true
@@ -1374,5 +848,5 @@ proxies:
       uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
       ws-opts:
         headers:
-            Host: o.metuji.com
+            Host: mankadmu.com
         path: /linkvws
