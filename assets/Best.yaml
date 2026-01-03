@@ -1,37 +1,9 @@
 proxies:
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: "\U0001F1F3\U0001F1F1NL_1|YT|GPT⁺|Github|FREE-9"
-      port: 16931
-      reality-opts:
-        public-key: 7O4PQ5fPqpmc7WmqHSsjkfprQrU5Q13Qk7yCcsp49AY
-        short-id: 0ee8b6
-      server: vd3.outlinevpn.cc
-      servername: music.yandex.ru
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 72a3aafa-281c-457b-bfd2-5a6428ea36dd
-    - name: "\U0001F1FA\U0001F1F8US_1|YT|Github|FREE-14"
-      network: ws
-      port: 443
-      server: 104.17.202.10
-      servername: snippets.kkii.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 5a2c16f9-e365-4080-8d38-6924c3835586
-      ws-opts:
-        headers:
-            Host: snippets.kkii.eu.org
-        path: /
-    - name: "\U0001F1FA\U0001F1F8US_2|YT|Github|FREE-14"
+    - name: "\U0001F1FA\U0001F1F8US_1|YT|Github|FREE-9"
       network: ws
       password: 5a2c16f9
-      port: 443
-      server: 162.159.24.131
+      port: 2096
+      server: 135.84.73.238
       skip-cert-verify: true
       sni: snippets.kkii.eu.org
       type: trojan
@@ -39,51 +11,12 @@ proxies:
       ws-opts:
         headers:
             Host: snippets.kkii.eu.org
-        path: /
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_3|YT|Github|FREE-14"
-      network: ws
-      port: 443
-      server: 104.19.220.22
-      servername: snippets.kkii.eu.org
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 5a2c16f9-e365-4080-8d38-6924c3835586
-      ws-opts:
-        headers:
-            Host: snippets.kkii.eu.org
-        path: /
-    - name: "\U0001F1FA\U0001F1F8US_4|YT|GPT|Github|FREE-14"
+        path: "/Telegram\U0001F1E8\U0001F1F3WangCai2"
+    - name: "\U0001F1FA\U0001F1F8US_2|YT|Github|FREE-9"
       network: ws
       password: 5a2c16f9
-      port: 443
-      server: 104.17.167.134
-      skip-cert-verify: true
-      sni: snippets.kkii.eu.org
-      type: trojan
-      ws-opts:
-        headers:
-            Host: snippets.kkii.eu.org
-        path: '%2F'
-    - name: "\U0001F1FA\U0001F1F8US_5|YT|Github|FREE-14"
-      network: ws
-      password: 5a2c16f9
-      port: 443
-      server: 104.17.162.3
-      skip-cert-verify: true
-      sni: snippets.kkii.eu.org
-      type: trojan
-      ws-opts:
-        headers:
-            Host: snippets.kkii.eu.org
-        path: '%2F'
-    - name: "\U0001F1FA\U0001F1F8US_6|YT|Github|FREE-14"
-      network: ws
-      password: 5a2c16f9
-      port: 443
-      server: 104.16.246.188
+      port: 2096
+      server: 94.140.0.238
       skip-cert-verify: true
       sni: snippets.kkii.eu.org
       type: trojan
@@ -91,413 +24,21 @@ proxies:
       ws-opts:
         headers:
             Host: snippets.kkii.eu.org
-        path: /
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_7|YT|GPT⁺|Gemini|Github|FREE-3"
-      password: shadowsocks
-      port: 443
-      server: 173.244.56.6
-      skip-cert-verify: true
-      type: ss
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1F2\U0001F1FDMX_1|YT|GPT⁺|Gemini|Github|FREE-3"
-      network: none
-      port: 27502
-      server: 216.238.87.47
-      skip-cert-verify: true
-      type: vmess
-      uuid: b8155ce4-7e08-4c40-800f-8671312b7124
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_8|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: 17cdeb6c-f046-11ee-bdac-f23c93141fad
-      port: "1743"
-      server: 6adab57e-t53wg0-tdvgqe-2gok.la.shifen.uk
-      skip-cert-verify: true
-      sni: 6adab57e-t53wg0-tdvgqe-2gok.la.shifen.uk
-      type: hysteria2
-      up: ""
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_9|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: 17cdeb6c-f046-11ee-bdac-f23c93141fad
-      port: "1743"
-      server: c37b0be5n-t3kyo0-t3lvgh-2gok.la.shifen.uk
-      skip-cert-verify: true
-      sni: c37b0be5-t3kyo0-t3lvgh-2gok.la.shifen.uk
-      type: hysteria2
-      up: ""
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_10|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: 12a81f5a-fa9e-11ef-8400-f23c9164ca5d
-      port: "443"
-      server: fbde8bc6-t6ngg0-tbmeud-1th9y.us.hyhuawei.com
-      skip-cert-verify: true
-      sni: fbde8bc6-t6ngg0-tbmeud-1th9y.us.hyhuawei.com
-      type: hysteria2
-      up: ""
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_11|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: 0abd5d38-fdf1-11ed-bade-f23c91369f2d
-      port: "443"
-      server: 1d4e3b3b-t6ngg0-tedirp-1fli7.us.hyhuawei.com
-      skip-cert-verify: true
-      sni: 1d4e3b3b-t6ngg0-tedirp-1fli7.us.hyhuawei.com
-      type: hysteria2
-      up: ""
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_12|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: 537d7098-fdbe-11ef-8ebc-f23c93141fad
-      port: "1743"
-      server: 14ff4864-t4x400-tcjtj6-d70y.la.shifen.uk
-      skip-cert-verify: true
-      sni: 14ff4864-t4x400-tcjtj6-d70y.la.shifen.uk
-      type: hysteria2
-      up: ""
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_13|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: 6286105c-fb6d-11ef-be96-f23c93136cb3
-      port: "1743"
-      server: cc65f71a-t4v9c0-t5waci-4550.la.shifen.uk
-      skip-cert-verify: true
-      sni: cc65f71a-t4v9c0-t5waci-4550.la.shifen.uk
-      type: hysteria2
-      up: ""
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_14|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: bcc58e88-e147-11ec-b286-f23c91cfbbc9
-      port: "443"
-      server: da6103f9-t6ngg0-tao3bn-ggww.us.hyhuawei.com
-      skip-cert-verify: true
-      sni: da6103f9-t6ngg0-tao3bn-ggww.us.hyhuawei.com
-      type: hysteria2
-      up: ""
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_15|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: be8cc8f6-0c6a-11f0-a5a3-f23c93141fad
-      port: "1743"
-      server: ea9466bf-t3dk00-t3i5yp-b4pt.la.shifen.uk
-      skip-cert-verify: true
-      sni: ea9466bf-t3dk00-t3i5yp-b4pt.la.shifen.uk
-      type: hysteria2
-      up: ""
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_16|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: c357a728-1211-11f0-9a65-f23c9164ca5d
-      port: "443"
-      server: e1d6b467-t53wg0-td5oia-1m49t.us.hyhuawei.com
-      skip-cert-verify: true
-      sni: e1d6b467-t53wg0-td5oia-1m49t.us.hyhuawei.com
-      type: hysteria2
-      up: ""
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1EB\U0001F1EEFI_1|YT|GPT⁺|Gemini|Github|FREE-18"
-      obfs: salamander
-      obfs-password: Jsbdksj@V2RayyNGvpn$Miracle
-      password: gZBgjlPmPF
-      port: "2083"
-      server: 85.9.197.203
-      skip-cert-verify: true
-      sni: refersion.com
-      type: hysteria2
-      up: ""
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_17|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: df7bed3c-06eb-11f0-8ebc-f23c93141fad
-      port: "1743"
-      server: e10829f0-t4un40-t9lb2a-1glq.la.shifen.uk
-      skip-cert-verify: true
-      sni: e10829f0-t4un40-t9lb2a-1glq.la.shifen.uk
-      type: hysteria2
-      up: ""
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F2\U0001F1E9MD_1|YT|GPT⁺|Github|FREE-21"
-      password: SS2QvbC9nqLp2sXXZo0BVy4slcErRuCt
-      port: 443
-      server: 103.35.189.136
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1FA\U0001F1F8US_18|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: NDRySIABARbErNIVsCNVkyYAHiBzhveT
-      port: 443
-      server: 23.95.75.146
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_19|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 156.146.38.168
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1E8\U0001F1E6CA_1|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-      port: 990
-      server: 79.127.200.169
-      skip-cert-verify: true
-      type: ss
-    - cipher: rc4-md5
-      name: "\U0001F1E8\U0001F1E6CA_2|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: 14fFPrbezE3HDZzsMOr6
-      port: 8080
-      server: 137.184.174.93
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_20|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 156.146.38.170
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_21|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 156.146.38.167
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1FA\U0001F1F8US_22|YT|GPT⁺|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 990
-      server: 104.192.226.106
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1E8\U0001F1E6CA_3|YT|GPT⁺|Github|FREE-21"
-      password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-      port: 990
-      server: 23.95.76.59
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1E8\U0001F1E6CA_4|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 990
-      server: 79.127.233.170
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1E8\U0001F1E6CA_5|YT|GPT⁺|Github|FREE-21"
-      password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-      port: 990
-      server: 45.154.204.7
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_2|YT|GPT⁺|Github|FREE-21"
-      password: oZIoA69Q8yhcQV8ka3Pa3A
-      port: 8080
-      server: 193.29.139.151
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_3|YT|GPT⁺|Github|FREE-21"
-      password: QCXDxuDlTTMD7jtgHUjIoj
-      port: 8080
-      server: 151.242.251.147
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_23|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 156.146.38.169
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-256-cfb
-      name: "\U0001F1FA\U0001F1F8US_24|YT|GPT⁺|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 989
-      server: 104.192.226.106
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-256-cfb
-      name: "\U0001F1EB\U0001F1F7FR_1|YT|GPT⁺|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 989
-      server: 51.159.106.175
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_4|YT|GPT⁺|Github|FREE-21"
-      password: k1dBOmOB4oqi7Ump37a1bQ
-      port: 8080
-      server: 151.242.251.142
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F8\U0001F1EESI_1|YT|GPT⁺|Github|FREE-21"
-      password: HfAiyrdFbKJuKIQkGjvJrDFefmH8YDSC
-      port: 443
-      server: 45.83.131.43
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1EE\U0001F1F9IT_1|YT|GPT⁺|Github|FREE-21"
-      password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-      port: 990
-      server: 212.102.54.45
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-256-cfb
-      name: "\U0001F1F2\U0001F1FDMX_2|YT|GPT⁺|Github|FREE-21"
-      password: f8f7aCzcPKbsF8p3
-      port: 989
-      server: 147.78.1.230
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1E8\U0001F1E6CA_6|YT|GPT⁺|Github|FREE-21"
-      password: JIhN6rBKkaEboLNXVSv5rq
-      port: 80
-      server: ca225.vpnbook.com
-      skip-cert-verify: true
-      type: ss
-    - cipher: rc4-md5
-      name: "\U0001F1FA\U0001F1F8US_25|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: 14fFPrbezE3HDZzsMOr6
-      port: 8080
-      server: 107.151.182.253
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F5\U0001F1E6PA_1|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-      port: 990
-      server: 138.186.142.81
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1E8\U0001F1E6CA_7|YT|GPT⁺|Github|FREE-21"
-      password: JIhN6rBKkaEboLNXVSv5rq
-      port: 80
-      server: 142.4.216.225
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_5|YT|GPT⁺|Github|FREE-21"
-      password: oZIoA69Q8yhcQV8ka3Pa3A
-      port: 8080
-      server: ltnl16.saint.ydns.eu
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_6|YT|GPT⁺|Github|FREE-21"
-      password: oZIoA69Q8yhcQV8ka3Pa3A
-      port: 8080
-      server: 45.87.175.92
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_7|YT|GPT⁺|Github|FREE-21"
-      password: oZIoA69Q8yhcQV8ka3Pa3A
-      port: 8080
-      server: 193.29.139.177
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F5\U0001F1E6PA_2|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-      port: 990
-      server: 138.186.142.80
-      skip-cert-verify: true
-      type: ss
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_26|YT|GPT⁺|Github|FREE-21"
-      network: ws
-      port: 20086
-      server: 198.23.174.168
-      skip-cert-verify: true
-      tls: false
-      type: vmess
-      uuid: 2b36304b-4f88-4ff5-9033-f4d57dbb5490
-      ws-opts:
-        path: /
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_8|YT|GPT⁺|Github|FREE-21"
-      password: oZIoA69Q8yhcQV8ka3Pa3A
-      port: 8080
-      server: 45.87.175.28
-      skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1F3\U0001F1F1NL_9|YT|GPT⁺|Github|FREE-21"
-      password: oZIoA69Q8yhcQV8ka3Pa3A
-      port: 8080
-      server: 193.29.139.141
-      skip-cert-verify: true
-      type: ss
-    - alpn:
-        - http/1.1
-      client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_27|YT|GPT⁺|Github|FREE-17"
-      network: ws
-      port: 443
-      server: 172.67.162.50
-      servername: 444RRrt5.7777155.xYZ
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: e4cbe8b8-37db-4aaa-8469-b84f34c51ebc
-      ws-opts:
-        headers:
-            Host: 444rrrt5.7777155.xyz
-            User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; FIG-LX3 Build/HUAWEIFIG-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-        path: /6OWLjRc26b0nHYr5hYXD
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      flow: xtls-rprx-vision
-      name: "\U0001F1F7\U0001F1FARU_1|YT|GPT|Github|FREE-12"
-      network: tcp
-      port: 4443
-      reality-opts:
-        public-key: 5XB_N3ATilH-6tp_MXht-84_y5YaJnx_Z7MbuY2otHE
-        short-id: aa7e96542880027a
-      server: 147.45.243.234
-      servername: github.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 526552b2-f67f-489c-9d0d-3e00e7d890d1
+        path: "/Telegram\U0001F1E8\U0001F1F3WangCai2"
     - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_28|YT|GPT⁺|Gemini|Github|FREE-12"
+      name: "\U0001F1FA\U0001F1F8US_3|YT|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: seashell.qzz.io
+      servername: seashell.qzz.io
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 13e71ddb-908c-45e0-993c-da482d848c88
+      ws-opts:
+        path: /156.254.114.120:30011
+    - encryption: none
+      name: "\U0001F1FA\U0001F1F8US_4|YT|GPT⁺|Gemini|Github|FREE-12"
       network: ws
       port: 443
       server: purplelily.qzz.io
@@ -505,47 +46,23 @@ proxies:
       skip-cert-verify: true
       tls: true
       type: vless
-      uuid: 9ac02124-e3f2-4a80-8ac8-d06612ebaceb
+      uuid: 70b84e89-b42a-4c91-896b-1c3dbd98a203
       ws-opts:
-        path: /57.128.183.35:443
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_29|YT|Github|FREE-12"
+        path: /23.95.56.195:443
+    - name: "\U0001F1FA\U0001F1F8US_5|YT|Github|FREE-12"
       network: ws
+      password: 5a2c16f9
       port: 443
-      server: blueivy.qzz.io
-      servername: blueivy.qzz.io
+      server: 172.64.229.83
       skip-cert-verify: true
+      sni: snippets.kkii.eu.org
       tls: true
-      type: vless
-      uuid: da943f80-91e6-46df-b7ba-c6ecf28e0171
+      type: trojan
       ws-opts:
-        path: /192.252.182.52:7602
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_30|YT|Gemini|Github|FREE-12"
-      network: ws
-      port: 443
-      server: exclavevirtualvless.alirexaxulst.workers.dev
-      servername: exclavevirtualvless.alirexaxulst.workers.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 9e25693f-a2a4-4c54-a6d0-3eb9ed4fbf99
-      ws-opts:
-        path: ws
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_31|YT|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 443
-      server: midnightblue.qzz.io
-      servername: midnightblue.qzz.io
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 96287144-7c5f-4f0b-99da-6c159f06038c
-      ws-opts:
-        path: /54.153.59.106:80
-    - name: "\U0001F1FA\U0001F1F8US_32|YT|Github|FREE-12"
+        headers:
+            Host: snippets.kkii.eu.org
+        path: /
+    - name: "\U0001F1FA\U0001F1F8US_6|YT|Github|FREE-12"
       network: ws
       password: 5a2c16f9
       port: 443
@@ -558,1398 +75,1102 @@ proxies:
         headers:
             Host: snippets.kkii.eu.org
         path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_33|YT|GPT⁺|Gemini|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_7|YT|Github|FREE-12"
       network: ws
-      port: 8880
-      server: 104.19.39.17
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - name: "\U0001F1FA\U0001F1F8US_34|YT|Github|FREE-12"
-      network: ws
-      password: 87d1bfd4-574e-4c96-ad42-0426f27461ff
+      password: 5a2c16f9
       port: 443
-      server: saas.sin.fan
+      server: freeyx.cloudflare88.eu.org
       skip-cert-verify: true
-      sni: _acme-challenge.2go.cloudns.be
+      sni: snippets.kkii.eu.org
       tls: true
       type: trojan
       ws-opts:
         headers:
-            Host: _acme-challenge.2go.cloudns.be
+            Host: snippets.kkii.eu.org
         path: /
-    - name: "\U0001F1FA\U0001F1F8US_35|YT|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_8|YT|Gemini|Github|FREE-12"
       network: ws
-      password: 87d1bfd4-574e-4c96-ad42-0426f27461ff
+      password: da943f80-91e6-46df-b7ba-c6ecf28e0171
       port: 443
-      server: store.ubi.com
+      server: blueivy.qzz.io
       skip-cert-verify: true
-      sni: _acme-challenge.2go.cloudns.be
+      sni: blueivy.qzz.io
       tls: true
       type: trojan
       ws-opts:
         headers:
-            Host: _acme-challenge.2go.cloudns.be
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_36|YT|GPT⁺|Gemini|Github|FREE-12"
+            Host: blueivy.qzz.io
+        path: /192.252.182.52:7602
+    - name: "\U0001F1FA\U0001F1F8US_9|YT|Gemini|Github|FREE-12"
       network: ws
-      port: 8880
-      server: 104.19.39.27
-      servername: sni.x86.de5.net
+      password: e86364fb-a5e3-42c3-b7fa-6ce8097fe19f
+      port: 443
+      server: bisque.qzz.io
       skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_37|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.132
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_38|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.146
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_39|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8443
-      server: 104.19.150.163
-      servername: saas.520cf.dns.army
-      skip-cert-verify: true
+      sni: bisque.qzz.io
       tls: true
-      type: vless
-      uuid: 6e69871c-4506-4cb9-b375-ac97cb972742
+      type: trojan
       ws-opts:
-        headers:
-            Host: saas.520cf.dns.army
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_40|YT|GPT⁺|Gemini|Github|FREE-12"
+        path: /66.135.4.222:8443
+    - name: "\U0001F1FA\U0001F1F8US_10|YT|Github|FREE-12"
       network: ws
-      port: 8880
-      server: 104.19.39.10
-      servername: sni.x86.de5.net
+      password: 5a2c16f9
+      port: 443
+      server: 104.19.220.22
       skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      sni: snippets.kkii.eu.org
+      tls: true
+      type: trojan
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
+            Host: snippets.kkii.eu.org
         path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_41|YT|GPT⁺|Gemini|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_11|YT|Github|FREE-12"
       network: ws
-      port: 8880
-      server: 104.19.39.60
-      servername: sni.x86.de5.net
+      password: 5a2c16f9
+      port: 443
+      server: 104.26.1.110
       skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      sni: snippets.kkii.eu.org
+      tls: true
+      type: trojan
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
+            Host: snippets.kkii.eu.org
         path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_42|YT|GPT⁺|Gemini|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_12|YT|Github|FREE-12"
       network: ws
-      port: 8880
-      server: 104.19.39.245
-      servername: sni.x86.de5.net
+      password: 5a2c16f9
+      port: 443
+      server: 162.159.24.131
       skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      sni: snippets.kkii.eu.org
+      tls: true
+      type: trojan
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
+            Host: snippets.kkii.eu.org
         path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_43|YT|GPT⁺|Gemini|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_13|YT|Gemini|Github|FREE-12"
       network: ws
-      port: 8880
-      server: 104.19.39.83
-      servername: sni.x86.de5.net
+      password: cf142ac0-4bae-4c4b-9882-21fc0550a661
+      port: 443
+      server: www.speedtest.net
       skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      sni: red-dream-2d6c.xepis84786.workers.dev
+      tls: true
+      type: trojan
       ws-opts:
-        headers:
-            Host: sni.x86.de5.net
         path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_44|YT|GPT⁺|Gemini|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_14|YT|Gemini|Github|FREE-12"
       network: ws
-      port: 8880
-      server: 104.19.39.105
-      servername: sni.x86.de5.net
+      password: zWFjJENcljZm
+      port: 443
+      server: usa.visa.com
       skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      sni: vahidqaz-7o61u7.vahidqaz.workers.dev
+      tls: true
+      type: trojan
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_45|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.202
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_46|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.173
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_47|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.55
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_48|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.25
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_49|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.38
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_50|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.178
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_51|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.32
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_52|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.192
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_53|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.216
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_54|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.63
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_55|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.184
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_56|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.81
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_57|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.62
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_58|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.2
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_59|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.218
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_60|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.205
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_61|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.140
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_62|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.56
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_63|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.114
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_64|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.221
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_65|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.162
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_66|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.209
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_67|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.110
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_68|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.50
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_69|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.252
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_70|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.130
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_71|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.222
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_72|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.82
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_73|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.188
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_74|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.179
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_75|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.113
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_76|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.96
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_77|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.170
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_78|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.230
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_79|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.5
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_80|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.154
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_81|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.9
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_82|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.98
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_83|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.42
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_84|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.36
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_85|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.174
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_86|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.236
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_87|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.239
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_88|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.249
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_89|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.67
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_90|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.94
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_91|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.181
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_92|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.189
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_93|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.95
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_94|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.41
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_95|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.136
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_96|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.61
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_97|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.133
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
+            Host: vahidqaz-7o61u7.vahidqaz.workers.dev
         path: /
     - client-fingerprint: chrome
       encryption: none
-      name: "\U0001F1E9\U0001F1EADE_1|YT|GPT⁺|Github|FREE-12"
+      name: "\U0001F1FA\U0001F1F8US_15|YT|GPT⁺|Github|FREE-12"
       network: ws
       port: 443
-      server: mmrknight-meli2.koyeb.app
+      server: 75.102.51.220
+      servername: ustc.dysenv2ray.top
       skip-cert-verify: true
       tls: true
       type: vless
-      uuid: 5c9b6087-f955-4506-9c1d-67a5aae44bc9
+      uuid: be2d41c0-50d5-49f8-d309-f6fd923063f7
       ws-opts:
-        path: /ws
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_98|YT|GPT⁺|Gemini|Github|FREE-12"
+        path: /ustc_dysen_20206
+    - name: "\U0001F1FA\U0001F1F8US_16|YT|Github|FREE-12"
       network: ws
-      port: 8880
-      server: 104.19.39.93
-      servername: sni.x86.de5.net
+      password: 5a2c16f9
+      port: 443
+      server: one.cf.cdn.hyli.xyz
       skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      sni: snippets.kkii.eu.org
+      tls: true
+      type: trojan
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_99|YT|GPT⁺|Gemini|Github|FREE-12"
+            Host: snippets.kkii.eu.org
+        path: ///
+    - name: "\U0001F1FA\U0001F1F8US_17|YT|Github|FREE-12"
       network: ws
-      port: 8880
-      server: 104.19.39.14
-      servername: sni.x86.de5.net
+      password: 5a2c16f9
+      port: 443
+      server: 104.17.167.134
       skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      sni: snippets.kkii.eu.org
+      tls: true
+      type: trojan
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
+            Host: snippets.kkii.eu.org
         path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_100|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.92
-      servername: sni.x86.de5.net
+    - alterId: "0"
+      cipher: auto
+      name: "\U0001F1F2\U0001F1FDMX_1|YT|GPT⁺|Gemini|Github|FREE-18"
+      network: none
+      port: 34460
+      server: 216.238.86.158
       skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      tls: false
+      type: vmess
+      udp: true
+      uuid: 90be214d-048c-4ea2-a602-b8e4d4e51e36
+      xudp: true
+    - name: "\U0001F1FA\U0001F1F8US_18|YT|Github|FREE-12"
+      network: ws
+      password: 5a2c16f9
+      port: 443
+      server: cf.130519.xyz
+      skip-cert-verify: true
+      sni: snippets.kkii.eu.org
+      tls: true
+      type: trojan
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
+            Host: snippets.kkii.eu.org
         path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_101|YT|GPT⁺|Gemini|Github|FREE-12"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_19|YT|Gemini|Github|FREE-18"
       network: ws
-      port: 8880
-      server: 104.19.39.102
-      servername: sni.x86.de5.net
+      password: 5a2c16f9
+      port: "8443"
+      server: 162.220.13.14
       skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      sni: snippets.kkii.eu.org
+      type: trojan
+      udp: true
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_102|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.21
-      servername: sni.x86.de5.net
+            User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36
+        path: "/Telegram\U0001F1E8\U0001F1F3WangCai2"
+    - down: ""
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_20|YT|GPT⁺|Gemini|Github|FREE-18"
+      obfs: ""
+      obfs-password: ""
+      password: 12a81f5a-fa9e-11ef-8400-f23c9164ca5d
+      port: "443"
+      server: fbde8bc6-t6ngg0-tbmeud-1th9y.us.hyhuawei.com
       skip-cert-verify: true
+      sni: fbde8bc6-t6ngg0-tbmeud-1th9y.us.hyhuawei.com
+      type: hysteria2
+      up: ""
+    - down: ""
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_21|YT|GPT⁺|Gemini|Github|FREE-18"
+      obfs: ""
+      obfs-password: ""
+      password: 0abd5d38-fdf1-11ed-bade-f23c91369f2d
+      port: "443"
+      server: 1d4e3b3b-t6ngg0-tedirp-1fli7.us.hyhuawei.com
+      skip-cert-verify: true
+      sni: 1d4e3b3b-t6ngg0-tedirp-1fli7.us.hyhuawei.com
+      type: hysteria2
+      up: ""
+    - down: ""
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_22|YT|GPT⁺|Github|FREE-18"
+      obfs: ""
+      obfs-password: ""
+      password: 17cdeb6c-f046-11ee-bdac-f23c93141fad
+      port: "1743"
+      server: 6adab57e-t53wg0-tdvgqe-2gok.la.shifen.uk
+      skip-cert-verify: true
+      sni: 6adab57e-t53wg0-tdvgqe-2gok.la.shifen.uk
+      type: hysteria2
+      up: ""
+    - down: ""
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_23|YT|GPT⁺|Github|FREE-18"
+      obfs: ""
+      obfs-password: ""
+      password: 17cdeb6c-f046-11ee-bdac-f23c93141fad
+      port: "1743"
+      server: c37b0be5n-t3kyo0-t3lvgh-2gok.la.shifen.uk
+      skip-cert-verify: true
+      sni: c37b0be5-t3kyo0-t3lvgh-2gok.la.shifen.uk
+      type: hysteria2
+      up: ""
+    - down: ""
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_24|YT|GPT⁺|Github|FREE-18"
+      obfs: ""
+      obfs-password: ""
+      password: 537d7098-fdbe-11ef-8ebc-f23c93141fad
+      port: "1743"
+      server: 14ff4864-t4x400-tcjtj6-d70y.la.shifen.uk
+      skip-cert-verify: true
+      sni: 14ff4864-t4x400-tcjtj6-d70y.la.shifen.uk
+      type: hysteria2
+      up: ""
+    - down: ""
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_25|YT|GPT⁺|Github|FREE-18"
+      obfs: ""
+      obfs-password: ""
+      password: 6286105c-fb6d-11ef-be96-f23c93136cb3
+      port: "1743"
+      server: cc65f71a-t4v9c0-t5waci-4550.la.shifen.uk
+      skip-cert-verify: true
+      sni: cc65f71a-t4v9c0-t5waci-4550.la.shifen.uk
+      type: hysteria2
+      up: ""
+    - down: ""
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_26|YT|GPT⁺|Gemini|Github|FREE-18"
+      obfs: ""
+      obfs-password: ""
+      password: bcc58e88-e147-11ec-b286-f23c91cfbbc9
+      port: "443"
+      server: da6103f9-t6ngg0-tao3bn-ggww.us.hyhuawei.com
+      skip-cert-verify: true
+      sni: da6103f9-t6ngg0-tao3bn-ggww.us.hyhuawei.com
+      type: hysteria2
+      up: ""
+    - down: ""
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_27|YT|GPT⁺|Gemini|Github|FREE-18"
+      obfs: ""
+      obfs-password: ""
+      password: c357a728-1211-11f0-9a65-f23c9164ca5d
+      port: "443"
+      server: e1d6b467-t53wg0-td5oia-1m49t.us.hyhuawei.com
+      skip-cert-verify: true
+      sni: e1d6b467-t53wg0-td5oia-1m49t.us.hyhuawei.com
+      type: hysteria2
+      up: ""
+    - down: ""
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_28|YT|GPT⁺|Github|FREE-18"
+      obfs: ""
+      obfs-password: ""
+      password: be8cc8f6-0c6a-11f0-a5a3-f23c93141fad
+      port: "1743"
+      server: ea9466bf-t3dk00-t3i5yp-b4pt.la.shifen.uk
+      skip-cert-verify: true
+      sni: ea9466bf-t3dk00-t3i5yp-b4pt.la.shifen.uk
+      type: hysteria2
+      up: ""
+    - down: ""
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_29|YT|GPT⁺|Github|FREE-18"
+      obfs: ""
+      obfs-password: ""
+      password: df7bed3c-06eb-11f0-8ebc-f23c93141fad
+      port: "1743"
+      server: e10829f0-t4un40-t9lb2a-1glq.la.shifen.uk
+      skip-cert-verify: true
+      sni: e10829f0-t4un40-t9lb2a-1glq.la.shifen.uk
+      type: hysteria2
+      up: ""
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_30|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 173.244.56.6
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1E8\U0001F1E6CA_1|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: f8f7aCzcPKbsF8p3
+      port: 990
+      server: 79.127.233.170
+      skip-cert-verify: true
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_31|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 156.146.38.170
+      skip-cert-verify: true
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_32|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 156.146.38.168
+      skip-cert-verify: true
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_33|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 156.146.38.169
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1FA\U0001F1F8US_34|YT|GPT⁺|Github|FREE-21"
+      password: UAMVtHm54uahd6SiN5WcD16rsPSdabPG
+      port: 443
+      server: 23.95.72.81
+      skip-cert-verify: true
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_35|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 156.146.38.167
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1FA\U0001F1F8US_36|YT|GPT⁺|Github|FREE-21"
+      password: f8f7aCzcPKbsF8p3
+      port: 990
+      server: 104.192.226.106
+      skip-cert-verify: true
+      type: ss
+    - cipher: rc4-md5
+      name: "\U0001F1E8\U0001F1E6CA_2|GPT⁺|Github|FREE-21"
+      password: 14fFPrbezE3HDZzsMOr6
+      port: 8080
+      server: 137.184.174.93
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1F2\U0001F1E9MD_1|YT|GPT⁺|Github|FREE-21"
+      password: SS2QvbC9nqLp2sXXZo0BVy4slcErRuCt
+      port: 443
+      server: 103.35.189.136
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1F2\U0001F1FDMX_2|YT|GPT⁺|Github|FREE-21"
+      password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+      port: 990
+      server: 147.78.1.230
+      skip-cert-verify: true
+      type: ss
+    - cipher: rc4-md5
+      name: "\U0001F1FA\U0001F1F8US_37|YT|GPT|Gemini|Github|FREE-21"
+      password: 14fFPrbezE3HDZzsMOr6
+      port: 8080
+      server: 107.151.182.253
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1E8\U0001F1E6CA_3|YT|GPT⁺|Github|FREE-21"
+      password: JIhN6rBKkaEboLNXVSv5rq
+      port: 80
+      server: ca225.vpnbook.com
+      skip-cert-verify: true
+      type: ss
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_38|YT|Github|FREE-14"
+      network: ws
+      port: 443
+      server: 104.17.69.244
+      servername: snippets.kkii.eu.org
+      skip-cert-verify: true
+      tls: true
       type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      udp: true
+      uuid: 5a2c16f9-e365-4080-8d38-6924c3835586
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
+            Host: snippets.kkii.eu.org
         path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_103|YT|GPT⁺|Gemini|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_39|YT|Github|FREE-14"
       network: ws
-      port: 8880
-      server: 104.19.39.89
-      servername: sni.x86.de5.net
+      port: 443
+      server: 104.19.212.207
+      servername: snippets.kkii.eu.org
       skip-cert-verify: true
+      tls: true
       type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      udp: true
+      uuid: 5a2c16f9-e365-4080-8d38-6924c3835586
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
+            Host: snippets.kkii.eu.org
         path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_104|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.73
-      servername: sni.x86.de5.net
+    - cipher: aes-256-cfb
+      delay: 632
+      name: "\U0001F1FA\U0001F1F8US_40|YT|GPT⁺|Gemini|Github|FREE-16"
+      password: qwerREWQ@@
+      port: 37186
+      server: 140.174.52.97
       skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      type: ss
+      udp: true
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_41|YT|GPT⁺|Gemini|Github|FREE-1"
+      password: shadowsocks
+      port: 443
+      server: 173.244.56.9
+      skip-cert-verify: true
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_42|YT|GPT⁺|Gemini|Github|FREE-1"
+      password: shadowsocks
+      port: 443
+      server: 37.19.198.160
+      skip-cert-verify: true
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_43|YT|GPT|Gemini|Github|FREE-1"
+      password: shadowsocks
+      port: 443
+      server: 37.19.198.236
+      skip-cert-verify: true
+      type: ss
+    - alterId: 0
+      cipher: auto
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_44|YT|GPT⁺|Github|FREE-30"
+      network: ws
+      port: 2083
+      server: hgtrojan.zabc.net
+      servername: hgtrojan.zabc.net
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: e6395c20-4571-4b34-d6b1-55a5d36e49ea
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_105|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.177
-      servername: sni.x86.de5.net
+            HOST: hgtrojan.zabc.net
+        path: /e6395c20
+    - alpn:
+        - h3
+      congestion-controller: bbr
+      disable-sni: false
+      name: "\U0001F1FA\U0001F1F8US_45|YT|GPT⁺|Github|FREE-24"
+      password: d9812081-7f61-456d-9340-a1fb8dfd603b
+      port: 54455
+      reduce-rtt: false
+      request-timeout: 0
+      server: phoenix-4.nezhasu.com
       skip-cert-verify: true
+      sni: phoenix-4.nezhasu.com
+      type: tuic
+      udp-relay-mode: native
+      uuid: d9812081-7f61-456d-9340-a1fb8dfd603b
+    - name: "\U0001F1FA\U0001F1F8US_46|YT|GPT⁺|Gemini|Github|FREE-24"
+      network: ws
+      port: 443
+      server: cornsilk.qzz.io
+      servername: cornsilk.qzz.io
+      skip-cert-verify: true
+      tls: true
       type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      udp: true
+      uuid: d15305f0-ad4f-4424-88d5-53e0b593fbe4
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
+            Host: cornsilk.qzz.io
+        path: /134.195.137.107:22473
+    - alpn:
+        - h3
+      congestion-controller: bbr
+      disable-sni: false
+      name: "\U0001F1FA\U0001F1F8US_47|YT|GPT⁺|Github|FREE-24"
+      password: d9812081-7f61-456d-9340-a1fb8dfd603b
+      port: 59283
+      reduce-rtt: false
+      request-timeout: 0
+      server: phoenix-2.nezhasu.cn
+      skip-cert-verify: true
+      sni: phoenix-2.nezhasu.cn
+      type: tuic
+      udp-relay-mode: native
+      uuid: d9812081-7f61-456d-9340-a1fb8dfd603b
+    - name: "\U0001F1FA\U0001F1F8US_48|YT|Gemini|Github|FREE-24"
+      network: ws
+      port: 443
+      server: cranberry.qzz.io
+      servername: cranberry.qzz.io
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: f0e95486-460e-4444-a492-9b23292cd696
+      ws-opts:
+        headers:
+            Host: cranberry.qzz.io
+        path: /111.20.226.42:12489
+    - name: "\U0001F1FA\U0001F1F8US_49|YT|Github|FREE-24"
+      network: ws
+      password: 5a2c16f9
+      port: 443
+      server: 172.64.229.103
+      skip-cert-verify: true
+      sni: snippets.kkii.eu.org
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: snippets.kkii.eu.org
         path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_106|YT|GPT⁺|Gemini|Github|FREE-12"
+    - name: "\U0001F1FA\U0001F1F8US_50|YT|Github|FREE-24"
+      network: ws
+      password: 5a2c16f9
+      port: 443
+      server: 172.64.229.10
+      skip-cert-verify: true
+      sni: snippets.kkii.eu.org
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: snippets.kkii.eu.org
+        path: /
+    - name: "\U0001F1FA\U0001F1F8US_51|YT|GPT|Github|FREE-24"
+      network: ws
+      password: 5a2c16f9
+      port: 443
+      server: 172.64.229.15
+      skip-cert-verify: true
+      sni: snippets.kkii.eu.org
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: snippets.kkii.eu.org
+        path: /
+    - name: "\U0001F1FA\U0001F1F8US_52|YT|Github|FREE-24"
+      network: ws
+      password: 5a2c16f9
+      port: 443
+      server: 104.16.245.77
+      skip-cert-verify: true
+      sni: snippets.kkii.eu.org
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: snippets.kkii.eu.org
+        path: /
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_53|YT|GPT⁺|Gemini|Github|FREE-38"
       network: ws
       port: 2096
-      server: 108.162.198.11
-      servername: saas.520cf.dns.army
+      server: 212.183.88.158
+      servername: sni.111000.de5.net
       skip-cert-verify: true
       tls: true
       type: vless
-      uuid: 6e69871c-4506-4cb9-b375-ac97cb972742
-      ws-opts:
-        headers:
-            Host: saas.520cf.dns.army
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_107|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.232
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
+      udp: false
       uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_108|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.104
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_109|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.71
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_110|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.76
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_111|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.220
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_112|YT|GPT|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.208
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_113|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.108
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_114|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.206
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_115|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.143
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_116|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.244
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_117|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.77
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_118|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.190
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_119|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.199
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_120|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.47
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_121|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.167
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_122|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.240
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_123|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.74
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_124|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.187
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_125|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.139
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_126|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 443
-      server: saas.sin.fan
-      servername: soos.frii.site
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 695620b8-7429-78d5-5813-98b65c1c63f4
-      ws-opts:
-        headers:
-            Host: soos.frii.site
-        path: /proxyip=sjc.o00o.ooo
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_127|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.185
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_128|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.160
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_129|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.157
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-      ws-opts:
-        headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_130|YT|GPT⁺|Gemini|Github|FREE-12"
+            host: sni.111000.de5.net
+        path: "/?ed=2560&Telegram\U0001F1E8\U0001F1F3+@WangCai2"
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_54|YT|GPT⁺|Gemini|Github|FREE-38"
       network: ws
       port: 2096
-      server: 172.64.229.220
-      servername: saas.520cf.dns.army
+      server: 62.72.166.238
+      servername: sni.111000.cc.cd
       skip-cert-verify: true
       tls: true
       type: vless
-      uuid: 6e69871c-4506-4cb9-b375-ac97cb972742
-      ws-opts:
-        headers:
-            Host: saas.520cf.dns.army
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_131|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 8880
-      server: 104.19.39.128
-      servername: sni.x86.de5.net
-      skip-cert-verify: true
-      type: vless
+      udp: false
       uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_132|YT|GPT⁺|Gemini|Github|FREE-12"
+            host: sni.111000.cc.cd
+        path: /?ed=2560&Join---PLANB_NET---Join---PLANB_NET
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_55|YT|GPT⁺|Gemini|Github|FREE-38"
       network: ws
-      port: 8880
-      server: 104.19.39.229
-      servername: sni.x86.de5.net
+      port: 2096
+      server: 172.64.146.20
+      servername: sni.111000.cc.cd
       skip-cert-verify: true
+      tls: true
       type: vless
+      udp: false
       uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_133|YT|GPT⁺|Gemini|Github|FREE-12"
+            host: sni.111000.cc.cd
+        path: "/?ed=2560&Telegram\U0001F1E8\U0001F1F3 @WangCai2"
+    - name: "\U0001F1FA\U0001F1F8US_56|YT|GPT|Github|FREE-24"
       network: ws
-      port: 8880
-      server: 104.19.39.84
-      servername: sni.x86.de5.net
+      password: 5a2c16f9
+      port: 443
+      server: 172.64.229.25
       skip-cert-verify: true
-      type: vless
-      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      sni: snippets.kkii.eu.org
+      type: trojan
+      udp: true
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
+            Host: snippets.kkii.eu.org
         path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_134|YT|GPT⁺|Gemini|Github|FREE-12"
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_57|YT|GPT⁺|Gemini|Github|FREE-38"
       network: ws
       port: 443
-      server: cf.cloudflare.182682.xyz
-      servername: soos.frii.site
+      server: visa.com
+      servername: asuka.boringdad.netlib.re
       skip-cert-verify: true
       tls: true
       type: vless
-      uuid: 695620b8-7429-78d5-5813-98b65c1c63f4
+      udp: false
+      uuid: 495c0dad-3268-4470-ac57-887c5089db0d
       ws-opts:
         headers:
-            Host: soos.frii.site
-        path: /proxyip=sjc.o00o.ooo
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_135|YT|GPT⁺|Gemini|Github|FREE-12"
+            host: asuka.boringdad.netlib.re
+        path: /
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_58|YT|GPT⁺|Gemini|Github|FREE-38"
       network: ws
-      port: 8880
-      server: 104.19.39.123
-      servername: sni.x86.de5.net
+      port: 2096
+      server: 154.92.9.238
+      servername: sni.111000.cc.cd
       skip-cert-verify: true
+      tls: true
       type: vless
+      udp: false
       uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_136|YT|GPT⁺|Gemini|Github|FREE-12"
+            host: sni.111000.cc.cd
+        path: "/?ed=2560&Telegram\U0001F1E8\U0001F1F3@WangCai2"
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_59|YT|GPT⁺|Gemini|Github|FREE-38"
       network: ws
-      port: 8880
-      server: 104.19.39.214
-      servername: sni.x86.de5.net
+      port: 2096
+      server: 172.64.144.159
+      servername: sni.111000.cc.cd
       skip-cert-verify: true
+      tls: true
       type: vless
+      udp: false
       uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_137|YT|GPT⁺|Gemini|Github|FREE-12"
+            host: sni.111000.cc.cd
+        path: "/?ed=2560&Telegram\U0001F1E8\U0001F1F3@WangCai2"
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_60|YT|GPT⁺|Gemini|Github|FREE-38"
       network: ws
-      port: 8880
-      server: 104.19.39.251
-      servername: sni.x86.de5.net
+      port: 2096
+      server: 185.207.199.238
+      servername: sni.111000.cc.cd
       skip-cert-verify: true
+      tls: true
       type: vless
+      udp: false
       uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_138|YT|GPT⁺|Gemini|Github|FREE-12"
+            host: sni.111000.cc.cd
+        path: "/?ed=2560&Telegram\U0001F1E8\U0001F1F3@WangCai2"
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_61|YT|GPT⁺|Gemini|Github|FREE-38"
       network: ws
-      port: 8880
-      server: 104.19.39.255
-      servername: sni.x86.de5.net
+      port: 2096
+      server: 45.192.223.238
+      servername: sni.111000.cc.cd
       skip-cert-verify: true
+      tls: true
       type: vless
+      udp: false
       uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
       ws-opts:
         headers:
-            Host: sni.x86.de5.net
+            host: sni.111000.cc.cd
+        path: "/?ed=2560&Telegram\U0001F1E8\U0001F1F3@WangCai2"
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_62|YT|GPT⁺|Gemini|Github|FREE-38"
+      network: ws
+      port: 2096
+      server: 5.10.214.158
+      servername: sni.111000.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: false
+      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      ws-opts:
+        headers:
+            host: sni.111000.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_63|YT|GPT⁺|Gemini|Github|FREE-38"
+      network: ws
+      port: 2096
+      server: 25.26.27.158
+      servername: sni.111000.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: false
+      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      ws-opts:
+        headers:
+            host: sni.111000.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_64|YT|GPT⁺|Gemini|Github|FREE-38"
+      network: ws
+      port: 2096
+      server: 45.40.152.238
+      servername: sni.111000.cc.cd
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: false
+      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      ws-opts:
+        headers:
+            host: sni.111000.cc.cd
+        path: "/?ed=2560&Telegram\U0001F1E8\U0001F1F3@WangCai2"
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_65|YT|GPT⁺|Gemini|Github|FREE-38"
+      network: ws
+      port: 2096
+      server: 194.76.18.158
+      servername: sni.111000.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: false
+      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      ws-opts:
+        headers:
+            host: sni.111000.de5.net
+        path: "/?ed=2560&Telegram\U0001F1E8\U0001F1F3+@WangCai2"
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_66|YT|GPT⁺|Gemini|Github|FREE-38"
+      network: ws
+      port: 2096
+      server: 190.93.247.168
+      servername: sni.111000.v6.army
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: false
+      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      ws-opts:
+        headers:
+            host: sni.111000.v6.army
+        path: "/?ed=2560&Telegram\U0001F1E8\U0001F1F3+@WangCai2"
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_67|YT|GPT⁺|Gemini|Github|FREE-38"
+      network: ws
+      port: 2096
+      server: 185.18.250.238
+      servername: sni.111000.cc.cd
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: false
+      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      ws-opts:
+        headers:
+            host: sni.111000.cc.cd
+        path: "/?ed=2560&Telegram\U0001F1E8\U0001F1F3@WangCai2"
+    - client-fingerprint: chrome
+      fingerprint: ""
+      grpc-opts:
+        grpc-service-name: grpc-vless
+      name: "\U0001F1EC\U0001F1E7GB_1|YT|GPT⁺|Github|FREE-38"
+      network: grpc
+      port: 8443
+      server: usa99.unlockspace.org
+      servername: usa99.unlockspace.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: false
+      uuid: 907b3c2c-a315-4e30-9786-8d78f14e9459
+    - name: "\U0001F1FA\U0001F1F8US_68|YT|Github|FREE-24"
+      network: ws
+      password: 5a2c16f9
+      port: 443
+      server: 162.159.128.253
+      skip-cert-verify: true
+      sni: snippets.kkii.eu.org
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: snippets.kkii.eu.org
         path: /
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_69|YT|GPT⁺|Gemini|Github|FREE-38"
+      network: ws
+      port: 2096
+      server: 130.250.137.238
+      servername: sni.111000.cc.cd
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: false
+      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      ws-opts:
+        headers:
+            host: sni.111000.cc.cd
+        path: "/?ed=2560&Telegram\U0001F1E8\U0001F1F3@WangCai2"
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_70|YT|GPT⁺|Gemini|Github|FREE-38"
+      network: ws
+      port: 2096
+      server: 185.251.80.238
+      servername: sni.111000.cc.cd
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: false
+      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      ws-opts:
+        headers:
+            host: sni.111000.cc.cd
+        path: "/?ed=2560&Telegram\U0001F1E8\U0001F1F3@WangCai2"
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_71|YT|GPT⁺|Gemini|Github|FREE-38"
+      network: ws
+      port: 2096
+      server: 172.64.145.178
+      servername: sni.111000.cc.cd
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: false
+      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      ws-opts:
+        headers:
+            host: sni.111000.cc.cd
+        path: "/?ed=2560&Telegram\U0001F1E8\U0001F1F3@WangCai2"
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_72|YT|GPT⁺|Gemini|Github|FREE-38"
+      network: ws
+      port: 2096
+      server: 141.11.203.238
+      servername: sni.111000.cc.cd
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: false
+      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      ws-opts:
+        headers:
+            host: sni.111000.cc.cd
+        path: "/?ed=2560&Telegram\U0001F1E8\U0001F1F3@WangCai2"
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_73|YT|GPT⁺|Gemini|Github|FREE-38"
+      network: ws
+      port: 2096
+      server: www.speedtest.net
+      servername: DiGIkALaA.dpdns.ORG
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: false
+      uuid: 2fb8808b-b94c-42ea-9dd2-cd77d2efcc8d
+      ws-opts:
+        headers:
+            host: DiGIkALaA.dpdns.ORG
+        path: /eyJqdW5rIjoidDZLaDRBMWhpIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_74|YT|GPT⁺|Gemini|Github|FREE-38"
+      network: ws
+      port: 2096
+      server: 170.114.46.238
+      servername: sni.111000.cc.cd
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: false
+      uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+      ws-opts:
+        headers:
+            host: sni.111000.cc.cd
+        path: "/?ed=2560&Telegram\U0001F1E8\U0001F1F3@WangCai2"
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1E8\U0001F1E6CA_4|YT|GPT⁺|Github|FREE-6"
+      network: ws
+      port: 443
+      server: 15.235.83.228
+      servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        path: /linkvws
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1E8\U0001F1E6CA_5|YT|GPT⁺|Github|FREE-6"
+      network: ws
+      port: 443
+      server: 148.113.176.192
+      servername: fapeng.org
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        path: linkvws
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1E8\U0001F1E6CA_6|YT|GPT⁺|Github|FREE-6"
+      network: ws
+      port: 443
+      server: 15.235.83.227
+      servername: mankadmu.com
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        path: /linkvws
+    - name: "\U0001F1FA\U0001F1F8US_75|YT|GPT⁺|Gemini|Github|FREE-6"
+      password: kkzh2prsyr2ik47as615
+      port: 57142
+      server: 64.94.95.118
+      skip-cert-verify: true
+      sni: 64.94.95.118
+      type: trojan
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_76|YT|GPT⁺|Github|FREE-6"
+      network: ws
+      port: 443
+      server: 15.204.103.7
+      servername: lammaland.org
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        headers:
+            Host: lammaland.org
+        path: linkvws
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1E8\U0001F1E6CA_7|YT|GPT⁺|Github|FREE-6"
+      network: ws
+      port: 443
+      server: 15.235.85.156
+      servername: kampong.org
+      skip-cert-verify: true
+      tls: true
+      type: vmess
+      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      ws-opts:
+        headers:
+            Host: kampong.org
+        path: linkvws
+    - alterId: 0
+      cipher: auto
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_77|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: none
+      port: 22524
+      server: 47.253.228.138
+      skip-cert-verify: true
+      type: vmess
+      uuid: 80845fcc-f862-45fe-c1d3-0a7120373712
+    - alterId: 0
+      cipher: auto
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_78|YT|GPT⁺|Github|FREE-40"
+      network: none
+      port: 19724
+      server: 154.44.14.244
+      skip-cert-verify: true
+      type: vmess
+      uuid: c393d530-034b-4df7-a90d-fb4cbc553a99
+    - name: "\U0001F1FA\U0001F1F8US_79|YT|GPT⁺|Gemini|Github|FREE-40"
+      password: kkzh2prsyr2ik47as615
+      port: 57142
+      server: 64.94.95.118
+      skip-cert-verify: true
+      type: trojan
+      udp: true
+    - alterId: 0
+      cipher: auto
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_80|YT|GPT⁺|Gemini|Github|FREE-40"
+      port: 14102
+      server: 172.233.229.91
+      skip-cert-verify: true
+      type: vmess
+      udp: true
+      uuid: 27ba87fc-583f-4763-9060-83cf0b9264db
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8 US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_81|YT|GPT⁺|Github|FREE-40"
+      network: tcp
+      port: 443
+      server: 165.140.216.141
+      skip-cert-verify: true
+      type: vmess
+      uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+    - cipher: chacha20-ietf-poly1305
+      country: "\U0001F1FA\U0001F1F8US"
+      name: "\U0001F1FA\U0001F1F8US_82|YT|GPT⁺|Github|FREE-40"
+      password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+      port: 990
+      server: 167.160.90.178
+      skip-cert-verify: true
+      type: ss
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8US"
+      h2-opts: {}
+      http-opts: {}
+      name: "\U0001F1FA\U0001F1F8US_83|YT|GPT⁺|Gemini|Github|FREE-40"
+      network: none
+      port: 43966
+      server: 209.54.104.219
+      skip-cert-verify: true
+      type: vmess
+      uuid: 0e3606ae-321a-4d0b-85ec-5f4352f4bc24
+    - alterId: 0
+      cipher: auto
+      country: "\U0001F1FA\U0001F1F8US"
+      h2-opts: {}
+      http-opts:
+        method: GET
+        path:
+            - /
+      name: "\U0001F1FA\U0001F1F8US_84|YT|GPT⁺|Github|FREE-40"
+      network: http
+      port: 443
+      server: 132.145.154.72
+      servername: a.189.cn
+      skip-cert-verify: true
+      type: vmess
+      uuid: bcb7c581-3c95-4569-a4e7-918141e91ea3
