@@ -1,40 +1,48 @@
 proxies:
-    - name: "\U0001F1FA\U0001F1F8US_1|YT|GPT⁺|Gemini|Github|FREE-9"
-      port: 1080
-      server: 174.138.61.184
-      skip-cert-verify: true
-      type: socks5
-      udp: true
     - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_2|YT|GPT⁺|Github|FREE-9"
-      port: 443
-      reality-opts:
-        public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
-        short-id: 2da72ce6
-      server: 136.175.178.165
-      servername: navi.bankrate.com
+      name: "\U0001F1E9\U0001F1EADE_1|YT|FREE-18"
+      network: tcp
+      port: "443"
+      server: decdn13.suio.me
+      servername: decdn13.suio.me
       skip-cert-verify: true
       tls: true
       type: vless
       udp: true
-      uuid: fdf3bd07-b310-487e-ada8-538e19e835f5
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_3|YT|GPT⁺|Github|FREE-9"
-      port: 443
-      reality-opts:
-        public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
-        short-id: 2da72ce6
-      server: 136.175.178.165
-      servername: navi.bankrate.com
+      uuid: a7a9f670-44c0-45a9-8047-69db0203c142
+      xudp: true
+    - name: "\U0001F1E9\U0001F1EADE_2|YT|GPT|Github|FREE-9"
+      network: ws
+      port: 2053
+      server: 50.62.195.9
+      servername: vw.badomzamini.uk
       skip-cert-verify: true
       tls: true
       type: vless
       udp: true
-      uuid: ba21b656-2355-44b5-829d-639cbc0e92b7
+      uuid: 8a2240da-25ca-4c95-9c55-26ef2ab70bab
+      ws-opts:
+        headers:
+            Host: vw.badomzamini.uk
+        path: /latest?ed=2560
+    - name: "\U0001F1E9\U0001F1EADE_3|YT|GPT|Github|FREE-9"
+      network: ws
+      port: 2053
+      server: 206.238.237.207
+      servername: vw.badomzamini.uk
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 8a2240da-25ca-4c95-9c55-26ef2ab70bab
+      ws-opts:
+        headers:
+            Host: vw.badomzamini.uk
+        path: /latest?ed=2560
     - cipher: aes-256-cfb
       client-fingerprint: chrome
-      delay: 869
-      name: "\U0001F1FA\U0001F1F8US_4|YT|GPT⁺|Gemini|Github|FREE-16"
+      delay: 1552
+      name: "\U0001F1FA\U0001F1F8US_1|YT|GPT⁺|Gemini|Github|FREE-16"
       password: qwerREWQ@@
       port: 41632
       server: 140.174.186.5
@@ -42,64 +50,10 @@ proxies:
       tfo: true
       type: ss
       udp: true
-    - cipher: aes-256-cfb
-      client-fingerprint: chrome
-      delay: 1411
-      name: "\U0001F1FA\U0001F1F8US_5|YT|GPT⁺|Gemini|Github|FREE-16"
-      password: qwerREWQ@@
-      port: 30723
-      server: 108.181.14.35
-      skip-cert-verify: true
-      tfo: true
-      type: ss
-      udp: true
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1FA\U0001F1F8US"
-      delay: 886
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_6|YT|GPT⁺|Gemini|Github|FREE-16"
-      network: ws
-      port: 443
-      server: 157.230.153.13
-      servername: cg1c11.waimaojd.com
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: d0563aa0-8fdd-481e-bf8a-ae3923c540b5
-      ws-opts:
-        headers:
-            HOST: cg1c11.waimaojd.com
-        path: /api/v1/graphql
-    - name: "\U0001F1E8\U0001F1E6CA_1|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 80
-      server: 172.66.128.70
-      skip-cert-verify: true
-      tls: false
-      type: vless
-      uuid: 3775d133-dc3a-4a02-8095-5c70c328ae9f
-      ws-opts:
-        headers:
-            Host: HUge-ActOR48bf36fHJV.ecOTouriSS.co.uK.
-        path: /?ed
-    - name: "\U0001F1F3\U0001F1F1NL_1|GPT⁺|Github|FREE-12"
-      network: ws
-      port: 2052
-      server: nodejs.org
-      skip-cert-verify: true
-      tls: false
-      type: vless
-      uuid: f8ae018b-b84d-4c9b-b03b-4642c3a25977
-      ws-opts:
-        headers:
-            Host: ExEMplAry-MILkytsxQiQYso.sPortlaNd.CoMPANy.
-        path: /?ed
     - alpn:
         - http/1.1
       client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_7|YT|GPT⁺|Gemini|Github|FREE-17"
+      name: "\U0001F1FA\U0001F1F8US_2|YT|GPT⁺|Gemini|Github|FREE-17"
       network: ws
       port: 443
       server: 172.67.162.50
@@ -115,167 +69,1540 @@ proxies:
             User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; FIG-LX3 Build/HUAWEIFIG-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
         path: /6OWLjRc26b0nHYr5hYXD
       xudp: true
-    - name: "\U0001F1EC\U0001F1E7GB_1|FREE-12"
-      network: ws
-      port: 80
-      server: fuck1.tawanaproxy.online
-      skip-cert-verify: true
-      tls: false
-      type: vless
-      uuid: c33275fd-a4fa-470d-90e4-55da39d849a8
-      ws-opts:
-        headers:
-            Host: en.tawana.cf.panbehpanel.ir
-        path: /
-    - client-fingerprint: random
-      name: "\U0001F1EC\U0001F1E7GB_2|YT|GPT⁺|Github|FREE-14"
-      network: ws
-      port: 443
-      server: 57.129.137.56
-      servername: o00o.snip.qzz.io
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 3321a819-889d-40b3-b8fa-f34208827ef1
-      ws-opts:
-        headers:
-            Host: o00o.snip.qzz.io
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
-        path: /proxyip=sjc.o00o.ooo
-      xudp: true
     - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_8|YT|GPT⁺|Gemini|Github|FREE-21"
+      name: "\U0001F1FA\U0001F1F8US_3|YT|GPT⁺|Gemini|Github|FREE-21"
       password: shadowsocks
       port: 443
-      server: 156.146.38.167
+      server: 156.146.38.170
       skip-cert-verify: true
       type: ss
     - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_9|YT|GPT⁺|Gemini|Github|FREE-21"
+      name: "\U0001F1FA\U0001F1F8US_4|YT|GPT⁺|Gemini|Github|FREE-21"
       password: shadowsocks
       port: 443
       server: 156.146.38.169
       skip-cert-verify: true
       type: ss
     - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_10|YT|GPT⁺|Gemini|Github|FREE-21"
+      name: "\U0001F1FA\U0001F1F8US_5|YT|GPT⁺|Gemini|Github|FREE-21"
       password: shadowsocks
       port: 443
-      server: 156.146.38.170
+      server: 156.146.38.167
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1FA\U0001F1F8US_6|YT|GPT⁺|Github|FREE-21"
+      password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+      port: 990
+      server: 173.234.29.2
       skip-cert-verify: true
       type: ss
     - cipher: rc4-md5
-      name: "\U0001F1E8\U0001F1E6CA_2|YT|GPT⁺|Gemini|Github|FREE-21"
+      name: "\U0001F1E8\U0001F1E6CA_1|YT|GPT⁺|Gemini|Github|FREE-21"
       password: 14fFPrbezE3HDZzsMOr6
       port: 8080
       server: 137.184.174.93
       skip-cert-verify: true
       type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_11|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
-      port: 443
-      server: 37.19.198.236
+    - cipher: rc4-md5
+      name: "\U0001F1FA\U0001F1F8US_7|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: 14fFPrbezE3HDZzsMOr6
+      port: 8080
+      server: 107.151.182.253
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1E8\U0001F1E6CA_2|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+      port: 990
+      server: 79.127.200.169
       skip-cert-verify: true
       type: ss
     - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_12|YT|GPT⁺|Gemini|Github|FREE-21"
+      name: "\U0001F1FA\U0001F1F8US_8|YT|GPT⁺|Gemini|Github|FREE-21"
       password: shadowsocks
       port: 443
-      server: 173.244.56.6
+      server: 37.19.198.236
       skip-cert-verify: true
       type: ss
     - cipher: chacha20-ietf-poly1305
       name: "\U0001F1E8\U0001F1E6CA_3|YT|GPT⁺|Github|FREE-21"
       password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
       port: 990
-      server: 45.154.204.7
+      server: 23.95.76.59
+      skip-cert-verify: true
+      type: ss
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_9|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 173.244.56.6
       skip-cert-verify: true
       type: ss
     - cipher: chacha20-ietf-poly1305
       name: "\U0001F1E8\U0001F1E6CA_4|YT|GPT⁺|Github|FREE-21"
       password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
       port: 990
-      server: 23.95.76.59
+      server: 45.154.204.7
       skip-cert-verify: true
       type: ss
-    - name: "\U0001F1FA\U0001F1F8US_13|YT|Gemini|Github|FREE-26"
-      network: ws
-      port: 80
-      server: 45.131.4.192
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1F3\U0001F1F1NL_1|YT|GPT⁺|Github|FREE-21"
+      password: 4a2rfixophdjffa8KVA4Aa
+      port: 8080
+      server: 193.29.139.157
+      skip-cert-verify: true
+      type: ss
+    - name: "\U0001F1EC\U0001F1E7GB_1|YT|GPT⁺|Github|FREE-21"
+      password: 7LBbob9IutFObLxLf9Svc1HaV
+      port: 443
+      server: 45.89.111.142
+      skip-cert-verify: true
+      sni: hl-freedom-1.undef.network
+      type: trojan
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1EC\U0001F1E7GB_2|YT|GPT⁺|Github|FREE-21"
+      password: y3SowqUkrt1cbm487g74Ac
+      port: 443
+      server: 78.129.140.11
+      skip-cert-verify: true
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1F3\U0001F1F1NL_2|YT|GPT⁺|Github|FREE-21"
+      password: oZIoA69Q8yhcQV8ka3Pa3A
+      port: 8080
+      server: 45.87.175.22
+      skip-cert-verify: true
+      type: ss
+    - flow: xtls-rprx-vision
+      name: "\U0001F1EB\U0001F1F7FR_1|YT|GPT⁺|Github|FREE-12"
+      port: 443
+      server: 162.19.10.94
+      servername: nasnet-162191094-direct.sharghdaily.co
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1E8\U0001F1FECY_1|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 45.83.140.206
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4e93d99e-7540-4f4d-884f-63a3c4a845dd
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_1|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 94.131.101.43
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_2|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 103.35.191.224
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F7\U0001F1FARU_1|YT|GPT|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 45.89.53.167
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_3|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 94.131.101.62
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4e93d99e-7540-4f4d-884f-63a3c4a845dd
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_4|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 94.131.101.77
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1E8\U0001F1FECY_2|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 45.83.140.93
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_5|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 94.131.101.139
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_6|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 80.92.205.82
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_7|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 94.131.101.53
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4e93d99e-7540-4f4d-884f-63a3c4a845dd
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1FA\U0001F1F8US_10|YT|GPT|Gemini|Github|FREE-12"
+      port: 52738
+      reality-opts:
+        public-key: 6463bLFXSSjl40OYA_yEXGWuN1C6T9YlzLQYJDS0XkE
+        short-id: 0301547db360
+      server: 172.245.213.136
+      servername: google.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: e59bb857-5e77-482c-babd-1eb21f1ea9d4
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_8|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 94.131.101.8
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4e93d99e-7540-4f4d-884f-63a3c4a845dd
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_9|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 94.131.101.112
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4e93d99e-7540-4f4d-884f-63a3c4a845dd
+    - name: "\U0001F1FA\U0001F1F8US_11|YT|GPT⁺|Gemini|Github|FREE-12"
+      password: kkzh2prsyr2ik47as615
+      port: 57142
+      server: 64.94.95.115
+      skip-cert-verify: true
+      sni: static.rutube.ru
+      tls: true
+      type: trojan
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_10|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 103.35.191.200
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_11|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 94.131.101.159
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_12|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 86.104.72.63
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F7\U0001F1FARU_2|YT|GPT|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 103.35.191.187
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_13|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 86.104.72.247
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_14|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 103.35.188.18
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_15|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 103.35.191.181
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_16|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 103.113.70.15
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_17|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 103.35.188.30
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_18|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 103.35.191.249
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_19|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 94.131.101.203
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1E8\U0001F1FECY_3|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 45.83.140.9
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F7\U0001F1FARU_3|YT|GPT|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 80.92.205.51
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_20|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 103.35.188.16
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_21|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 103.113.70.6
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4e93d99e-7540-4f4d-884f-63a3c4a845dd
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_22|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 94.131.101.115
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_23|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 94.131.101.12
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_24|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 103.113.70.12
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F7\U0001F1FARU_4|YT|GPT|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 45.89.53.49
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_25|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 94.131.101.91
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1E8\U0001F1FECY_4|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 45.83.140.4
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_26|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 103.35.188.22
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1E8\U0001F1FECY_5|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 45.83.140.34
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_27|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 103.35.191.190
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_28|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 94.131.101.131
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4e93d99e-7540-4f4d-884f-63a3c4a845dd
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_29|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 103.35.188.43
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_30|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 86.104.72.165
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4e93d99e-7540-4f4d-884f-63a3c4a845dd
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_31|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 94.131.101.252
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_32|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 103.35.188.55
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_33|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 103.35.188.8
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1FA\U0001F1F8US_12|YT|GPT⁺|Gemini|Github|FREE-12"
+      port: 28190
+      reality-opts:
+        public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
+      server: 159.89.87.21
+      servername: aws.amazon.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1FA\U0001F1F8US_13|YT|GPT⁺|Gemini|Github|FREE-12"
+      port: 36925
+      reality-opts:
+        public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
+      server: 137.184.218.169
+      servername: www.cloudflare.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
+    - name: "\U0001F1FA\U0001F1F8US_14|YT|GPT⁺|Gemini|Github|FREE-12"
+      password: kkzh2prsyr2ik47as615
+      port: 57142
+      server: 64.94.95.118
+      skip-cert-verify: true
+      sni: 64.94.95.118
+      tls: true
+      type: trojan
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F7\U0001F1FARU_5|YT|GPT|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 45.89.53.110
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F2\U0001F1E9MD_34|YT|GPT⁺|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: fb1a8818b2ec7f2e
+      server: 86.104.72.253
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1F7\U0001F1FARU_6|YT|GPT|Github|FREE-12"
+      port: 8443
+      reality-opts:
+        public-key: 61Svf2Pd08DRvSgCHyI_J-F7lhPLd_hg3mS_byFl_h0
+        short-id: cefa7ca418bd0dcb
+      server: 103.113.70.36
+      servername: tradingview.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 93a20fae-54f4-4e25-93ef-995b3e52fc04
+    - name: "\U0001F1FA\U0001F1F8US_15|YT|GPT⁺|Gemini|Github|FREE-12"
+      password: kkzh2prsyr2ik47as615
+      port: 57142
+      server: 64.94.95.114
+      skip-cert-verify: true
+      sni: static.rutube.ru
+      tls: true
+      type: trojan
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1FA\U0001F1F8US_16|YT|GPT⁺|Gemini|Github|FREE-12"
+      port: 443
+      reality-opts:
+        public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
+        short-id: f79448a30d
+      server: 205.185.116.23
+      servername: hls-svod.itunes.apple.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: e108f3eb-4d3a-4e20-a09b-7008e333bc23
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_17|YT|GPT⁺|Gemini|Github|FREE-12"
+      port: 34045
+      reality-opts:
+        public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
+        short-id: e8ab71d0
+      server: 107.174.69.194
+      servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_18|YT|GPT⁺|Gemini|Github|FREE-12"
+      port: 443
+      server: 178.130.47.143
+      servername: uscdn3.suio.me
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: a7a9f670-44c0-45a9-8047-69db0203c142
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1FA\U0001F1F8US_19|YT|GPT⁺|Gemini|Github|FREE-12"
+      port: 23576
+      reality-opts:
+        public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+        short-id: "01"
+      server: 15.204.97.195
+      servername: fuck.rkn
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_20|YT|GPT⁺|Github|FREE-12"
+      port: 52554
+      reality-opts:
+        public-key: DCnaVqwxfGF3d7LDHqFKYtlyGw2l6LsbxPvphK776Gc
+        short-id: 6b4bdb32
+      server: 150.241.230.85
+      servername: yahoo.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: ad39e228-35a9-4629-a16a-d66a97654225
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1E9\U0001F1EADE_4|YT|GPT⁺|Github|FREE-12"
+      port: 443
+      reality-opts:
+        public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
+        short-id: d3b13f31
+      server: 45.139.196.194
+      servername: hls-svod.itunes.apple.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: e108f3eb-4d3a-4e20-a09b-7008e333bc23
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1EC\U0001F1E7GB_3|YT|GPT⁺|Github|FREE-12"
+      port: 443
+      reality-opts:
+        public-key: llaiqC-oIhL_bjc236FPq26LSn7IVhIa4cIC6OVytws
+        short-id: 175d
+      server: 37.221.125.195
+      servername: hls-svod.itunes.apple.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: ba77276e-9939-4c6c-a73e-90e02b6faf13
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1E9\U0001F1EADE_5|YT|GPT⁺|Github|FREE-12"
+      port: 443
+      reality-opts:
+        public-key: 2XHOm5oJ92noxYHfahYv6dABkpp-bdehIA5grPB1X2c
+        short-id: beba4237
+      server: 94.156.115.109
+      servername: tunnel.vk-apps.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 9357d31a-97f5-492b-9a9d-24dcb3449fb9
+    - client-fingerprint: chrome
+      name: "\U0001F1E9\U0001F1EADE_6|FREE-12"
+      port: 443
+      server: 77.110.107.212
+      servername: decdn13.suio.me
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: a7a9f670-44c0-45a9-8047-69db0203c142
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1E6\U0001F1FAAU_1|YT|GPT⁺|Github|FREE-12"
+      port: 443
+      server: 91.247.177.208
+      servername: vy1.sangar.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 5a9a33eb-546c-4ffa-aadc-1c75b3ac084b
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_21|YT|Github|FREE-12"
+      port: 443
+      server: 89.185.80.35
+      servername: uscdn2.suio.me
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: ba9ddd0d-5ffd-4d40-b76d-df32ecb092a1
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_22|YT|GPT⁺|Github|FREE-12"
+      port: 443
+      server: 165.140.216.141
       skip-cert-verify: true
       tls: false
+      type: vmess
+      uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_23|YT|GPT⁺|Gemini|Github|FREE-12"
+      port: 43966
+      server: 209.54.104.219
+      skip-cert-verify: true
+      tls: false
+      type: vmess
+      uuid: 0e3606ae-321a-4d0b-85ec-5f4352f4bc24
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1E8\U0001F1FECY_6|YT|GPT⁺|Github|FREE-12"
+      port: 443
+      reality-opts:
+        public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
+        short-id: f79448a30d
+      server: cze01-vlr01.tcp-reset-club.net
+      servername: hls-svod.itunes.apple.com
+      skip-cert-verify: true
+      tls: true
       type: vless
-      uuid: 5f4845b4-11dc-41d6-9508-4ff6a02e36c1
-      ws-opts:
-        headers:
-            Host: silent-paper-fa57.fipiyag989.workers.dev
-        path: /Cczu8jOo6HDo?ed=2560
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_14|YT|GPT⁺|Gemini|Github|FREE-1"
-      password: shadowsocks
+      uuid: e363cb8f-1a5a-4357-b058-d5ffa91cc6ca
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1E8\U0001F1FECY_7|YT|GPT⁺|Github|FREE-12"
       port: 443
-      server: 173.244.56.9
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_15|GPT⁺|Gemini|Github|FREE-1"
-      password: shadowsocks
-      port: 443
-      server: 37.19.198.160
-      skip-cert-verify: true
-      type: ss
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1E8\U0001F1E6CA_5|YT|GPT⁺|Gemini|Github|FREE-39"
-      network: ws
-      port: 443
-      server: 15.235.83.228
+      reality-opts:
+        public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
+        short-id: f79448a30d
+      server: 45.15.162.85
+      servername: hls-svod.itunes.apple.com
       skip-cert-verify: true
       tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            host: lammaland.org
-        path: linkvws
-    - name: "\U0001F1F5\U0001F1F1PL_1|GPT⁺|Github|FREE-29"
-      network: ws
-      password: humanity
+      type: vless
+      uuid: 45e3b7ad-03b6-42fc-b616-1e92bdd0a5b3
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1EB\U0001F1F7FR_2|GPT⁺|Github|FREE-12"
       port: 443
-      server: 208.103.161.110
-      skip-cert-verify: true
-      sni: www.creationlong.org
-      type: trojan
-      ws-opts:
-        headers:
-            Host: www.creationlong.org
-        path: /assignment
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1E8\U0001F1E6CA"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1E8\U0001F1E6CA_6|YT|GPT⁺|Gemini|Github|FREE-40"
-      network: ws
-      port: 443
-      server: 15.235.85.156
-      servername: kampong.org
+      reality-opts:
+        public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
+        short-id: 86e999a2cdc2
+      server: fr01-vlr01.tcp-reset-club.net
+      servername: hls-svod.itunes.apple.com
       skip-cert-verify: true
       tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+      type: vless
+      uuid: e108f3eb-4d3a-4e20-a09b-7008e333bc23
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_24|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 147.78.140.0
+      servername: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 829658bf-03c4-4c28-81e9-dd6ea141b2d0
       ws-opts:
         headers:
-            HOST: kampong.org
-        path: linkvws
+            Host: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net
+        path: /XIXVPN?ed
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_25|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 209.102.207.10
+      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
+      ws-opts:
+        headers:
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_26|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 188.114.97.3
+      servername: vjv62pggz1658fuliaf9lri7rra85l8utox0kjtogve4whop.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 83adcc98-ac23-4e51-9ae0-788a73fd9939
+      ws-opts:
+        headers:
+            Host: vjv62pggz1658fuliaf9lri7rra85l8utox0kjtogve4whop.zjde5.de5.net
+        path: /?ed
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_27|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 104.18.4.130
+      servername: r4fnviw9jl4i4rx.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
+      ws-opts:
+        headers:
+            Host: r4fnviw9jl4i4rx.zjde5.de5.net
+        path: /V2ynpv-V2ynpv-V2ynpv-V2ynpv-V2ynpv
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_28|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 66.81.247.155
+      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: bbdab850-9164-43f3-adf9-26f7c5458e9d
+      ws-opts:
+        headers:
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+        path: /?ed=
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_29|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 188.114.98.0
+      servername: 6nwf5rauksz8126xm.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 8f1a15bf-a352-4c32-aee2-957039a6847b
+      ws-opts:
+        headers:
+            Host: 6nwf5rauksz8126xm.zjde5.de5.net
+        path: /bored_vpn?ed=2560
+    - client-fingerprint: random
+      name: "\U0001F1FA\U0001F1F8US_30|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 212.183.88.185
+      servername: r4fnviw9jl4i4rx.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
+      ws-opts:
+        headers:
+            Host: r4fnviw9jl4i4rx.zjde5.de5.net
+        path: /?ed
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_31|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 104.27.84.29
+      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
+      ws-opts:
+        headers:
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+        path: /?ed
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_32|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 161.145.150.88
+      servername: vyznthvt7f5fr.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 9e685fe3-e0f9-482d-939c-200a3f89b363
+      ws-opts:
+        headers:
+            Host: vyznthvt7f5fr.zjde5.de5.net
+        path: /?ed=2560fp=chrome
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_33|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: www.visa.com
+      servername: upk0rcvmdqb6bfpr37uaflb8dkozvr474qrlq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 97deb2b5-29e3-46e5-b091-c5840fb003bf
+      ws-opts:
+        headers:
+            Host: upk0rcvmdqb6bfpr37uaflb8dkozvr474qrlq.zjde5.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_34|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 172.64.145.38
+      servername: vyznthvt7f5fr.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 9e685fe3-e0f9-482d-939c-200a3f89b363
+      ws-opts:
+        headers:
+            Host: vyznthvt7f5fr.zjde5.de5.net
+        path: /?ed=2560fp=chrome
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_35|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 188.114.97.185
+      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
+      ws-opts:
+        headers:
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+        path: /?ed=#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_36|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 188.114.99.3
+      servername: vjv62pggz1658fuliaf9lri7rra85l8utox0kjtogve4whop.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 83adcc98-ac23-4e51-9ae0-788a73fd9939
+      ws-opts:
+        headers:
+            Host: vjv62pggz1658fuliaf9lri7rra85l8utox0kjtogve4whop.zjde5.de5.net
+        path: /?ed
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_37|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 69.84.182.161
+      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
+      ws-opts:
+        headers:
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+        path: /?ed=#TELEGRAM-ALIXTSO?ed=512
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_38|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 104.17.164.123
+      servername: em4l7cftot8umbqcw5fd01r7mioa6f4mrx.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 1ea626ee-55a1-48da-9bd7-36673ec84a0c
+      ws-opts:
+        headers:
+            Host: em4l7cftot8umbqcw5fd01r7mioa6f4mrx.zjde5.de5.net
+        path: "/\U0001F512"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_39|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: cloudproxycdn.healingfluence.com
+      servername: 6nwf5rauksz8126xm.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 8f1a15bf-a352-4c32-aee2-957039a6847b
+      ws-opts:
+        headers:
+            Host: 6nwf5rauksz8126xm.zjde5.de5.net
+        path: /XIXVPN?ed
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_40|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 172.67.190.234
+      servername: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: f85f60b1-2b96-49e9-8bde-b656d1516df0
+      ws-opts:
+        headers:
+            Host: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net
+        path: /@OnNetVpn
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_41|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 104.17.165.123
+      servername: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: f85f60b1-2b96-49e9-8bde-b656d1516df0
+      ws-opts:
+        headers:
+            Host: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net
+        path: "/\U0001F512"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_42|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 104.18.14.19
+      servername: sggwlznep40y4aopfferax.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 7545e825-df45-4b42-8eb6-0d3444707a0c
+      ws-opts:
+        headers:
+            Host: sggwlznep40y4aopfferax.zjde5.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_43|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 192.200.160.132
+      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
+      ws-opts:
+        headers:
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+        path: "/\U0001F512"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_44|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 172.67.190.234
+      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
+      ws-opts:
+        headers:
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+        path: /@OnNetVpn
+    - client-fingerprint: random
+      name: "\U0001F1FA\U0001F1F8US_45|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 198.41.203.22
+      servername: r4fnviw9jl4i4rx.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
+      ws-opts:
+        headers:
+            Host: r4fnviw9jl4i4rx.zjde5.de5.net
+        path: /?ed=#?ed=512
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_46|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 104.21.6.48
+      servername: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: f85f60b1-2b96-49e9-8bde-b656d1516df0
+      ws-opts:
+        headers:
+            Host: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_47|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 172.67.135.102
+      servername: pages.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 396c904b-4b62-4334-b793-ee25fc0c61cc
+      ws-opts:
+        headers:
+            Host: 8vmU06cxdz59m931xnREgj8qpnoq1-06.pages.dev
+        path: /eyJqdW5rIjoiTHczMWlhREZIb0ljUDhoaCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_48|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 172.64.152.23
+      servername: xfjd79v2tjscrm6jqo.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: bb8c74a1-abc1-4511-b100-9876e30cb65c
+      ws-opts:
+        headers:
+            Host: xfjd79v2tjscrm6jqo.zjde5.de5.net
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_49|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 104.17.166.123
+      servername: u2zazy8ncky89ay8ahiet1ydi9fucb5dgfbrp5recn9n.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: d31efa40-0d96-4040-9789-0d5910670fe5
+      ws-opts:
+        headers:
+            Host: u2zazy8ncky89ay8ahiet1ydi9fucb5dgfbrp5recn9n.zjde5.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_50|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: ns.cloudflare.com
+      servername: r4fnviw9jl4i4rx.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: b127a4dc-bd83-4608-9de3-f4b2ce1ba359
+      ws-opts:
+        headers:
+            Host: r4fnviw9jl4i4rx.zjde5.de5.net
+        path: /@Zapdns_@@Dlurixbot
+    - client-fingerprint: random
+      name: "\U0001F1FA\U0001F1F8US_51|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: fuck.tawanaproxy.online
+      servername: r4fnviw9jl4i4rx.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
+      ws-opts:
+        headers:
+            Host: r4fnviw9jl4i4rx.zjde5.de5.net
+        path: /?ed=#ABASBIJAN?ed=512
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_52|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 172.64.149.99
+      servername: 8p3cfl0ripm.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 2ddeb056-17d4-421e-a318-39428733d4a2
+      ws-opts:
+        headers:
+            Host: 8p3cfl0ripm.zjde5.de5.net
+        path: /Telegram@V2rayAlpha/?ed=2048
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_53|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: ipbaz.ping-box.com
+      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
+      ws-opts:
+        headers:
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+        path: /@freeOnlineVPN
+    - client-fingerprint: random
+      name: "\U0001F1FA\U0001F1F8US_54|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 192.144.19.55
+      servername: r4fnviw9jl4i4rx.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
+      ws-opts:
+        headers:
+            Host: r4fnviw9jl4i4rx.zjde5.de5.net
+        path: /?ed=#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_55|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 104.17.163.123
+      servername: vjv62pggz1658fuliaf9lri7rra85l8utox0kjtogve4whop.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 83adcc98-ac23-4e51-9ae0-788a73fd9939
+      ws-opts:
+        headers:
+            Host: vjv62pggz1658fuliaf9lri7rra85l8utox0kjtogve4whop.zjde5.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_56|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 172.64.145.38
+      servername: xfjd79v2tjscrm6jqo.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: bb8c74a1-abc1-4511-b100-9876e30cb65c
+      ws-opts:
+        headers:
+            Host: xfjd79v2tjscrm6jqo.zjde5.de5.net
+        path: /XIXVPN?ed
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_57|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 104.21.45.67
+      servername: r4fnviw9jl4i4rx.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
+      ws-opts:
+        headers:
+            Host: r4fnviw9jl4i4rx.zjde5.de5.net
+        path: /XIXVPN?ed
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_58|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 192.0.54.225
+      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
+      ws-opts:
+        headers:
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_59|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: www.shopify.com
+      servername: isvbcu76h0wjmnx1fdv1hw05j3pz9f434trjs1r50h96oh.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4bfa7984-5eda-4bab-b862-06c703002850
+      ws-opts:
+        headers:
+            Host: isvbcu76h0wjmnx1fdv1hw05j3pz9f434trjs1r50h96oh.zjde5.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_60|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 172.64.145.93
+      servername: i1a5gfcn5l4omhyp9t581zi8etzgfr0.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 59512dca-9be0-4007-acee-df181700b0b9
+      ws-opts:
+        headers:
+            Host: i1a5gfcn5l4omhyp9t581zi8etzgfr0.zjde5.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_61|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 172.64.153.235
+      servername: 45egrtii5xuxfdtvcrfm5ybf5re.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: fbd98863-c5bb-4aba-8593-5b064d238c7d
+      ws-opts:
+        headers:
+            Host: 45egrtii5xuxfdtvcrfm5ybf5re.zjde5.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_62|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 172.64.150.28
+      servername: pages.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 396c904b-4b62-4334-b793-ee25fc0c61cc
+      ws-opts:
+        headers:
+            Host: 8vmU06cxdz59m931xnREgj8qpnoq1-06.pages.dev
+        path: /eyJqdW5rIjoiTHczMWlhREZIb0ljUDhoaCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_63|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 172.64.153.22
+      servername: egaxhxw0p031z8iyfgjt9fyhhb1hwj4vr3gn0xoxqu901o8ruij.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: e53a92c7-4a78-49cc-ab01-917661058b9a
+      ws-opts:
+        headers:
+            Host: egaxhxw0p031z8iyfgjt9fyhhb1hwj4vr3gn0xoxqu901o8ruij.zjde5.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_64|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 172.64.154.125
+      servername: 50s7eq24tjfew7spou3hyw9ijxn2c4ruuvadu1mbcfiwtx7eo9.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 6fbb5e57-34a8-4726-b0f3-814912932f2d
+      ws-opts:
+        headers:
+            Host: 50s7eq24tjfew7spou3hyw9ijxn2c4ruuvadu1mbcfiwtx7eo9.zjde5.de5.net
+        path: /?ed=2560
+    - client-fingerprint: random
+      name: "\U0001F1FA\U0001F1F8US_65|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 104.21.40.34
+      servername: r4fnviw9jl4i4rx.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
+      ws-opts:
+        headers:
+            Host: r4fnviw9jl4i4rx.zjde5.de5.net
+        path: /?ed=#TELEGRAM-mtmvpn---TELEGRAM-mtmvpn---TELEGRAM-mtmvpn---TELEGRAM-mtmvpn---TELEGRAM-mtmvpn?ed=512
     - alterId: 0
       cipher: auto
-      country: "\U0001F1E8\U0001F1E6CA"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1E8\U0001F1E6CA_7|YT|GPT⁺|Gemini|Github|FREE-40"
+      name: "\U0001F1E8\U0001F1E6CA_5|YT|GPT⁺|Gemini|Github|FREE-12"
       network: ws
       port: 443
       server: 15.235.85.147
@@ -285,642 +1612,258 @@ proxies:
       type: vmess
       uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
       ws-opts:
-        headers:
-            HOST: pelang.org
-        path: linkvws
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1FA\U0001F1F8 US"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1E8\U0001F1E6CA_8|YT|GPT⁺|Gemini|Github|FREE-40"
-      network: ws
-      port: 443
-      server: 15.235.83.228
-      servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            HOST: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
         path: /linkvws
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1FA\U0001F1F8 US"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1E8\U0001F1E6CA_9|YT|GPT⁺|Gemini|Github|FREE-40"
-      network: ws
-      port: 443
-      server: 15.235.50.172
-      servername: baradiha.com
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            HOST: baradiha.com
-        path: /linkvws
-    - alterId: 0
-      cipher: auto
-      country: "\U0001F1FA\U0001F1F8US"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_16|YT|GPT⁺|Gemini|Github|FREE-40"
-      network: none
-      port: 43966
-      server: 209.54.104.219
-      skip-cert-verify: true
-      type: vmess
-      uuid: 0e3606ae-321a-4d0b-85ec-5f4352f4bc24
     - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_17|YT|GPT⁺|Gemini|Github|FREE-38"
+      name: "\U0001F1FA\U0001F1F8US_66|YT|GPT⁺|Gemini|Github|FREE-12"
       network: ws
-      port: 8443
-      server: ipbaz.ping-box.com
-      servername: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net
+      port: 443
+      server: 172.67.162.50
+      servername: eEedFR5.7777155.Xyz
       skip-cert-verify: true
       tls: true
       type: vless
-      udp: false
-      uuid: 829658bf-03c4-4c28-81e9-dd6ea141b2d0
+      uuid: e4cbe8b8-37db-4aaa-8469-b84f34c51ebc
       ws-opts:
         headers:
-            host: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net
-        path: mehrosaboran?ed=2560
-    - country: "\U0001F1FA\U0001F1F8US"
-      name: "\U0001F1FA\U0001F1F8US_18|YT|GPT⁺|Gemini|Github|FREE-40"
-      password: kkzh2prsyr2ik47as615
-      port: 57142
-      server: 64.94.95.118
-      skip-cert-verify: true
-      sni: 64.94.95.118
-      type: trojan
-      udp: true
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_19|YT|GPT⁺|Gemini|Github|FREE-38"
+            Host: eeedfr5.7777155.xyz
+        path: /6OWLjRc26b0nHYr5hYXD
+    - name: "\U0001F1FA\U0001F1F8US_67|YT|GPT⁺|Gemini|Github|FREE-12"
       network: ws
-      port: 443
-      server: 66.81.247.155
+      port: 80
+      server: 134.199.244.164
+      skip-cert-verify: true
+      tls: false
+      type: vless
+      uuid: c33275fd-a4fa-470d-90e4-55da39d849a8
+      ws-opts:
+        headers:
+            Host: free.panbehpanel.ir
+        path: /
+    - name: "\U0001F1FA\U0001F1F8US_68|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 80
+      server: tawananet.panbehpanel.ir
+      skip-cert-verify: true
+      tls: false
+      type: vless
+      uuid: c33275fd-a4fa-470d-90e4-55da39d849a8
+      ws-opts:
+        headers:
+            Host: free.panbehpanel.ir
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_69|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 199.34.228.99
       servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
       skip-cert-verify: true
       tls: true
       type: vless
-      udp: false
       uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
       ws-opts:
         headers:
-            host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+        path: /vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_70|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 192.200.160.248
+      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
+      ws-opts:
+        headers:
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
         path: /?ed=2560
-    - client-fingerprint: random
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_20|YT|GPT⁺|Gemini|Github|FREE-38"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_71|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: e581-c1438ccadd39.007770777.xyz
+      servername: e581-c1438ccadd39.007770777.xyz
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 7f45c040-d0d8-4738-af88-f7eeb1b115ac
+      ws-opts:
+        headers:
+            Host: e581-c1438ccadd39.007770777.xyz
+        path: /1wmMoyLhZyYLc4tF
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_72|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 104.21.90.226
+      servername: 444RRrt5.7777155.xYZ
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: e4cbe8b8-37db-4aaa-8469-b84f34c51ebc
+      ws-opts:
+        headers:
+            Host: 444rrrt5.7777155.xyz
+        path: /6OWLjRc26b0nHYr5hYXD
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_73|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 104.17.164.123
+      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
+      ws-opts:
+        headers:
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_74|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 199.34.228.99
+      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
+      ws-opts:
+        headers:
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_75|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 63.141.128.14
+      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
+      ws-opts:
+        headers:
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_76|YT|GPT⁺|Gemini|Github|FREE-12"
       network: ws
       port: 8443
-      server: 104.17.162.123
+      server: 188.114.98.3
+      servername: vjv62pggz1658fuliaf9lri7rra85l8utox0kjtogve4whop.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 83adcc98-ac23-4e51-9ae0-788a73fd9939
+      ws-opts:
+        headers:
+            Host: vjv62pggz1658fuliaf9lri7rra85l8utox0kjtogve4whop.zjde5.de5.net
+        path: /?ed
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_77|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 63.141.128.18
+      servername: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 829658bf-03c4-4c28-81e9-dd6ea141b2d0
+      ws-opts:
+        headers:
+            Host: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_78|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 63.141.128.14
+      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
+      ws-opts:
+        headers:
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+        path: /mehrosaboran?ed=2560
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_79|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 80
+      server: ddDFHhj.922922.Shop
+      skip-cert-verify: true
+      tls: false
+      type: vmess
+      uuid: bce0c7cb-08d1-46a7-b77b-7bff8b46252f
+      ws-opts:
+        headers:
+            Host: ddDFHhj.922922.Shop
+        path: /RkUUbqhA9GJZBROjL3Q5vTymr
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_80|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 104.25.32.190
       servername: r4fnviw9jl4i4rx.zjde5.de5.net
       skip-cert-verify: true
       tls: true
       type: vless
-      udp: false
       uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
       ws-opts:
         headers:
-            host: r4fnviw9jl4i4rx.zjde5.de5.net
-        path: /?ed=2560
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_21|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 443
-      server: ipbaz.ping-box.com
-      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
-      ws-opts:
-        headers:
-            host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-        path: /Telegram@V2rayAlpha/?ed=2560
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_22|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: ip.notomarosww.com
-      servername: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 829658bf-03c4-4c28-81e9-dd6ea141b2d0
-      ws-opts:
-        headers:
-            host: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net
-        path: mehrosaboran?ed=2560
-    - client-fingerprint: firefox
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_23|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 443
-      server: 104.26.15.85
-      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
-      ws-opts:
-        headers:
-            host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-        path: /?ed=#Join--V2rayTun0--Join--V2rayTun0--Join--V2rayTun0--Join--V2rayTun0--Join--V2rayTun0--Join--V2rayTun0--Join--V2rayTun0--Join--V2rayTun0--?ed=512
-    - alterId: 1
-      cipher: auto
-      country: "\U0001F1FA\U0001F1F8US"
-      h2-opts: {}
-      http-opts: {}
-      name: "\U0001F1FA\U0001F1F8US_24|YT|GPT⁺|Github|FREE-40"
-      network: ws
-      port: 443
-      server: 15.204.64.211
-      servername: kampong.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            HOST: kampong.org
-        path: linkvws
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_25|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: 66.81.247.155
-      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: bbdab850-9164-43f3-adf9-26f7c5458e9d
-      ws-opts:
-        headers:
-            host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+            Host: r4fnviw9jl4i4rx.zjde5.de5.net
         path: /?ed=512
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_26|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: ipbaz.ping-box.com
-      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
-      ws-opts:
-        headers:
-            host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-        path: /vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl?ed=2560
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_27|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: 104.17.163.123
-      servername: 4f009rpo6n.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 5073081a-a4a6-46e6-a3f5-ff6bb0bbdfab
-      ws-opts:
-        headers:
-            host: 4f009rpo6n.zjde5.de5.net
-        path: /?ed=2560
-    - client-fingerprint: random
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_28|YT|GPT|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: 104.18.4.130
-      servername: r4fnviw9jl4i4rx.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
-      ws-opts:
-        headers:
-            host: r4fnviw9jl4i4rx.zjde5.de5.net
-        path: /XIXVPN?ed
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_29|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 443
-      server: 188.114.98.0
-      servername: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 829658bf-03c4-4c28-81e9-dd6ea141b2d0
-      ws-opts:
-        headers:
-            host: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net
-        path: /?ed=2560
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_30|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 443
-      server: 172.64.152.23
-      servername: xfjd79v2tjscrm6jqo.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: bb8c74a1-abc1-4511-b100-9876e30cb65c
-      ws-opts:
-        headers:
-            host: xfjd79v2tjscrm6jqo.zjde5.de5.net
-        path: /Telegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2-Telegram-XV2ry2?ed=2048
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_31|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: 172.64.145.38
-      servername: vyznthvt7f5fr.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 9e685fe3-e0f9-482d-939c-200a3f89b363
-      ws-opts:
-        headers:
-            host: vyznthvt7f5fr.zjde5.de5.net
-        path: /?ed=2560fp=chrome
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_32|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: ip.notomarosww.com
-      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
-      ws-opts:
-        headers:
-            host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-        path: /?ed=2560
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1E9\U0001F1EADE_1|YT|GPT⁺|Github|FREE-38"
-      network: ws
-      port: 443
-      server: 188.114.98.0
-      servername: dev.twistsparrow.xyz
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045
-      ws-opts:
-        headers:
-            host: dev.twistsparrow.xyz
-        path: /
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_33|YT|GPT|Gemini|Github|FREE-38"
-      network: ws
-      port: 443
-      server: 188.114.98.0
-      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
-      ws-opts:
-        headers:
-            host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
-        path: /?ed=2560
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_34|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: ipbaz.ping-box.com
-      servername: xfjd79v2tjscrm6jqo.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: bb8c74a1-abc1-4511-b100-9876e30cb65c
-      ws-opts:
-        headers:
-            host: xfjd79v2tjscrm6jqo.zjde5.de5.net
-        path: /vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl-vpnowl?ed=2560
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_35|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: 104.17.162.123
-      servername: 6nwf5rauksz8126xm.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 8f1a15bf-a352-4c32-aee2-957039a6847b
-      ws-opts:
-        headers:
-            host: 6nwf5rauksz8126xm.zjde5.de5.net
-        path: /?ed=2560
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_36|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: 172.64.145.38
-      servername: xfjd79v2tjscrm6jqo.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: bb8c74a1-abc1-4511-b100-9876e30cb65c
-      ws-opts:
-        headers:
-            host: xfjd79v2tjscrm6jqo.zjde5.de5.net
-        path: /?ed=2560
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_37|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: ipbaz.ping-box.com
-      servername: 8p3cfl0ripm.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 2ddeb056-17d4-421e-a318-39428733d4a2
-      ws-opts:
-        headers:
-            host: 8p3cfl0ripm.zjde5.de5.net
-        path: /Telegram@V2rayAlpha/?ed=2048
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_38|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: ip.notomarosww.com
-      servername: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: f85f60b1-2b96-49e9-8bde-b656d1516df0
-      ws-opts:
-        headers:
-            host: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net
-        path: /Tel-@V2rayAlpha/?ed=2560
-    - client-fingerprint: random
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_39|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: ip.notomarosww.com
-      servername: r4fnviw9jl4i4rx.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
-      ws-opts:
-        headers:
-            host: r4fnviw9jl4i4rx.zjde5.de5.net
-        path: /Tel-@V2rayAlpha/?ed=512
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_40|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: 172.64.149.99
-      servername: 8p3cfl0ripm.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 2ddeb056-17d4-421e-a318-39428733d4a2
-      ws-opts:
-        headers:
-            host: 8p3cfl0ripm.zjde5.de5.net
-        path: /Telegram@V2rayAlpha/?ed=2048
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_41|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: ipbaz.ping-box.com
-      servername: 6nwf5rauksz8126xm.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 8f1a15bf-a352-4c32-aee2-957039a6847b
-      ws-opts:
-        headers:
-            host: 6nwf5rauksz8126xm.zjde5.de5.net
-        path: /?TELEGRAM--KANAL--JKVPN--JKVPN--JKVPN--JKVPN--JKVPN--JKVPN?ed=2560
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_42|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: 104.17.162.123
-      servername: kf6e9f48l1a98c4tcclaj4f9vz3rqui9y4.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 3200012b-b38b-4184-b503-1bad9a52b2d6
-      ws-opts:
-        headers:
-            host: kf6e9f48l1a98c4tcclaj4f9vz3rqui9y4.zjde5.de5.net
-        path: /?ed=2560
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_43|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 443
-      server: 104.17.165.123
-      servername: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: f85f60b1-2b96-49e9-8bde-b656d1516df0
-      ws-opts:
-        headers:
-            host: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net
-        path: /?ed=2560
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_44|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: ip.notomarosww.com
-      servername: 8p3cfl0ripm.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 2ddeb056-17d4-421e-a318-39428733d4a2
-      ws-opts:
-        headers:
-            host: 8p3cfl0ripm.zjde5.de5.net
-        path: /Telegram@V2rayAlpha/?ed=2048
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_45|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: ipbaz.ping-box.com
-      servername: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: f85f60b1-2b96-49e9-8bde-b656d1516df0
-      ws-opts:
-        headers:
-            host: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net
-        path: mehrosaboran?ed=2560
-    - client-fingerprint: random
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_46|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: 172.64.53.13
-      servername: r4fnviw9jl4i4rx.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
-      ws-opts:
-        headers:
-            host: r4fnviw9jl4i4rx.zjde5.de5.net
-        path: /XIXVPN?ed
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_47|YT|Gemini|Github|FREE-38"
-      network: ws
-      port: 443
-      server: ipbaz.ping-box.com
-      servername: teams.live.com.afrcloud1.c01.kr
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 21f9985c-d363-4eee-957f-720e9e9f9b8d
-      ws-opts:
-        headers:
-            host: teams.live.com.afrcloud1.c01.kr
-        path: /
-    - client-fingerprint: random
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_48|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 443
-      server: 172.64.145.38
-      servername: vyznthvt7f5fr.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 9e685fe3-e0f9-482d-939c-200a3f89b363
-      ws-opts:
-        headers:
-            host: vyznthvt7f5fr.zjde5.de5.net
-        path: /?ed=2560fp=random
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_49|YT|GPT⁺|Gemini|Github|FREE-38"
-      network: ws
-      port: 8443
-      server: ipbaz.ping-box.com
-      servername: 4f009rpo6n.zjde5.de5.net
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: 5073081a-a4a6-46e6-a3f5-ff6bb0bbdfab
-      ws-opts:
-        headers:
-            host: 4f009rpo6n.zjde5.de5.net
-        path: /?ed=2560
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1E9\U0001F1EADE_2|YT|GPT⁺|Github|FREE-38"
-      network: ws
-      port: 443
-      server: 104.18.32.47
-      servername: freuddd.info
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: c9b0932d-8d1c-43c5-b64b-e9a74719c76d
-      ws-opts:
-        headers:
-            host: freuddd.info
-        path: /hsdgsws
-    - client-fingerprint: chrome
-      fingerprint: ""
-      name: "\U0001F1E9\U0001F1EADE_3|Github|FREE-38"
-      network: ws
-      port: 2053
-      server: cdn.halazzon.ir
-      servername: ir6.hnbyme.online
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: false
-      uuid: c659ce22-0a02-4d75-8c89-58d99916b846
-      ws-opts:
-        headers:
-            host: ir6.hnbyme.online
-        path: /
-    - cipher: aes-128-cfb
-      name: "\U0001F1E8\U0001F1E6CA_10|YT|GPT⁺|Github|FREE-6"
-      obfs: http_post
-      obfs-param: ""
-      password: $$Turb0VPN$$
-      port: 443
-      protocol: auth_aes128_md5
-      protocol-param: ""
-      server: ssca.irundns.net
-      skip-cert-verify: true
-      type: ssr
     - alterId: 0
       cipher: auto
-      name: "\U0001F1E8\U0001F1E6CA_11|YT|GPT⁺|Gemini|Github|FREE-6"
+      name: "\U0001F1FA\U0001F1F8US_81|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 80
+      server: dDdCCVFg.922922.SHOP
+      skip-cert-verify: true
+      tls: false
+      type: vmess
+      uuid: bce0c7cb-08d1-46a7-b77b-7bff8b46252f
+      ws-opts:
+        headers:
+            Host: dDdCCVFg.922922.SHOP
+        path: /RkUUbqhA9GJZBROjL3Q5vTymr
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_82|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 80
+      server: ccc.922922.shop
+      skip-cert-verify: true
+      tls: false
+      type: vmess
+      uuid: bce0c7cb-08d1-46a7-b77b-7bff8b46252f
+      ws-opts:
+        headers:
+            Host: cCc.922922.ShOp
+        path: /RkUUbqhA9GJZBROjL3Q5vTymr
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_83|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 80
+      server: vvVBgHyu.922922.SHoP
+      skip-cert-verify: true
+      tls: false
+      type: vmess
+      uuid: bce0c7cb-08d1-46a7-b77b-7bff8b46252f
+      ws-opts:
+        headers:
+            Host: vvVBgHyu.922922.SHoP
+        path: /RkUUbqhA9GJZBROjL3Q5vTymr
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1E8\U0001F1E6CA_6|YT|GPT⁺|Gemini|Github|FREE-12"
       network: ws
       port: 443
       server: 15.235.83.227
@@ -931,149 +1874,114 @@ proxies:
       uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
       ws-opts:
         path: /linkvws
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1E8\U0001F1E6CA_12|YT|GPT⁺|Gemini|Github|FREE-6"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_84|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 63.141.128.92
+      servername: 6nwf5rauksz8126xm.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 8f1a15bf-a352-4c32-aee2-957039a6847b
+      ws-opts:
+        headers:
+            Host: 6nwf5rauksz8126xm.zjde5.de5.net
+        path: /mehrosaboran?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_85|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 216.24.57.251
+      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
+      ws-opts:
+        headers:
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+        path: /mehrosaboran?ed=2560
+    - client-fingerprint: firefox
+      name: "\U0001F1FA\U0001F1F8US_86|YT|GPT|Gemini|Github|FREE-12"
       network: ws
       port: 443
-      server: 148.113.153.109
-      servername: yichueng.org
+      server: 104.26.15.85
+      servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b
+      ws-opts:
+        headers:
+            Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_87|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 104.19.16.70
+      servername: r4fnviw9jl4i4rx.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285
+      ws-opts:
+        headers:
+            Host: r4fnviw9jl4i4rx.zjde5.de5.net
+        path: /?ed=512
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_88|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 104.194.85.213
+      servername: jp-aniu.xmmaa.dpdns.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: e258977b-e413-4718-a3af-02d75492c349
+      ws-opts:
+        headers:
+            Host: jp-aniu.xmmaa.dpdns.org
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_89|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: cf.090227.xyz
+      servername: owmfr.zjde5.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 2a551068-f0e2-4c02-a576-362a6858bd4a
+      ws-opts:
+        headers:
+            Host: owmfr.zjde5.de5.net
+        path: /?ed=2560
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_90|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 80
+      server: xxxccfrt.922922.shop
+      skip-cert-verify: true
+      tls: false
+      type: vmess
+      uuid: bce0c7cb-08d1-46a7-b77b-7bff8b46252f
+      ws-opts:
+        headers:
+            Host: XXXccFrt.922922.ShOP
+        path: /RkUUbqhA9GJZBROjL3Q5vTymr
+    - alterId: 1
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_91|YT|GPT⁺|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 15.204.64.211
+      servername: kampong.org
       skip-cert-verify: true
       tls: true
       type: vmess
       uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
       ws-opts:
-        headers:
-            Host: yichueng.org
-        path: linkvws
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_50|YT|GPT⁺|Gemini|Github|FREE-6"
-      network: ws
-      port: 443
-      server: 15.204.103.7
-      servername: lammaland.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            Host: lammaland.org
-        path: linkvws
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1E8\U0001F1E6CA_13|YT|GPT⁺|Gemini|Github|FREE-6"
-      network: ws
-      port: 443
-      server: 15.235.83.227
-      servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            Host: mankadmu.com
         path: /linkvws
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_51|YT|GPT⁺|Gemini|Github|FREE-6"
-      network: ws
-      port: 443
-      server: 15.204.64.214
-      servername: yichueng.org
-      skip-cert-verify: true
-      tls: true
-      type: vmess
-      uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-      ws-opts:
-        headers:
-            Host: yichueng.org
-        path: linkvws
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_52|YT|GPT⁺|Github|FREE-24"
-      network: tcp
-      port: 443
-      reality-opts:
-        public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
-        short-id: 2da72ce6
-      server: 136.175.178.165
-      servername: navi.bankrate.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: f4c79a13-1364-4656-93a2-6b9ec699b80a
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_53|YT|GPT⁺|Gemini|Github|FREE-24"
-      network: ws
-      port: 2053
-      server: bestcf.030101.xyz
-      servername: snippet.danfeng.nn.kg
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: a2a396c3-f40e-4dee-bdbb-b1201f12dc1c
-      ws-opts:
-        headers:
-            Host: snippet.danfeng.nn.kg
-        path: /danfeng?ed=2560
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_54|YT|GPT⁺|Github|FREE-24"
-      network: tcp
-      port: 443
-      reality-opts:
-        public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
-        short-id: 2da72ce6
-      server: 136.175.178.165
-      servername: navi.bankrate.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 12025c43-51dc-497b-90a2-6d57177857ff
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_55|YT|GPT⁺|Gemini|Github|FREE-24"
-      network: ws
-      port: 2053
-      server: 104.19.73.126
-      servername: snippet.danfeng.nn.kg
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: a2a396c3-f40e-4dee-bdbb-b1201f12dc1c
-      ws-opts:
-        headers:
-            Host: snippet.danfeng.nn.kg
-        path: /danfeng?ed=2560
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_56|YT|GPT⁺|Github|FREE-24"
-      network: tcp
-      port: 443
-      reality-opts:
-        public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
-        short-id: 2da72ce6
-      server: 136.175.178.165
-      servername: navi.bankrate.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 4ce9bd37-4922-454f-84bc-e6700daecd7a
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_57|YT|GPT⁺|Github|FREE-24"
-      network: tcp
-      port: 443
-      reality-opts:
-        public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
-        short-id: 2da72ce6
-      server: 136.175.178.165
-      servername: navi.bankrate.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 02250f72-886a-4b0e-9f28-dde701d6a0e7
