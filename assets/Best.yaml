@@ -1,33 +1,15 @@
 proxies:
-    - name: "\U0001F1F1\U0001F1FBLV_1|YT|GPT⁺|Gemini|Github|FREE-22"
-      network: ws
-      port: 2053
-      server: 104.17.72.206
-      servername: sni.111000.indevs.in
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_1|YT|GPT⁺|Github|FREE-15"
+      port: 180
+      server: 82.198.246.233
       skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-      ws-opts:
-        headers:
-            Host: sni.111000.indevs.in
-    - name: "\U0001F1F1\U0001F1FBLV_2|YT|GPT⁺|Gemini|Github|FREE-22"
-      network: ws
-      port: 2096
-      server: 188.114.98.0
-      servername: sni.111000.indevs.in
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-      ws-opts:
-        headers:
-            Host: sni.111000.indevs.in
-        path: /?Telegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2=
+      tls: false
+      type: vmess
+      uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
     - client-fingerprint: chrome
-      name: "\U0001F1F1\U0001F1FBLV_3|YT|GPT⁺|Gemini|Github|FREE-14"
+      name: "\U0001F1FA\U0001F1F8US_2|YT|GPT⁺|Gemini|Github|FREE-14"
       network: ws
       port: 443
       server: 91.193.58.67
@@ -43,458 +25,46 @@ proxies:
             User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.3 (KHTML, like Gecko) Chrome/6.0.472.63 Safari/534.3
         path: "/?ed=2560&https://t.me/WangCai2\U0001F1E8\U0001F1F3"
       xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_1|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
+    - down: ""
+      fingerprint: ""
+      name: "\U0001F1EF\U0001F1F5JP_1|YT|GPT⁺|Gemini|Github|FREE-14"
+      obfs: ""
+      obfs-password: ""
+      password: qQe1z5kU8kN6SlKnDt9Ru3Qp
       port: 443
-      server: 172.64.229.81
-      servername: kalami-eew.pages.dev
+      server: vpn-jp-003.fastervpn.world
       skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_2|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2083
-      server: 104.19.49.189
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_3|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2096
-      server: 104.19.58.114
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_4|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2096
-      server: 104.19.32.18
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_5|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2096
-      server: 104.19.48.160
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Linux; Android 5.1.1; A37fw Build/LMY47V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_6|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2083
-      server: 104.19.61.153
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1EC\U0001F1E7GB_1|YT|GPT|Gemini|Github|FREE-14"
-      network: ws
-      port: 2096
-      server: saas.sin.fan
-      servername: gogo.kmj.qzz.io
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-      ws-opts:
-        headers:
-            Host: gogo.kmj.qzz.io
-            User-Agent: Mozilla/5.0 (Linux; Android 7.0; SM-G610F Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Mobile Safari/537.36
-        path: /socks5=gogo:gogo@185.184.70.120:50088
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_7|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
+      sni: vpn-jp-003.fastervpn.world
+      type: hysteria2
+      up: ""
+    - name: "\U0001F1EF\U0001F1F5JP_2|YT|GPT⁺|Gemini|Github|FREE-14"
+      password: qQe1z5kU8kN6SlKnDt9Ru3Qp
       port: 443
-      server: 104.19.38.110
-      servername: kalami-eew.pages.dev
+      server: vpn-jp-002.fastervpn.world
       skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_8|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2053
-      server: 104.19.40.109
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_9|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2053
-      server: 104.19.39.4
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_10|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2083
-      server: 104.18.46.47
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; Redmi 4A Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.3112.116 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_11|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2053
-      server: 104.19.37.110
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Linux; Android 5.1.1; A37fw Build/LMY47V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_12|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2087
-      server: 172.64.144.138
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_13|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2083
-      server: 104.19.42.81
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1EC\U0001F1E7GB_2|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 8443
-      server: 104.17.102.95
-      servername: gogo.kmj.qzz.io
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-      ws-opts:
-        headers:
-            Host: gogo.kmj.qzz.io
-            User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36
-        path: /socks5=gogo:gogo@185.184.70.120:50088
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_14|YT|Gemini|Github|FREE-14"
-      network: ws
-      port: 8443
-      server: 104.19.45.14
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_15|YT|GPT|Gemini|Github|FREE-14"
-      network: ws
-      port: 2083
-      server: 104.18.40.222
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_16|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 8443
-      server: 172.64.144.153
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1EC\U0001F1E7GB_3|YT|GPT|Gemini|Github|FREE-14"
-      network: ws
-      port: 2096
-      server: 104.19.39.50
-      servername: gogo.kmj.qzz.io
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-      ws-opts:
-        headers:
-            Host: gogo.kmj.qzz.io
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
-        path: /socks5=gogo:gogo@185.184.70.120:50088
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_17|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2096
-      server: 104.19.33.131
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_18|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2087
-      server: 104.19.43.149
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_19|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
+      sni: vpn-jp-002.fastervpn.world
+      type: hysteria2
+    - name: "\U0001F1EF\U0001F1F5JP_3|YT|GPT⁺|Gemini|Github|FREE-14"
+      password: qQe1z5kU8kN6SlKnDt9Ru3Qp
       port: 443
-      server: 104.19.40.10
-      servername: kalami-eew.pages.dev
+      server: vpn-jp-001.fastervpn.world
       skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_20|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2083
-      server: 104.18.35.45
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; SM-J700M Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1EC\U0001F1E7GB_4|YT|GPT|Gemini|Github|FREE-14"
-      network: ws
-      port: 8443
-      server: 104.19.150.163
-      servername: gogo.kmj.qzz.io
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-      ws-opts:
-        headers:
-            Host: gogo.kmj.qzz.io
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
-        path: /socks5=gogo:gogo@185.184.70.120:50088
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1F8\U0001F1ECSG_1|YT|Gemini|Github|FREE-14"
-      network: ws
+      sni: vpn-jp-001.fastervpn.world
+      type: hysteria2
+    - down: ""
+      fingerprint: ""
+      name: "\U0001F1EF\U0001F1F5JP_4|YT|GPT⁺|Gemini|Github|FREE-14"
+      obfs: ""
+      obfs-password: ""
+      password: qQe1z5kU8kN6SlKnDt9Ru3Qp
       port: 443
-      server: cdns.doon.eu.org
-      servername: ts-13.pages.dev
+      server: vpn-jp-004.fastervpn.world
       skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 704564fb-bd6e-4c9b-88fc-66ceebb85825
-      ws-opts:
-        headers:
-            Host: ts-13.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
-        path: /fp=randomized
-      xudp: true
+      sni: vpn-jp-004.fastervpn.world
+      type: hysteria2
+      up: ""
     - client-fingerprint: chrome
-      name: "\U0001F1F8\U0001F1ECSG_2|YT|Gemini|Github|FREE-14"
+      name: "\U0001F1FA\U0001F1F8US_3|YT|Gemini|Github|FREE-14"
       network: ws
       password: 8r<[9'l6hAO#8ZQi
       port: 2096
@@ -509,674 +79,64 @@ proxies:
         path: /tr
     - client-fingerprint: chrome
       encryption: none
-      name: "\U0001F1FA\U0001F1F8US_21|YT|GPT⁺|Gemini|Github|FREE-14"
+      name: "\U0001F1FA\U0001F1F8US_4|YT|GPT⁺|Gemini|Github|FREE-14"
       network: ws
-      port: 2053
-      security: tls
-      server: 104.18.35.222
-      servername: kalami-eew.pages.dev
+      port: 443
+      server: 104.16.255.215
+      servername: sfsl.ardomains1.dpdns.org
       skip-cert-verify: true
       tls: true
       type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+      udp: true
+      uuid: 69d38faa-21a1-4d18-82cb-796a942c181b
       ws-opts:
         headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1EC\U0001F1E7GB_5|YT|GPT⁺|Gemini|Github|FREE-14"
+            Host: sfsl.ardomains1.dpdns.org
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36
+        path: /?ed=2048
+      xudp: true
+    - name: "\U0001F1F1\U0001F1FBLV_1|YT|GPT⁺|Gemini|Github|FREE-3"
       network: ws
       port: 2096
-      server: 104.19.43.14
-      servername: gogo.kmj.qzz.io
+      server: 188.114.98.0
+      servername: sni.111000.indevs.in
       skip-cert-verify: true
       tls: true
       type: vless
       udp: true
-      uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
       ws-opts:
         headers:
-            Host: gogo.kmj.qzz.io
-            User-Agent: Mozilla/5.0 (Unknown; Linux) AppleWebKit/538.1 (KHTML, like Gecko) Chrome/v1.0.0 Safari/538.1
-        path: /socks5=gogo:gogo@185.184.70.120:50088
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_22|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2083
-      server: 104.19.54.84
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.3 (KHTML, like Gecko) Chrome/6.0.472.63 Safari/534.3
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_23|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2096
-      server: 172.64.144.251
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Linux; Android 5.1.1; SM-J120M Build/LMY47X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1F8\U0001F1ECSG_3|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 8443
-      server: 104.19.59.39
-      servername: gogo.kmj.qzz.io
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-      ws-opts:
-        headers:
-            Host: gogo.kmj.qzz.io
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36
-        path: /socks5=gogo:gogo@185.184.70.120:50088
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_24|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2087
-      server: 104.19.52.23
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_25|YT|GPT|Gemini|Github|FREE-14"
-      network: ws
-      port: 2087
-      server: 104.19.60.93
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_26|YT|GPT|Gemini|Github|FREE-14"
-      network: ws
-      port: 8443
-      server: 172.67.76.112
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; ANE-LX3 Build/HUAWEIANE-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_27|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2083
-      server: 172.67.75.176
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.30 (KHTML, like Gecko) Slackware/Chrome/12.0.742.100 Safari/534.30
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1EC\U0001F1E7GB_6|YT|GPT|Gemini|Github|FREE-14"
-      network: ws
-      port: 2096
-      server: cf.3666888.xyz
-      servername: gogo.kmj.qzz.io
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-      ws-opts:
-        headers:
-            Host: gogo.kmj.qzz.io
-            User-Agent: Mozilla/5.0 (Linux; Android 7.0; SM-G610F Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Mobile Safari/537.36
-        path: /socks5=gogo:gogo@185.184.70.120:50088
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1EC\U0001F1E7GB_7|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2096
-      server: 172.64.229.220
-      servername: gogo.kmj.qzz.io
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-      ws-opts:
-        headers:
-            Host: gogo.kmj.qzz.io
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
-        path: /socks5=gogo:gogo@185.184.70.120:50088
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_28|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 443
-      server: 104.19.56.156
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_29|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2083
-      server: 104.18.47.184
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_30|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 8443
-      server: 104.19.52.246
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; WAS-LX3 Build/HUAWEIWAS-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_31|YT|GPT|Gemini|Github|FREE-14"
-      network: ws
-      port: 8443
-      server: 172.64.145.101
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; SM-G532M Build/MMB29T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_32|YT|GPT⁺|Gemini|Github|FREE-14"
+            Host: sni.111000.indevs.in
+        path: /?Telegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2=
+    - name: "\U0001F1F8\U0001F1ECSG_1|YT|GPT⁺|Gemini|Github|FREE-3"
       network: ws
       port: 2053
-      server: 172.64.229.28
-      servername: kalami-eew.pages.dev
+      server: 104.17.72.206
+      servername: sni.111000.indevs.in
       skip-cert-verify: true
       tls: true
       type: vless
       udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
       ws-opts:
         headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_33|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 8443
-      server: 104.19.50.190
-      servername: kalami-eew.pages.dev
+            Host: sni.111000.indevs.in
+    - cipher: aes-256-cfb
+      country: "\U0001F1FA\U0001F1F8US"
+      delay: 1082
+      name: "\U0001F1FA\U0001F1F8US_5|YT|GPT⁺|Github|FREE-16"
+      password: f8f7aCzcPKbsF8p3
+      port: 989
+      server: 104.192.226.106
       skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_34|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 8443
-      server: 104.26.15.177
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_35|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 443
-      server: 104.18.46.42
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_36|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2053
-      server: 104.19.40.11
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_37|YT|GPT|Gemini|Github|FREE-14"
-      network: ws
-      port: 8443
-      server: 104.19.55.242
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Linux; Android 7.0; TRT-LX3 Build/HUAWEITRT-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_38|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2053
-      server: 104.19.63.181
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_39|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 443
-      server: 104.19.47.139
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_40|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 2096
-      server: 172.64.144.192
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_41|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 8443
-      server: 104.18.33.30
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_42|YT|GPT|Gemini|Github|FREE-14"
-      network: ws
-      port: 2053
-      server: 104.19.50.190
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36
-        path: /
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_43|YT|GPT⁺|Gemini|Github|FREE-14"
-      network: ws
-      port: 443
-      server: 104.19.37.229
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; ANE-LX3 Build/HUAWEIANE-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-        path: /
-      xudp: true
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1FA\U0001F1F8US_44|YT|GPT⁺|Github|FREE-23"
-      port: 180
-      server: 82.198.246.37
-      skip-cert-verify: true
-      tls: false
-      type: vmess
-      udp: true
-      uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-    - name: "\U0001F1FA\U0001F1F8US_45|YT|Gemini|Github|FREE-13"
+      type: ss
+    - delay: 1512
+      name: "\U0001F1FA\U0001F1F8US_6|YT|Gemini|Github|FREE-16"
       network: ws
       password: 8r<[9'l6hAO#8ZQi
       port: 443
-      server: 27.50.48.253
-      skip-cert-verify: true
-      sni: Koma-YT.PAGeS.Dev
-      type: trojan
-      ws-opts:
-        headers:
-            Host: Koma-YT.PAGeS.Dev
-        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_46|YT|GPT⁺|Gemini|Github|FREE-18"
-      network: ws
-      port: "443"
-      server: 172.67.74.138
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Linux; Android 5.1.1; SM-J111M Build/LMY47V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-        path: /fp=chrome
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_47|YT|GPT⁺|Gemini|Github|FREE-18"
-      network: ws
-      port: "8443"
-      server: 172.67.65.144
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
-        path: /fp=chrome
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_48|YT|GPT⁺|Gemini|Github|FREE-18"
-      network: ws
-      port: "2096"
-      server: 198.41.223.84
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
-        path: /fp=chrome
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_49|YT|GPT⁺|Gemini|Github|FREE-18"
-      network: ws
-      port: "2083"
-      server: 8.35.211.106
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
-        path: /fp=chrome
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_50|YT|Gemini|Github|FREE-13"
-      network: ws
-      password: 8r<[9'l6hAO#8ZQi
-      port: 443
-      server: 104.238.68.253
-      skip-cert-verify: true
-      sni: Koma-YT.PAGeS.Dev
-      tls: true
-      type: trojan
-      ws-opts:
-        headers:
-            Host: Koma-YT.PAGeS.Dev
-        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_51|YT|GPT⁺|Gemini|Github|FREE-18"
-      network: ws
-      port: "2053"
-      server: 104.19.45.145
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36
-        path: /fp=chrome
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_52|YT|GPT⁺|Gemini|Github|FREE-18"
-      network: ws
-      port: "2096"
-      server: 8.35.211.180
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
-        path: /fp=chrome
-      xudp: true
-    - name: "\U0001F1F8\U0001F1ECSG_4|YT|Gemini|Github|FREE-13"
-      network: ws
-      password: 8r<[9'l6hAO#8ZQi
-      port: 443
-      server: 104.234.50.53
-      skip-cert-verify: true
-      sni: Koma-YT.PAGeS.Dev
-      type: trojan
-      ws-opts:
-        headers:
-            Host: Koma-YT.PAGeS.Dev
-        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_53|YT|GPT⁺|Gemini|Github|FREE-18"
-      network: ws
-      port: "2053"
-      server: 104.26.8.55
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
-        path: /fp=chrome
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_54|YT|GPT⁺|Gemini|Github|FREE-18"
-      network: ws
-      port: "2053"
-      server: 104.19.33.255
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-            User-Agent: Mozilla/5.0 (Linux; Android 7.0; TRT-LX2 Build/HUAWEITRT-LX2; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/59.0.3071.125 Mobile Safari/537.36
-        path: /fp=chrome
-      xudp: true
-    - name: "\U0001F1FA\U0001F1F8US_55|YT|Gemini|Github|FREE-13"
-      network: ws
-      password: 8r<[9'l6hAO#8ZQi
-      port: 443
-      server: 108.162.192.253
+      server: 128.14.66.165
       skip-cert-verify: true
       sni: Koma-YT.PAGeS.Dev
       type: trojan
@@ -1185,64 +145,12 @@ proxies:
         headers:
             Host: Koma-YT.PAGeS.Dev
         path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1E9\U0001F1EADE_1|YT|GPT⁺|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-      port: "443"
-      server: vpn-de-001.fastervpn.world
-      skip-cert-verify: true
-      sni: vpn-de-001.fastervpn.world
-      type: hysteria2
-      up: ""
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1FA\U0001F1F8US_56|YT|GPT⁺|Gemini|Github|FREE-18"
-      obfs: ""
-      obfs-password: ""
-      password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-      port: "443"
-      server: vpn-us-003.fastervpn.world
-      skip-cert-verify: true
-      sni: vpn-us-003.fastervpn.world
-      type: hysteria2
-      up: ""
-    - client-fingerprint: chrome
-      name: "\U0001F1F8\U0001F1ECSG_5|YT|Gemini|Github|FREE-18"
-      network: ws
-      password: 8r<[9'l6hAO#8ZQi
-      port: "443"
-      server: 198.62.62.253
-      skip-cert-verify: true
-      sni: Koma-YT.PAGeS.Dev
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
-        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
-    - client-fingerprint: chrome
-      name: "\U0001F1F8\U0001F1ECSG_6|YT|Gemini|Github|FREE-18"
-      network: ws
-      password: 8r<[9'l6hAO#8ZQi
-      port: "443"
-      server: 198.12.144.253
-      skip-cert-verify: true
-      sni: Koma-YT.PAGeS.Dev
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            User-Agent: Mozilla/5.0 (Linux; Android 7.0; SM-J710F Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36
-        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
-    - delay: 921
-      name: "\U0001F1F8\U0001F1ECSG_7|YT|Gemini|Github|FREE-16"
+    - delay: 1257
+      name: "\U0001F1FA\U0001F1F8US_7|YT|Gemini|Github|FREE-16"
       network: ws
       password: 8r<[9'l6hAO#8ZQi
       port: 443
-      server: 114.129.43.253
+      server: 199.68.156.253
       skip-cert-verify: true
       sni: Koma-YT.PAGeS.Dev
       type: trojan
@@ -1251,22 +159,8 @@ proxies:
         headers:
             Host: Koma-YT.PAGeS.Dev
         path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
-    - delay: 934
-      name: "\U0001F1F8\U0001F1ECSG_8|Gemini|Github|FREE-16"
-      network: ws
-      password: 8r<[9'l6hAO#8ZQi
-      port: 443
-      server: 194.59.5.253
-      skip-cert-verify: true
-      sni: Koma-YT.PAGeS.Dev
-      type: trojan
-      udp: true
-      ws-opts:
-        headers:
-            Host: Koma-YT.PAGeS.Dev
-        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
-    - delay: 812
-      name: "\U0001F1F8\U0001F1ECSG_9|YT|Gemini|Github|FREE-16"
+    - delay: 1981
+      name: "\U0001F1FA\U0001F1F8US_8|YT|Gemini|Github|FREE-16"
       network: ws
       password: 8r<[9'l6hAO#8ZQi
       port: 443
@@ -1279,12 +173,12 @@ proxies:
         headers:
             Host: Koma-YT.PAGeS.Dev
         path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
-    - delay: 1668
-      name: "\U0001F1FA\U0001F1F8US_57|YT|Gemini|Github|FREE-16"
+    - delay: 882
+      name: "\U0001F1F8\U0001F1ECSG_2|YT|Gemini|Github|FREE-16"
       network: ws
       password: 8r<[9'l6hAO#8ZQi
       port: 443
-      server: 8.6.112.253
+      server: 178.128.70.6
       skip-cert-verify: true
       sni: Koma-YT.PAGeS.Dev
       type: trojan
@@ -1293,12 +187,12 @@ proxies:
         headers:
             Host: Koma-YT.PAGeS.Dev
         path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
-    - delay: 1768
-      name: "\U0001F1F8\U0001F1ECSG_10|YT|Gemini|Github|FREE-16"
+    - delay: 791
+      name: "\U0001F1FA\U0001F1F8US_9|YT|Gemini|Github|FREE-16"
       network: ws
       password: 8r<[9'l6hAO#8ZQi
-      port: 443
-      server: 166.62.105.253
+      port: 2096
+      server: 165.22.130.178
       skip-cert-verify: true
       sni: Koma-YT.PAGeS.Dev
       type: trojan
@@ -1307,12 +201,12 @@ proxies:
         headers:
             Host: Koma-YT.PAGeS.Dev
         path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
-    - delay: 774
-      name: "\U0001F1FA\U0001F1F8US_58|YT|Gemini|Github|FREE-16"
+    - delay: 1780
+      name: "\U0001F1FA\U0001F1F8US_10|YT|Gemini|Github|FREE-16"
       network: ws
       password: 8r<[9'l6hAO#8ZQi
       port: 443
-      server: 188.164.248.253
+      server: 173.245.59.253
       skip-cert-verify: true
       sni: Koma-YT.PAGeS.Dev
       type: trojan
@@ -1321,138 +215,1428 @@ proxies:
         headers:
             Host: Koma-YT.PAGeS.Dev
         path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_59|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
+    - delay: 2654
+      name: "\U0001F1FA\U0001F1F8US_11|YT|Gemini|Github|FREE-16"
+      network: ws
+      password: 8r<[9'l6hAO#8ZQi
       port: 443
-      server: 37.19.198.244
+      server: 108.162.192.253
       skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_60|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            Host: Koma-YT.PAGeS.Dev
+        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_2|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 45.85.119.238
+      servername: sni.jpmj.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.jpmj.dev
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_3|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 172.64.146.198
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_4|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 45.131.7.138
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_5|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
       port: 443
-      server: 37.19.198.236
+      server: 91.193.58.247
+      servername: sni.111000.v6.rocks
       skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1E8\U0001F1E6CA_1|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-      port: 990
-      server: 79.127.200.169
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.v6.rocks
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_6|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 192.65.217.138
+      servername: sni.111000.indevs.in
       skip-cert-verify: true
-      type: ss
-    - cipher: rc4-md5
-      name: "\U0001F1E8\U0001F1E6CA_2|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: 14fFPrbezE3HDZzsMOr6
-      port: 8080
-      server: 137.184.174.93
-      skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_61|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_7|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
       port: 443
-      server: 156.146.38.167
+      server: 135.84.74.43
+      servername: sni.111000.v6.navy
       skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_62|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.v6.navy
+        path: /
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_12|YT|GPT⁺|Github|FREE-12"
+      network: ws
+      port: 20086
+      server: 173.249.209.146
+      skip-cert-verify: true
+      tls: false
+      type: vmess
+      udp: true
+      uuid: 3935c2dc-dbb0-43f7-b367-fe89abe87fdf
+      ws-opts:
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F8\U0001F1ECSG_3|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 166.62.109.238
+      servername: sni.jpmj.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.jpmj.dev
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_8|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 167.68.11.138
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_9|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
       port: 443
-      server: 156.146.38.169
+      server: 164.38.155.138
+      servername: sni.111000.indevs.in
       skip-cert-verify: true
-      type: ss
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_63|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: shadowsocks
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F8\U0001F1ECSG_4|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 185.238.228.238
+      servername: sni.jpmj.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.jpmj.dev
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_10|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 155.46.167.138
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_11|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 27.50.48.238
+      servername: sni.jpmj.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.jpmj.dev
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_12|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 8.6.112.0
+      servername: sni.111000.dynv6.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.dynv6.net
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_13|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 45.80.108.138
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_14|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 185.156.19.138
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: "/?Telegram\U0001F1E8\U0001F1F3@WangCai2="
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_13|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
       port: 443
-      server: 156.146.38.170
+      server: 135.84.74.90
+      servername: sni.111000.dynv6.net
       skip-cert-verify: true
-      type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1FA\U0001F1F8US_64|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: QTmLViU4VEmuwbOxUw4IXd
-      port: 59556
-      server: 107.172.250.161
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.dynv6.net
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_15|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 185.193.31.138
+      servername: sni.111000.indevs.in
       skip-cert-verify: true
-      type: ss
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: "/?telegram\U0001F1E8\U0001F1F3+@wangcai2="
+    - client-fingerprint: firefox
+      name: "\U0001F1FA\U0001F1F8US_14|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2053
+      server: cf5.danfeng.eu.org
+      servername: juzi8186.qea.ccwu.cc
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: bafacd98-136a-4530-838d-4e5c51838dac
+      ws-opts:
+        headers:
+            Host: juzi8186.qea.ccwu.cc
+        path: /out/comics/document/juzibaipiao?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_16|YT|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 162.159.153.2
+      servername: sni.111000.dynv6.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.dynv6.net
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_17|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 135.84.73.9
+      servername: sni.111000.v6.navy
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.v6.navy
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_18|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 14.102.229.43
+      servername: sni.111000.cc.cd
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.cc.cd
+        path: "/?https://t.me/wangcai2\U0001F1E8\U0001F1F3="
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_19|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 5.10.214.191
+      servername: sni.my111000.tech
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.my111000.tech
+        path: "/Telegram\U0001F1E8\U0001F1F3@WangCai2/"
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_20|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 156.243.83.138
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_21|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 192.200.160.19
+      servername: sni.111000.v6.navy
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.v6.navy
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_22|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 198.71.233.55
+      servername: sni.111000.v6.navy
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.v6.navy
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_23|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 104.18.32.47
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_24|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 162.159.12.151
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_25|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 135.84.73.160
+      servername: sni.111000.dynv6.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.dynv6.net
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_26|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 135.84.72.25
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_27|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 104.18.4.130
+      servername: sni.111000.v6.navy
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.v6.navy
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_28|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 198.71.189.51
+      servername: sni.111000.dynv6.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.dynv6.net
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_29|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: bestcf.030101.xyz
+      servername: sni.111000.dynv6.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.dynv6.net
+        path: /?proxyip=ip.111000.de5.net:443
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_30|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 135.84.73.138
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_31|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2083
+      server: 104.18.4.130
+      servername: sni.111000.v6.navy
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.v6.navy
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_32|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 77.232.140.43
+      servername: sni.111000.cc.cd
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.cc.cd
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_33|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 130.250.137.238
+      servername: sni.jpmj.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.jpmj.dev
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_34|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 167.68.42.238
+      servername: sni.jpmj.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.jpmj.dev
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_35|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 135.84.75.14
+      servername: sni.111000.dynv6.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.dynv6.net
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_36|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 72.167.241.43
+      servername: sni.111000.cc.cd
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.cc.cd
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F3\U0001F1F1NL_1|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2053
+      server: 141.193.213.10
+      servername: qyi.fqjd663.ggff.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 8c4604ef-749c-4b56-adf1-7da405002a21
+      ws-opts:
+        headers:
+            Host: qyi.fqjd663.ggff.net
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_15|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 160.153.1.121
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_37|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 209.94.90.138
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_38|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2053
+      server: 104.18.13.149
+      servername: sni.111000.dynv6.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.dynv6.net
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_39|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 45.131.211.138
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - name: "\U0001F1F8\U0001F1ECSG_5|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 104.17.101.139
+      servername: sni.111000.dynv6.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.dynv6.net
+        path: /?proxyip=ip.111000.de5.net:443
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_40|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 25.26.27.191
+      servername: sni.my111000.tech
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.my111000.tech
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_41|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 172.66.44.211
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_42|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 147.78.140.238
+      servername: sni.jpmj.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.jpmj.dev
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_43|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 166.62.105.238
+      servername: sni.jpmj.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.jpmj.dev
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F3\U0001F1F1NL_2|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 104.18.12.149
+      servername: S4-f45.pAGeS.DeV
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: b60e5c32-3d4e-425c-a785-a36cd0621a72
+      ws-opts:
+        headers:
+            Host: S4-f45.pAGeS.DeV
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_44|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 176.124.223.238
+      servername: sni.jpmj.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.jpmj.dev
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_45|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2053
+      server: 104.18.4.130
+      servername: sni.111000.dynv6.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.dynv6.net
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F8\U0001F1ECSG_6|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 104.18.12.149
+      servername: sni.jpmj.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.jpmj.dev
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_46|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 45.130.125.138
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_47|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 188.164.158.138
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_48|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 154.197.75.138
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: "/?Telegram\U0001F1E8\U0001F1F3@WangCai2="
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_49|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 104.18.16.56
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_50|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 45.40.147.191
+      servername: sni.my111000.tech
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.my111000.tech
+        path: "/Telegram\U0001F1E8\U0001F1F3@WangCai2/"
+    - client-fingerprint: chrome
+      name: "\U0001F1F8\U0001F1ECSG_7|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2053
+      server: 104.18.32.47
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_51|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 45.80.111.7
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_52|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 130.250.137.138
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - name: "\U0001F1FA\U0001F1F8US_16|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 84.32.129.194
+      servername: 1-aym.pages.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+      ws-opts:
+        headers:
+            Host: 1-aym.pages.dev
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_53|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 45.131.211.238
+      servername: sni.jpmj.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.jpmj.dev
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_54|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 135.84.64.244
+      servername: sni.111000.dynv6.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.dynv6.net
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_55|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 181.214.1.238
+      servername: sni.jpmj.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.jpmj.dev
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_56|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 104.18.13.149
+      servername: sni.111000.v6.navy
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.v6.navy
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_17|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 162.159.17.189
+      servername: juzi.qea.ccwu.cc
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: a6f1755f-0140-4bea-8727-0db1bed7c4df
+      ws-opts:
+        headers:
+            Host: juzi.qea.ccwu.cc
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_57|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 108.165.216.138
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_58|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 164.38.155.138
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_59|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 216.24.57.4
+      servername: sni.111000.dynv6.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.dynv6.net
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_60|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 172.64.149.54
+      servername: sni.jpmj.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.jpmj.dev
+        path: /?ed=2560
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_61|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 104.16.250.22
+      servername: sni.111000.indevs.in
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.indevs.in
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_62|YT|GPT|Gemini|Github|FREE-12"
+      network: ws
+      port: 8443
+      server: 8.6.112.6
+      servername: sni.111000.dynv6.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.dynv6.net
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_63|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 2096
+      server: 185.156.19.238
+      servername: sni.jpmj.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.jpmj.dev
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_64|YT|GPT⁺|Gemini|Github|FREE-12"
+      network: ws
+      port: 443
+      server: 199.34.228.160
+      servername: sni.111000.v6.navy
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+      ws-opts:
+        headers:
+            Host: sni.111000.v6.navy
+        path: /
     - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_65|YT|GPT⁺|Gemini|Github|FREE-21"
+      name: "\U0001F1FA\U0001F1F8US_18|YT|GPT⁺|Gemini|Github|FREE-21"
       password: shadowsocks
       port: 443
       server: 173.244.56.6
       skip-cert-verify: true
       type: ss
-    - cipher: chacha20-ietf-poly1305
-      name: "\U0001F1FA\U0001F1F8US_66|YT|GPT⁺|Gemini|Github|FREE-21"
-      password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-      port: 990
-      server: 173.234.29.2
+    - cipher: aes-256-cfb
+      name: "\U0001F1E8\U0001F1E6CA_1|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: f8f7aCzcPKbsF8p3
+      port: 989
+      server: 79.127.233.170
       skip-cert-verify: true
       type: ss
-    - name: "\U0001F1F9\U0001F1FCTW_1|YT|GPT⁺|Gemini|Github|FREE-12"
+    - cipher: aes-128-gcm
+      name: "\U0001F1FA\U0001F1F8US_19|YT|GPT⁺|Gemini|Github|FREE-21"
+      password: shadowsocks
+      port: 443
+      server: 173.244.56.9
+      skip-cert-verify: true
+      type: ss
+    - encryption: none
+      name: "\U0001F1FA\U0001F1F8US_20|YT|GPT⁺|Gemini|Github|FREE-10"
       network: ws
-      port: 2087
-      server: 172.67.76.40
-      servername: mybloh.ccwu.cc
+      port: 2053
+      security: tls
+      server: 108.162.198.54
+      servername: cocobaby.pages.dev
       skip-cert-verify: true
       tls: true
       type: vless
-      udp: true
-      uuid: 73bcd72f-9545-4cb8-8daf-7d004501880d
+      uuid: b818576e-951a-4a9c-879a-d32611b977ad
       ws-opts:
         headers:
-            Host: mybloh.ccwu.cc
-        path: /proxyip=223.165.4.57,167.253.153.147,114.33.57.170
-    - client-fingerprint: chrome
-      name: "\U0001F1F9\U0001F1FCTW_2|YT|GPT⁺|Gemini|Github|FREE-12"
+            Host: cocobaby.pages.dev
+        path: /
+    - encryption: none
+      name: "\U0001F1FA\U0001F1F8US_21|YT|GPT⁺|Gemini|Github|FREE-10"
       network: ws
-      port: 2083
-      server: 104.26.8.97
-      servername: mybloh.ccwu.cc
+      port: 2053
+      security: tls
+      server: 172.64.229.219
+      servername: cocobaby.pages.dev
       skip-cert-verify: true
       tls: true
       type: vless
-      udp: true
-      uuid: 73bcd72f-9545-4cb8-8daf-7d004501880d
+      uuid: b818576e-951a-4a9c-879a-d32611b977ad
       ws-opts:
         headers:
-            Host: mybloh.ccwu.cc
-        path: /proxyip=223.165.4.57,167.253.153.147,114.33.57.170
-    - client-fingerprint: chrome
-      name: "\U0001F1F9\U0001F1FCTW_3|YT|GPT⁺|Gemini|Github|FREE-12"
-      network: ws
-      port: 2096
-      server: 104.19.41.30
-      servername: mybloh.ccwu.cc
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      udp: true
-      uuid: 73bcd72f-9545-4cb8-8daf-7d004501880d
-      ws-opts:
-        headers:
-            Host: mybloh.ccwu.cc
-        path: /proxyip=223.165.4.57,167.253.153.147,114.33.57.170
-    - client-fingerprint: chrome
-      name: "\U0001F1F9\U0001F1FCTW_4|YT|GPT⁺|Gemini|Github|FREE-12"
+            Host: cocobaby.pages.dev
+        path: /
+    - client-fingerprint: firefox
+      name: "\U0001F1FA\U0001F1F8US_22|YT|GPT⁺|Gemini|Github|FREE-10"
       network: ws
       port: 443
-      server: 104.26.8.111
-      servername: mybloh.ccwu.cc
+      server: nexusmods.com
+      servername: gddy.hhlfy.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 5b9fa73b-b549-480b-add9-c45e650d236f
+      ws-opts:
+        headers:
+            Host: gddy.hhlfy.de5.net
+        path: /
+    - client-fingerprint: firefox
+      name: "\U0001F1FA\U0001F1F8US_23|YT|GPT⁺|Gemini|Github|FREE-10"
+      network: ws
+      port: 443
+      server: saas.sin.fan
+      servername: gddy.hhlfy.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 5b9fa73b-b549-480b-add9-c45e650d236f
+      ws-opts:
+        headers:
+            Host: gddy.hhlfy.de5.net
+        path: /
+    - client-fingerprint: firefox
+      name: "\U0001F1FA\U0001F1F8US_24|YT|GPT⁺|Gemini|Github|FREE-10"
+      network: ws
+      port: 443
+      server: cf.877774.xyz
+      servername: gddy.hhlfy.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 5b9fa73b-b549-480b-add9-c45e650d236f
+      ws-opts:
+        headers:
+            Host: gddy.hhlfy.de5.net
+        path: /
+    - encryption: none
+      name: "\U0001F1FA\U0001F1F8US_25|YT|GPT⁺|Gemini|Github|FREE-10"
+      network: ws
+      port: 2096
+      security: tls
+      server: 104.18.44.159
+      servername: cocobaby.pages.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: b818576e-951a-4a9c-879a-d32611b977ad
+      ws-opts:
+        headers:
+            Host: cocobaby.pages.dev
+        path: /
+    - encryption: none
+      name: "\U0001F1FA\U0001F1F8US_26|YT|GPT⁺|Gemini|Github|FREE-10"
+      network: ws
+      port: 2087
+      security: tls
+      server: 172.64.144.36
+      servername: cocobaby.pages.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: b818576e-951a-4a9c-879a-d32611b977ad
+      ws-opts:
+        headers:
+            Host: cocobaby.pages.dev
+        path: /
+    - encryption: none
+      name: "\U0001F1FA\U0001F1F8US_27|YT|GPT⁺|Gemini|Github|FREE-10"
+      network: ws
+      port: 2053
+      security: tls
+      server: 162.159.32.23
+      servername: cocobaby.pages.dev
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: b818576e-951a-4a9c-879a-d32611b977ad
+      ws-opts:
+        headers:
+            Host: cocobaby.pages.dev
+        path: /
+    - name: "\U0001F1FA\U0001F1F8US_28|YT|GPT⁺|Gemini|Github|FREE-10"
+      password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+      port: 443
+      server: vpn-us-001.fastervpn.world
+      skip-cert-verify: true
+      sni: vpn-us-001.fastervpn.world
+      type: hysteria2
+    - client-fingerprint: firefox
+      name: "\U0001F1FA\U0001F1F8US_29|YT|GPT|Gemini|Github|FREE-10"
+      network: ws
+      port: 443
+      server: store.ubi.com
+      servername: gddy.hhlfy.de5.net
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 5b9fa73b-b549-480b-add9-c45e650d236f
+      ws-opts:
+        headers:
+            Host: gddy.hhlfy.de5.net
+        path: /
+    - name: "\U0001F1FA\U0001F1F8US_30|YT|Gemini|Github|FREE-10"
+      network: ws
+      password: 8r<[9'l6hAO#8ZQi
+      port: 2053
+      server: 96.44.149.15
+      skip-cert-verify: true
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      ws-opts:
+        headers:
+            Host: Koma-YT.PAGeS.Dev
+        path: "/trTelegram\U0001F1E8\U0001F1F3+@WangCai2"
+    - name: "\U0001F1FA\U0001F1F8US_31|YT|Gemini|Github|FREE-10"
+      network: ws
+      password: 8r<[9'l6hAO#8ZQi
+      port: 2096
+      server: Koma-YT.PAGeS.Dev
+      skip-cert-verify: true
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      udp: true
+      ws-opts:
+        path: /tr
+    - name: "\U0001F1FA\U0001F1F8US_32|YT|Gemini|Github|FREE-10"
+      network: ws
+      password: 8r<[9'l6hAO#8ZQi
+      port: 8443
+      server: 142.171.121.229
+      skip-cert-verify: true
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      ws-opts:
+        headers:
+            Host: Koma-YT.PAGeS.Dev
+        path: "/trTelegram\U0001F1E8\U0001F1F3+@WangCai2"
+    - name: "\U0001F1FA\U0001F1F8US_33|YT|Gemini|Github|FREE-10"
+      network: ws
+      password: 8r<[9'l6hAO#8ZQi
+      port: 443
+      server: 192.227.237.81
+      skip-cert-verify: true
+      sni: Koma-YT.PAGeS.Dev
+      tls: true
+      type: trojan
+      ws-opts:
+        headers:
+            Host: Koma-YT.PAGeS.Dev
+        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
+    - name: "\U0001F1FA\U0001F1F8US_34|YT|Gemini|Github|FREE-10"
+      network: ws
+      password: 8r<[9'l6hAO#8ZQi
+      port: 443
+      server: 45.40.150.253
+      skip-cert-verify: true
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      ws-opts:
+        headers:
+            Host: Koma-YT.PAGeS.Dev
+        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
+    - name: "\U0001F1F8\U0001F1ECSG_8|YT|Gemini|Github|FREE-10"
+      network: ws
+      password: 8r<[9'l6hAO#8ZQi
+      port: 443
+      server: 8.34.70.253
+      skip-cert-verify: true
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      ws-opts:
+        headers:
+            Host: Koma-YT.PAGeS.Dev
+        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
+    - name: "\U0001F1FA\U0001F1F8US_35|YT|GPT⁺|Gemini|Github|FREE-6"
+      password: kkzh2prsyr2ik47as615
+      port: 57142
+      server: 64.94.95.118
+      skip-cert-verify: true
+      type: trojan
+    - client-fingerprint: chrome
+      name: "\U0001F1F1\U0001F1FBLV_65|YT|GPT⁺|Gemini|Github|FREE-24"
+      network: ws
+      port: 443
+      server: 185.16.110.1
+      servername: sni.111000.indevs.in
       skip-cert-verify: true
       tls: true
       type: vless
       udp: true
-      uuid: 73bcd72f-9545-4cb8-8daf-7d004501880d
+      uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
       ws-opts:
         headers:
-            Host: mybloh.ccwu.cc
-        path: /proxyip=223.165.4.57,167.253.153.147,114.33.57.170
+            Host: sni.111000.indevs.in
+        path: /?ed=2560
+    - name: "\U0001F1FA\U0001F1F8US_36|YT|GPT⁺|Gemini|Github|FREE-24"
+      password: 94d40708-8273-11ea-8fc9-f23c913c8d2b
+      port: 443
+      server: 197a8e8e-tetwg0-tga61j-mv7m.sjc.oshuawei.com
+      skip-cert-verify: true
+      tls: true
+      type: http
+      username: 94d40708-8273-11ea-8fc9-f23c913c8d2b
+    - name: "\U0001F1FA\U0001F1F8US_37|YT|GPT⁺|Gemini|Github|FREE-24"
+      password: 94d40708-8273-11ea-8fc9-f23c913c8d2b
+      port: 443
+      server: 77c39aeb-tetwg0-tga61j-mv7m.sj.hyhuawei.com
+      skip-cert-verify: true
+      tls: true
+      type: http
+      username: 94d40708-8273-11ea-8fc9-f23c913c8d2b
     - client-fingerprint: chrome
       flow: xtls-rprx-vision
-      name: "\U0001F1FA\U0001F1F8US_67|GPT|Github|FREE-12"
+      name: "\U0001F1FA\U0001F1F8US_38|GPT⁺|Github|FREE-24"
+      network: tcp
       port: 443
       reality-opts:
         public-key: V6FabatADtcX7aO9KMjGCadJC4LuQ_5nRViab-z-nFQ
@@ -1464,419 +1648,205 @@ proxies:
       type: vless
       udp: true
       uuid: 629d2ccc-3a2a-4dd3-83d2-86b25fc8783e
-    - name: "\U0001F1FA\U0001F1F8US_68|YT|GPT⁺|Gemini|Github|FREE-12"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_39|YT|GPT⁺|Gemini|Github|FREE-18"
       network: ws
-      port: 443
-      server: 50.228.203.26
-      servername: babayaga-6i7.pages.dev
+      port: "443"
+      server: cdn.tzpro.xyz
+      servername: juzi.qea.ccwu.cc
       skip-cert-verify: true
       tls: true
       type: vless
       udp: true
-      uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+      uuid: a6f1755f-0140-4bea-8727-0db1bed7c4df
       ws-opts:
         headers:
-            Host: babayaga-6i7.pages.dev
-        path: "/?ed=2560&Telegram\U0001F1E8\U0001F1F3@WangCai2"
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_69|YT|GPT|Gemini|Github|FREE-10"
+            Host: juzi.qea.ccwu.cc
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36
+        path: /?ed=2048fp=chrome
+      xudp: true
+    - name: "\U0001F1F8\U0001F1ECSG_9|YT|GPT⁺|Gemini|Github|FREE-18"
       network: ws
-      port: 8443
-      security: tls
-      server: 108.162.198.90
-      servername: kalami-eew.pages.dev
+      port: "80"
+      server: 141.193.213.21
       skip-cert-verify: true
-      tls: true
       type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+      udp: true
+      uuid: fac62eac-1eec-4260-a991-0cac2f8745a3
       ws-opts:
         headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_70|YT|GPT⁺|Gemini|Github|FREE-10"
+            Host: free-server.techsonic.ggff.net
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36
+        path: /@Tech_Sonic
+      xudp: true
+    - client-fingerprint: chrome
+      name: "\U0001F1F8\U0001F1ECSG_10|YT|Gemini|Github|FREE-18"
       network: ws
-      port: 2083
-      security: tls
-      server: 108.162.198.90
-      servername: kalami-eew.pages.dev
+      password: 8r<[9'l6hAO#8ZQi
+      port: "443"
+      server: 146.190.122.220
       skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      udp: true
       ws-opts:
         headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_71|YT|GPT⁺|Gemini|Github|FREE-10"
+            User-Agent: Mozilla/5.0 (Linux; Android 6.0; CAM-L21 Build/HUAWEICAM-L21; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.0.3202.84 Mobile Safari/537.36
+        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
+    - client-fingerprint: chrome
+      name: "\U0001F1F8\U0001F1ECSG_11|YT|Gemini|Github|FREE-18"
       network: ws
-      port: 2083
-      security: tls
-      server: 108.162.198.30
-      servername: kalami-eew.pages.dev
+      password: 8r<[9'l6hAO#8ZQi
+      port: "443"
+      server: 192.169.221.253
       skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      udp: true
       ws-opts:
         headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_72|YT|GPT⁺|Gemini|Github|FREE-10"
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36
+        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
+    - client-fingerprint: chrome
+      name: "\U0001F1F8\U0001F1ECSG_12|YT|Gemini|Github|FREE-18"
       network: ws
-      port: 2096
-      security: tls
-      server: 108.162.198.132
-      servername: kalami-eew.pages.dev
+      password: 8r<[9'l6hAO#8ZQi
+      port: "443"
+      server: 198.71.188.253
       skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      udp: true
       ws-opts:
         headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - name: "\U0001F1FA\U0001F1F8US_73|YT|GPT⁺|Gemini|Github|FREE-10"
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
+    - client-fingerprint: chrome
+      name: "\U0001F1F8\U0001F1ECSG_13|YT|Gemini|Github|FREE-18"
       network: ws
-      port: 2087
-      security: tls
-      server: 162.159.41.135
-      servername: kalami-eew.pages.dev
+      password: 8r<[9'l6hAO#8ZQi
+      port: "443"
+      server: 45.40.149.253
       skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      udp: true
       ws-opts:
         headers:
-            Host: kalami-eew.pages.dev
-        path: /fp=chrome
-    - name: "\U0001F1FA\U0001F1F8US_74|YT|GPT⁺|Gemini|Github|FREE-10"
+            User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.99 Safari/533.4
+        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_40|YT|Gemini|Github|FREE-18"
       network: ws
-      port: 2053
-      security: tls
-      server: 8.35.211.180
-      servername: kalami-eew.pages.dev
+      password: 8r<[9'l6hAO#8ZQi
+      port: "443"
+      server: 199.181.197.253
       skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      udp: true
       ws-opts:
         headers:
-            Host: kalami-eew.pages.dev
-        path: /fp=chrome
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_75|YT|GPT⁺|Gemini|Github|FREE-10"
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
+    - client-fingerprint: chrome
+      name: "\U0001F1F8\U0001F1ECSG_14|YT|Gemini|Github|FREE-18"
       network: ws
-      port: 443
-      security: tls
-      server: 162.159.46.255
-      servername: kalami-eew.pages.dev
+      password: 8r<[9'l6hAO#8ZQi
+      port: "2096"
+      server: 157.230.140.153
       skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      udp: true
       ws-opts:
         headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - name: "\U0001F1FA\U0001F1F8US_76|YT|GPT⁺|Gemini|Github|FREE-10"
+            User-Agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/533.2 (KHTML, like Gecko) Chrome/5.0.342.1 Safari/533.2
+        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_41|YT|Gemini|Github|FREE-18"
       network: ws
-      port: 2083
-      server: 8.39.125.68
-      servername: kalami-eew.pages.dev
+      password: 8r<[9'l6hAO#8ZQi
+      port: "443"
+      server: 104.238.70.253
+      skip-cert-verify: true
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_42|YT|Gemini|FREE-18"
+      network: ws
+      password: 8r<[9'l6hAO#8ZQi
+      port: "443"
+      server: 209.94.90.253
+      skip-cert-verify: true
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
+        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_43|YT|Gemini|Github|FREE-18"
+      network: ws
+      password: 8r<[9'l6hAO#8ZQi
+      port: "2083"
+      server: 206.189.214.99
+      skip-cert-verify: true
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision-udp443-udp443
+      http-opts:
+        headers: {}
+        path:
+            - /
+      name: "\U0001F1FA\U0001F1F8US_44|YT|GPT⁺|Gemini|Github|FREE-18"
+      network: tcp
+      port: "443"
+      server: ohio1.ap221.com
+      servername: ohio.ap221.com
       skip-cert-verify: true
       tls: true
       type: vless
       udp: true
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - name: "\U0001F1FA\U0001F1F8US_77|YT|GPT⁺|Gemini|Github|FREE-10"
+      uuid: 03491a57-f071-4c0c-84f2-f4ec9062ede1
+      xudp: true
+    - client-fingerprint: chrome
+      name: "\U0001F1F8\U0001F1ECSG_15|YT|Gemini|Github|FREE-18"
       network: ws
-      port: 2087
-      security: tls
-      server: 8.39.125.222
-      servername: kalami-eew.pages.dev
+      password: 8r<[9'l6hAO#8ZQi
+      port: "443"
+      server: 108.165.152.253
       skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      udp: true
       ws-opts:
         headers:
-            Host: kalami-eew.pages.dev
-        path: /fp=chrome
-    - name: "\U0001F1FA\U0001F1F8US_78|YT|GPT⁺|Gemini|Github|FREE-10"
+            User-Agent: Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36
+        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_45|YT|Gemini|Github|FREE-18"
       network: ws
-      port: 8443
-      security: tls
-      server: 198.41.223.148
-      servername: kalami-eew.pages.dev
+      password: 8r<[9'l6hAO#8ZQi
+      port: "443"
+      server: 148.135.66.242
       skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+      sni: Koma-YT.PAGeS.Dev
+      type: trojan
+      udp: true
       ws-opts:
         headers:
-            Host: kalami-eew.pages.dev
-        path: /fp=chrome
-    - name: "\U0001F1FA\U0001F1F8US_79|YT|GPT⁺|Gemini|Github|FREE-10"
-      network: ws
-      port: 2096
-      security: tls
-      server: 8.39.125.31
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /fp=chrome
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_80|YT|GPT⁺|Gemini|Github|FREE-10"
-      network: ws
-      port: 2096
-      security: tls
-      server: 173.245.58.46
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_81|YT|GPT⁺|Gemini|Github|FREE-10"
-      network: ws
-      port: 2083
-      security: tls
-      server: 162.159.35.122
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_82|YT|GPT⁺|Gemini|Github|FREE-10"
-      network: ws
-      port: 8443
-      security: tls
-      server: 8.35.211.50
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_83|YT|GPT⁺|Gemini|Github|FREE-10"
-      network: ws
-      port: 2083
-      security: tls
-      server: 198.41.223.162
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - name: "\U0001F1FA\U0001F1F8US_84|YT|GPT⁺|Gemini|Github|FREE-10"
-      network: ws
-      port: 2053
-      security: tls
-      server: 104.18.37.211
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /fp=chrome
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_85|YT|GPT⁺|Gemini|Github|FREE-10"
-      network: ws
-      port: 2096
-      security: tls
-      server: 104.18.36.58
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_86|YT|GPT⁺|Gemini|Github|FREE-10"
-      network: ws
-      port: 2096
-      security: tls
-      server: 104.19.56.138
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_87|YT|GPT⁺|Gemini|Github|FREE-10"
-      network: ws
-      port: 2096
-      security: tls
-      server: 8.35.211.138
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_88|YT|GPT⁺|Gemini|Github|FREE-10"
-      network: ws
-      port: 443
-      security: tls
-      server: 104.18.39.145
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - name: "\U0001F1E8\U0001F1E6CA_3|YT|GPT⁺|Gemini|Github|FREE-10"
-      password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-      port: 443
-      server: vpn-ca-001.fastervpn.world
-      skip-cert-verify: true
-      sni: vpn-ca-001.fastervpn.world
-      type: hysteria2
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_89|YT|GPT⁺|Gemini|Github|FREE-10"
-      network: ws
-      port: 443
-      security: tls
-      server: 162.159.44.57
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_90|YT|GPT⁺|Gemini|Github|FREE-10"
-      network: ws
-      port: 2087
-      security: tls
-      server: 8.39.125.145
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_91|YT|GPT⁺|Gemini|Github|FREE-10"
-      network: ws
-      port: 443
-      security: tls
-      server: 8.35.211.92
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_92|YT|GPT⁺|Gemini|Github|FREE-10"
-      network: ws
-      port: 2083
-      security: tls
-      server: 162.159.42.50
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - cipher: aes-128-gcm
-      name: "\U0001F1FA\U0001F1F8US_93|YT|GPT⁺|Gemini|Github|FREE-1"
-      password: shadowsocks
-      port: 443
-      server: 37.19.198.160
-      skip-cert-verify: true
-      type: ss
-    - name: "\U0001F1FA\U0001F1F8US_94|YT|GPT|Gemini|Github|FREE-10"
-      network: ws
-      port: 2053
-      security: tls
-      server: 104.19.55.31
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /fp=chrome
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_95|YT|GPT⁺|Gemini|Github|FREE-10"
-      network: ws
-      port: 2083
-      security: tls
-      server: 104.19.33.168
-      servername: kalami-eew.pages.dev
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
-      ws-opts:
-        headers:
-            Host: kalami-eew.pages.dev
-        path: /
-    - name: "\U0001F1EB\U0001F1F7FR_1|YT|GPT⁺|Github|FREE-10"
-      password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-      port: 443
-      server: vpn-fr-002.fastervpn.world
-      skip-cert-verify: true
-      sni: vpn-fr-002.fastervpn.world
-      type: hysteria2
+            User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36
+        path: "/trTelegram\U0001F1E8\U0001F1F3 @WangCai2"
