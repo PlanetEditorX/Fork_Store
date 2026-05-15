@@ -380,11 +380,14 @@ public class SyncClipboardController(
         try
         {
             System.IO.File.Delete(path);
+            // 如果上级目录变空，则删除目录
+            var dir = Path.GetDirectoryName(path);
+            if (Directory.Exists(dir) && !Directory.EnumerateFileSystemEntries(dir).Any())
+            {
+                Directory.Delete(dir);
+            }
         }
-        catch
-        {
-        }
-
+        catch { }
         return File(bytes, contentType ?? "application/octet-stream");
     }
 }
