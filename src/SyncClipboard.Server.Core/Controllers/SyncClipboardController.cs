@@ -161,6 +161,9 @@ public class SyncClipboardController(
             return BadRequest("dto cannot be null");
         }
 
+        // 强制重置下载状态
+        dto.IsDownloaded = false;
+
         if (!string.IsNullOrWhiteSpace(dto.Hash))
         {
             var profile = await _historyService.GetExistingProfileAsync(
@@ -174,6 +177,45 @@ public class SyncClipboardController(
         }
 
         return await CreateAndSaveNewProfile(dto, token);
+    }
+
+    [HttpPut("api/mark-downloaded")]
+    public async Task<IActionResult> MarkAsDownloaded([FromBody] ProfileDto dto, CancellationToken token)
+    {
+        var profilePath = Path.Combine(_serverEnv.GetDataRootPath(), "SyncClipboard.json");
+        var cacheKey = profilePath;
+
+        // 1. 获取当前缓存的 ProfileDto
+        if (!_cache.TryGetValue(cacheKey, out ProfileDto? currentProfile) || currentProfile is null)
+        {
+            // 缓存未命中，尝试从文件加载
+            if (!System.IO.File.Exists(profilePath))
+                return NotFound("SyncClipboard.json not found");
+
+            var text = await System.IO.File.ReadAllTextAsync(profilePath, token);
+            currentProfile = JsonSerializer.Deserialize<ProfileDto>(text);
+            if (currentProfile is null)
+                return NotFound("SyncClipboard.json is empty or corrupted");
+        }
+
+        // 2. 校验 Hash
+        if (currentProfile.Hash != dto.Hash)
+            return NotFound("Hash mismatch");
+
+        // 3. 标记已下载
+        currentProfile.IsDownloaded = true;
+
+        // 4. 更新缓存
+        _cache.Set(cacheKey, currentProfile);
+
+        // 5. 写回文件
+        var json = JsonSerializer.Serialize(currentProfile);
+        await System.IO.File.WriteAllTextAsync(profilePath, json, token);
+
+        // 6. 通过 SignalR 通知所有客户端状态改变
+        await _hubContext.Clients.All.RemoteProfileChanged(currentProfile);
+
+        return Ok();
     }
 
     [HttpGet("")]
