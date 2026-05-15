@@ -163,27 +163,59 @@ public class SyncClipboardController(
         var profilePath = Path.Combine(_serverEnv.GetDataRootPath(), "SyncClipboard.json");
         var cacheKey = profilePath;
 
-        // 辅助函数：标记文本已下载
-        async Task AutoMarkTextDownloadedIfNeeded(ProfileDto profile)
+        // ---- 辅助函数：启动后台标记任务 ----
+        async Task ScheduleMarkAsDownloadedAsync(ProfileDto original)
         {
-            if (profile.Type == ProfileType.Text && !profile.IsDownloaded)
+            // 克隆一个新的对象，以免修改原引用
+            var clone = new ProfileDto
             {
-                profile.IsDownloaded = true;
-                _cache.Set(cacheKey, profile);
-                var json = JsonSerializer.Serialize(profile);
-                await System.IO.File.WriteAllTextAsync(profilePath, json, token);
-                await _hubContext.Clients.All.RemoteProfileChanged(profile);
-            }
+                Type = original.Type,
+                Hash = original.Hash,
+                Text = original.Text,
+                HasData = original.HasData,
+                DataName = original.DataName,
+                Size = original.Size,
+                IsDownloaded = true   // 后台任务中设为 true
+            };
+
+            // 捕获需要用到的路径与服务（注意 IHubContext 和 IMemoryCache 是线程安全的单例）
+            var hub = _hubContext;
+            var cache = _cache;
+            var rootPath = _serverEnv.GetDataRootPath(); // 立即取值，避免 Scope 问题
+
+            // 启动后台任务，无视结果
+            _ = Task.Run(async () =>
+            {
+                try
+                {
+                    // 更新缓存
+                    cache.Set(cacheKey, clone);
+                    // 写回文件
+                    var json = JsonSerializer.Serialize(clone);
+                    await System.IO.File.WriteAllTextAsync(profilePath, json);
+                    // 通知其他客户端
+                    await hub.Clients.All.RemoteProfileChanged(clone);
+                }
+                catch
+                {
+                    // 静默处理，不影响主请求
+                }
+            });
         }
+        // -----------------------------------
 
         // 缓存命中
-        if (_cache.TryGetValue(cacheKey, out ProfileDto? cachedProfile))
+        if (_cache.TryGetValue(cacheKey, out ProfileDto? cachedProfile) && cachedProfile != null)
         {
-            await AutoMarkTextDownloadedIfNeeded(cachedProfile!);
-            return Ok(cachedProfile);
+            // 如果是文本且尚未标记，则在返回后异步标记
+            if (cachedProfile.Type == ProfileType.Text && !cachedProfile.IsDownloaded)
+            {
+                _ = ScheduleMarkAsDownloadedAsync(cachedProfile);
+            }
+            return Ok(cachedProfile);  // 这次返回的仍然是 false
         }
 
-        // 文件不存在，返回空白文本
+        // 文件不存在，返回空文本
         if (!System.IO.File.Exists(profilePath))
         {
             var dto = await new TextProfile(string.Empty).ToProfileDto(token);
@@ -204,8 +236,12 @@ public class SyncClipboardController(
             return Ok(dto);
         }
 
-        // 加载成功后，标记文本已下载
-        await AutoMarkTextDownloadedIfNeeded(cachedProfile!);
+        // 加载完成后，如果需要标记，同样启动后台任务
+        if (cachedProfile!.Type == ProfileType.Text && !cachedProfile.IsDownloaded)
+        {
+            _ = ScheduleMarkAsDownloadedAsync(cachedProfile);
+        }
+
         _cache.Set(cacheKey, cachedProfile);
         return Ok(cachedProfile);
     }
