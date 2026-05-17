@@ -9,7 +9,7 @@ public abstract class Profile
     protected string? Hash;
     protected long? Size;
     protected readonly SemaphoreSlim _hashInitLock = new(1, 1);
-
+    public string? Source { get; set; }
     public abstract ProfileType Type { get; }
     public abstract string DisplayText { get; }
     public abstract string ShortDisplayText { get; }

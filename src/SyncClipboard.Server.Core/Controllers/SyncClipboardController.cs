@@ -175,7 +175,8 @@ public class SyncClipboardController(
                 HasData = original.HasData,
                 DataName = original.DataName,
                 Size = original.Size,
-                IsDownloaded = true   // 后台任务中设为 true
+                IsDownloaded = true,   // 后台任务中设为 true
+                Source = original.Source // 来源
             };
 
             // 捕获需要用到的路径与服务（注意 IHubContext 和 IMemoryCache 是线程安全的单例）

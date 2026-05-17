@@ -320,7 +320,8 @@ public class GroupProfile : Profile
             Text = DisplayText,
             HasData = true,
             DataName = _transferDataName,
-            Size = await GetSize(token)
+            Size = await GetSize(token),
+            Source = Source
         };
     }
 
