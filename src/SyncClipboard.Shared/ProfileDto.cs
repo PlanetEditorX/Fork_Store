@@ -13,4 +13,5 @@ public record class ProfileDto
     public string? DataName { get; set; }
     public long Size { get; set; } = 0;
     public bool IsDownloaded { get; set; } = false;
+    public string? Source { get; set; }
 }
