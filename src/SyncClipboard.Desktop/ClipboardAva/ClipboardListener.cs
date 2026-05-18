@@ -60,25 +60,24 @@ internal class ClipboardListener(IClipboardFactory clipboardFactory, ILogger log
             _cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
 
             var meta = await ClipboardFactory.GetMetaInfomation(_cts.Token);
-            if (meta == _meta)
+
+            // 使用 with 表达式创建新对象，同时设置 Source
+            var metaWithSource = meta with { Source = _source };
+
+            if (metaWithSource == _meta)
             {
                 return;
             }
 
-            if (meta != null)
-            {
-                meta.Source = _source;
-            }
-
             if (_meta is not null)
             {
-                _meta = meta;
-                _ = Task.Run(() => _action?.Invoke(meta));
-                _ = _logger.WriteAsync($"Clipboard changed to {meta}");
+                _meta = metaWithSource;
+                _ = Task.Run(() => _action?.Invoke(metaWithSource));
+                _ = _logger.WriteAsync($"Clipboard changed to {metaWithSource}");
             }
             else
             {
-                _meta = meta;
+                _meta = metaWithSource;
             }
         }
         catch { }
