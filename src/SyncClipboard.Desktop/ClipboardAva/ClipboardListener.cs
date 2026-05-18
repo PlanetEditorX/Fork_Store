@@ -11,6 +11,8 @@ internal class ClipboardListener(IClipboardFactory clipboardFactory, ILogger log
 {
     protected override IClipboardFactory ClipboardFactory { get; } = clipboardFactory;
     private readonly ILogger _logger = logger;
+    // 获取电脑名字
+    private readonly string _source = Environment.MachineName;
 
     private Timer? _timer;
     private MetaChanged? _action;
@@ -61,6 +63,11 @@ internal class ClipboardListener(IClipboardFactory clipboardFactory, ILogger log
             if (meta == _meta)
             {
                 return;
+            }
+
+            if (meta != null)
+            {
+                meta.Source = _source;
             }
 
             if (_meta is not null)
