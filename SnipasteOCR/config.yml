@@ -1,0 +1,9 @@
+snipaste:
+  modelpath: models
+  path: C:\Users\DearX\Pictures\Saved Pictures
+  preview_enabled: true
+translation:
+  from_lang: auto
+  secret_id: secret_id
+  secret_key: secret_key
+  to_lang: zh
