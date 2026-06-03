@@ -1,0 +1,6 @@
+# 域名匹配
+DOMAIN,dc.services.visualstudio.com
+
+# 域名后缀匹配
+DOMAIN-SUFFIX,api.simpleallowcopy.com
+DOMAIN-SUFFIX,lzzncm.com
