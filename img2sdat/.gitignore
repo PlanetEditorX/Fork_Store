@@ -1,0 +1,8 @@
+*.pyc
+.lh/
+*.img
+system/
+system.new.dat
+system.patch.dat
+system.transfer.list
+system.new.dat.br
