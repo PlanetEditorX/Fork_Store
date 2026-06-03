@@ -1,0 +1,16 @@
+﻿namespace SyncClipboard.Core.Interfaces;
+
+public interface ITrayIcon
+{
+    void Create();
+    event Action? LeftClicked;
+    event Action? DoubleClicked;
+
+    void ShowUploadAnimation();
+    void ShowDownloadAnimation();
+    void StopAnimation();
+
+    public void SetStatusString(string key, string statusStr, bool error);
+    public void SetStatusString(string key, string statusStr);
+    public void SetActiveStatus(bool active);
+}
