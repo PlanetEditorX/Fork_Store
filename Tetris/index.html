@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄罗斯方块</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        table{
+            border-collapse: separate;
+            margin: 5% auto;
+            background-color: #9ead86;
+            border: 3px solid black;
+            float: left;
+            margin: 5%;
+        }
+        .tab1{
+            margin-left: 35%!important;
+        }
+        *:first table{
+            border: 10px solid red;
+        }
+        tr{
+        }
+        td{
+            border: 2px solid #879372;
+            width: 20px;
+            height: 20px;
+            color: #000;
+            margin: 10px;
+        }
+        td::after{
+            content: '';
+            width: 70%;
+            height: 70%;
+            margin: auto;
+            background-color: #879372;
+            display: block;
+        }
+        html{
+            height: 100%;
+        }
+        h2{
+            width: 100%;
+            float: left;
+        }
+        body{
+            overflow: hidden;
+            background-color: rgba(0, 150, 136,1);
+            /* background:url("images/background.jpg") no-repeat; */
+            /* background-size: cover; */
+        }
+        .c1{
+            background: red;
+        }
+        .c2{
+            background: blue;
+        }
+        .c3{
+            background: green;
+        }
+        .c4{
+            background: orange;
+        }
+        .c5{
+            background: purple;
+        }
+        .c6{
+            background: yellow;
+        }
+        .c7{
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="score">分数: 0</h2>
+    <h2 id="f">帧编号: 0</h2>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/BLOCK_JSON.js"></script>
+    <script src="./js/Game.js"></script>
+    <script src="./js/Block.js"></script>
+    <script src="./js/Map.js"></script>
+    <script>
+        let game = new Game()
+    </script>
+</body>
+</html>
