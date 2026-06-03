@@ -1,0 +1,780 @@
+package check
+
+import (
+	"bufio"
+	"context"
+	"fmt"
+	"io"
+	"log/slog"
+	"math"
+	"math/rand"
+	"net"
+	"net/http"
+	"os"
+	"regexp"
+	"strconv"
+	"strings"
+	"sync"
+	"sync/atomic"
+	"time"
+
+	"subs-check/check/platform"
+	"subs-check/config"
+	proxyutils "subs-check/proxy"
+
+	"github.com/juju/ratelimit"
+	"github.com/metacubex/mihomo/adapter"
+	"github.com/metacubex/mihomo/constant"
+	"gopkg.in/yaml.v3"
+)
+
+// Result 存储节点检测结果
+type Result struct {
+	Proxy      map[string]any
+	Openai     bool
+	OpenaiWeb  bool
+	Youtube    string
+	Netflix    bool
+	Google     bool
+	Cloudflare bool
+	Disney     bool
+	Gemini     bool
+	Github     bool
+	TikTok     string
+	IP         string
+	IPRisk     string
+	Country    string
+}
+
+// ProxyChecker 处理代理检测的主要结构体
+type ProxyChecker struct {
+	results     []Result
+	proxyCount  int
+	threadCount int
+	progress    int32
+	available   int32
+	resultChan  chan Result
+	tasks       chan map[string]any
+}
+
+var Progress atomic.Uint32
+var Available atomic.Uint32
+var ProxyCount atomic.Uint32
+var TotalBytes atomic.Uint64
+
+var ForceClose atomic.Bool
+
+var Bucket *ratelimit.Bucket
+
+// NewProxyChecker 创建新的检测器实例
+func NewProxyChecker(proxyCount int) *ProxyChecker {
+	threadCount := config.GlobalConfig.Concurrent
+	if proxyCount < threadCount {
+		threadCount = proxyCount
+	}
+
+	ProxyCount.Store(uint32(proxyCount))
+	return &ProxyChecker{
+		results:     make([]Result, 0),
+		proxyCount:  proxyCount,
+		threadCount: threadCount,
+		resultChan:  make(chan Result),
+		tasks:       make(chan map[string]any, 1),
+	}
+}
+
+// Check 执行代理检测的主函数
+func Check(proxyType string) ([]Result, error) {
+	proxyutils.ResetRenameCounter()
+	ForceClose.Store(false)
+
+	ProxyCount.Store(0)
+	Available.Store(0)
+	Progress.Store(0)
+
+	TotalBytes.Store(0)
+
+	// 之前好的节点前置
+	var proxies []map[string]any
+	save_proxies, err := GetGlobalProxies(proxyType)
+	if save_proxies != nil && err == nil {
+		slog.Info(fmt.Sprintf("添加之前测试成功的节点，数量: %d", len(save_proxies)))
+		proxies = append(proxies, save_proxies...)
+	}
+	tmp, err := proxyutils.GetProxies(proxyType)
+	if err != nil {
+		return nil, fmt.Errorf("获取节点失败: %w", err)
+	}
+	proxies = append(proxies, tmp...)
+	slog.Info(fmt.Sprintf("获取节点数量: %d", len(proxies)))
+
+	proxies = proxyutils.DeduplicateProxies(proxies)
+	slog.Info(fmt.Sprintf("去重后节点数量: %d", len(proxies)))
+	if proxyType == "SingleNodes" {
+		// 构造 Clash 配置结构
+		config := map[string]interface{}{
+			"proxies": tmp,
+		}
+
+		// 写入 YAML 文件
+		file, err := os.Create("output/vps.yaml")
+		if err != nil {
+			panic(err)
+		}
+		defer file.Close()
+
+		encoder := yaml.NewEncoder(file)
+		encoder.SetIndent(2)
+		if err := encoder.Encode(config); err != nil {
+			panic(err)
+		}
+	}
+	if proxyType == "FreeSubUrls" {
+		// 加载上次失败的代理及其剩余次数
+		previousFailures, err := loadFailedProxies()
+		if err != nil {
+			slog.Warn(fmt.Sprintf("加载上次失败节点失败: %v", err))
+		}
+
+		// 过滤掉失败次数未用完的代理
+		if len(previousFailures) > 0 {
+			var filteredProxies []map[string]any
+			for _, p := range proxies {
+				if name, ok := p["name"].(string); ok {
+					if count, exists := previousFailures[name]; !exists || count <= 0 {
+						filteredProxies = append(filteredProxies, p)
+					}
+				}
+			}
+			proxies = filteredProxies
+			slog.Info(fmt.Sprintf("已排除上次失败的节点，当前节点数量: %d", len(proxies)))
+		}
+
+		checker := NewProxyChecker(len(proxies))
+		results, err := checker.run(proxies, proxyType)
+
+		// 保存失败的代理，并更新它们的失败次数
+		saveFailedProxies(proxies, results, previousFailures)
+		return results, err
+	} else {
+		checker := NewProxyChecker(len(proxies))
+		return checker.run(proxies, proxyType)
+	}
+	// === END MODIFICATION ===
+}
+
+// Run 运行检测流程
+func (pc *ProxyChecker) run(proxies []map[string]any, proxyType string) ([]Result, error) {
+
+	if config.GlobalConfig.TotalSpeedLimit != 0 {
+		Bucket = ratelimit.NewBucketWithRate(float64(config.GlobalConfig.TotalSpeedLimit*1024*1024), int64(config.GlobalConfig.TotalSpeedLimit*1024*1024/10))
+	} else {
+		Bucket = ratelimit.NewBucketWithRate(float64(math.MaxInt64), int64(math.MaxInt64))
+	}
+
+	slog.Info("开始检测节点")
+	slog.Info("当前参数", "timeout", config.GlobalConfig.Timeout, "concurrent", config.GlobalConfig.Concurrent, "enable-speedtest", config.GlobalConfig.SpeedTestUrl != "", "min-speed", config.GlobalConfig.MinSpeed, "download-timeout", config.GlobalConfig.DownloadTimeout, "download-mb", config.GlobalConfig.DownloadMB, "total-speed-limit", config.GlobalConfig.TotalSpeedLimit)
+
+	done := make(chan bool)
+	if config.GlobalConfig.PrintProgress {
+		go pc.showProgress(done)
+	}
+	var wg sync.WaitGroup
+	// 启动工作线程
+	for i := 0; i < pc.threadCount; i++ {
+		wg.Add(1)
+		go pc.worker(&wg, proxyType)
+	}
+
+	// 发送任务
+	go pc.distributeProxies(proxies, proxyType)
+	slog.Debug(fmt.Sprintf("发送任务: %d", len(proxies)))
+
+	// 收集结果 - 添加一个 WaitGroup 来等待结果收集完成
+	var collectWg sync.WaitGroup
+	collectWg.Add(1)
+	go func() {
+		pc.collectResults()
+		collectWg.Done()
+	}()
+
+	wg.Wait()
+	close(pc.resultChan)
+
+	// 等待结果收集完成
+	collectWg.Wait()
+	// 等待进度条显示完成
+	time.Sleep(100 * time.Millisecond)
+
+	if config.GlobalConfig.PrintProgress {
+		done <- true
+	}
+
+	if proxyType == "FreeSubUrls" && config.GlobalConfig.SuccessLimit > 0 && pc.available >= config.GlobalConfig.SuccessLimit {
+		slog.Warn(fmt.Sprintf("达到节点数量限制: %d", config.GlobalConfig.SuccessLimit))
+	}
+	slog.Info(fmt.Sprintf("可用节点数量: %d", len(pc.results)))
+	slog.Info(fmt.Sprintf("测试总消耗流量: %.3fGB", float64(TotalBytes.Load())/1024/1024/1024))
+
+	// 检查订阅成功率并发出警告
+	pc.checkSubscriptionSuccessRate(proxies)
+
+	return pc.results, nil
+}
+
+// worker 处理单个代理检测的工作线程
+func (pc *ProxyChecker) worker(wg *sync.WaitGroup, proxyType string) {
+	defer wg.Done()
+	for proxy := range pc.tasks {
+		if result := pc.checkProxy(proxy, proxyType); result != nil {
+			pc.resultChan <- *result
+		}
+		pc.incrementProgress()
+	}
+}
+
+// checkProxy 检测单个代理
+func (pc *ProxyChecker) checkProxy(proxy map[string]any, proxyType string) *Result {
+	res := &Result{
+		Proxy: proxy,
+	}
+
+	if os.Getenv("SUB_CHECK_SKIP") != "" {
+		// slog.Debug(fmt.Sprintf("跳过检测代理: %v", proxy["name"]))
+		return res
+	}
+
+	// 排除名称中包含特定关键词的节点
+	if name, ok := proxy["name"].(string); ok {
+		for _, kw := range config.GlobalConfig.ExcludeNodes {
+			if strings.Contains(name, kw) {
+				slog.Debug(fmt.Sprintf("跳过包含关键词 [%s] 的节点: %v", kw, name))
+				return nil
+			}
+		}
+		for _, kw := range config.GlobalConfig.UncheckNodes {
+			if strings.Contains(name, kw) {
+				slog.Debug(fmt.Sprintf("跳过检测包含关键词 [%s] 的节点: %v", kw, name))
+				return res
+			}
+		}
+	}
+
+	// 跳过证书验证：从配置中读取
+	proxy["skip-cert-verify"] = config.GlobalConfig.SkipCertVerify
+
+	httpClient := CreateClient(proxy)
+	if httpClient == nil {
+		slog.Debug(fmt.Sprintf("创建代理Client失败: %v", proxy["name"]))
+		return nil
+	}
+	defer httpClient.Close()
+
+	// 检测失败
+	// - 如果是免费订阅链接，则返回失败
+	// - 如果是订阅链接且开启了订阅检查，则返回失败
+	// - 如果是订阅链接且关闭了订阅检查，继续检测
+	isSub := proxyType == "SubUrls"
+	isFree := proxyType == "FreeSubUrls"
+	isStrictCheck := isFree || (isSub && config.GlobalConfig.SubCheck)
+
+	cloudflare, err := platform.CheckCloudflare(httpClient.Client)
+	if (err != nil || !cloudflare) && isStrictCheck {
+		slog.Debug(fmt.Sprintf("节点被排除: Cloudflare检测失败: %v", proxy["name"]))
+		return nil
+	}
+
+	google, err := platform.CheckGoogle(httpClient.Client)
+	if (err != nil || !google) && isStrictCheck {
+		slog.Debug(fmt.Sprintf("节点被排除: Google检测失败: %v", proxy["name"]))
+		return nil
+	}
+
+	// 如果是 SubUrls 且未开启 SubCheck，允许继续检测
+	if (!cloudflare || !google) && isSub && !config.GlobalConfig.SubCheck {
+		slog.Debug(fmt.Sprintf("跳过检测订阅代理: %v, cloudflare: %v, google: %v", proxy["name"], cloudflare, google))
+		res.Google = true
+		res.Cloudflare = true
+	}
+
+	var speed int
+	// 当有测速地址，且为免费订阅时，进行测速，付费订阅不进行测速，只检测平台
+	if config.GlobalConfig.SpeedTestUrl != "" && proxyType == "FreeSubUrls" {
+		speed, _, err = platform.CheckSpeed(httpClient.Client, Bucket)
+		if err != nil || speed < config.GlobalConfig.MinSpeed {
+			slog.Debug(fmt.Sprintf("节点被排除: Speed过低: %v", proxy["name"]))
+			return nil
+		}
+	}
+
+	if config.GlobalConfig.MediaCheck {
+		// 遍历需要检测的平台
+		for _, plat := range config.GlobalConfig.Platforms {
+			switch plat {
+			case "openai":
+				cookiesOK, clientOK := platform.CheckOpenAI(httpClient.Client)
+				if clientOK && cookiesOK {
+					res.Openai = true
+				} else if cookiesOK || clientOK {
+					res.OpenaiWeb = true
+				}
+			case "youtube":
+				if region, _ := platform.CheckYoutube(httpClient.Client); region != "" {
+					res.Youtube = region
+				}
+			case "netflix":
+				if ok, _ := platform.CheckNetflix(httpClient.Client); ok {
+					res.Netflix = true
+				}
+			case "disney":
+				if ok, _ := platform.CheckDisney(httpClient.Client); ok {
+					res.Disney = true
+				}
+			case "gemini":
+				if ok, _ := platform.CheckGemini(httpClient.Client); ok {
+					res.Gemini = true
+				}
+			case "github":
+				if ok, _ := platform.CheckGitHub(httpClient.Client); ok {
+					res.Github = true
+				}
+			case "iprisk":
+				country, ip := proxyutils.GetProxyCountry(httpClient.Client)
+				if ip == "" {
+					break
+				}
+				res.IP = ip
+				res.Country = country
+				risk, err := platform.CheckIPRisk(httpClient.Client, ip)
+				if err == nil {
+					res.IPRisk = risk
+				} else {
+					// 失败的可能性高，所以放上日志
+					slog.Debug(fmt.Sprintf("查询IP风险失败: %v", err))
+				}
+			case "tiktok":
+				if region, _ := platform.CheckTikTok(httpClient.Client); region != "" {
+					res.TikTok = region
+				}
+			}
+		}
+	}
+	// 更新代理名称
+	pc.updateProxyName(res, httpClient, speed)
+	pc.incrementAvailable()
+	return res
+}
+
+// 获取内存中上次成功的节点
+func GetGlobalProxies(proxyType string) ([]map[string]any, error) {
+	if config.GlobalConfig.KeepSuccessProxies {
+		switch proxyType {
+		case "SubUrls":
+			if config.GlobalConfig.KeepFreeProxies {
+				return nil, nil
+			}
+			proxys := config.GlobalProxies.SubUrls
+			// 重置全局节点
+			config.GlobalProxies.SubUrls = make([]map[string]any, 0)
+			return proxys, nil
+		case "FreeSubUrls":
+			proxys := config.GlobalProxies.FreeSubUrls
+			config.GlobalProxies.FreeSubUrls = make([]map[string]any, 0)
+			return proxys, nil
+		}
+	}
+	return nil, nil
+}
+
+// updateProxyName 更新代理名称
+func (pc *ProxyChecker) updateProxyName(res *Result, httpClient *ProxyClient, speed int) {
+	// 以节点IP查询位置重命名节点
+	if config.GlobalConfig.RenameNode {
+		if res.Country != "" {
+			res.Proxy["name"] = config.GlobalConfig.NodePrefix + proxyutils.Rename(res.Country)
+		} else {
+			country, _ := proxyutils.GetProxyCountry(httpClient.Client)
+			// 未获取到国家信息
+			if country == "" {
+				country = proxyutils.GetCountryFromNode(res.Proxy["name"].(string))
+			}
+			res.Proxy["name"] = config.GlobalConfig.NodePrefix + proxyutils.Rename(country)
+		}
+	}
+
+	name := res.Proxy["name"].(string)
+	name = strings.TrimSpace(name)
+
+	var tags []string
+	// 获取速度
+	if config.GlobalConfig.PrintDownload && config.GlobalConfig.SpeedTestUrl != "" {
+		name = regexp.MustCompile(`\s*\|(?:\s*[\d.]+[KM]B/s)`).ReplaceAllString(name, "")
+		var speedStr string
+		if speed < 1024 {
+			speedStr = fmt.Sprintf("%dKB/s", speed)
+		} else {
+			speedStr = fmt.Sprintf("%.1fMB/s", float64(speed)/1024)
+		}
+		tags = append(tags, speedStr)
+	}
+
+	if config.GlobalConfig.MediaCheck {
+		// 移除已有的标记（IPRisk和平台标记）
+		name = regexp.MustCompile(`\s*\|(?:NF|D\+|GPT⁺|GPT|GM|YT-[^|]+|TK-[^|]+|\d+%)`).ReplaceAllString(name, "")
+	}
+
+	// 按用户输入顺序定义
+	for _, plat := range config.GlobalConfig.Platforms {
+		switch plat {
+		case "openai":
+			if res.Openai {
+				tags = append(tags, "GPT⁺")
+			} else if res.OpenaiWeb {
+				tags = append(tags, "GPT")
+			}
+		case "netflix":
+			if res.Netflix {
+				tags = append(tags, "NF")
+			}
+		case "disney":
+			if res.Disney {
+				tags = append(tags, "D+")
+			}
+		case "gemini":
+			if res.Gemini {
+				tags = append(tags, "Gemini")
+			}
+		case "github":
+			if res.Github {
+				tags = append(tags, "Github")
+			}
+		case "iprisk":
+			if res.IPRisk != "" {
+				tags = append(tags, res.IPRisk)
+			}
+		case "youtube":
+			if res.Youtube != "" {
+				if config.GlobalConfig.YoutubeCountry {
+					tags = append(tags, fmt.Sprintf("YT-%s", res.Youtube))
+				} else {
+					// 如果不显示国家，则只添加 YT 标签
+					tags = append(tags, "YT")
+				}
+			}
+		case "tiktok":
+			if res.TikTok != "" {
+				tags = append(tags, fmt.Sprintf("TK-%s", res.TikTok))
+			}
+		}
+	}
+
+	if tag, ok := res.Proxy["sub_tag"].(string); ok && tag != "" {
+		tags = append(tags, tag)
+	}
+
+	// 将所有标记添加到名称中
+	if len(tags) > 0 {
+		name += "|" + strings.Join(tags, "|")
+	}
+
+	res.Proxy["name"] = name
+
+}
+
+// showProgress 显示进度条
+func (pc *ProxyChecker) showProgress(done chan bool) {
+	for {
+		select {
+		case <-done:
+			fmt.Println()
+			return
+		default:
+			current := atomic.LoadInt32(&pc.progress)
+			available := atomic.LoadInt32(&pc.available)
+
+			if pc.proxyCount == 0 {
+				time.Sleep(100 * time.Millisecond)
+				break
+			}
+
+			// if 0/0 = NaN ,shoule panic
+			percent := float64(current) / float64(pc.proxyCount) * 100
+			fmt.Printf("\r进度: [%-45s] %.1f%% (%d/%d) 可用: %d",
+				strings.Repeat("=", int(percent/2))+">",
+				percent,
+				current,
+				pc.proxyCount,
+				available)
+			time.Sleep(100 * time.Millisecond)
+		}
+	}
+}
+
+// 辅助方法
+func (pc *ProxyChecker) incrementProgress() {
+	atomic.AddInt32(&pc.progress, 1)
+	Progress.Add(1)
+}
+
+func (pc *ProxyChecker) incrementAvailable() {
+	atomic.AddInt32(&pc.available, 1)
+	Available.Add(1)
+}
+
+// distributeProxies 分发代理任务
+func (pc *ProxyChecker) distributeProxies(proxies []map[string]any, proxyType string) {
+	for _, proxy := range proxies {
+		if config.GlobalConfig.SuccessLimit > 0 && proxyType == "FreeSubUrls" && atomic.LoadInt32(&pc.available) >= config.GlobalConfig.SuccessLimit {
+			break
+		}
+		if ForceClose.Load() {
+			slog.Warn("收到强制关闭信号，停止派发任务")
+			break
+		}
+		pc.tasks <- proxy
+	}
+	close(pc.tasks)
+}
+
+// collectResults 收集检测结果
+func (pc *ProxyChecker) collectResults() {
+	for result := range pc.resultChan {
+		pc.results = append(pc.results, result)
+	}
+}
+
+// checkSubscriptionSuccessRate 检查订阅成功率并发出警告
+func (pc *ProxyChecker) checkSubscriptionSuccessRate(allProxies []map[string]any) {
+	// 统计每个订阅的节点总数和成功数
+	subStats := make(map[string]struct {
+		total   int
+		success int
+	})
+
+	// 统计所有节点的订阅来源
+	for _, proxy := range allProxies {
+		if subUrl, ok := proxy["sub_url"].(string); ok {
+			stats := subStats[subUrl]
+			stats.total++
+			subStats[subUrl] = stats
+		}
+	}
+
+	// 统计成功节点的订阅来源
+	for _, result := range pc.results {
+		if result.Proxy != nil {
+			if subUrl, ok := result.Proxy["sub_url"].(string); ok {
+				stats := subStats[subUrl]
+				stats.success++
+				subStats[subUrl] = stats
+			}
+			delete(result.Proxy, "sub_url")
+			delete(result.Proxy, "sub_tag")
+		}
+	}
+
+	// 检查成功率并发出警告
+	for subUrl, stats := range subStats {
+		if stats.total > 0 {
+			successRate := float32(stats.success) / float32(stats.total)
+
+			// 如果成功率低于x，发出警告
+			if successRate < config.GlobalConfig.SuccessRate {
+				slog.Warn(fmt.Sprintf("订阅成功率过低: %s", subUrl),
+					"总节点数", stats.total,
+					"成功节点数", stats.success,
+					"成功占比", fmt.Sprintf("%.2f%%", successRate*100))
+			} else {
+				slog.Debug(fmt.Sprintf("订阅节点统计: %s", subUrl),
+					"总节点数", stats.total,
+					"成功节点数", stats.success,
+					"成功占比", fmt.Sprintf("%.2f%%", successRate*100))
+			}
+		}
+	}
+}
+
+// CreateClient creates and returns an http.Client with a Close function
+type ProxyClient struct {
+	*http.Client
+	proxy     constant.Proxy
+	Transport *StatsTransport
+}
+
+func CreateClient(mapping map[string]any) *ProxyClient {
+	proxy, err := adapter.ParseProxy(mapping)
+	if err != nil {
+		slog.Debug(fmt.Sprintf("底层mihomo创建代理Client失败: %v", err))
+		return nil
+	}
+
+	baseTransport := &http.Transport{
+		DialContext: func(ctx context.Context, network, addr string) (net.Conn, error) {
+			host, port, err := net.SplitHostPort(addr)
+			if err != nil {
+				return nil, err
+			}
+			var u16Port uint16
+			if port, err := strconv.ParseUint(port, 10, 16); err == nil {
+				u16Port = uint16(port)
+			}
+			return proxy.DialContext(ctx, &constant.Metadata{
+				Host:    host,
+				DstPort: u16Port,
+			})
+		},
+		DisableKeepAlives: true,
+	}
+
+	statsTransport := &StatsTransport{
+		Base: baseTransport,
+	}
+	return &ProxyClient{
+		Client: &http.Client{
+			Timeout:   time.Duration(config.GlobalConfig.Timeout) * time.Millisecond,
+			Transport: statsTransport,
+		},
+		proxy:     proxy,
+		Transport: statsTransport,
+	}
+}
+
+// 防止底层库有一些泄露，所以这里手动关闭
+func (pc *ProxyClient) Close() {
+	if pc.Client != nil {
+		pc.Client.CloseIdleConnections()
+	}
+
+	// 即使这里不关闭，底层GC的时候也会自动关闭
+	if pc.proxy != nil {
+		pc.proxy.Close()
+	}
+	pc.Client = nil
+
+	if pc.Transport != nil {
+		TotalBytes.Add(atomic.LoadUint64(&pc.Transport.BytesRead))
+	}
+	pc.Transport = nil
+}
+
+type countingReadCloser struct {
+	io.ReadCloser
+	counter *uint64
+}
+
+func (c *countingReadCloser) Read(p []byte) (int, error) {
+	n, err := c.ReadCloser.Read(p)
+	atomic.AddUint64(c.counter, uint64(n))
+	return n, err
+}
+
+type StatsTransport struct {
+	Base      http.RoundTripper
+	BytesRead uint64
+}
+
+func (s *StatsTransport) RoundTrip(req *http.Request) (*http.Response, error) {
+	resp, err := s.Base.RoundTrip(req)
+	if err != nil {
+		return nil, err
+	}
+
+	resp.Body = &countingReadCloser{
+		ReadCloser: resp.Body,
+		counter:    &s.BytesRead,
+	}
+	return resp, nil
+}
+
+// 初始失败重试数的最小和最大值
+const MIN_RETRY_COUNT = 3
+const MAX_RETRY_COUNT = 20
+
+// 失败节点路径
+var FAILEDPROXIESPATH = "output/Failed_Proxies.txt"
+
+// 存储失败节点,并更新它们的失败次数,会覆盖现有文件
+func saveFailedProxies(proxies []map[string]any, results []Result, previousFailures map[string]int) {
+	file, err := os.Create(FAILEDPROXIESPATH)
+	if err != nil {
+		slog.Error(fmt.Sprintf("Failed to create file %s: %v", FAILEDPROXIESPATH, err))
+		return
+	}
+	defer file.Close()
+
+	// 标记本次成功的节点名称
+	successfulNames := make(map[string]struct{})
+	for _, result := range results {
+		if name, ok := result.Proxy["name"].(string); ok {
+			if result.Google || result.Cloudflare {
+				successfulNames[name] = struct{}{}
+			}
+		}
+	}
+
+	updatedFailures := make(map[string]int)
+
+	for name, count := range previousFailures {
+		if _, exists := successfulNames[name]; !exists {
+			if count > 1 {
+				updatedFailures[name] = count - 1
+			}
+		}
+	}
+
+	for _, proxy := range proxies {
+		if name, ok := proxy["name"].(string); ok {
+			if _, isSuccessful := successfulNames[name]; !isSuccessful {
+				if _, wasPreviousFailure := previousFailures[name]; !wasPreviousFailure {
+					updatedFailures[name] = rand.Intn(MAX_RETRY_COUNT-MIN_RETRY_COUNT+1) + MIN_RETRY_COUNT
+				}
+			}
+		}
+	}
+
+	for name, count := range updatedFailures {
+		if _, err := file.WriteString(fmt.Sprintf("%s %d\n", name, count)); err != nil {
+			slog.Error(fmt.Sprintf("Failed to write to file %s: %v", FAILEDPROXIESPATH, err))
+		}
+	}
+	slog.Info("更新失败节点到文件.", "file", FAILEDPROXIESPATH)
+}
+
+// loadFailedProxies 加载上次失败的服务器 IP
+func loadFailedProxies() (map[string]int, error) {
+	failedProxies := make(map[string]int)
+
+	file, err := os.Open(FAILEDPROXIESPATH)
+	if err != nil {
+		if os.IsNotExist(err) {
+			return failedProxies, nil
+		}
+		return nil, fmt.Errorf("failed to open failed proxies file: %w", err)
+	}
+	defer file.Close()
+
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if line == "" {
+			continue
+		}
+		parts := strings.Fields(line)
+		if len(parts) != 2 {
+			continue
+		}
+		name := parts[0]
+		count, err := strconv.Atoi(parts[1])
+		if err != nil {
+			continue
+		}
+		failedProxies[name] = count
+	}
+
+	if err := scanner.Err(); err != nil {
+		return nil, fmt.Errorf("error reading file: %w", err)
+	}
+
+	slog.Info(fmt.Sprintf("读取到失败的节点，数量: %d", len(failedProxies)))
+	return failedProxies, nil
+}

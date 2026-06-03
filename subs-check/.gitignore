@@ -1,0 +1,14 @@
+openipdb.ipdb
+config.yaml
+mihomo.yaml
+test
+
+output/*
+subs-check*
+mihomo-check*
+
+.idea
+.vscode
+
+.DS_Store
+__debug_bin.*
