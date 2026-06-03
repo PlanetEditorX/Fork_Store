@@ -1,0 +1,6 @@
+DANGBEI B3 PRO BOARD
+M: PlanetEditorX
+S: Maintained
+F: board/amlogic/dangbei-b3-pro/
+F: configs/dangbei-b3-pro_defconfig
+F: arch/arm/dts/dangbei-b3-pro.dts

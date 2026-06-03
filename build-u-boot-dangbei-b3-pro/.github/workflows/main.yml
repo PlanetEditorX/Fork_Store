@@ -1,0 +1,125 @@
+name: Main CI
+
+on:
+  workflow_dispatch:
+    inputs:
+      enable_dts_decompile:
+        description: '是否反编译生成dtb文件'
+        type: boolean
+        required: true
+        default: 'false'
+      enable_ssh:
+        description: '是否启用 SSH 步骤'
+        required: true
+        default: 'false'
+  push:
+    tags:
+      - 'v*'  # 触发条件：推送 tag，如 v1.0.0
+env:
+  enable_dts_decompile: ${{ github.event.inputs.enable_dts_decompile || 'false' }}
+  enable_ssh: ${{ github.event.inputs.enable_ssh || 'false' }}
+  OUTPUT_DIR: ${{ github.workspace }}/output
+  FIPDIR: ${{ github.workspace }}/build/amlogic-boot-fip/
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    outputs:
+      should_build: ${{ steps.check.outputs.should_build }}
+    steps:
+      - name: 检出本仓库代码
+        uses: actions/checkout@v4
+
+      - name: 配置环境
+        run: |
+          mkdir -p "$OUTPUT_DIR"
+          sudo apt update && sudo apt install -y \
+              gcc-aarch64-linux-gnu build-essential bison flex libssl-dev \
+              make git python3 python3-pip device-tree-compiler libfdt-dev
+
+      - name: 克隆u-boot仓库
+        uses: actions/checkout@v4
+        with:
+          repository: unifreq/u-boot
+          path: build/u-boot
+
+      - name: 克隆amlogic-boot-fip仓库
+        uses: actions/checkout@v4
+        with:
+          repository: unifreq/amlogic-boot-fip
+          path: build/amlogic-boot-fip
+
+
+      - name: 拷贝自定义配置
+        run: |
+          echo "📦 Copying DTS files..."
+          cp -a --force u-boot/. build/u-boot/
+
+          echo "🧬 Copying Amlogic boot FIP..."
+          cp -r amlogic-boot-fip build/
+
+          echo "✅ Copying completed."
+
+      - name: 运行编译
+        run: |
+          cd build/u-boot/
+          export CROSS_COMPILE=aarch64-linux-gnu-
+          make dangbei-b3-pro_defconfig
+          make -j$(nproc)
+
+      - name: 设置fip
+        run: |
+          cd build/u-boot/
+          mkdir fip
+          cp -r $FIPDIR/* fip/
+          cp u-boot.bin fip/bl33.bin
+          cd fip
+          ls -l
+          mkdir output
+          chmod +x build-fip.sh
+          chmod +x dangbei-b3-pro/blx_fix.sh
+          chmod +x dangbei-b3-pro/aml_encrypt_g12b
+
+      - name: 编译fip
+        run: |
+          cd build/u-boot/fip
+          bash build-fip.sh dangbei-b3-pro bl33.bin output
+          # cp output/u-boot.bin.sd.bin $OUTPUT_DIR/u-boot.sd
+          # cp output/u-boot.bin.sd.bin $OUTPUT_DIR/u-boot.usb
+          # cp output/u-boot.bin $OUTPUT_DIR/u-boot.emmc
+
+      - name: 拷贝下载文件
+        run: |
+          cd build/u-boot/
+          mkdir -p $OUTPUT_DIR/dtb/amlogic
+          cp arch/arm/dts/meson-g12b-dangbei-b3-pro.dtb $OUTPUT_DIR/dtb/amlogic/
+
+      - name: 反编译 DTB 为 DTS
+        if: env.enable_dts_decompile == 'true'
+        run: |
+          cd $OUTPUT_DIR
+          dtc -I dtb -O dts -o meson-g12b-dangbei-b3-pro.decompiled.dts meson-g12b-dangbei-b3-pro.dtb
+
+      - name: 上传文件
+        uses: actions/upload-artifact@v4
+        with:
+          name: dangbei-b3-pro-u-boot_files
+          path: ${{ env.OUTPUT_DIR }}
+
+      - name: SSH链接管理
+        if: env.enable_ssh == 'true'
+        uses: P3TERX/ssh2actions@v1.0.0
+
+      - name: 打包构建产物
+        run: |
+          cd ${{ env.OUTPUT_DIR }}
+          zip -r dangbei-b3-pro-u-boot-${{ github.ref_name }}.zip .
+
+      - name: 创建 GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "当贝B3 PRO Armbian U-Boot"
+          tag_name: ${{ github.ref_name }}
+          files: ${{ env.OUTPUT_DIR }}/dangbei-b3-pro-u-boot-${{ github.ref_name }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
