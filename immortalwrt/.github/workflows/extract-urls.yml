@@ -1,0 +1,30 @@
+name: Extract URLs
+
+on:
+  workflow_dispatch:
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Download File
+      run: |
+        curl -sL "https://raw.githubusercontent.com/AUK9527/Are-u-ok/main/apps/README.md" -o url_list.md
+
+    - name: Extract URLs
+      run: |
+        grep -o 'https://.*run' url_list.md | grep -e 'PassWall2' -e 'OpenClash' > extracted_urls.txt
+        echo "Extracted URLs:"
+        cat extracted_urls.txt
+
+    - name: Set Output
+      id: set_output
+      run: |
+        urls=$(cat extracted_urls.txt | tr '\n' ' ')
+        echo "urls=$urls" >> $GITHUB_OUTPUT
+
+    outputs:
+      urls: ${{ steps.set_output.outputs.urls }}
