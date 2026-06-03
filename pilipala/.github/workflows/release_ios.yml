@@ -1,0 +1,102 @@
+name: Pilipala IOS Release
+
+# action事件触发
+on:
+  workflow_dispatch:
+  push:
+    # push tag时触发
+    tags:
+      - "v*.*.*"
+
+jobs:
+  iOS:
+    runs-on: macos-latest
+
+    steps:
+      - name: 代码迁出
+        uses: actions/checkout@v4
+
+      - name: 安装Flutter
+        if: steps.cache-flutter.outputs.cache-hit != 'true'
+        uses: subosito/flutter-action@v2.10.0
+        with:
+          cache: true
+          flutter-version: 3.19.6
+
+      - name: flutter build ipa
+        run: |
+          flutter build ios --release --no-codesign
+          ln -sf ./build/ios/iphoneos Payload
+          zip -r9 app.ipa Payload/runner.app
+
+      - name: 获取版本号
+        id: version
+        run: |
+          # Attempt to extract version from tag
+          VERSION_FROM_TAG="${GITHUB_REF#refs/tags/v}"
+
+          # Check if the extraction was successful (i.e., if the prefix was removed)
+          if [[ "$VERSION_FROM_TAG" == "$GITHUB_REF" ]]; then
+            # If no prefix was removed, it means GITHUB_REF did not start with 'refs/tags/v'
+            echo "No 'refs/tags/v' prefix found in GITHUB_REF. Setting default version."
+            echo "version=1.0.1" >> "$GITHUB_OUTPUT"
+          else
+            # If a prefix was removed, use the extracted version
+            echo "Extracted version from tag: $VERSION_FROM_TAG"
+            echo "version=$VERSION_FROM_TAG" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 重命名应用
+        run: |
+          DATE=${{ steps.date.outputs.date }}
+          for file in app.ipa; do
+            new_file_name="build/Pili-${{ steps.version.outputs.version }}.ipa"
+            mv "$file" "$new_file_name"
+          done
+
+      - name: 上传
+        uses: actions/upload-artifact@v4
+        with:
+          if-no-files-found: error
+          name: Pilipala-Release
+          path: |
+            build/Pili-*.ipa
+
+  upload:
+    runs-on: ubuntu-latest
+
+    needs:
+      - iOS
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: Pilipala-Release
+          path: ./Pilipala-Release
+
+      - name: Install dependencies
+        run: sudo apt-get install tree -y
+
+      - name: Get version
+        id: version
+        run: |
+          # Attempt to extract version from tag
+          VERSION_FROM_TAG="${GITHUB_REF#refs/tags/v}"
+
+          # Check if the extraction was successful (i.e., if the prefix was removed)
+          if [[ "$VERSION_FROM_TAG" == "$GITHUB_REF" ]]; then
+            # If no prefix was removed, it means GITHUB_REF did not start with 'refs/tags/v'
+            echo "No 'refs/tags/v' prefix found in GITHUB_REF. Setting default version."
+            echo "version=1.0.1" >> "$GITHUB_OUTPUT"
+          else
+            # If a prefix was removed, use the extracted version
+            echo "Extracted version from tag: $VERSION_FROM_TAG"
+            echo "version=$VERSION_FROM_TAG" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Upload Release
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          files: Pilipala-Release/*
