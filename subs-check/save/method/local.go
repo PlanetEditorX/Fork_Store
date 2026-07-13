@@ -6,8 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"subs-check/config"
-	"subs-check/utils"
+	"github.com/beck-8/subs-check/config"
+	"github.com/beck-8/subs-check/utils"
 )
 
 const (
@@ -24,13 +24,7 @@ type LocalSaver struct {
 
 // NewLocalSaver 创建新的本地保存器
 func NewLocalSaver() (*LocalSaver, error) {
-	var basePath string
-	envPath := os.Getenv("envPath")
-	if envPath != "" {
-		basePath = envPath
-	} else {
-		basePath = utils.GetExecutablePath()
-	}
+	basePath := utils.GetExecutablePath()
 	if basePath == "" {
 		return nil, fmt.Errorf("获取可执行文件路径失败")
 	}

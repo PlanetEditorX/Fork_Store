@@ -5,18 +5,17 @@ import (
 	"fmt"
 	"log/slog"
 	"os"
-	"path/filepath"
 	"runtime"
 	"runtime/debug"
 	"sync/atomic"
 	"time"
 
-	"subs-check/app/monitor"
-	"subs-check/assets"
-	"subs-check/check"
-	"subs-check/config"
-	"subs-check/save"
-	"subs-check/utils"
+	"github.com/beck-8/subs-check/app/monitor"
+	"github.com/beck-8/subs-check/assets"
+	"github.com/beck-8/subs-check/check"
+	"github.com/beck-8/subs-check/config"
+	"github.com/beck-8/subs-check/save"
+	"github.com/beck-8/subs-check/utils"
 	"github.com/fsnotify/fsnotify"
 	"github.com/robfig/cron/v3"
 )
@@ -59,12 +58,28 @@ func (app *App) Initialize() error {
 		return fmt.Errorf("加载配置文件失败: %w", err)
 	}
 
+	// 初始化 DNS resolver（必须在任何 proxy 连接之前，影响 mihomo 全局 resolver）
+	if err := initResolver(); err != nil {
+		return fmt.Errorf("初始化 DNS 失败: %w", err)
+	}
+
 	// 初始化配置文件监听
 	if err := app.initConfigWatcher(); err != nil {
 		return fmt.Errorf("初始化配置文件监听失败: %w", err)
 	}
 
-	app.interval = config.GlobalConfig.CheckInterval
+	// 从配置文件中读取代理，设置代理
+	if config.GlobalConfig.Proxy != "" {
+		os.Setenv("HTTP_PROXY", config.GlobalConfig.Proxy)
+		os.Setenv("HTTPS_PROXY", config.GlobalConfig.Proxy)
+	}
+
+	app.interval = func() int {
+		if config.GlobalConfig.CheckInterval <= 0 {
+			return 1
+		}
+		return config.GlobalConfig.CheckInterval
+	}()
 
 	if config.GlobalConfig.ListenPort != "" {
 		if err := app.initHttpServer(); err != nil {
@@ -85,7 +100,7 @@ func (app *App) Initialize() error {
 	monitor.StartMemoryMonitor()
 
 	// 设置信号处理器
-	utils.SetupSignalHandler(&check.ForceClose)
+	utils.SetupSignalHandler(check.RequestCancel)
 	return nil
 }
 
@@ -100,8 +115,6 @@ func (app *App) Run() {
 			app.cron.Stop()
 		}
 	}()
-
-	slog.Info(fmt.Sprintf("进度展示: %v", config.GlobalConfig.PrintProgress))
 
 	// 设置初始定时器模式
 	app.setTimer()
@@ -199,12 +212,6 @@ func (app *App) triggerCheck() {
 		os.Exit(1)
 	}
 
-	// 检查一次性路径是否存在,适用于Github Actions,用于一次执行完后退出程序
-	if _, err := os.Stat("output/once"); err == nil {
-		slog.Info("检测到 Github Actions 运行环境，退出程序\n")
-		os.Exit(0) // 提前退出
-	}
-
 	// 检测完成后显示下次检查时间
 	if app.ticker != nil {
 		// 使用间隔时间模式
@@ -224,81 +231,26 @@ func (app *App) triggerCheck() {
 
 // checkProxies 执行代理检测
 func (app *App) checkProxies() error {
-	slog.Info("开始检测代理")
-	var allResults []check.Result // 创建一个空切片，来存储所有合并的结果
-	if len(config.GlobalConfig.SubUrls) == 0 {
-		slog.Warn("没有配置订阅链接")
-	} else {
-		slog.Info(fmt.Sprintf("当前设置机场订阅链接数量: %d", len(config.GlobalConfig.SubUrls)))
-		results, err := CheckProxy("SubUrls")
-		if err != nil {
-			return fmt.Errorf("检测代理失败: %w", err)
+	slog.Info("开始准备检测代理", "进度展示", config.GlobalConfig.PrintProgress)
+
+	// 加载历史可用节点到待测队列
+	if config.GlobalConfig.KeepDays > 0 {
+		if hp := save.LoadHistoryProxies(); len(hp) > 0 {
+			config.GlobalProxies = append(config.GlobalProxies, hp...)
 		}
-		allResults = append(allResults, results...)
-		SetGlobalProxies("SubUrls", results)
-	}
-	if len(config.GlobalConfig.SingleNodes) == 0 {
-		slog.Info("没有配置单个节点链接")
-	} else {
-		slog.Info(fmt.Sprintf("当前设置单个节点链接数量: %d", len(config.GlobalConfig.SingleNodes)))
-		results, err := CheckProxy("SingleNodes")
-		if err != nil {
-			return fmt.Errorf("检测代理失败: %w", err)
-		}
-		allResults = append(allResults, results...)
-		SetGlobalProxies("SingleNodes", results)
-	}
-	if len(config.GlobalConfig.FreeSubUrls) == 0 {
-		slog.Info("没有配置免费订阅链接")
-	} else {
-		slog.Info(fmt.Sprintf("当前设置免费订阅链接数量: %d", len(config.GlobalConfig.FreeSubUrls)))
-		results, err := CheckProxy("FreeSubUrls")
-		if err != nil {
-			return fmt.Errorf("检测代理失败: %w", err)
-		}
-		allResults = append(allResults, results...)
-		SetGlobalProxies("FreeSubUrls", results)
 	}
 
+	results, err := check.Check()
+	if err != nil {
+		return fmt.Errorf("检测代理失败: %w", err)
+	}
 	slog.Info("检测完成")
-	save.SaveConfig(allResults)
-	utils.SendNotify(len(allResults))
+	save.SaveConfig(results)
+	utils.SendNotify(len(results))
 	utils.UpdateSubs()
 
 	// 执行回调脚本
-	utils.ExecuteCallback(len(allResults))
+	utils.ExecuteCallback(len(results))
 
 	return nil
-}
-
-// 将成功的节点添加到全局中，暂时内存保存
-func SetGlobalProxies(proxyType string, allResults []check.Result) error {
-	if config.GlobalConfig.KeepSuccessProxies {
-		for _, result := range allResults {
-			if result.Proxy != nil {
-				switch proxyType {
-					case "SubUrls":
-						if !config.GlobalConfig.KeepFreeProxies {
-							config.GlobalProxies.SubUrls = append(config.GlobalProxies.SubUrls, result.Proxy)
-						}
-					case "FreeSubUrls":
-						config.GlobalProxies.FreeSubUrls = append(config.GlobalProxies.FreeSubUrls, result.Proxy)
-					}
-			}
-		}
-	}
-	return nil
-}
-
-func CheckProxy(proxyType string) ([]check.Result, error) {
-    results, err := check.Check(proxyType)
-    if err != nil {
-        return nil, fmt.Errorf("检测代理失败: %w", err)
-    }
-    return results, nil
-}
-
-
-func TempLog() string {
-	return filepath.Join(os.TempDir(), "subs-check.log")
 }

@@ -9,6 +9,7 @@ mihomo-check*
 
 .idea
 .vscode
+.claude/
+.qoder/
 
 .DS_Store
-__debug_bin.*

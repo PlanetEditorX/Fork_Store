@@ -6,11 +6,12 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"strings"
 	"time"
 
 	"log/slog"
 
-	"subs-check/config"
+	"github.com/beck-8/subs-check/config"
 )
 
 var (
@@ -42,7 +43,7 @@ type GistUploader struct {
 // NewGistUploader 创建新的 Gist 上传器
 func NewGistUploader() *GistUploader {
 	if config.GlobalConfig.GithubAPIMirror != "" {
-		gistAPIURL = config.GlobalConfig.GithubAPIMirror + "/gists"
+		gistAPIURL = strings.TrimRight(config.GlobalConfig.GithubAPIMirror, "/") + "/gists"
 	}
 	return &GistUploader{
 		client:   &http.Client{Timeout: 30 * time.Second},
@@ -144,7 +145,7 @@ func (g *GistUploader) doUpload(jsonData []byte) error {
 // createRequest 创建HTTP请求
 func (g *GistUploader) createRequest(jsonData []byte) (*http.Request, error) {
 	url := gistAPIURL + "/" + g.id
-	req, err := http.NewRequest("POST", url, bytes.NewBuffer(jsonData))
+	req, err := http.NewRequest("PATCH", url, bytes.NewBuffer(jsonData))
 	if err != nil {
 		return nil, fmt.Errorf("创建请求失败: %w", err)
 	}

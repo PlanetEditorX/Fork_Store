@@ -9,7 +9,7 @@ import (
 	"runtime"
 	"strings"
 
-	"subs-check/config"
+	"github.com/beck-8/subs-check/config"
 )
 
 // ExecuteCallback 执行回调脚本

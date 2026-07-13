@@ -5,7 +5,7 @@ import (
 	"log/slog"
 	"os"
 
-	"subs-check/app"
+	"github.com/beck-8/subs-check/app"
 )
 
 func main() {
