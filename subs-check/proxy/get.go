@@ -29,6 +29,34 @@ type subEntry struct {
 	source string
 }
 
+func ParseMergedClash(data []byte) ([]map[string]any, error) {
+	var result []map[string]any
+
+	parts := bytes.Split(data, []byte("mixed-port:"))
+
+	for _, part := range parts[1:] {
+		part = append([]byte("mixed-port:"), part...)
+
+		var con map[string]any
+		if err := yaml.Unmarshal(part, &con); err != nil {
+			continue
+		}
+
+		proxies, ok := con["proxies"].([]any)
+		if !ok {
+			continue
+		}
+
+		for _, p := range proxies {
+			if m, ok := p.(map[string]any); ok {
+				result = append(result, m)
+			}
+		}
+	}
+
+	return result, nil
+}
+
 func GetProxies() ([]map[string]any, error) {
 
 	// 解析本地与远程订阅清单
@@ -82,9 +110,31 @@ func GetProxies() ([]map[string]any, error) {
 
 			if bytes.Contains(data, []byte("proxies:")) {
 				err = yaml.Unmarshal(data, &con)
-				if err != nil {
+
+				if err != nil && bytes.Contains(data, []byte("mixed-port:")) {
+					proxyList, err = ParseMergedClash(data)
+					if err != nil {
+						slog.Error("解析Clash集合失败", "source", e.source, "url", url, "err", err)
+						return
+					}
+				} else if err != nil {
 					slog.Error("解析Clash配置错误", "source", e.source, "url", url, "err", err)
 					return
+				} else {
+					proxyInterface, ok := con["proxies"]
+					if !ok || proxyInterface == nil {
+						slog.Error("订阅链接没有proxies", "source", e.source, "url", url)
+						return
+					}
+					list, ok := proxyInterface.([]any)
+					if !ok {
+						return
+					}
+					for _, proxy := range list {
+						if proxyMap, ok := proxy.(map[string]any); ok {
+							proxyList = append(proxyList, proxyMap)
+						}
+					}
 				}
 			} else {
 				proxyList, err = convert.ConvertsV2Ray(data)
@@ -92,6 +142,7 @@ func GetProxies() ([]map[string]any, error) {
 					slog.Error("解析proxy错误", "source", e.source, "url", url, "err", err)
 					return
 				}
+			}
 
 				slog.Debug("获取订阅链接", "source", e.source, "url", url, "count", len(proxyList))
 
