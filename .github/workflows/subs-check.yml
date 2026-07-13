@@ -26,6 +26,7 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: stable
+          cache: false
 
       - name: 设置时区为北京时间
         uses: szenius/set-timezone@v1.2
