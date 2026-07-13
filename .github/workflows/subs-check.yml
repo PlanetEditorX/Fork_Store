@@ -1,4 +1,5 @@
 name: Subs Check
+
 on:
   workflow_dispatch:
   schedule:
@@ -6,23 +7,23 @@ on:
 
 permissions:
   contents: write
-  packages: write
 
 jobs:
   BuildAndUpdate:
     runs-on: ubuntu-latest
+
     defaults:
       run:
         working-directory: subs-check   # 指定子目录
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Setup Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v5
         with:
           go-version: stable
 
@@ -33,27 +34,42 @@ jobs:
 
       - name: 创建Go运行环境
         run: |
-          go mod tidy
+          go mod download
+          go build -o subs-check-bin .
           mkdir -p output
-          touch output/once
 
-      - name: 设置配置参数config.yaml
+      - name: 设置配置参数 config.yaml
         run: |
           cp config/config.example.yaml config/config.yaml
+
           sed -i 's/success-limit: 100/success-limit: 150/' config/config.yaml
           sed -i 's/min-speed: 512/min-speed: 1024/' config/config.yaml
           sed -i 's/download-mb: 10/download-mb: 20/' config/config.yaml
 
-      - name: 运行程序并获取YAML文件
+      - name: 运行程序并生成 YAML
         run: |
-          go run . -f ./config/config.yaml
+          ./subs-check-bin -f ./config/config.yaml
+
+          echo "===== 输出文件 ====="
+          ls -lah output
+
+          test -f output/all.yaml || {
+            echo "错误: output/all.yaml 不存在"
+            find . -name "*.yaml"
+            exit 1
+          }
+
           cp output/all.yaml assets/Best.yaml
 
       - name: 提交更改
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
+
           git add assets/Best.yaml
+
           CURRENT_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+
           git commit -m "Update assets/Best.yaml at $CURRENT_TIME" || echo "No changes"
+
           git push
