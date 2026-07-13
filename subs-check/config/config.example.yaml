@@ -25,7 +25,7 @@ timeout: 5000
 # 如果找不到稳定的测速地址，可以自建测速地址
 speed-test-url: https://github.com/AaronFeng753/Waifu2x-Extension-GUI/releases/download/v2.21.12/Waifu2x-Extension-GUI-v2.21.12-Portable.7z
 # 最低测速结果舍弃(KB/s)
-min-speed: 512
+min-speed: 1024
 # 下载测试时间(s)(与下载链接大小相关，默认最大测试10s)
 download-timeout: 10
 # 单节点测速下载数据大小(MB)限制，0为不限
@@ -56,7 +56,7 @@ platforms:
   - openai
   - gemini
   - github
-  # - iprisk
+  - iprisk
   # - tiktok
   # - netflix
   # - disney
@@ -80,7 +80,7 @@ uncheck-nodes:
   - "落地"
 
 # 跳过证书验证
-skip-cert-verify: true
+skip-cert-verify: false
 
 # 保留之前测试成功的节点
 # 如果为true，则保留之前测试成功的节点，这样就不会因为上游链接更新，导致可用的节点被清除掉
@@ -90,7 +90,7 @@ keep-free-proxies: true
 
 # 是否开启订阅检查
 # 如果为false，则不会检查订阅链接的可用性，直接使用配置文件中的订阅链接
-sub-check: false
+sub-check: true
 
 # 输出目录
 # 如果为空，则为程序所在目录的config目录
