@@ -121,38 +121,45 @@ func GetProxies() ([]map[string]any, error) {
 				return
 			}
 
-			proxyList, ok := proxyInterface.([]any)
-			if !ok {
-				return
-			}
-			slog.Debug("获取订阅链接", "source", e.source, "url", url, "count", len(proxyList))
-			local = make([]map[string]any, 0, len(proxyList))
-			for _, proxy := range proxyList {
-				if proxyMap, ok := proxy.(map[string]any); ok {
-					if t, ok := proxyMap["type"].(string); ok {
-						// 只测试指定协议
-						if len(config.GlobalConfig.NodeType) > 0 && !lo.Contains(config.GlobalConfig.NodeType, t) {
-							continue
-						}
-						// 虽然支持mihomo支持下划线，但是这里为了规范，还是改成横杠
-						// todo: 不知道后边还有没有这类问题
-						switch t {
-						case "hysteria2", "hy2":
-							if _, ok := proxyMap["obfs_password"]; ok {
-								proxyMap["obfs-password"] = proxyMap["obfs_password"]
-								delete(proxyMap, "obfs_password")
-							}
-						}
-					}
-					// 为每个节点添加订阅链接来源信息和备注
-					proxyMap["sub_url"] = url
-					if tag != "" {
-						proxyMap["sub_tag"] = tag
-					}
-					local = append(local, proxyMap)
-				}
-			}
-			buckets[i] = local
+			proxyInterface, ok := con["proxies"]
+      if !ok || proxyInterface == nil {
+        slog.Error("订阅链接没有proxies", "source", e.source, "url", url)
+        return
+      }
+
+      // 用一个新变量 rawList 来接收 []any 类型断言
+      rawList, ok := proxyInterface.([]any)
+      if !ok {
+        slog.Error("proxies 格式不正确，未能解析为列表", "source", e.source, "url", url)
+        return
+      }
+
+      slog.Debug("获取订阅链接", "source", e.source, "url", url, "count", len(rawList))
+      local = make([]map[string]any, 0, len(rawList))
+
+      // 接下来循环遍历 rawList，把里面的每一项转为 map[string]any
+      for _, p := range rawList {
+        proxy, ok := p.(map[string]any)
+        if !ok {
+          continue
+        }
+
+        // 只测试指定协议
+        if t, ok := proxy["type"].(string); ok {
+          if len(config.GlobalConfig.NodeType) > 0 && !lo.Contains(config.GlobalConfig.NodeType, t) {
+            continue
+          }
+        }
+
+        // 为每个节点添加订阅链接来源信息和备注
+        proxy["sub_url"] = url
+        if tag != "" {
+          proxy["sub_tag"] = tag
+        }
+        local = append(local, proxy)
+      }
+
+      buckets[i] = local
 		}(idx, subEntry{url: utils.WarpUrl(subUrl.url), source: subUrl.source})
 	}
 
