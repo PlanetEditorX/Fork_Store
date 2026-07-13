@@ -37,6 +37,7 @@ jobs:
           go mod download
           go build -o subs-check-bin .
           mkdir -p output
+          touch output/once
 
       - name: 设置配置参数 config.yaml
         run: |
