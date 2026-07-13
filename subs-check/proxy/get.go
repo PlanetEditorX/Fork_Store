@@ -78,14 +78,23 @@ func GetProxies() ([]map[string]any, error) {
 			var local []map[string]any
 
 			var con map[string]any
-			err = yaml.Unmarshal(data, &con)
-			if err != nil {
-				proxyList, err := convert.ConvertsV2Ray(data)
+			var proxyList []map[string]any
+
+			if bytes.Contains(data, []byte("proxies:")) {
+				err = yaml.Unmarshal(data, &con)
+				if err != nil {
+					slog.Error("解析Clash配置错误", "source", e.source, "url", url, "err", err)
+					return
+				}
+			} else {
+				proxyList, err = convert.ConvertsV2Ray(data)
 				if err != nil {
 					slog.Error("解析proxy错误", "source", e.source, "url", url, "err", err)
 					return
 				}
+
 				slog.Debug("获取订阅链接", "source", e.source, "url", url, "count", len(proxyList))
+
 				local = make([]map[string]any, 0, len(proxyList))
 				for _, proxy := range proxyList {
 					// 只测试指定协议
