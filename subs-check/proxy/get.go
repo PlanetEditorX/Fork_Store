@@ -206,7 +206,6 @@ func GetProxies() ([]map[string]any, error) {
 
       buckets[i] = local
 		}(idx, subEntry{url: utils.WarpUrl(subUrl.url), source: subUrl.source})
-	}
 
 	// 等待所有工作协程完成
 	wg.Wait()
