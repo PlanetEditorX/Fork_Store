@@ -31,15 +31,18 @@ type App struct {
 	done       chan struct{} // 用于结束ticker goroutine的信号
 	cron       *cron.Cron    // crontab调度器
 	version    string
+	once       bool
 }
 
 // New 创建新的应用实例
 func New(version string) *App {
 	configPath := flag.String("f", "", "配置文件路径")
+	once := flag.Bool("once", false, "是否只运行一次后退出")
 	flag.Parse()
 
 	return &App{
 		configPath: *configPath,
+		once:       *once,
 		checkChan:  make(chan struct{}),
 		done:       make(chan struct{}),
 		version:    version,
@@ -115,6 +118,13 @@ func (app *App) Run() {
 			app.cron.Stop()
 		}
 	}()
+
+	// 单次运行模式
+    if app.once {
+        slog.Info("单次运行模式启动...")
+        app.triggerCheck()
+        return // 执行完直接退出，触发 defer 清理，程序完美结束
+    }
 
 	// 设置初始定时器模式
 	app.setTimer()

@@ -50,7 +50,7 @@ jobs:
 
       - name: 运行程序并生成 YAML
         run: |
-          ./subs-check-bin -f ./config/config.yaml
+          ./subs-check-bin -once -f ./config/config.yaml
 
           echo "===== 输出文件 ====="
           ls -lah output
