@@ -68,18 +68,13 @@ func GetProxies() ([]map[string]any, error) {
 	}
 
 	var wg sync.WaitGroup
-	// Subscription-fetch concurrency is decoupled from the alive-check
-	// concurrency: most users want dozens of cheap HTTP fetches in parallel
-	// even when the alive-check pool is tuned large. Falls back to 20 if
-	// the user hasn't set it (zero value).
 	subFetchConcurrency := config.GlobalConfig.SubUrlsConcurrent
 	if subFetchConcurrency <= 0 {
 		subFetchConcurrency = 20
 	}
 	concurrentLimit := make(chan struct{}, subFetchConcurrency) // 限制并发数
 
-	// 按订阅顺序预分配槽位,每个 goroutine 只写自己的下标,无竞争
-	// 这样即便是并发获取,最终合并时仍能保持 subUrls 的顺序(本地在前,远程在后)
+	// 按订阅顺序预分配槽位
 	buckets := make([][]map[string]any, len(subUrls))
 
 	// 启动工作协程
@@ -104,7 +99,6 @@ func GetProxies() ([]map[string]any, error) {
 			}
 
 			var local []map[string]any
-
 			var con map[string]any
 			var proxyList []map[string]any
 
@@ -144,68 +138,28 @@ func GetProxies() ([]map[string]any, error) {
 				}
 			}
 
-				slog.Debug("获取订阅链接", "source", e.source, "url", url, "count", len(proxyList))
+			slog.Debug("获取订阅链接", "source", e.source, "url", url, "count", len(proxyList))
 
-				local = make([]map[string]any, 0, len(proxyList))
-				for _, proxy := range proxyList {
-					// 只测试指定协议
-					if t, ok := proxy["type"].(string); ok {
-						if len(config.GlobalConfig.NodeType) > 0 && !lo.Contains(config.GlobalConfig.NodeType, t) {
-							continue
-						}
+			local = make([]map[string]any, 0, len(proxyList))
+			for _, proxy := range proxyList {
+				// 只测试指定协议
+				if t, ok := proxy["type"].(string); ok {
+					if len(config.GlobalConfig.NodeType) > 0 && !lo.Contains(config.GlobalConfig.NodeType, t) {
+						continue
 					}
-
-					// 为每个节点添加订阅链接来源信息和备注
-					proxy["sub_url"] = url
-					if tag != "" {
-						proxy["sub_tag"] = tag
-					}
-					local = append(local, proxy)
 				}
-				buckets[i] = local
-				return
+
+				// 为每个节点添加订阅链接来源信息和备注
+				proxy["sub_url"] = url
+				if tag != "" {
+					proxy["sub_tag"] = tag
+				}
+				local = append(local, proxy)
 			}
+			buckets[i] = local
 
-			proxyInterface, ok := con["proxies"]
-      if !ok || proxyInterface == nil {
-        slog.Error("订阅链接没有proxies", "source", e.source, "url", url)
-        return
-      }
-
-      // 用一个新变量 rawList 来接收 []any 类型断言
-      rawList, ok := proxyInterface.([]any)
-      if !ok {
-        slog.Error("proxies 格式不正确，未能解析为列表", "source", e.source, "url", url)
-        return
-      }
-
-      slog.Debug("获取订阅链接", "source", e.source, "url", url, "count", len(rawList))
-      local = make([]map[string]any, 0, len(rawList))
-
-      // 接下来循环遍历 rawList，把里面的每一项转为 map[string]any
-      for _, p := range rawList {
-        proxy, ok := p.(map[string]any)
-        if !ok {
-          continue
-        }
-
-        // 只测试指定协议
-        if t, ok := proxy["type"].(string); ok {
-          if len(config.GlobalConfig.NodeType) > 0 && !lo.Contains(config.GlobalConfig.NodeType, t) {
-            continue
-          }
-        }
-
-        // 为每个节点添加订阅链接来源信息和备注
-        proxy["sub_url"] = url
-        if tag != "" {
-          proxy["sub_tag"] = tag
-        }
-        local = append(local, proxy)
-      }
-
-      buckets[i] = local
 		}(idx, subEntry{url: utils.WarpUrl(subUrl.url), source: subUrl.source})
+	}
 
 	// 等待所有工作协程完成
 	wg.Wait()
