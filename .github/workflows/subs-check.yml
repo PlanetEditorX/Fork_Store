@@ -34,6 +34,7 @@ jobs:
 
       - name: 创建Go运行环境
         run: |
+          go mod tidy
           go mod download
           go build -o subs-check-bin .
           mkdir -p output
