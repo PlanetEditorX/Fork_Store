@@ -26,7 +26,7 @@ check-interval: 120
 # 保存几个成功的节点，为0代表不限制
 # 如果你的并发数量超过这个参数，那么成功的结果可能会大于这个数值
 # success-limit <= success <= success-limit+concurrent
-success-limit: 20
+success-limit: 30
 
 # 超时时间(毫秒)(节点的最大延迟)
 timeout: 5000
@@ -293,7 +293,6 @@ sub-urls:
   - "https://raw.githubusercontent.com/peacefish/nodefree/main/sub/proxy_cf.yaml"
   - "https://raw.githubusercontent.com/NiceVPN123/NiceVPN/main/utils/pool/output.yaml"
   - "https://raw.githubusercontent.com/NiceVPN123/NiceVPN/main/Clash.yaml"
-  - "https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/refs/heads/main/APIs/sc0.yaml"
   - "https://raw.githubusercontent.com/aiboboxx/v2rayfree/refs/heads/main/README.md"
   - "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes.meta.yml"
   - "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/all_configs.txt"
