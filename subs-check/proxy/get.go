@@ -116,12 +116,6 @@ func GetProxies() ([]map[string]any, error) {
 			}
 
 			proxyInterface, ok := con["proxies"]
-			if !ok || proxyInterface == nil {
-				slog.Error("订阅链接没有proxies", "source", e.source, "url", url)
-				return
-			}
-
-			proxyInterface, ok := con["proxies"]
       if !ok || proxyInterface == nil {
         slog.Error("订阅链接没有proxies", "source", e.source, "url", url)
         return
