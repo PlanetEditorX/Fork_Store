@@ -1,242 +1,112 @@
 proxies:
-    - alpn:
-        - http/1.1
-      client-fingerprint: firefox
-      encryption: none
-      name: "\U0001F1F3\U0001F1F1NL_23|3.8MB/s|0%|TK-NL|D+|GPT⁺-NL|GM-NL|CL-NL"
-      network: ws
-      port: "443"
-      server: x4g-production-4ce4.up.railway.app
-      servername: x4g-production-4ce4.up.railway.app
-      tls: true
-      type: vless
-      udp: true
-      uuid: db633771-6002-4e85-b4f3-103e328ad861
-      ws-opts:
-        headers:
-            Host: x4g-production-4ce4.up.railway.app
-            User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.3 (KHTML, like Gecko) Chrome/6.0.472.63 Safari/534.3
-        path: /ws/db633771-6002-4e85-b4f3-103e328ad861
-      xudp: true
-    - alpn:
-        - h2
-        - http/1.1
-      client-fingerprint: chrome
-      encryption: mlkem768x25519plus.native.0rtt.1wRO2UUgp1vx1XIx2wZLuYDC7N6a5F7SRlLrMp9PGwg
-      name: "\U0001F1FA\U0001F1F8US_72|11.5MB/s|0%|TK-US|YT-US|NF|D+|GPT⁺-US|GM-US|CL-US|SP-US"
-      network: xhttp
-      port: "443"
-      server: www.speedtest.net
-      servername: sor.syaedu.com
-      tls: true
-      type: vless
-      udp: true
-      uuid: ccebf44c-e3ad-4092-8b35-41179a9dfa23
-      xhttp-opts:
-        host: sor.syaedu.com
-        mode: auto
-        path: /sor
-        x-padding-bytes: 100-1000
-      xudp: true
-    - name: "\U0001F1F7\U0001F1F4RO_27|2.6MB/s|0%|TK-RO|YT-RO|NF|GPT⁺-RO|GM-RO|CL-RO|SP-RO"
-      port: 9002
-      server: 84.239.49.207
-      skip-cert-verify: true
-      tls: true
-      type: http
-      udp: true
-    - name: "\U0001F1F7\U0001F1F4RO_28|2.6MB/s|0%|TK-RO|YT-CN|NF|GPT⁺-RO|CL-RO|SP-RO"
-      port: 9002
-      server: 84.239.49.40
-      skip-cert-verify: true
-      tls: true
-      type: http
-      udp: true
-    - name: "\U0001F1F7\U0001F1F4RO_29|2.9MB/s|0%|TK-RO|YT-CN|NF|GPT⁺-RO|CL-RO|SP-RO"
-      port: 9002
-      server: 84.239.49.235
-      skip-cert-verify: true
-      tls: true
-      type: http
-      udp: true
-    - multiplexing: MULTIPLEXING_LOW
-      name: "\U0001F1FA\U0001F1F8US_73|9.8MB/s|0%|TK-US|YT-CN|NF|D+|GPT⁺-US|CL-US|SP-US"
-      password: dongtaiwang.com
-      port: 34567
-      server: 157.254.223.44
-      transport: TCP
-      type: mieru
-      username: dongtaiwang.com
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1EB\U0001F1F7FR_22|5.5MB/s|0%|TK-FR|YT-FR|NF|GPT⁺-FR|GM-FR|CL-FR|SP-FR"
-      network: ws
-      port: 443
-      server: 159.112.235.52
-      servername: octopusss.net
-      tls: true
-      type: vless
-      udp: true
-      uuid: 073d1d50-8478-47bf-a828-7a1b381931d5
-      ws-opts:
-        headers:
-            Host: octopusss.net
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36
-        path: /odiyfws
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1E9\U0001F1EADE_19|2.6MB/s|0%|TK-DE|YT-DE|NF|GM-DE|SP-DE"
-      network: ws
-      port: 443
-      server: 104.21.74.63
-      tls: true
-      type: vless
-      udp: true
-      uuid: 72d1797c-cef8-410a-b8fd-db9104dc3cb0
-      ws-opts:
-        headers:
-            Host: amooaliii.net
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
-        path: /jdhfyws
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1EB\U0001F1F7FR_23|5.2MB/s|0%|TK-FR|YT-SA|NF|GPT⁺-FR|GM-SA|CL-FR|SP-FR"
-      network: ws
-      port: 443
-      server: 104.26.14.137
-      servername: shegeftihaaa.net
-      tls: true
-      type: vless
-      udp: true
-      uuid: 7e544a9d-7667-413b-bbb0-b3bb1aac6d77
-      ws-opts:
-        headers:
-            Host: shegeftihaaa.net
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
-        path: /rsedgws
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1EB\U0001F1F7FR_24|4.1MB/s|0%|TK-FR|YT-SA|NF|GPT⁺-FR|GM-SA|CL-FR|SP-FR"
-      network: ws
-      port: 443
-      server: 172.67.74.2
-      servername: shegeftihaaa.net
-      tls: true
-      type: vless
-      udp: true
-      uuid: 7e544a9d-7667-413b-bbb0-b3bb1aac6d77
-      ws-opts:
-        early-data-header-name: Sec-WebSocket-Protocol
-        headers:
-            Host: shegeftihaaa.net
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36
-        max-early-data: 2048
-        path: /rsedgws
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_74|5.7MB/s|0%|TK-US|YT-US|NF|GPT⁺-US|GM-US|CL-US|SP-US"
-      network: ws
-      port: 443
-      server: ansooyefilter-production-4623.up.railway.app
-      servername: ansooyefilter-production-4623.up.railway.app
-      skip-cert-verify: false
-      tfo: false
-      tls: true
-      type: vless
-      udp: true
-      uuid: a75f5c82-d667-0ce8-d297-30286b054691
-      ws-opts:
-        headers:
-            Host: ansooyefilter-production-4623.up.railway.app
-        path: /ws/a75f5c82-d667-0ce8-d297-30286b054691
-    - client-fingerprint: chrome
-      name: "\U0001F1FA\U0001F1F8US_75|6.0MB/s|3%|TK-US|YT-US|NF|GPT⁺-US|GM-US|CL-US|SP-US"
-      network: ws
-      port: 443
-      server: x4g-update1000-production.up.railway.app
-      servername: x4g-update1000-production.up.railway.app
-      skip-cert-verify: false
-      tfo: false
-      tls: true
-      type: vless
-      udp: true
-      uuid: b68b3c3d-2623-4d94-2633-0d8aec412b0e
-      ws-opts:
-        headers:
-            Host: x4g-update1000-production.up.railway.app
-        path: /ws/b68b3c3d-2623-4d94-2633-0d8aec412b0e
-    - client-fingerprint: chrome
-      name: "\U0001F1F3\U0001F1F1NL_24|6.1MB/s|0%|TK-NL|YT-NL|NF|D+|GPT⁺-NL|GM-NL|CL-NL|SP-NL"
-      network: xhttp
-      port: 443
-      server: 3x-ui-upgrade-production-9831.up.railway.app
-      servername: 3x-ui-upgrade-production-9831.up.railway.app
-      skip-cert-verify: false
-      tfo: false
-      tls: true
-      type: vless
-      udp: true
-      uuid: 94fb0e5b-eb40-4c06-a465-5dd7a9d2f6d2
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1EF\U0001F1F5JP_3|2.9MB/s|2%|YT-JP|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
-      network: ws
-      port: 58905
-      server: 161.33.139.138
-      skip-cert-verify: true
-      tls: false
-      type: vmess
-      udp: true
-      uuid: 1610f8dc-0661-4032-ac6a-a7250603f608
-      ws-opts:
-        path: /1610f8dc-0661-4032-ac6a-a7250603f608-vm
-    - name: "\U0001F1F7\U0001F1F4RO_30|2.6MB/s|0%|TK-RO|YT-CN|NF|GPT⁺-RO|CL-RO|SP-RO"
-      port: 9002
-      server: 84.239.49.176
-      skip-cert-verify: true
-      sni: www.bing.com
-      tls: true
-      type: http
-    - name: "\U0001F1F7\U0001F1F4RO_31|3.1MB/s|0%|TK-RO|YT-RO|NF|GPT⁺-RO|GM-RO|CL-RO|SP-RO"
-      port: 9002
-      server: 84.239.49.198
-      skip-cert-verify: true
-      tls: true
-      type: http
-    - name: "\U0001F1F7\U0001F1F4RO_32|3.0MB/s|0%|TK-RO|YT-RO|NF|GPT⁺-RO|GM-RO|CL-RO|SP-RO"
+    - name: "\U0001F1F7\U0001F1F4RO_32|2.1MB/s|0%|TK-RO|NF|GPT⁺-RO|GM-RO|CL-RO|SP-RO"
       port: 9002
       server: 84.239.14.157
       skip-cert-verify: true
       sni: www.bing.com
       tls: true
       type: http
-    - name: "\U0001F1F7\U0001F1F4RO_33|2.6MB/s|0%|TK-RO|YT-RU|NF|GPT⁺-RO|CL-RO|SP-RO"
+    - name: "\U0001F1F7\U0001F1F4RO_33|2.1MB/s|0%|TK-RO|YT-RU|NF|GPT⁺-RO|CL-RO|SP-RO"
       port: 9002
       server: 84.239.49.38
       skip-cert-verify: true
       sni: www.bing.com
       tls: true
       type: http
-    - name: "\U0001F1F7\U0001F1F4RO_34|2.9MB/s|0%|TK-RO|YT-CN|NF|GPT⁺-RO|CL-RO|SP-RO"
+    - name: "\U0001F1F7\U0001F1F4RO_34|2.0MB/s|0%|TK-RO|NF|GPT⁺-RO|GM-RO|CL-RO|SP-RO"
       port: 9002
-      server: 84.239.49.202
+      server: 84.239.49.159
+      skip-cert-verify: true
+      tls: true
+      type: http
+      udp: true
+    - name: "\U0001F1EF\U0001F1F5JP_5|3.3MB/s|3%|YT-JP|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
+      password: PI36027154
+      port: 443
+      server: stirred-buck.rooster465.autos
+      skip-cert-verify: false
+      sni: stirred-buck.rooster465.autos
+      type: trojan
+    - name: "\U0001F1EF\U0001F1F5JP_6|3.6MB/s|1%|TK-JP|YT-JP|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
+      password: PI36027154
+      port: 443
+      server: busy-lab.rooster465.autos
+      skip-cert-verify: false
+      sni: busy-lab.rooster465.autos
+      type: trojan
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1EF\U0001F1F5JP_7|4.2MB/s|2%|TK-JP|YT-JP|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
+      network: ws
+      port: 58905
+      server: 161.33.139.138
+      servername: 161.33.139.138
+      skip-cert-verify: false
+      tls: false
+      type: vmess
+      uuid: 1610f8dc-0661-4032-ac6a-a7250603f608
+      ws-opts:
+        path: /1610f8dc-0661-4032-ac6a-a7250603f608-vm
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_43|3.1MB/s|0%|TK-US|NF|D+|GPT⁺-NL|GM-NL|CL-NL|SP-NL"
+      network: ws
+      port: 443
+      server: x4g-update-production-d517.up.railway.app
+      servername: x4g-update-production-d517.up.railway.app
+      skip-cert-verify: false
+      tfo: false
+      tls: true
+      type: vless
+      udp: true
+      uuid: 5b910013-f46d-317a-f396-6f0e4012a27b
+      ws-opts:
+        headers:
+            Host: x4g-update-production-d517.up.railway.app
+        path: /ws/5b910013-f46d-317a-f396-6f0e4012a27b
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: "\U0001F1EB\U0001F1EEFI_3|2.1MB/s|0%|TK-FI|YT-FI|NF|GPT⁺-FI|GM-FI|CL-FI|SP-FI"
+      port: 443
+      reality-opts:
+        public-key: HKpd1sbrhBds8SJSL0d22MAq_QyTR6EP6y5b5DYol3U
+      server: meowfin.nethcloud.top
+      servername: www.wikihow.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: a34b5e88-cf0d-4c01-8199-2d1002d3c787
+    - name: "\U0001F1F7\U0001F1F4RO_35|2.4MB/s|0%|TK-RO|D+|GPT⁺-RO|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.14.149
       skip-cert-verify: true
       sni: www.bing.com
       tls: true
       type: http
-    - name: "\U0001F1F7\U0001F1F4RO_35|2.6MB/s|0%|TK-RO|NF|GPT⁺-RO|GM-RO|CL-RO|SP-RO"
+    - name: "\U0001F1F7\U0001F1F4RO_36|2.2MB/s|0%|TK-RO|YT-CN|NF|GPT⁺-RO|CL-RO|SP-RO"
       port: 9002
-      server: 84.239.14.148
+      server: 84.239.49.39
       skip-cert-verify: true
       sni: www.bing.com
       tls: true
       type: http
-    - name: "\U0001F1F7\U0001F1F4RO_36|2.9MB/s|0%|TK-RO|YT-RO|NF|GPT⁺-RO|GM-RO|CL-RO|SP-RO"
+    - name: "\U0001F1F7\U0001F1F4RO_37|2.1MB/s|0%|TK-RO|YT-UA|NF|GPT⁺-RO|GM-UA|CL-RO|SP-RO"
       port: 9002
-      server: 84.239.14.152
+      server: 84.239.49.215
+      skip-cert-verify: true
+      sni: www.bing.com
+      tls: true
+      type: http
+    - name: "\U0001F1F7\U0001F1F4RO_38|2.1MB/s|0%|TK-RO|YT-CN|NF|GPT⁺-RO|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.49.40
+      skip-cert-verify: true
+      sni: www.bing.com
+      tls: true
+      type: http
+    - name: "\U0001F1F7\U0001F1F4RO_39|2.1MB/s|0%|TK-RO|YT-CN|NF|GPT⁺-RO|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.49.199
       skip-cert-verify: true
       sni: www.bing.com
       tls: true
@@ -245,57 +115,52 @@ proxies:
         - http/1.1
       client-fingerprint: chrome
       encryption: none
-      name: "\U0001F1FA\U0001F1F8US_76|8.1MB/s|0%|TK-US|YT-US|NF|D+|GPT⁺-US|GM-US|CL-US|SP-US"
+      name: "\U0001F1F3\U0001F1F1NL_18|3.2MB/s|0%|TK-NL|NF|D+|GPT⁺-NL|GM-NL|CL-NL|SP-NL"
       network: ws
       port: "443"
-      server: stanet1.up.railway.app
-      servername: stanet1.up.railway.app
+      server: x4g-production-c71f.up.railway.app
+      servername: x4g-production-c71f.up.railway.app
       tls: true
       type: vless
       udp: true
-      uuid: 4b54bc81-d091-88f2-1061-502c76cbf2b5
+      uuid: 01200f5c-5321-d946-7028-0661ea0a2c0e
       ws-opts:
         headers:
-            Host: stanet1.up.railway.app
-            User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.3 (KHTML, like Gecko) Chrome/6.0.472.63 Safari/534.3
-        path: /ws/4b54bc81-d091-88f2-1061-502c76cbf2b5
+            Host: x4g-production-c71f.up.railway.app
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36
+        path: /ws/01200f5c-5321-d946-7028-0661ea0a2c0e
+      xudp: true
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_44|4.2MB/s|0%|TK-US|YT-US|NF|D+|GPT⁺-US|GM-US|CL-US|SP-US"
+      network: ws
+      port: "443"
+      server: x4g-production-0a61.up.railway.app
+      servername: x4g-production-0a61.up.railway.app
+      tls: true
+      type: vless
+      udp: true
+      uuid: 1725bfd6-5c74-759f-64d1-2f442f1c5992
+      ws-opts:
+        headers:
+            Host: x4g-production-0a61.up.railway.app
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+        path: /ws/1725bfd6-5c74-759f-64d1-2f442f1c5992
       xudp: true
     - encryption: none
-      name: "\U0001F1F3\U0001F1F1NL_25|1.5MB/s|3%|TK-NL|YT-RU|NF|GPT⁺-NL|CL-NL|SP-NL"
-      network: ws
-      port: "8090"
-      server: 109.107.173.97
-      type: vless
-      udp: true
-      uuid: ef14c532-b69a-4f46-ae29-272f2fdaf673
-      ws-opts:
-        headers:
-            Host: rukr.speedload.ru
-            User-Agent: Mozilla/5.0 (Linux; Android 7.0; SM-G610M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.80 Mobile Safari/537.36
-        path: /ws
-      xudp: true
-    - client-fingerprint: edge
-      encryption: none
-      flow: xtls-rprx-vision
-      name: "\U0001F1EC\U0001F1E7GB_4|3.3MB/s|0%|TK-US|YT-GB|NF|GPT⁺-FI|GM-GB|CL-FI|SP-FI"
+      name: "\U0001F1EB\U0001F1F7FR_11|1.2MB/s|5%|TK-FR|YT-FR|NF|GPT⁺-FR|GM-FR|CL-FR|SP-FR"
       network: tcp
-      port: "443"
-      reality-opts:
-        public-key: v78yAb9eo19LuR0e08mB_cnAS-QLlvqRkEZoKs7q2mU
-        short-id: 30e530274c0c72cc
-      server: fi.karzino-connected.com
-      servername: fi.karzino-connected.com
-      tls: true
+      port: "22224"
+      server: 13.38.212.228
       type: vless
       udp: true
-      uuid: ef3e206d-3cbc-4254-8374-df04fe35a762
+      uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
       xudp: true
     - client-fingerprint: chrome
       encryption: none
-      name: "\U0001F1EB\U0001F1F7FR_25|5.2MB/s|0%|TK-FR|YT-SA|NF|GPT⁺-FR|GM-SA|CL-FR|SP-FR"
+      name: "\U0001F1EC\U0001F1E7GB_6|4.3MB/s|0%|TK-GB|YT-FR|NF|GPT⁺-FR|GM-FR|CL-FR|SP-FR"
       network: ws
       port: "443"
-      server: 108.162.192.75
+      server: 45.130.125.207
       servername: shegeftihaaa.net
       tls: true
       type: vless
@@ -304,91 +169,143 @@ proxies:
       ws-opts:
         headers:
             Host: shegeftihaaa.net
-            User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
+            User-Agent: Mozilla/5.0 (Linux; Android 7.0; SM-G570M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.80 Mobile Safari/537.36
         path: /rsedgws
       xudp: true
     - client-fingerprint: chrome
       encryption: none
-      name: "\U0001F1E9\U0001F1EADE_20|5.4MB/s|0%|TK-DE|YT-DE|NF|GM-DE|SP-DE"
+      name: "\U0001F1EC\U0001F1E7GB_7|3.5MB/s|0%|TK-GB|YT-FR|NF|GPT⁺-FR|GM-FR|CL-FR|SP-FR"
       network: ws
       port: "443"
-      server: 104.16.174.3
-      servername: JoinProxyVPN11.amooaliii.net
+      server: 8.47.69.0
+      servername: shegeftihaaa.net
       tls: true
       type: vless
       udp: true
-      uuid: 72d1797c-cef8-410a-b8fd-db9104dc3cb0
+      uuid: 7e544a9d-7667-413b-bbb0-b3bb1aac6d77
       ws-opts:
         headers:
-            Host: amooaliii.net
-            User-Agent: Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36
-        path: /jdhfyws
+            Host: shegeftihaaa.net
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+        path: /rsedgws
       xudp: true
     - client-fingerprint: chrome
       encryption: none
-      flow: xtls-rprx-vision
-      name: "\U0001F1F3\U0001F1F1NL_26|3.2MB/s|3%|TK-NL|YT-RU|NF|GPT⁺-NL|GM-NL|CL-NL|SP-NL"
-      network: tcp
+      name: "\U0001F1EC\U0001F1E7GB_8|2.2MB/s|0%|TK-GB|NF|GPT⁺-FR|GM-FR|CL-FR|SP-FR"
+      network: ws
       port: "443"
-      reality-opts:
-        public-key: L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww
-        short-id: ed7b9bdfedb9b8e5
-      server: nl.go-vpn.club
-      servername: gateway.icloud.com
+      server: 104.16.72.41
+      servername: shegeftihaaa.net
       tls: true
       type: vless
       udp: true
-      uuid: 40de6299-d792-4868-8a82-411ead0aa943
+      uuid: 7e544a9d-7667-413b-bbb0-b3bb1aac6d77
+      ws-opts:
+        headers:
+            Host: shegeftihaaa.net
+            User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36
+        path: /rsedgws
       xudp: true
     - client-fingerprint: chrome
       encryption: none
-      name: "\U0001F1EB\U0001F1F7FR_26|5.9MB/s|0%|TK-FR|YT-FR|NF|GPT⁺-FR|GM-FR|CL-FR|SP-FR"
+      name: "\U0001F1EB\U0001F1F7FR_12|2.6MB/s|0%|TK-FR|YT-FR|NF|D+|GPT⁺-SG|GM-FR|CL-SG|SP-FR"
       network: ws
       port: "443"
-      server: 172.64.32.75
-      servername: octopusss.net
+      server: 37.59.96.25
+      servername: support.zoom.us.yxls.eu.cc
       tls: true
       type: vless
       udp: true
-      uuid: 073d1d50-8478-47bf-a828-7a1b381931d5
+      uuid: 6680846a-8a57-4dfd-9a0e-63209cfc8535
       ws-opts:
         headers:
-            Host: octopusss.net
-            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
-        path: /odiyfws
+            Host: support.zoom.us.yxls.eu.cc
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36
+        path: /sg-amz
       xudp: true
-    - client-fingerprint: ios
-      encryption: none
-      name: "\U0001F1F8\U0001F1EASE_3|2.1MB/s|0%|TK-SE|YT-SE|NF|GPT⁺-SE|GM-SE|CL-SE|SP-SE"
+    - encryption: none
+      name: "\U0001F1EB\U0001F1F7FR_13|3.3MB/s|3%|TK-FR|YT-FR|NF|GPT⁺-FR|GM-FR|CL-FR|SP-FR"
       network: tcp
-      port: "1000"
+      port: "22224"
+      server: 51.44.137.10
+      type: vless
+      udp: true
+      uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+      xudp: true
+    - client-fingerprint: chrome
+      encryption: none
+      name: "\U0001F1FA\U0001F1F8US_45|9.8MB/s|4%|TK-US|YT-DE|NF|GPT⁺-US|GM-DE|CL-US|SP-US"
+      network: tcp
+      port: "8526"
       reality-opts:
-        public-key: ECxm-BdHYhxYK9MtN33NkkrFSdFZXp-OB-yhN8AleRY
-        short-id: a62d513cd709744a
-      server: teain.org
-      servername: knox.cdn-apple.com
+        public-key: -zNDEqKkScKvMWB7spEper78GE_u-nR4jDHZ3DpOoxM
+        short-id: 62ad184af31fc8cf
+      server: hokm-t2.igatel.com
+      servername: www.yahoo.com
       tls: true
       type: vless
       udp: true
-      uuid: 5ae768bf-2ea0-22d2-eade-6763e14dc745
+      uuid: a49adb79-ed7b-449a-8bba-3842dc495e74
       xudp: true
-    - name: "\U0001F1F7\U0001F1F4RO_37|2.6MB/s|0%|TK-RO|YT-US|NF|D+|GPT⁺-RO|CL-RO|SP-RO"
+    - name: "\U0001F1F7\U0001F1F4RO_40|2.4MB/s|0%|TK-RO|YT-US|NF|GPT⁺-RO|CL-RO|SP-RO"
       port: 9002
-      server: 84.239.49.154
+      server: 84.239.49.59
       skip-cert-verify: true
       sni: www.bing.com
       tls: true
       type: http
-    - name: "\U0001F1F7\U0001F1F4RO_38|2.6MB/s|0%|TK-RO|YT-UA|NF|GPT⁺-RO|GM-UA|CL-RO|SP-RO"
+    - name: "\U0001F1F7\U0001F1F4RO_41|2.1MB/s|0%|TK-RO|NF|GPT⁺-RO|GM-RO|CL-RO|SP-RO"
       port: 9002
-      server: 84.239.49.247
+      server: 84.239.49.220
       skip-cert-verify: true
       sni: www.bing.com
       tls: true
       type: http
-    - name: "\U0001F1F7\U0001F1F4RO_39|2.9MB/s|0%|TK-RO|NF|GPT⁺-RO|GM-RO|CL-RO|SP-RO"
+    - name: "\U0001F1F7\U0001F1F4RO_42|2.3MB/s|0%|TK-RO|YT-CN|NF|GPT⁺-RO|CL-RO|SP-RO"
       port: 9002
-      server: 84.239.49.186
+      server: 84.239.49.183
+      skip-cert-verify: true
+      sni: www.bing.com
+      tls: true
+      type: http
+    - name: "\U0001F1F7\U0001F1F4RO_43|2.1MB/s|0%|TK-RO|NF|GPT⁺-RO|GM-RO|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.14.156
+      skip-cert-verify: true
+      sni: www.bing.com
+      tls: true
+      type: http
+    - name: "\U0001F1F7\U0001F1F4RO_44|2.2MB/s|0%|TK-RO|YT-CN|NF|GPT⁺-RO|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.49.234
+      skip-cert-verify: true
+      sni: www.bing.com
+      tls: true
+      type: http
+    - name: "\U0001F1F7\U0001F1F4RO_45|2.3MB/s|0%|TK-RO|YT-US|NF|GPT⁺-RO|GM-TM|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.49.248
+      skip-cert-verify: true
+      sni: www.bing.com
+      tls: true
+      type: http
+    - name: "\U0001F1F7\U0001F1F4RO_46|2.4MB/s|0%|TK-RO|YT-RU|NF|GPT⁺-RO|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.49.244
+      skip-cert-verify: true
+      sni: www.bing.com
+      tls: true
+      type: http
+    - name: "\U0001F1F7\U0001F1F4RO_47|2.1MB/s|0%|TK-RO|YT-US|NF|GPT⁺-RO|GM-TM|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.49.41
+      skip-cert-verify: true
+      sni: www.bing.com
+      tls: true
+      type: http
+    - name: "\U0001F1F7\U0001F1F4RO_48|2.1MB/s|0%|TK-RO|NF|GPT⁺-RO|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.49.185
       skip-cert-verify: true
       sni: www.bing.com
       tls: true
