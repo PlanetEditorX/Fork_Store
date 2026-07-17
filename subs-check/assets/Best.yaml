@@ -1,212 +1,6 @@
 proxies:
-    - name: "\U0001F1F7\U0001F1F4RO_21|2.6MB/s|0%|TK-RO|YT-RO|NF|D+|GPT⁺-RO|CL-RO|SP-RO"
-      port: 9002
-      server: 84.239.49.154
-      skip-cert-verify: true
-      tls: true
-      type: http
-      udp: true
-    - name: "\U0001F1F7\U0001F1F4RO_22|2.9MB/s|0%|TK-RO|YT-CN|NF|GPT⁺-RO|CL-RO|SP-RO"
-      port: 9002
-      server: 84.239.49.39
-      skip-cert-verify: true
-      tls: true
-      type: http
-      udp: true
-    - name: "\U0001F1EB\U0001F1F7FR_7|2.2MB/s|0%|YT-HK|GPT⁺-MY|CL-MY|SP-FR"
-      password: Lw_DP4+W.J5K33MD2Jy5zQVuT5n71+=BcD
-      port: 443
-      server: 38.60.168.129
-      skip-cert-verify: false
-      type: trojan
     - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1EC\U0001F1E7GB_5|5.1MB/s|0%|TK-FR|YT-FR|NF|GPT⁺-FR|GM-FR|CL-FR|SP-FR"
-      network: ws
-      port: 443
-      server: 108.162.192.75
-      servername: octopusss.net
-      tls: true
-      type: vless
-      udp: true
-      uuid: 073d1d50-8478-47bf-a828-7a1b381931d5
-      ws-opts:
-        early-data-header-name: Sec-WebSocket-Protocol
-        headers:
-            Host: octopusss.net
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36
-        max-early-data: 2048
-        path: /odiyfws
-      xudp: true
-    - name: "\U0001F1F7\U0001F1F4RO_23|2.9MB/s|0%|TK-RO|YT-CN|NF|GPT⁺-RO|CL-RO|SP-RO"
-      port: 9002
-      server: 84.239.49.42
-      skip-cert-verify: true
-      sni: www.bing.com
-      tls: true
-      type: http
-    - name: "\U0001F1F7\U0001F1F4RO_24|2.6MB/s|0%|TK-RO|YT-RO|NF|D+|GPT⁺-RO|GM-RO|CL-RO|SP-RO"
-      port: 9002
-      server: 84.239.14.149
-      skip-cert-verify: true
-      tls: true
-      type: http
-      udp: true
-    - down: ""
-      fingerprint: ""
-      name: "\U0001F1F0\U0001F1F7KR_7|5.2MB/s|2%|YT-KR|NF|GPT⁺-KR|GM-KR|CL-KR|SP-KR"
-      obfs: ""
-      obfs-password: ""
-      password: d5m-5bGOsVbFgRlxsEyO3pCF
-      port: "55020"
-      server: 138.2.116.23
-      skip-cert-verify: true
-      sni: 140.245.74.46.sslip.io
-      type: hysteria2
-      up: ""
-    - name: "\U0001F1F7\U0001F1F4RO_25|2.7MB/s|0%|TK-RO|GPT⁺-RO|CL-RO|SP-RO"
-      port: 9002
-      server: 84.239.49.58
-      skip-cert-verify: true
-      sni: www.bing.com
-      tls: true
-      type: http
-    - name: "\U0001F1F7\U0001F1F4RO_26|2.8MB/s|0%|TK-RO|YT-CN|GPT⁺-RO|CL-RO|SP-RO"
-      port: 9002
-      server: 84.239.49.234
-      skip-cert-verify: true
-      tls: true
-      type: http
-      udp: true
-    - name: "\U0001F1F7\U0001F1F4RO_27|2.1MB/s|0%|TK-RO|YT-CN|NF|GPT⁺-RO|CL-RO|SP-RO"
-      port: 9002
-      server: 84.239.49.55
-      skip-cert-verify: true
-      tls: true
-      type: http
-      udp: true
-    - name: "\U0001F1F0\U0001F1F7KR_8|1.0MB/s|3%|YT-KR|NF|D+|GPT⁺-KR|GM-KR|CL-KR|SP-KR"
-      password: CF68213490
-      port: 443
-      server: climbing-frog.rooster465.autos
-      skip-cert-verify: false
-      sni: climbing-frog.rooster465.autos
-      type: trojan
-    - name: "\U0001F1EF\U0001F1F5JP_16|2.5MB/s|3%|YT-JP|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
-      network: tcp
-      password: CF68213490
-      port: "443"
-      server: accurate-frog.rooster465.autos
-      skip-cert-verify: false
-      sni: accurate-frog.rooster465.autos
-      type: trojan
-      udp: true
-    - name: "\U0001F1EF\U0001F1F5JP_17|3.5MB/s|4%|YT-JP|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
-      network: tcp
-      password: CF68213490
-      port: "443"
-      server: adapting-basilisk.rooster465.autos
-      skip-cert-verify: false
-      sni: adapting-basilisk.rooster465.autos
-      type: trojan
-      udp: true
-    - name: "\U0001F1EF\U0001F1F5JP_18|3.3MB/s|3%|TK-JP|YT-JP|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
-      network: tcp
-      password: CF68213490
-      port: "443"
-      server: composed-sheep.rooster465.autos
-      skip-cert-verify: false
-      sni: composed-sheep.rooster465.autos
-      type: trojan
-      udp: true
-    - name: "\U0001F1EF\U0001F1F5JP_19|3.3MB/s|1%|YT-JP|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
-      network: tcp
-      password: CF68213490
-      port: "443"
-      server: eternal-perch.rooster465.autos
-      skip-cert-verify: false
-      sni: eternal-perch.rooster465.autos
-      type: trojan
-      udp: true
-    - name: "\U0001F1EF\U0001F1F5JP_20|3.2MB/s|1%|TK-JP|YT-JP|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
-      network: tcp
-      password: CF68213490
-      port: "443"
-      server: in-oriole.rooster465.autos
-      skip-cert-verify: false
-      sni: in-oriole.rooster465.autos
-      type: trojan
-      udp: true
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1FA\U0001F1F8US_54|9.9MB/s|0%|TK-US|YT-US|NF|D+|GPT⁺-JP|GM-US|CL-JP|SP-US"
-      network: ws
-      port: 8880
-      server: cf8.466688.xyz
-      type: vless
-      udp: true
-      uuid: 9be3bb59-c281-4fee-ae3d-7cf6c4b47eb4
-      ws-opts:
-        headers:
-            Host: late-mountain-6801.355.workers.dev
-            User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
-        path: /pyip=ProxyIP.JP.CMLiussss.net
-      xudp: true
-    - name: "\U0001F1F7\U0001F1F4RO_28|2.5MB/s|0%|TK-RO|YT-RO|GPT⁺-RO|GM-RO|CL-RO|SP-RO"
-      port: 9002
-      server: 84.239.49.173
-      skip-cert-verify: true
-      sni: www.bing.com
-      tls: true
-      type: http
-    - name: "\U0001F1F7\U0001F1F4RO_29|2.6MB/s|0%|TK-RO|YT-RO|NF|GPT⁺-RO|GM-RO|CL-RO|SP-RO"
-      port: 9002
-      server: 84.239.49.161
-      skip-cert-verify: true
-      sni: www.bing.com
-      tls: true
-      type: http
-    - name: "\U0001F1F7\U0001F1F4RO_30|2.7MB/s|0%|TK-RO|YT-US|GPT⁺-RO|CL-RO|SP-RO"
-      port: 9002
-      server: 84.239.49.199
-      skip-cert-verify: true
-      sni: www.bing.com
-      tls: true
-      type: http
-    - client-fingerprint: chrome
-      encryption: none
-      name: "\U0001F1EC\U0001F1E7GB_6|5.1MB/s|0%|TK-FR|YT-FR|NF|GPT⁺-FR|GM-FR|CL-FR|SP-FR"
-      network: ws
-      port: "443"
-      server: 104.17.147.22
-      servername: octopusss.net
-      tls: true
-      type: vless
-      udp: true
-      uuid: 073d1d50-8478-47bf-a828-7a1b381931d5
-      ws-opts:
-        headers:
-            Host: octopusss.net
-            User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; Redmi 4A Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.3112.116 Mobile Safari/537.36
-        path: /odiyfws
-      xudp: true
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: "\U0001F1FA\U0001F1F8US_55|1.4MB/s|0%|YT-US|NF|GPT⁺-SE|CL-SE|SP-US"
-      network: tcp
-      port: "993"
-      reality-opts:
-        public-key: _pfnx4mNda47T7Hyi_tNfnSXzL9fL4EKQWNu31NSkmo
-        short-id: ""
-      server: 104.245.242.4
-      servername: res.cdn.office.net
-      tls: true
-      type: vless
-      udp: true
-      uuid: 526d2855-c7d1-ecf3-e4f8-5a75f77d5bb3
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1F8\U0001F1ECSG_18|1.9MB/s|3%|TK-SG|YT-SG|NF-SG|GPT⁺-SG|GM-SG|CL-SG|SP-SG"
+      name: "\U0001F1F8\U0001F1ECSG_9|1.0MB/s|3%|GPT⁺-SG|GM-SG|CL-SG|SP-SG"
       password: CF68213490
       port: "443"
       server: intimate-moray.rooster465.autos
@@ -215,53 +9,9 @@ proxies:
       type: trojan
       udp: true
     - client-fingerprint: chrome
-      name: "\U0001F1EF\U0001F1F5JP_21|2.2MB/s|1%|YT-JP|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
-      password: CF68213490
-      port: "443"
-      server: summary-firefly.rooster465.autos
-      skip-cert-verify: false
-      sni: summary-firefly.rooster465.autos
-      type: trojan
-      udp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1F8\U0001F1ECSG_19|2.4MB/s|1%|YT-SG|NF-SG|GPT⁺-SG|GM-SG|CL-SG|SP-SG"
-      network: tcp
-      password: CF68213490
-      port: "443"
-      server: relevant-oryx.rooster465.autos
-      skip-cert-verify: false
-      sni: relevant-oryx.rooster465.autos
-      type: trojan
-      udp: true
-    - client-fingerprint: chrome
       encryption: none
       flow: xtls-rprx-vision
-      name: "\U0001F1E7\U0001F1F7BR_3|2.5MB/s|6%|TK-BR|YT-NL|NF|D+|GPT⁺|GM-NL|CL-NL|SP-NL"
-      network: tcp
-      port: "40443"
-      reality-opts:
-        public-key: D_ks4Yyk4-osnWBxCFvd0_UEgohUXvR2zJoWQg1CACU
-        short-id: c84f
-      server: cdn.netraidly.ru
-      servername: deepl.com
-      tls: true
-      type: vless
-      udp: true
-      uuid: 4bf5a71c-d726-4585-b095-7396675706d5
-      xudp: true
-    - encryption: none
-      name: "\U0001F1EE\U0001F1F9IT_2|2.2MB/s|2%|TK-IT|YT-IT|NF|GPT⁺-IT|GM-IT|CL-IT|SP-IT"
-      network: tcp
-      port: "10086"
-      server: 204.216.216.23
-      type: vless
-      udp: true
-      uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
-      xudp: true
-    - client-fingerprint: chrome
-      encryption: none
-      flow: xtls-rprx-vision
-      name: "\U0001F1EE\U0001F1F7IR_2|2.3MB/s|0%|YT-US|NF|GPT-DE|CL-DE|SP-DE"
+      name: "\U0001F1EE\U0001F1F7IR_2|2.7MB/s|0%|YT-US|NF|GPT-DE|CL-DE|SP-DE"
       network: tcp
       port: "443"
       reality-opts:
@@ -274,72 +24,306 @@ proxies:
       udp: true
       uuid: 1f6531a1-a6eb-4274-9f51-4a0899456fcf
       xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1EF\U0001F1F5JP_22|3.3MB/s|0%|YT-CN|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
-      network: tcp
+    - name: "\U0001F1F7\U0001F1F4RO_17|3.3MB/s|0%|TK-RO|YT-US|NF|GPT⁺-RO|GM-TM|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.49.166
+      skip-cert-verify: true
+      sni: www.bing.com
+      tls: true
+      type: http
+    - name: "\U0001F1EF\U0001F1F5JP_16|1.1MB/s|0%|YT-JP|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
+      password: NQ26071394
+      port: "443"
+      server: gentle-turtle.rooster465.autos
+      skip-cert-verify: false
+      sni: gentle-turtle.rooster465.autos
+      type: trojan
+      udp: true
+    - name: "\U0001F1F7\U0001F1F4RO_18|3.4MB/s|0%|TK-RO|YT-RO|NF|GPT⁺-RO|GM-RO|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.49.220
+      skip-cert-verify: true
+      sni: www.bing.com
+      tls: true
+      type: http
+    - name: "\U0001F1F7\U0001F1F4RO_19|3.3MB/s|0%|TK-RO|YT-US|NF|GPT⁺-RO|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.49.229
+      skip-cert-verify: true
+      sni: www.bing.com
+      tls: true
+      type: http
+    - name: "\U0001F1F7\U0001F1F4RO_20|3.5MB/s|0%|TK-RO|YT-RO|NF|GPT⁺-RO|GM-RO|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.14.152
+      skip-cert-verify: true
+      tls: true
+      type: http
+      udp: true
+    - name: "\U0001F1F9\U0001F1FCTW_2|3.4MB/s|0%|YT-TW|NF|GPT⁺-TW|GM-TW|CL-TW|SP-TW"
+      password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+      port: 443
+      server: vpn-tw-002.fastervpn.world
+      skip-cert-verify: true
+      sni: vpn-tw-002.fastervpn.world
+      type: hysteria2
+      udp: true
+    - name: "\U0001F1E9\U0001F1EADE_15|4.0MB/s|2%|TK-DE|YT-DE|NF|GPT⁺-DE|GM-DE|CL-DE|SP-DE"
+      password: KV63147582
+      port: 443
+      server: evolving-baboon.rooster465.autos
+      skip-cert-verify: false
+      sni: evolving-baboon.rooster465.autos
+      type: trojan
+    - name: "\U0001F1EF\U0001F1F5JP_17|1.3MB/s|3%|YT-JP|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
       password: CF68213490
-      port: "443"
-      server: alert-redfish.rooster465.autos
+      port: 443
+      server: accurate-frog.rooster465.autos
       skip-cert-verify: false
-      sni: alert-redfish.rooster465.autos
+      sni: accurate-frog.rooster465.autos
       type: trojan
-      udp: true
-    - alterId: 0
-      cipher: auto
-      name: "\U0001F1E9\U0001F1EADE_8|3.1MB/s|0%|TK-DE|YT-US|NF|D+|GPT⁺-NL|CL-NL|SP-DE"
-      network: raw
-      port: "80"
-      server: 94.103.167.116
-      skip-cert-verify: false
-      tls: false
-      type: vmess
-      udp: true
-      uuid: d1b0c103-a7ff-4bd6-887d-a73d6ebf1f50
-      xudp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1EF\U0001F1F5JP_23|3.4MB/s|3%|TK-JP|YT-JP|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
+    - name: "\U0001F1F0\U0001F1F7KR_11|1.2MB/s|0%|YT-CN|D+|GPT⁺-KR|GM-KR|CL-KR|SP-KR"
       password: CF68213490
-      port: "443"
-      server: united-molly.rooster465.autos
+      port: 443
+      server: clear-heron.rooster465.autos
       skip-cert-verify: false
-      sni: united-molly.rooster465.autos
+      sni: clear-heron.rooster465.autos
       type: trojan
-      udp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1E9\U0001F1EADE_9|1.6MB/s|0%|TK-DE|YT-DE|NF|GPT⁺-DE|GM-DE|CL-DE|SP-DE"
-      password: OD90375861
-      port: "443"
-      server: together-insect.rooster465.autos
-      skip-cert-verify: false
-      sni: together-insect.rooster465.autos
-      type: trojan
-      udp: true
-    - client-fingerprint: chrome
-      name: "\U0001F1EF\U0001F1F5JP_24|3.2MB/s|1%|TK-JP|YT-JP|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
+    - name: "\U0001F1F8\U0001F1ECSG_10|1.6MB/s|3%|YT-SG|GPT⁺-SG|GM-SG|CL-SG|SP-SG"
       password: CF68213490
-      port: "443"
-      server: adapting-giraffe.rooster465.autos
+      port: 443
+      server: sacred-treefrog.rooster465.autos
       skip-cert-verify: false
-      sni: adapting-giraffe.rooster465.autos
+      sni: sacred-treefrog.rooster465.autos
       type: trojan
-      udp: true
-    - encryption: none
-      name: "\U0001F1FA\U0001F1F8US_56|5.7MB/s|0%|TK-US|YT-US|NF|D+|GPT⁺-JP|GM-US|CL-JP|SP-US"
+    - client-fingerprint: chrome
+      name: "\U0001F1FA\U0001F1F8US_75|124.3MB/s|1%|TK-US|YT-US|NF|D+|GM-US|CL-US|SP-US"
       network: ws
-      port: "8880"
-      server: 104.16.100.66
+      port: 443
+      server: 188.164.248.67
+      servername: vp21.cc.cd
+      tls: true
       type: vless
       udp: true
-      uuid: d25ba473-5b05-48bb-b048-e82844e2ae39
+      uuid: 7b102311-43fd-4e8f-877e-8090623c101d
       ws-opts:
         headers:
-            Host: misty-recipe-be74.271.workers.dev
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36
-        path: /pyip=ProxyIP.JP.CMLiussss.net
-      xudp: true
-    - name: "\U0001F1F7\U0001F1F4RO_31|2.8MB/s|0%|TK-RO|NF|GPT⁺-RO|GM-UA|CL-RO|SP-RO"
+            Host: vp21.cc.cd
+        path: /
+    - client-fingerprint: chrome
+      name: "\U0001F1F7\U0001F1FARU_4|4.2MB/s|5%|TK-RU|YT-RU|NF|D+|GPT-NL|CL-NL"
+      network: ws
+      port: 8443
+      server: xinnusvpn.duckdns.org
+      servername: xinnusvpn.duckdns.org
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      udp: true
+      uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
+      ws-opts:
+        headers:
+            Host: xinnusvpn.duckdns.org
+        path: /wsnl
+    - name: "\U0001F1F7\U0001F1F4RO_21|3.1MB/s|0%|TK-RO|YT-RU|NF|GPT⁺-RO|CL-RO|SP-RO"
       port: 9002
-      server: 84.239.49.192
+      server: 84.239.49.240
+      skip-cert-verify: true
+      sni: www.bing.com
+      tls: true
+      type: http
+    - name: "\U0001F1F7\U0001F1F4RO_22|3.1MB/s|0%|TK-RO|YT-CN|NF|GPT⁺-RO|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.49.245
+      skip-cert-verify: true
+      sni: www.bing.com
+      tls: true
+      type: http
+    - name: "\U0001F1F7\U0001F1F4RO_23|3.1MB/s|0%|TK-RO|YT-CN|NF|GPT⁺-RO|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.49.207
+      skip-cert-verify: true
+      sni: www.bing.com
+      tls: true
+      type: http
+    - name: "\U0001F1FA\U0001F1F8US_76|2.5MB/s|5%|TK-US|YT-US|GPT⁺-US|GM-US|CL-US|SP-US"
+      password: OD90375861
+      port: 443
+      server: nearby-muskrat.rooster465.autos
+      skip-cert-verify: false
+      sni: nearby-muskrat.rooster465.autos
+      type: trojan
+    - name: "\U0001F1EF\U0001F1F5JP_18|1.1MB/s|1%|YT-JP|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
+      password: CF68213490
+      port: 443
+      server: rested-osprey.rooster465.autos
+      skip-cert-verify: false
+      sni: rested-osprey.rooster465.autos
+      type: trojan
+    - cipher: aes-256-cfb
+      name: "\U0001F1F1\U0001F1F9LT_2|2.6MB/s|0%|TK-LT|YT-LT|NF-LT|GPT⁺-LT|GM-LT|CL-LT|SP-LT"
+      password: qYEN5HX4JKeVCdEC
+      port: 9039
+      server: 195.238.126.84
+      type: ss
+      udp: true
+    - client-fingerprint: firefox
+      encryption: none
+      flow: xtls-rprx-vision
+      name: "\U0001F1EC\U0001F1E7GB_4|2.8MB/s|0%|TK-FI|YT-RU|NF|GPT⁺-FI|CL-FI|SP-FI"
+      network: tcp
+      port: "443"
+      reality-opts:
+        public-key: C1hW1bTA9WOacIK-fHHg-HLkDZ3FY7FhEhAyldMSUEA
+        short-id: a1b2c3d4e5f6
+      server: 2.27.13.17
+      servername: cloudflare.com
+      tls: true
+      type: vless
+      udp: true
+      uuid: 3ef170be-05d0-479c-9753-aa2f860964ea
+      xudp: true
+    - client-fingerprint: chrome
+      encryption: none
+      flow: xtls-rprx-vision
+      name: "\U0001F1FA\U0001F1F8US_77|4.6MB/s|0%|TK-US|YT-NL|NF|GPT⁺-NL|GM-NL|CL-NL|SP-US"
+      network: tcp
+      port: "443"
+      reality-opts:
+        public-key: 10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc
+        short-id: 43dcff53849b81e6
+      server: 89.105.219.132
+      servername: nl.quattro-tech.ru
+      tls: true
+      type: vless
+      udp: true
+      uuid: ecad47b0-249e-4f6f-adff-e3c8f02b1897
+      xudp: true
+    - alterId: "0"
+      cipher: auto
+      name: "\U0001F1FA\U0001F1F8US_78|10.1MB/s|0%|YT-US|NF|GPT⁺-US|GM-US|CL-US|SP-US"
+      network: ws
+      port: "443"
+      server: xsj004-10.facai2024.com
+      skip-cert-verify: false
+      tls: true
+      type: vmess
+      udp: true
+      uuid: 1f1aa362-2576-4989-8fdb-7cf1c2c96490
+      ws-opts:
+        headers:
+            Host: xsj004-10.facai2024.com
+        path: /1f1aa362-25
+      xudp: true
+    - client-fingerprint: chrome
+      encryption: none
+      name: "\U0001F1F3\U0001F1F1NL_17|6.6MB/s|0%|TK-NL|NF|GPT-NL|SP-NL"
+      network: ws
+      port: "443"
+      server: 91.193.58.201
+      servername: vangoghhh.info
+      tls: true
+      type: vless
+      udp: true
+      uuid: 14b59caf-a196-4ec2-8c70-c7b388062f5b
+      ws-opts:
+        headers:
+            Host: vangoghhh.info
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36
+        path: /rdfgtws
+      xudp: true
+    - client-fingerprint: chrome
+      name: "\U0001F1E9\U0001F1EADE_16|3.3MB/s|2%|TK-DE|NF|GPT⁺-DE|GM-DE|CL-DE|SP-DE"
+      password: KV63147582
+      port: "443"
+      server: evolving-baboon.rooster465.autos
+      skip-cert-verify: false
+      type: trojan
+      udp: true
+    - client-fingerprint: chrome
+      encryption: none
+      name: "\U0001F1FA\U0001F1F8US_79|7.3MB/s|0%|TK-US|YT-US|NF|GPT⁺-FI|CL-FI|SP-US"
+      network: xhttp
+      port: "443"
+      reality-opts:
+        public-key: xIjbKxdcvohT7h7YKLulv287nKjzhilSCqFbphItQGI
+        short-id: ""
+      server: 104.245.242.4
+      servername: dl.google.com
+      tls: true
+      type: vless
+      udp: true
+      uuid: 526d2855-c7d1-ecf3-e4f8-5a75f77d5bb3
+      xhttp-opts:
+        mode: auto
+      xudp: true
+    - client-fingerprint: chrome
+      name: "\U0001F1EF\U0001F1F5JP_19|2.5MB/s|3%|YT-JP|NF|GPT⁺-JP|GM-JP|CL-JP|SP-JP"
+      password: NQ26071394
+      port: "443"
+      server: ace-liger.rooster465.autos
+      skip-cert-verify: false
+      sni: ace-liger.rooster465.autos
+      type: trojan
+      udp: true
+    - client-fingerprint: chrome
+      name: "\U0001F1F8\U0001F1ECSG_11|1.0MB/s|3%|YT-SG|GPT⁺-SG|GM-SG|CL-SG|SP-SG"
+      password: CF68213490
+      port: "443"
+      server: gentle-raptor.rooster465.autos
+      skip-cert-verify: false
+      sni: gentle-raptor.rooster465.autos
+      type: trojan
+      udp: true
+    - client-fingerprint: qq
+      encryption: none
+      flow: xtls-rprx-vision
+      name: "\U0001F1E8\U0001F1FFCZ_2|2.4MB/s|0%|TK-CZ|YT-GB|NF|GPT⁺-FI|GM-GB|CL-FI|SP-FI"
+      network: tcp
+      port: "443"
+      reality-opts:
+        public-key: yocysajpuAGT059wla3OHEQZ8yNQt8heojZuYM2MkSY
+        short-id: 8ccda4d8bbe0b881
+      server: fin.themesh.site
+      servername: fin.themesh.site
+      tls: true
+      type: vless
+      udp: true
+      uuid: 6fa9f6ae-877b-4858-b128-a8377fd9038b
+      xudp: true
+    - client-fingerprint: chrome
+      encryption: none
+      flow: xtls-rprx-vision
+      name: "\U0001F1E8\U0001F1EDCH_2|1.1MB/s|0%|TK-CH|NF|D+|GPT⁺-CH|CL-CH|SP-CH"
+      network: tcp
+      port: "443"
+      reality-opts:
+        public-key: W8hnq0oVIPpRGyM8UUQuaAF2KKxl6C10yBgO911iFwM
+        short-id: ""
+      server: ch-5.lemonbow.ru
+      servername: www.samsung.com
+      tls: true
+      type: vless
+      udp: true
+      uuid: 8516c47e-a7a1-42f7-9c14-ae9b14873cc8
+      xudp: true
+    - name: "\U0001F1F7\U0001F1F4RO_24|3.1MB/s|0%|TK-RO|YT-TW|NF|GPT⁺-RO|GM-TW|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.49.48
+      skip-cert-verify: true
+      sni: www.bing.com
+      tls: true
+      type: http
+    - name: "\U0001F1F7\U0001F1F4RO_25|3.2MB/s|0%|TK-RO|YT-CN|NF|GPT⁺-RO|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.49.175
+      skip-cert-verify: true
+      sni: www.bing.com
+      tls: true
+      type: http
+    - name: "\U0001F1F7\U0001F1F4RO_26|2.8MB/s|0%|TK-RO|YT-US|NF|GPT⁺-RO|CL-RO|SP-RO"
+      port: 9002
+      server: 84.239.49.186
       skip-cert-verify: true
       sni: www.bing.com
       tls: true
