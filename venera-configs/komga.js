@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.3.0"
+	version = "1.3.1"
 
 	minAppVersion = "1.4.0"
 
@@ -162,9 +162,10 @@ class Komga extends ComicSource {
 				const libraries = this.loadData('komga_libraries')
 				if (Array.isArray(libraries)) {
 					for (const library of libraries.slice(0, 4)) {
+						// 首页书库展示全部系列；不要沿用推荐栏的 12 条上限。
+						// 完整列表也有“分类 → 书库”的分页入口，此处 unpaged 由 Komga 处理。
 						const list = await this.fetchSeriesList('/api/v1/series', {
-							page: 0,
-							size: 12,
+							unpaged: true,
 							sort: ['metadata.lastModified,desc'],
 							library_id: [library.id]
 						})
