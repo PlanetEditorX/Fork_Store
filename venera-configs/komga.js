@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.2.1"
+	version = "1.2.2"
 
 	minAppVersion = "1.4.0"
 
@@ -425,6 +425,8 @@ class Komga extends ComicSource {
 
 	comic = {
 		loadInfo: async (id) => {
+			// 从阅读器退回详情页：顺手把当前这章结算掉
+			if (this._activeBookId) this.finalizeReadBook(this._activeBookId)
 			const bookId = this.extractBookId(id)
 			if (bookId) {
 				return await this.loadBookDetails(bookId)
@@ -484,6 +486,11 @@ class Komga extends ComicSource {
 				if (typeof comicId === 'string' && comicId.startsWith('book:') && !epId) {
 					bookId = comicId.slice(5)
 				}
+			// 换章 / 重新打开章节：先把上一章结算掉（读到结尾就标已读完）
+			if (this._activeBookId && this._activeBookId !== bookId) {
+				this.finalizeReadBook(this._activeBookId)
+			}
+			this._activeBookId = bookId
 			const pages = await this.getJson(`/api/v1/books/${bookId}/pages`)
 			const list = Array.isArray(pages) ? pages : []
 			list.sort((a, b) => (a?.number ?? 0) - (b?.number ?? 0))
@@ -882,6 +889,9 @@ class Komga extends ComicSource {
 		st.t = 0
 		if (!min) return
 
+		// 记录这本书出现过的最大页码：阅读器只要把末页载进缓存，这里就会等于总页数
+		this.recordSeenMax(bookId, max)
+
 		const total = this.bookPageCount(bookId)
 		let candidate
 		if (max > min) {
@@ -952,6 +962,62 @@ class Komga extends ComicSource {
 			if (typeof Network.sendRequest === 'function') {
 				await Network.sendRequest('PATCH', url, headers, payload)
 			}
+		} catch (_) {
+		}
+	}
+
+	// 记录「这本书的末页有没有被阅读器载入过」，落盘以便跨会话使用
+	recordSeenMax(bookId, page) {
+		if (!bookId || !page) return
+		this._seenMax = this._seenMax || {}
+		if ((this._seenMax[bookId] || 0) >= page) return
+		this._seenMax[bookId] = page
+		try {
+			const saved = this.loadData('book_seen_max') || {}
+			if ((saved[bookId] || 0) >= page) return
+			saved[bookId] = page
+			const keys = Object.keys(saved)
+			if (keys.length > 300) delete saved[keys[0]]
+			this.saveData('book_seen_max', saved)
+		} catch (_) {
+		}
+	}
+
+	seenMax(bookId) {
+		const map = this._seenMax
+		if (map && map[bookId]) return map[bookId]
+		try {
+			const saved = this.loadData('book_seen_max')
+			return (saved && saved[bookId]) || 0
+		} catch (_) {
+			return 0
+		}
+	}
+
+	/**
+	 * 离开一章时收尾：阅读器的预取只在「当前页之后」，末页之后的图不存在，
+	 * 所以读到结尾时我们发现的最大页码 = 总页数，而已上报页码会落后 3~6 页。
+	 * 只要末页进过缓存、且已知位置落在末尾窗口内，就把这章标记为读完。
+	 */
+	finalizeReadBook(bookId) {
+		try {
+			if (!bookId) return
+			if (!this.authToken) return
+			if (this.loadSetting('sync_progress') === false) return
+			if (this.loadSetting('page_sync') === false) return
+			const total = this.bookPageCount(bookId)
+			if (!total) return
+			const pending = this._track && this._track[bookId]
+			// 上一个窗口可能还没到 600ms 结算点，先落地，否则 max 还没记进 seenMax
+			if (pending && pending.count) this.flushTrackedPage(bookId, pending)
+			const seen = this.seenMax(bookId)
+			if (seen < total) return
+			const st = this._track && this._track[bookId]
+			const last = (st && st.last) || 0
+			if (last >= total) return
+			if (total - last > 12) return
+			if (st) st.last = total
+			this.syncReadProgress(bookId, total, true)
 		} catch (_) {
 		}
 	}
