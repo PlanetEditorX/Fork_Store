@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.6.0"
+	version = "1.7.0"
 
 	minAppVersion = "1.4.0"
 
@@ -496,83 +496,7 @@ class Komga extends ComicSource {
 			if (typeof id === 'string' && this.isHiddenSeries(id)) {
 				return this.managementResult('该系列已提交删除，已从源列表隐藏')
 			}
-			const [series, booksPage] = await Promise.all([
-				this.getJson(`/api/v1/series/${id}`),
-				this.getJson(`/api/v1/series/${id}/books`, {
-					unpaged: true,
-					sort: ['metadata.numberSort,asc']
-				})
-			])
-			const books = (Array.isArray(booksPage?.content) ? booksPage.content : [])
-				.filter((book) => !this.isHiddenBook(book?.id))
-			const readable = books.filter((book) => this.isSupportedBook(book))
-			readable.sort((a, b) => this.compareBooks(a, b))
-			const chapters = new Map()
-			readable.forEach((book, index) => {
-				chapters.set(book.id, this.formatBookTitle(book, index))
-				// 详情页拿到页数就记住，避免客户端命中章节缓存、不调 loadEp 时算不出总页数
-				this.rememberBookPages(book.id, book?.media?.pagesCount || 0)
-			})
-			const metadata = series?.metadata || {}
-			// 系列级简介为空时，用第一本有简介的单本兜底：很多人的简介其实写在单本上
-			let summary = series?.booksMetadata?.summary || metadata.summary || ''
-			if (!summary) {
-				const withSummary = books.find((book) => book?.metadata?.summary)
-				summary = withSummary?.metadata?.summary || ''
-			}
-			const authors = this.collectAuthors(series?.booksMetadata?.authors)
-			const genres = Array.isArray(metadata.genres) ? metadata.genres : []
-			const tags = Array.isArray(series?.booksMetadata?.tags) ? series.booksMetadata.tags : []
-			const readCount = readable.filter((book) => book?.readProgress?.completed).length
-			const inProgressCount = readable.filter((book) => book?.readProgress && !book.readProgress.completed).length
-			let description = summary || '暂无简介'
-			const progressParts = []
-			if (readable.length) {
-				progressParts.push(`已读 ${readCount}/${readable.length}`)
-				if (inProgressCount) progressParts.push(`在读 ${inProgressCount}`)
-			}
-			// 同步自检：有图片事件却一次都没发出去，基本就是没登录 / 缺权限
-			const syncLine = this.buildSyncStatus()
-			if (syncLine) progressParts.push(syncLine)
-			if (progressParts.length) description = `${description}\n\n${progressParts.join(' · ')}`
-			const seriesTitle = metadata.title || series?.name || id
-			const seriesCover = this.buildUrl(`/api/v1/series/${id}/thumbnail`)
-			const tagSections = {}
-			if (authors.length) tagSections['作者'] = authors
-			if (genres.length) tagSections['类型'] = this.uniqueArray(genres)
-			if (tags.length) tagSections['标签'] = this.uniqueArray(tags)
-			// 映匣不给源开放卡片长按菜单；详情页标签点击会进入搜索页，故用它承载管理动作。
-			// 章节不在详情页逐条列标签：100 章就会撑出 100 行，这里只放一个按需展开的选择入口。
-			const managementActions = [
-				{ type: 'mark-read-series', id, label: '标记已读', detail: seriesTitle, cover: seriesCover },
-				{ type: 'mark-unread-series', id, label: '标记未读', detail: seriesTitle, cover: seriesCover },
-				{ type: 'delete-series', id, label: '删除系列', detail: seriesTitle, cover: seriesCover }
-			]
-			if (books.length) {
-				managementActions.push({
-					type: 'choose-delete-chapter',
-					id,
-					label: '删除章节',
-					detail: seriesTitle,
-					cover: seriesCover
-				})
-			}
-			tagSections['管理'] = this.registerManagementActions(managementActions)
-			if (!readable.length && books.length) {
-				tagSections['提示'] = ['该系列包含的项目暂不支持阅读']
-			}
-			const info = new ComicDetails({
-				title: seriesTitle,
-				subTitle: authors.slice(0, 3).join(', '),
-				cover: seriesCover,
-				description,
-				tags: tagSections,
-				chapters,
-				updateTime: this.formatDate(series?.lastModified),
-				uploadTime: this.formatDate(series?.created),
-				url: series?.url || this.buildUrl(`/series/${id}`)
-			})
-			return info
+			return await this.loadSeriesDetails(id)
 		},
 		loadEp: async (comicId, epId) => {
 				let bookId = epId || comicId
@@ -723,6 +647,89 @@ class Komga extends ComicSource {
 			cover: this.buildUrl(`/api/v1/books/${book.id}/thumbnail`),
 			tags: this.uniqueArray(tags).slice(0, 12),
 			description,
+		})
+	}
+
+	async loadSeriesDetails(seriesId, note) {
+		const [series, booksPage] = await Promise.all([
+			this.getJson(`/api/v1/series/${seriesId}`),
+			// _ts 破坏 HTTP 缓存：删除后必须拿到最新章节集合，不能命中旧响应
+			this.getJson(`/api/v1/series/${seriesId}/books`, {
+				unpaged: true,
+				sort: ['metadata.numberSort,asc'],
+				_ts: Date.now()
+			})
+		])
+		const books = (Array.isArray(booksPage?.content) ? booksPage.content : [])
+			.filter((book) => !this.isHiddenBook(book?.id))
+		const readable = books.filter((book) => this.isSupportedBook(book))
+		readable.sort((a, b) => this.compareBooks(a, b))
+		const chapters = new Map()
+		readable.forEach((book, index) => {
+			chapters.set(book.id, this.formatBookTitle(book, index))
+			// 详情页拿到页数就记住，避免客户端命中章节缓存、不调 loadEp 时算不出总页数
+			this.rememberBookPages(book.id, book?.media?.pagesCount || 0)
+		})
+		const metadata = series?.metadata || {}
+		// 系列级简介为空时，用第一本有简介的单本兜底：很多人的简介其实写在单本上
+		let summary = series?.booksMetadata?.summary || metadata.summary || ''
+		if (!summary) {
+			const withSummary = books.find((book) => book?.metadata?.summary)
+			summary = withSummary?.metadata?.summary || ''
+		}
+		const authors = this.collectAuthors(series?.booksMetadata?.authors)
+		const genres = Array.isArray(metadata.genres) ? metadata.genres : []
+		const tags = Array.isArray(series?.booksMetadata?.tags) ? series.booksMetadata.tags : []
+		const readCount = readable.filter((book) => book?.readProgress?.completed).length
+		const inProgressCount = readable.filter((book) => book?.readProgress && !book.readProgress.completed).length
+		let description = summary || '暂无简介'
+		const progressParts = []
+		if (readable.length) {
+			progressParts.push(`已读 ${readCount}/${readable.length}`)
+			if (inProgressCount) progressParts.push(`在读 ${inProgressCount}`)
+		}
+		// 同步自检：有图片事件却一次都没发出去，基本就是没登录 / 缺权限
+		const syncLine = this.buildSyncStatus()
+		if (syncLine) progressParts.push(syncLine)
+		if (progressParts.length) description = `${description}\n\n${progressParts.join(' · ')}`
+		// 删除后直接回到本页时，把结果提示放在最前面
+		if (note) description = `${note}\n\n${description}`
+		const seriesTitle = metadata.title || series?.name || seriesId
+		const seriesCover = this.buildUrl(`/api/v1/series/${seriesId}/thumbnail`)
+		const tagSections = {}
+		if (authors.length) tagSections['作者'] = authors
+		if (genres.length) tagSections['类型'] = this.uniqueArray(genres)
+		if (tags.length) tagSections['标签'] = this.uniqueArray(tags)
+		// 映匣不给源开放卡片长按菜单；详情页标签点击会进入搜索页，故用它承载管理动作。
+		// 章节不在详情页逐条列标签：100 章就会撑出 100 行，这里只放一个按需展开的选择入口。
+		const managementActions = [
+			{ type: 'mark-read-series', id: seriesId, label: '标记已读', detail: seriesTitle, cover: seriesCover },
+			{ type: 'mark-unread-series', id: seriesId, label: '标记未读', detail: seriesTitle, cover: seriesCover },
+			{ type: 'delete-series', id: seriesId, label: '删除系列', detail: seriesTitle, cover: seriesCover }
+		]
+		if (books.length) {
+			managementActions.push({
+				type: 'choose-delete-chapter',
+				id: seriesId,
+				label: '删除章节',
+				detail: seriesTitle,
+				cover: seriesCover
+			})
+		}
+		tagSections['管理'] = this.registerManagementActions(managementActions)
+		if (!readable.length && books.length) {
+			tagSections['提示'] = ['该系列包含的项目暂不支持阅读']
+		}
+		return new ComicDetails({
+			title: seriesTitle,
+			subTitle: authors.slice(0, 3).join(', '),
+			cover: seriesCover,
+			description,
+			tags: tagSections,
+			chapters,
+			updateTime: this.formatDate(series?.lastModified),
+			uploadTime: this.formatDate(series?.created),
+			url: series?.url || this.buildUrl(`/series/${seriesId}`)
 		})
 	}
 
@@ -987,6 +994,15 @@ class Komga extends ComicSource {
 		this.saveData('komga_pending_deletes', pending)
 		try {
 			const status = await this.performManagementAction(action)
+			// 章节删除后直接返回刷新后的系列详情：映匣详情页只在首次进入时加载，
+			// 若这里只给一张文字卡片，用户返回上一页看到的仍是删除前的章节列表。
+			if (action.type === 'delete-chapter-range') {
+				try {
+					return await this.loadSeriesDetails(action.id, status)
+				} catch (_) {
+					// 刷新失败就退回结果卡片，至少让用户看到删除结果
+				}
+			}
 			return this.managementResult(status, action.cover)
 		} catch (error) {
 			return this.managementResult(`${action.label} 失败：${error}`, action.cover)
