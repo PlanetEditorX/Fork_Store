@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.0.3"
+	version = "1.0.4"
 
 	minAppVersion = "1.4.0"
 
@@ -14,7 +14,7 @@ class Komga extends ComicSource {
 		base_url: {
 			title: "服务器地址",
 			type: "input",
-			default: "https://demo.komga.org",
+			default: "http://192.168.1.10:25600",
 			validator: "^(https?:\\/\\/).+$"
 		},
 		// default_username: {
@@ -104,7 +104,7 @@ class Komga extends ComicSource {
 				lastStatus = res ? res.status : 0
 				lastBody = String((res && res.body) || '').slice(0, 120)
 				if (lastStatus === 401) {
-					throw `账号或密码错误（${this.baseUrl} 返回 401）`
+					throw `账号或密码错误（${this.baseUrl} 返回 401）。Komga 的登录名是注册邮箱（name@example.com），不是用户名，请确认。`
 				}
 			}
 			throw `登录失败：${this.baseUrl} 无法访问 ${endpoints.join(' 或 ')}，最后状态 ${lastStatus} ${lastBody}`
