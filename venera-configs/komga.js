@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.4.0"
+	version = "1.4.1"
 
 	minAppVersion = "1.4.0"
 
@@ -151,28 +151,40 @@ class Komga extends ComicSource {
 	explore = [
 		{
 			title: "Komga",
-			type: "singlePageWithMultiPart",
+			type: "multiPartPage",
 			load: async () => {
 				await this.refreshReferenceData(false)
-				const feeds = {}
+				const feeds = []
 				const latest = await this.fetchSeriesList('/api/v1/series/latest', { size: 12, page: 0 })
-				if (latest.comics.length) feeds["最新上架"] = latest.comics
+				if (latest.comics.length) feeds.push({ title: "最新上架", comics: latest.comics })
 				const updated = await this.fetchSeriesList('/api/v1/series/updated', { size: 12, page: 0 })
-				if (updated.comics.length) feeds["最近更新"] = updated.comics
+				if (updated.comics.length) feeds.push({ title: "最近更新", comics: updated.comics })
 				const libraries = this.loadData('komga_libraries')
 				if (Array.isArray(libraries)) {
 					for (const library of libraries.slice(0, 4)) {
 						// 首页书库展示全部系列；不要沿用推荐栏的 12 条上限。
-						// 完整列表也有“分类 → 书库”的分页入口，此处 unpaged 由 Komga 处理。
 						const list = await this.fetchSeriesList('/api/v1/series', {
 							unpaged: true,
 							sort: ['metadata.lastModified,desc'],
 							library_id: [library.id]
 						})
-						if (list.comics.length) feeds[library.name] = list.comics
+						if (list.comics.length) {
+							feeds.push({
+								title: library.name,
+								comics: list.comics,
+								// 映匣：字典形式的首页栏目只能进入静态列表；viewMore 才能进入带筛选的分类页。
+								viewMore: {
+									page: 'category',
+									attributes: {
+										category: 'library',
+										param: library.id
+									}
+								}
+							})
+						}
 					}
 				}
-				if (!Object.keys(feeds).length) {
+				if (!feeds.length) {
 					throw '未找到可展示的数据，请确认已登录且服务器可用'
 				}
 				return feeds
