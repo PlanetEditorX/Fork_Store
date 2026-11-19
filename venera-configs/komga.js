@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.1.0"
+	version = "1.2.0"
 
 	minAppVersion = "1.4.0"
 
@@ -26,6 +26,11 @@ class Komga extends ComicSource {
 			title: "打开章节即标记为已读完",
 			type: "switch",
 			default: false
+		},
+		page_sync: {
+			title: "同步精确页码（按图片加载推断，误差 ±1 页）",
+			type: "switch",
+			default: true
 		},
 		// default_username: {
 		// 	title: "默认账号",
@@ -489,10 +494,15 @@ class Komga extends ComicSource {
 					const number = page?.number ?? 0
 					return this.buildUrl(`/api/v1/books/${bookId}/pages/${number}`, zeroBased ? { zero_based: true } : null)
 				})
-			await this.syncReadProgress(bookId)
+			this.rememberBookPages(bookId, images.length)
+			if (this.loadSetting('mark_completed_on_open') === true) {
+				await this.syncReadProgress(bookId, null, true)
+			}
 			return { images }
 		},
-		onImageLoad: (url) => {
+		onImageLoad: (url, comicId, epId) => {
+			// 同步返回请求配置，进度上报在内部异步发起，避免第三方客户端不 await 时丢 headers
+			this.trackPageFromImage(url, epId || comicId)
 			return {
 				headers: this.imageHeaders
 			}
@@ -766,15 +776,102 @@ class Komga extends ComicSource {
 		return parts.join('&')
 	}
 
-	async syncReadProgress(bookId) {
+	// ---------- 阅读进度同步 ----------
+
+	rememberBookPages(bookId, count) {
+		if (!bookId || !count) return
+		this._bookPages = this._bookPages || {}
+		this._bookPages[bookId] = count
+	}
+
+	bookPageCount(bookId) {
+		const map = this._bookPages
+		return (map && map[bookId]) || 0
+	}
+
+	// 从 Komga 的图片地址反解出书 id 与 1-based 页码
+	parsePageFromImage(url) {
+		if (typeof url !== 'string') return null
+		const m = /\/api\/v1\/books\/([^/?#]+)\/pages\/(\d+)/.exec(url)
+		if (!m) return null
+		const zeroBased = /[?&]zero_based=true/.test(url)
+		const page = parseInt(m[2], 10) + (zeroBased ? 1 : 0)
+		if (!page && page !== 0) return null
+		return { bookId: m[1], page }
+	}
+
+	/**
+	 * 每张图片加载前被调用（App 的 onImageLoad 钩子）。
+	 * 阅读器会预加载当前页前后若干页，因此同一「窗口」内会连续收到一串页码；
+	 * 取窗口下界 +1 作为当前页（窗口下界通常是当前页-1）。
+	 */
+	async trackPageFromImage(imageUrl, fallbackBookId) {
+		try {
+			if (this.loadSetting('page_sync') === false) return
+			if (!this.authToken) return
+			const parsed = this.parsePageFromImage(imageUrl)
+			if (!parsed) return
+			const bookId = parsed.bookId || fallbackBookId
+			if (!bookId) return
+
+			this._track = this._track || {}
+			let st = this._track[bookId]
+			if (!st) {
+				if (Object.keys(this._track).length > 64) this._track = {}
+				st = this._track[bookId] = { min: 0, last: 0, lastSeen: 0 }
+			}
+
+			const page = parsed.page
+			// 一次翻页会连续预加载当前页前后若干张，形成一串递增的请求；
+			// 页码不再「接上一张 +1」就说明是新窗口（翻页/跳页/回翻）
+			if (page === st.lastSeen) return
+			if (!st.min || page !== st.lastSeen + 1) {
+				st.min = page
+			}
+			st.lastSeen = page
+
+			const total = this.bookPageCount(bookId)
+			let candidate = st.min === 1 ? 1 : st.min + 1
+			if (total > 0 && candidate > total) candidate = total
+			if (candidate < 1) candidate = 1
+			if (candidate === st.last) return
+
+			st.last = candidate
+			await this.syncReadProgress(bookId, candidate, total > 0 && candidate >= total)
+		} catch (_) {
+		}
+	}
+
+	async syncReadProgress(bookId, page, completed) {
 		try {
 			if (!bookId) return
 			if (!this.authToken) return
 			if (this.loadSetting('sync_progress') === false) return
-			const completed = this.loadSetting('mark_completed_on_open') === true
-			const payload = completed
-				? JSON.stringify({ completed: true })
-				: JSON.stringify({ page: 1, completed: false })
+
+			let payload
+			if (typeof page === 'number' && page > 0) {
+				const total = this.bookPageCount(bookId)
+				const reachEnd = completed === true || (total > 0 && page >= total)
+				this._finished = this._finished || {}
+				const knownFinished = this._finished[bookId] === true
+				if (reachEnd) {
+					if (knownFinished) return
+					this._finished[bookId] = true
+					payload = JSON.stringify({ page, completed: true })
+				} else if (knownFinished) {
+					// 已读完的书回翻时只更新页码，不带 completed，避免把已读标记抹掉
+					payload = JSON.stringify({ page })
+				} else {
+					payload = JSON.stringify({ page, completed: false })
+				}
+			} else if (completed === true) {
+				this._finished = this._finished || {}
+				this._finished[bookId] = true
+				payload = JSON.stringify({ completed: true })
+			} else {
+				return
+			}
+
 			const headers = {
 				"Accept": "application/json",
 				"Content-Type": "application/json",
