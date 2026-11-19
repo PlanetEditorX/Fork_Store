@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.8.0"
+	version = "1.8.1"
 
 	minAppVersion = "1.4.0"
 
@@ -150,6 +150,7 @@ class Komga extends ComicSource {
 			this.deleteData('komga_action_status')
 			this.deleteData('komga_hidden_series')
 			this.deleteData('komga_hidden_books')
+			this.deleteData('komga_notice')
 		},
 		registerWebsite: null
 	}
@@ -651,6 +652,16 @@ class Komga extends ComicSource {
 	}
 
 	async loadSeriesDetails(seriesId, note) {
+		// 删除章节后经「返回《系列》」卡进来时，用一次性提示把结果带到系列页顶部
+		let notice = note
+		if (!notice) {
+			const notices = this.loadData('komga_notice') || {}
+			if (notices[seriesId]) {
+				notice = notices[seriesId]
+				delete notices[seriesId]
+				this.saveData('komga_notice', notices)
+			}
+		}
 		const [series, booksPage] = await Promise.all([
 			this.getJson(`/api/v1/series/${seriesId}`),
 			// _ts 破坏 HTTP 缓存：删除后必须拿到最新章节集合，不能命中旧响应
@@ -693,7 +704,7 @@ class Komga extends ComicSource {
 		if (syncLine) progressParts.push(syncLine)
 		if (progressParts.length) description = `${description}\n\n${progressParts.join(' · ')}`
 		// 删除后直接回到本页时，把结果提示放在最前面
-		if (note) description = `${note}\n\n${description}`
+		if (notice) description = `${notice}\n\n${description}`
 		const seriesTitle = metadata.title || series?.name || seriesId
 		const seriesCover = this.buildUrl(`/api/v1/series/${seriesId}/thumbnail`)
 		const tagSections = {}
@@ -856,34 +867,25 @@ class Komga extends ComicSource {
 				maxPage: 1
 			}
 		}
-		const pending = this.loadData('komga_pending_deletes') || {}
+		const picks = this.loadData('komga_chapter_picks') || {}
 		const comics = slice.map((book, index) => {
 			const title = this.formatBookTitle(book, (pageIndex - 1) * pageSize + index)
 			const cover = this.buildUrl(`/api/v1/books/${book.id}/thumbnail`)
-			let nonce = this.hashString(`del:${book.id}:${Date.now()}:${Math.random()}`)
-			while (pending[nonce]) nonce = this.hashString(`${nonce}:${Math.random()}`)
-			// 卡片点击走 comic.loadInfo：在这里就把它当成最终确认，
-			// 点一下即删除该章并回到刷新后的系列页，不再经过「选择删除范围」。
-			pending[nonce] = {
-				type: 'delete-chapter-confirm',
-				id: String(book.id),
-				seriesId: String(seriesId),
-				label: '确认删除',
-				detail: title,
-				cover
-			}
+			let nonce = this.hashString(`ask:${book.id}:${Date.now()}:${Math.random()}`)
+			while (picks[nonce]) nonce = this.hashString(`${nonce}:${Math.random()}`)
+			picks[nonce] = { id: String(book.id), title, cover, seriesId: String(seriesId) }
 			return new Comic({
-				id: `komga-confirm:${nonce}`,
-				title: `确认删除｜${title}`,
+				id: `komga-ask:${nonce}`,
+				title: `删除章节｜${title}`,
 				subtitle: '',
 				subTitle: '',
 				cover,
-				description: `点击即永久删除《${title}》并返回系列页面。此操作不可恢复，返回上一页即可取消。`
+				description: '第一次确认：点击选中此章节。进入下一页后再点「确认删除」才会真正删除，返回即可取消。'
 			})
 		})
-		const keys = Object.keys(pending)
-		while (keys.length > 500) delete pending[keys.shift()]
-		this.saveData('komga_pending_deletes', pending)
+		const keys = Object.keys(picks)
+		while (keys.length > 500) delete picks[keys.shift()]
+		this.saveData('komga_chapter_picks', picks)
 		return { comics, maxPage }
 	}
 
@@ -902,7 +904,8 @@ class Komga extends ComicSource {
 		}])[0]
 		return new ComicDetails({
 			title: `删除章节《${pick.title}》？`,
-			subTitle: '点下面的「确认删除」才会真正删除',
+			subTitle: '第二次确认：点下面的「确认删除」',
+			subtitle: '第二次确认：点下面的「确认删除」',
 			cover: pick.cover,
 			description: '警告：此操作非常危险，可能导致不可逆的数据丢失！\n\n点击「确认删除」后会立即调用 Komga 的删除文件接口永久删除该章节，然后返回系列页面。返回上一页即可取消。',
 			tags: { '确认删除': [token] },
@@ -974,6 +977,14 @@ class Komga extends ComicSource {
 		}
 		try {
 			const status = await this.performManagementAction(action)
+			// 章节删除后给一张系列卡：映匣的标签点击只能落到列表页，无法直接跳详情，
+			// 这里做成唯一一张系列卡，点一下即进入已刷新的系列页。
+			if (action.type === 'delete-chapter-confirm' && action.seriesId) {
+				const notices = this.loadData('komga_notice') || {}
+				notices[action.seriesId] = status
+				this.saveData('komga_notice', notices)
+				return { comics: [await this.seriesReturnComic(action.seriesId, status)], maxPage: 1 }
+			}
 			return { comics: [this.statusComic(this.saveManagementStatus(status))], maxPage: 1 }
 		} catch (error) {
 			return { comics: [this.statusComic(this.saveManagementStatus(`${action.label} 失败：${error}`))], maxPage: 1 }
@@ -1066,6 +1077,26 @@ class Komga extends ComicSource {
 			subtitle: '',
 			subTitle: '',
 			description: status.text
+		})
+	}
+
+	async seriesReturnComic(seriesId, text) {
+		let title = ''
+		let cover = ''
+		try {
+			const series = await this.getJson(`/api/v1/series/${encodeURIComponent(seriesId)}`)
+			title = series?.metadata?.title || series?.name || ''
+			cover = this.buildUrl(`/api/v1/series/${seriesId}/thumbnail`)
+		} catch (_) {
+			// 系列信息拿不到也不影响返回卡片
+		}
+		return new Comic({
+			id: String(seriesId),
+			title: title ? `返回《${title}》` : '返回系列',
+			subtitle: '',
+			subTitle: '',
+			cover,
+			description: `${text}\n\n点击本卡片进入系列（章节列表已刷新）。`
 		})
 	}
 
