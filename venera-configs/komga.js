@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.2.2"
+	version = "1.2.3"
 
 	minAppVersion = "1.4.0"
 
@@ -453,11 +453,15 @@ class Komga extends ComicSource {
 			const readCount = readable.filter((book) => book?.readProgress?.completed).length
 			const inProgressCount = readable.filter((book) => book?.readProgress && !book.readProgress.completed).length
 			let description = summary || '暂无简介'
+			const progressParts = []
 			if (readable.length) {
-				const progressParts = [`已读 ${readCount}/${readable.length}`]
+				progressParts.push(`已读 ${readCount}/${readable.length}`)
 				if (inProgressCount) progressParts.push(`在读 ${inProgressCount}`)
-				description = `${description}\n\n${progressParts.join(' · ')}`
 			}
+			// 同步自检：有图片事件却一次都没发出去，基本就是没登录 / 缺权限
+			if (this._sent) progressParts.push(`同步已上报 ${this._sent} 次（第 ${this._sentPage} 页）`)
+			else if (this._hooked) progressParts.push('同步未发出（检查是否已登录）')
+			if (progressParts.length) description = `${description}\n\n${progressParts.join(' · ')}`
 			const tagSections = {}
 			if (authors.length) tagSections['作者'] = authors
 			if (genres.length) tagSections['类型'] = this.uniqueArray(genres)
@@ -838,6 +842,7 @@ class Komga extends ComicSource {
 			const bookId = parsed.bookId || fallbackBookId
 			if (!bookId) return
 
+			this._hooked = (this._hooked || 0) + 1
 			const st = this.trackEntry(bookId)
 			const now = Date.now()
 			// 与上一批间隔超过 300ms → 上一批已经结束，先结算
@@ -897,7 +902,10 @@ class Komga extends ComicSource {
 		if (max > min) {
 			// 一批里有多张 → 这批就是预取窗口，下界即当前页
 			candidate = min
-			st.offset = Math.min(max - min, 8)
+			// 跨度只用来估计预取距离，必须夹住：映匣最多向后预取 6 页。
+			// 之前夹到 8，遇到「打开章节时一次性拿到第 1 页起的一大把图」就会把跨度记成 8，
+			// 之后每张单图都算成 min-8，落到第 1 页被当成相邻章节预取而丢弃 → 完全不上报。
+			st.offset = Math.min(max - min, 6)
 		} else {
 			// 只有一张 → 是预取前沿（滚动时只下载新进窗口的那张），减掉跨度
 			if (total > 0 && min >= total) {
@@ -905,13 +913,19 @@ class Komga extends ComicSource {
 				candidate = total
 			} else {
 				candidate = min - (st.offset || 0)
+				// 跨度把页码算到 1 以下，说明跨度估大了：丢掉重新学，别把后续全部判成第 1 页
+				if (candidate < 2 && min >= 3) {
+					st.offset = 0
+					candidate = min
+				}
 			}
 		}
 		if (total > 0 && candidate > total) candidate = total
 		if (candidate < 1) candidate = 1
 
-		// 第 1 页一律不标记：阅读器会把相邻章节的首图也预取下来，标记了会把别的书弄成「在读」
-		if (candidate === 1) return
+		// 只有「单独一张、而且就是第 1 页」才当作相邻章节的预取丢掉；
+		// 一次拿到 1..N 的一批说明这一章确实被打开了，第 1 页也要记
+		if (count <= 1 && candidate === 1) return
 		if (candidate === st.last) return
 
 		st.last = candidate
@@ -957,41 +971,31 @@ class Komga extends ComicSource {
 			const url = this.buildUrl(`/api/v1/books/${bookId}/read-progress`)
 			if (typeof Network.patch === 'function') {
 				await Network.patch(url, headers, payload)
+				this._sent = (this._sent || 0) + 1
+				this._sentPage = typeof page === 'number' ? page : this._sentPage
 				return
 			}
 			if (typeof Network.sendRequest === 'function') {
 				await Network.sendRequest('PATCH', url, headers, payload)
+				this._sent = (this._sent || 0) + 1
+				this._sentPage = typeof page === 'number' ? page : this._sentPage
 			}
 		} catch (_) {
 		}
 	}
 
-	// 记录「这本书的末页有没有被阅读器载入过」，落盘以便跨会话使用
+	// 记录「这本书的末页有没有被阅读器载入过」。只放内存：每次翻页都落盘会拖慢
+	// QuickJS 里的桥接调用（每次 save_data 都是一次原生调用），得不偿失。
 	recordSeenMax(bookId, page) {
 		if (!bookId || !page) return
 		this._seenMax = this._seenMax || {}
 		if ((this._seenMax[bookId] || 0) >= page) return
 		this._seenMax[bookId] = page
-		try {
-			const saved = this.loadData('book_seen_max') || {}
-			if ((saved[bookId] || 0) >= page) return
-			saved[bookId] = page
-			const keys = Object.keys(saved)
-			if (keys.length > 300) delete saved[keys[0]]
-			this.saveData('book_seen_max', saved)
-		} catch (_) {
-		}
 	}
 
 	seenMax(bookId) {
 		const map = this._seenMax
-		if (map && map[bookId]) return map[bookId]
-		try {
-			const saved = this.loadData('book_seen_max')
-			return (saved && saved[bookId]) || 0
-		} catch (_) {
-			return 0
-		}
+		return (map && map[bookId]) || 0
 	}
 
 	/**
