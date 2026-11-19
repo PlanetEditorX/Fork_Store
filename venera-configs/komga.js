@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.8.1"
+	version = "1.8.2"
 
 	minAppVersion = "1.4.0"
 
@@ -487,6 +487,10 @@ class Komga extends ComicSource {
 			if (typeof id === 'string' && id.startsWith('komga-ask:')) {
 				return await this.chapterDeleteConfirm(id.slice('komga-ask:'.length))
 			}
+			// 「确认删除」卡被点击：执行删除并直接返回刷新后的系列详情，不产生中间结果页。
+			if (typeof id === 'string' && id.startsWith('komga-del:')) {
+				return await this.confirmDeleteAction(id.slice('komga-del:'.length))
+			}
 			const bookId = this.extractBookId(id)
 			if (bookId && this.isHiddenBook(bookId)) {
 				return this.managementResult('该单本已提交删除，已从源列表隐藏')
@@ -880,7 +884,7 @@ class Komga extends ComicSource {
 				subtitle: '',
 				subTitle: '',
 				cover,
-				description: '第一次确认：点击选中此章节。进入下一页后再点「确认删除」才会真正删除，返回即可取消。'
+				description: '第一次确认：点击选中此章节。下一页在「相关」里点「确认删除」卡片才会真正删除，返回即可取消。'
 			})
 		})
 		const keys = Object.keys(picks)
@@ -893,22 +897,37 @@ class Komga extends ComicSource {
 		const picks = this.loadData('komga_chapter_picks') || {}
 		const pick = picks[nonce]
 		if (!pick) return this.managementResult('该章节选择已过期，请重新进入「删除章节」入口')
-		// 选中章节后直接给确认页：不再让用户先挑删除范围，点一次确认即删本章。
-		const token = this.registerManagementActions([{
+		// 第二次确认必须是一次「卡片」点击：映匣里文字标签只会跳搜索列表，
+		// 只有卡片点击才走 comic.loadInfo，才能删除后直接返回系列页、不留结果层。
+		// 详情页的「相关」区（recommend）正是可点击的漫画卡，故把确认卡放在那里。
+		const delNonce = this.hashString(`del:${pick.id}:${Date.now()}:${Math.random()}`)
+		const pending = this.loadData('komga_pending_deletes') || {}
+		pending[delNonce] = {
 			type: 'delete-chapter-confirm',
 			id: pick.id,
 			seriesId: pick.seriesId,
 			label: '确认删除',
 			detail: pick.title,
 			cover: pick.cover
-		}])[0]
+		}
+		const keys = Object.keys(pending)
+		while (keys.length > 200) delete pending[keys.shift()]
+		this.saveData('komga_pending_deletes', pending)
 		return new ComicDetails({
 			title: `删除章节《${pick.title}》？`,
-			subTitle: '第二次确认：点下面的「确认删除」',
-			subtitle: '第二次确认：点下面的「确认删除」',
+			subTitle: '再点一次「确认删除」才会删除',
+			subtitle: '再点一次「确认删除」才会删除',
 			cover: pick.cover,
-			description: '警告：此操作非常危险，可能导致不可逆的数据丢失！\n\n点击「确认删除」后会立即调用 Komga 的删除文件接口永久删除该章节，然后返回系列页面。返回上一页即可取消。',
-			tags: { '确认删除': [token] },
+			description: '警告：此操作非常危险，可能导致不可逆的数据丢失！\n\n请在页面下方的「相关」中点「确认删除」卡片：点击后会立即调用 Komga 的删除文件接口永久删除该章节，然后直接回到系列页面。返回上一页即可取消。',
+			tags: {},
+			recommend: [new Comic({
+				id: `komga-del:${delNonce}`,
+				title: `确认删除《${pick.title}》`,
+				subtitle: '',
+				subTitle: '',
+				cover: pick.cover,
+				description: '点击即永久删除该章节并返回系列页面。'
+			})],
 			chapters: new Map()
 		})
 	}
