@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.7.0"
+	version = "1.8.0"
 
 	minAppVersion = "1.4.0"
 
@@ -806,6 +806,7 @@ class Komga extends ComicSource {
 				cover: entry.cover || ''
 			}
 			if (entry.anchorId != null) action.anchorId = String(entry.anchorId)
+			if (entry.seriesId != null) action.seriesId = String(entry.seriesId)
 			if (entry.count != null) action.count = Number(entry.count)
 			actions[token] = action
 			return token
@@ -855,25 +856,34 @@ class Komga extends ComicSource {
 				maxPage: 1
 			}
 		}
-		const picks = this.loadData('komga_chapter_picks') || {}
+		const pending = this.loadData('komga_pending_deletes') || {}
 		const comics = slice.map((book, index) => {
 			const title = this.formatBookTitle(book, (pageIndex - 1) * pageSize + index)
 			const cover = this.buildUrl(`/api/v1/books/${book.id}/thumbnail`)
-			let nonce = this.hashString(`ask:${book.id}:${Date.now()}:${Math.random()}`)
-			while (picks[nonce]) nonce = this.hashString(`${nonce}:${Math.random()}`)
-			picks[nonce] = { id: String(book.id), title, cover, seriesId: String(seriesId) }
+			let nonce = this.hashString(`del:${book.id}:${Date.now()}:${Math.random()}`)
+			while (pending[nonce]) nonce = this.hashString(`${nonce}:${Math.random()}`)
+			// 卡片点击走 comic.loadInfo：在这里就把它当成最终确认，
+			// 点一下即删除该章并回到刷新后的系列页，不再经过「选择删除范围」。
+			pending[nonce] = {
+				type: 'delete-chapter-confirm',
+				id: String(book.id),
+				seriesId: String(seriesId),
+				label: '确认删除',
+				detail: title,
+				cover
+			}
 			return new Comic({
-				id: `komga-ask:${nonce}`,
-				title: `选择删除｜${title}`,
+				id: `komga-confirm:${nonce}`,
+				title: `确认删除｜${title}`,
 				subtitle: '',
 				subTitle: '',
 				cover,
-				description: '点击选择此章节；下一页还需要再点「确认删除」标签，才会真正删除服务器上的文件。返回即可取消。'
+				description: `点击即永久删除《${title}》并返回系列页面。此操作不可恢复，返回上一页即可取消。`
 			})
 		})
-		const keys = Object.keys(picks)
-		while (keys.length > 500) delete picks[keys.shift()]
-		this.saveData('komga_chapter_picks', picks)
+		const keys = Object.keys(pending)
+		while (keys.length > 500) delete pending[keys.shift()]
+		this.saveData('komga_pending_deletes', pending)
 		return { comics, maxPage }
 	}
 
@@ -881,37 +891,21 @@ class Komga extends ComicSource {
 		const picks = this.loadData('komga_chapter_picks') || {}
 		const pick = picks[nonce]
 		if (!pick) return this.managementResult('该章节选择已过期，请重新进入「删除章节」入口')
-		let books = []
-		try {
-			books = await this.loadSeriesBooks(pick.seriesId)
-		} catch (error) {
-			return this.managementResult(`读取章节列表失败：${error}`)
-		}
-		const index = books.findIndex((book) => String(book.id) === String(pick.id))
-		if (index < 0) return this.managementResult('该章节已不存在，可能已被删除')
-		const remain = books.length - index
-		// 区间选项：1 / 5 / 10 / 20 / 到末尾，去重且不超过剩余章节数。
-		const counts = [1]
-		for (const size of [5, 10, 20]) {
-			if (size < remain) counts.push(size)
-		}
-		if (remain > 1) counts.push(remain)
-		const entries = counts.map((count) => ({
-			type: 'delete-chapter-range',
-			id: pick.seriesId,
-			anchorId: pick.id,
-			count,
-			label: count === 1 ? '只删本章' : (count === remain ? `删到末尾（${count} 章）` : `删本章起 ${count} 章`),
+		// 选中章节后直接给确认页：不再让用户先挑删除范围，点一次确认即删本章。
+		const token = this.registerManagementActions([{
+			type: 'delete-chapter-confirm',
+			id: pick.id,
+			seriesId: pick.seriesId,
+			label: '确认删除',
 			detail: pick.title,
 			cover: pick.cover
-		}))
-		const tokens = this.registerManagementActions(entries)
+		}])[0]
 		return new ComicDetails({
-			title: `删除章节《${pick.title}》`,
-			subTitle: remain > 1 ? `本章之后还有 ${remain - 1} 章` : '已是最后一章',
+			title: `删除章节《${pick.title}》？`,
+			subTitle: '点下面的「确认删除」才会真正删除',
 			cover: pick.cover,
-			description: '先选删除范围，再点确认卡片执行。\n\n选择范围本身不会删除任何文件；只有再次点击确认卡片，才会调用 Komga 的删除文件接口。返回上一页即可取消。',
-			tags: { '选择删除范围': tokens },
+			description: '警告：此操作非常危险，可能导致不可逆的数据丢失！\n\n点击「确认删除」后会立即调用 Komga 的删除文件接口永久删除该章节，然后返回系列页面。返回上一页即可取消。',
+			tags: { '确认删除': [token] },
 			chapters: new Map()
 		})
 	}
@@ -996,9 +990,10 @@ class Komga extends ComicSource {
 			const status = await this.performManagementAction(action)
 			// 章节删除后直接返回刷新后的系列详情：映匣详情页只在首次进入时加载，
 			// 若这里只给一张文字卡片，用户返回上一页看到的仍是删除前的章节列表。
-			if (action.type === 'delete-chapter-range') {
+			const backSeriesId = action.seriesId || (action.type === 'delete-chapter-range' ? action.id : null)
+			if (backSeriesId && (action.type === 'delete-chapter-range' || action.type === 'delete-chapter-confirm')) {
 				try {
-					return await this.loadSeriesDetails(action.id, status)
+					return await this.loadSeriesDetails(backSeriesId, status)
 				} catch (_) {
 					// 刷新失败就退回结果卡片，至少让用户看到删除结果
 				}
@@ -1051,7 +1046,7 @@ class Komga extends ComicSource {
 		}
 		if (action.type === 'delete-chapter' || action.type === 'delete-chapter-confirm') {
 			this.markHidden('book', action.id)
-			return `${action.label}：删除请求已提交（HTTP ${res.status}）。Komga 可能异步处理并等待书库重新扫描；已从章节列表隐藏。`
+			return `已删除${action.detail ? `《${action.detail}》` : ''}：请求已提交（HTTP ${res.status}）。Komga 可能异步处理并等待书库重新扫描；已从章节列表隐藏。`
 		}
 		return `${action.label}：操作成功（HTTP ${res.status}）`
 	}
