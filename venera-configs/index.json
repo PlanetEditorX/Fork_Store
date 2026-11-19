@@ -2,10 +2,7 @@
     {
         "name": "Komga",
         "fileName": "komga.js",
-        "filename": "komga.js",
-        "url": "https://cdn.jsdelivr.net/gh/PlanetEditorX/Fork_Store@main/venera-configs/komga.js",
         "key": "komga",
-        "version": "1.0.0",
-        "description": "自建 Komga 服务器，自定义修改版"
+        "version": "1.0.1"
     }
 ]

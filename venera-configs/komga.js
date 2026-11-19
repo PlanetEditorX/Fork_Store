@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.0.0"
+	version = "1.0.1"
 
 	minAppVersion = "1.4.0"
 
