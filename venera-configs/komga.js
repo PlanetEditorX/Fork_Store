@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.0.1"
+	version = "1.0.2"
 
 	minAppVersion = "1.4.0"
 
@@ -51,8 +51,7 @@ class Komga extends ComicSource {
 		if (!username || !password) {
 			return null
 		}
-		const encoded = Convert.encodeBase64(Convert.encodeUtf8(`${username}:${password}`))
-		return typeof encoded === 'string' ? encoded : Convert.decodeUtf8(encoded)
+		return this.toBase64(`${username}:${password}`)
 	}
 
 	get headers() {
@@ -79,25 +78,36 @@ class Komga extends ComicSource {
 			if (!account || !pwd) {
 				throw '账号或密码不能为空'
 			}
-			const basic = Convert.encodeBase64(Convert.encodeUtf8(`${account}:${pwd}`))
-			const token = typeof basic === 'string' ? basic : Convert.decodeUtf8(basic)
-			const res = await Network.get(
-				this.buildUrl('/api/v2/users/me'),
-				{
-					"Accept": "application/json",
-					"Authorization": `Basic ${token}`
+			const token = this.toBase64(`${account}:${pwd}`)
+			const endpoints = ['/api/v2/users/me', '/api/v1/users/me']
+			let lastStatus = 0
+			let lastBody = ''
+			for (const path of endpoints) {
+				let res
+				try {
+					res = await Network.get(
+						this.buildUrl(path),
+						{
+							"Accept": "application/json",
+							"Authorization": `Basic ${token}`
+						}
+					)
+				} catch (error) {
+					throw `无法访问服务器 ${this.baseUrl}（${path}）：${error}`
 				}
-			)
-			if (res.status === 401) {
-				throw '账号或密码错误'
+				if (res && res.status === 200) {
+					this.saveData('komga_auth', token)
+					this.saveData('komga_account_email', account)
+					await this.refreshReferenceData(true)
+					return account
+				}
+				lastStatus = res ? res.status : 0
+				lastBody = String((res && res.body) || '').slice(0, 120)
+				if (lastStatus === 401) {
+					throw `账号或密码错误（${this.baseUrl} 返回 401）`
+				}
 			}
-			if (res.status !== 200) {
-				throw `登录失败: ${res.status}`
-			}
-			this.saveData('komga_auth', token)
-			this.saveData('komga_account_email', account)
-			await this.refreshReferenceData(true)
-			return account
+			throw `登录失败：${this.baseUrl} 无法访问 ${endpoints.join(' 或 ')}，最后状态 ${lastStatus} ${lastBody}`
 		},
 		logout: () => {
 			this.deleteData('komga_auth')
@@ -736,6 +746,42 @@ class Komga extends ComicSource {
 			}
 		}
 		return parts.join('&')
+	}
+
+	// 纯 JS 实现的 UTF-8 -> Base64，避免依赖各客户端 Convert 桥接的差异
+	toBase64(text) {
+		const table = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+		const bytes = []
+		for (let i = 0; i < text.length; i++) {
+			let code = text.charCodeAt(i)
+			if (code < 0x80) {
+				bytes.push(code)
+			} else if (code < 0x800) {
+				bytes.push(0xc0 | (code >> 6), 0x80 | (code & 0x3f))
+			} else if (code >= 0xd800 && code <= 0xdbff && i + 1 < text.length) {
+				const next = text.charCodeAt(++i)
+				const point = 0x10000 + ((code - 0xd800) << 10) + (next - 0xdc00)
+				bytes.push(
+					0xf0 | (point >> 18),
+					0x80 | ((point >> 12) & 0x3f),
+					0x80 | ((point >> 6) & 0x3f),
+					0x80 | (point & 0x3f)
+				)
+			} else {
+				bytes.push(0xe0 | (code >> 12), 0x80 | ((code >> 6) & 0x3f), 0x80 | (code & 0x3f))
+			}
+		}
+		let output = ''
+		for (let i = 0; i < bytes.length; i += 3) {
+			const b0 = bytes[i]
+			const b1 = i + 1 < bytes.length ? bytes[i + 1] : undefined
+			const b2 = i + 2 < bytes.length ? bytes[i + 2] : undefined
+			output += table[b0 >> 2]
+			output += table[((b0 & 0x03) << 4) | ((b1 === undefined ? 0 : b1) >> 4)]
+			output += b1 === undefined ? '=' : table[((b1 & 0x0f) << 2) | ((b2 === undefined ? 0 : b2) >> 6)]
+			output += b2 === undefined ? '=' : table[b2 & 0x3f]
+		}
+		return output
 	}
 
 	formatDate(value) {
