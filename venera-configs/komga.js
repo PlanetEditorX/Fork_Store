@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.2.0"
+	version = "1.2.1"
 
 	minAppVersion = "1.4.0"
 
@@ -782,11 +782,26 @@ class Komga extends ComicSource {
 		if (!bookId || !count) return
 		this._bookPages = this._bookPages || {}
 		this._bookPages[bookId] = count
+		// 落盘一份：映匣的章节列表带 30 分钟缓存，重启后不一定再走 loadEp
+		try {
+			const saved = this.loadData('book_pages') || {}
+			saved[bookId] = count
+			const keys = Object.keys(saved)
+			if (keys.length > 300) delete saved[keys[0]]
+			this.saveData('book_pages', saved)
+		} catch (_) {
+		}
 	}
 
 	bookPageCount(bookId) {
 		const map = this._bookPages
-		return (map && map[bookId]) || 0
+		if (map && map[bookId]) return map[bookId]
+		try {
+			const saved = this.loadData('book_pages')
+			return (saved && saved[bookId]) || 0
+		} catch (_) {
+			return 0
+		}
 	}
 
 	// 从 Komga 的图片地址反解出书 id 与 1-based 页码
@@ -802,10 +817,12 @@ class Komga extends ComicSource {
 
 	/**
 	 * 每张图片加载前被调用（App 的 onImageLoad 钩子）。
-	 * 阅读器会预加载当前页前后若干页，因此同一「窗口」内会连续收到一串页码；
-	 * 取窗口下界 +1 作为当前页（窗口下界通常是当前页-1）。
+	 * 阅读器会预加载当前页前后若干张，同一批请求（几百毫秒内）构成一个「窗口」：
+	 *  - 窗口里有多张 → 下界通常就是当前页-1
+	 *  - 窗口里只有一张（滚动时只下载新进窗口的那张）→ 该页即预取前沿
+	 * 用时间分批而非页码递增，避免缓存命中导致的缺页把后续请求误判成同一批。
 	 */
-	async trackPageFromImage(imageUrl, fallbackBookId) {
+	trackPageFromImage(imageUrl, fallbackBookId) {
 		try {
 			if (this.loadSetting('page_sync') === false) return
 			if (!this.authToken) return
@@ -814,33 +831,83 @@ class Komga extends ComicSource {
 			const bookId = parsed.bookId || fallbackBookId
 			if (!bookId) return
 
-			this._track = this._track || {}
-			let st = this._track[bookId]
-			if (!st) {
-				if (Object.keys(this._track).length > 64) this._track = {}
-				st = this._track[bookId] = { min: 0, last: 0, lastSeen: 0 }
+			const st = this.trackEntry(bookId)
+			const now = Date.now()
+			// 与上一批间隔超过 300ms → 上一批已经结束，先结算
+			if (st.count && now - st.t > 300) this.flushTrackedPage(bookId, st)
+
+			if (!st.count) {
+				st.min = parsed.page
+				st.max = parsed.page
+			} else {
+				if (parsed.page < st.min) st.min = parsed.page
+				if (parsed.page > st.max) st.max = parsed.page
 			}
+			st.count += 1
+			st.t = now
 
-			const page = parsed.page
-			// 一次翻页会连续预加载当前页前后若干张，形成一串递增的请求；
-			// 页码不再「接上一张 +1」就说明是新窗口（翻页/跳页/回翻）
-			if (page === st.lastSeen) return
-			if (!st.min || page !== st.lastSeen + 1) {
-				st.min = page
+			if (typeof setTimeout === 'function') {
+				if (st.timer) {
+					try { clearTimeout(st.timer) } catch (_) { }
+				}
+				st.timer = setTimeout(() => this.flushTrackedPage(bookId, st), 600)
+			} else {
+				this.flushTrackedPage(bookId, st)
 			}
-			st.lastSeen = page
-
-			const total = this.bookPageCount(bookId)
-			let candidate = st.min === 1 ? 1 : st.min + 1
-			if (total > 0 && candidate > total) candidate = total
-			if (candidate < 1) candidate = 1
-			if (candidate === st.last) return
-
-			st.last = candidate
-			await this.syncReadProgress(bookId, candidate, total > 0 && candidate >= total)
 		} catch (_) {
 		}
 	}
+
+	trackEntry(bookId) {
+		this._track = this._track || {}
+		let st = this._track[bookId]
+		if (!st) {
+			if (Object.keys(this._track).length > 64) this._track = {}
+			st = this._track[bookId] = { min: 0, max: 0, count: 0, timer: null, last: 0, t: 0, offset: 0 }
+		}
+		return st
+	}
+
+	flushTrackedPage(bookId, st) {
+		if (st.timer) {
+			try { clearTimeout(st.timer) } catch (_) { }
+			st.timer = null
+		}
+		const min = st.min
+		const max = st.max
+		const count = st.count
+		st.min = 0
+		st.max = 0
+		st.count = 0
+		st.t = 0
+		if (!min) return
+
+		const total = this.bookPageCount(bookId)
+		let candidate
+		if (max > min) {
+			// 一批里有多张 → 这批就是预取窗口，下界即当前页
+			candidate = min
+			st.offset = Math.min(max - min, 8)
+		} else {
+			// 只有一张 → 是预取前沿（滚动时只下载新进窗口的那张），减掉跨度
+			if (total > 0 && min >= total) {
+				// 预取端已经顶到末页，人就在最后几页
+				candidate = total
+			} else {
+				candidate = min - (st.offset || 0)
+			}
+		}
+		if (total > 0 && candidate > total) candidate = total
+		if (candidate < 1) candidate = 1
+
+		// 第 1 页一律不标记：阅读器会把相邻章节的首图也预取下来，标记了会把别的书弄成「在读」
+		if (candidate === 1) return
+		if (candidate === st.last) return
+
+		st.last = candidate
+		this.syncReadProgress(bookId, candidate, total > 0 && candidate >= total)
+	}
+
 
 	async syncReadProgress(bookId, page, completed) {
 		try {
