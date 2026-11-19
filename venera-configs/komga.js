@@ -8,7 +8,7 @@ class Komga extends ComicSource {
 
 	minAppVersion = "1.4.0"
 
-	url = "https://cdn.jsdelivr.net/gh/venera-app/venera-configs@main/komga.js"
+	url = "https://cdn.jsdelivr.net/gh/PlanetEditorX/Fork_Store@main/venera-configs/komga.js"
 
 	settings = {
 		base_url: {
