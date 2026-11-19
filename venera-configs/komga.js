@@ -4,11 +4,11 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.0.2"
+	version = "1.0.3"
 
 	minAppVersion = "1.4.0"
 
-	url = "https://cdn.jsdelivr.net/gh/PlanetEditorX/Fork_Store@main/venera-configs/komga.js"
+	url = "https://raw.githubusercontent.com/PlanetEditorX/Fork_Store/main/venera-configs/komga.js"
 
 	settings = {
 		base_url: {
