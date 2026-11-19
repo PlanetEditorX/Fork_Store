@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.2.3"
+	version = "1.2.4"
 
 	minAppVersion = "1.4.0"
 
@@ -31,6 +31,17 @@ class Komga extends ComicSource {
 			title: "同步精确页码（按图片加载推断，误差 ±1 页）",
 			type: "switch",
 			default: true
+		},
+		dwell_complete: {
+			title: "缓存章节按停留时长判定已读完",
+			type: "switch",
+			default: true
+		},
+		dwell_seconds: {
+			title: "停留多少秒算读完（缓存章节）",
+			type: "input",
+			default: "20",
+			validator: "^\\d+$"
 		},
 		// default_username: {
 		// 	title: "默认账号",
@@ -444,9 +455,16 @@ class Komga extends ComicSource {
 			const chapters = new Map()
 			readable.forEach((book, index) => {
 				chapters.set(book.id, this.formatBookTitle(book, index))
+				// 详情页拿到页数就记住，避免客户端命中章节缓存、不调 loadEp 时算不出总页数
+				this.rememberBookPages(book.id, book?.media?.pagesCount || 0)
 			})
 			const metadata = series?.metadata || {}
-			const summary = series?.booksMetadata?.summary || metadata.summary || ''
+			// 系列级简介为空时，用第一本有简介的单本兜底：很多人的简介其实写在单本上
+			let summary = series?.booksMetadata?.summary || metadata.summary || ''
+			if (!summary) {
+				const withSummary = books.find((book) => book?.metadata?.summary)
+				summary = withSummary?.metadata?.summary || ''
+			}
 			const authors = this.collectAuthors(series?.booksMetadata?.authors)
 			const genres = Array.isArray(metadata.genres) ? metadata.genres : []
 			const tags = Array.isArray(series?.booksMetadata?.tags) ? series.booksMetadata.tags : []
@@ -459,8 +477,8 @@ class Komga extends ComicSource {
 				if (inProgressCount) progressParts.push(`在读 ${inProgressCount}`)
 			}
 			// 同步自检：有图片事件却一次都没发出去，基本就是没登录 / 缺权限
-			if (this._sent) progressParts.push(`同步已上报 ${this._sent} 次（第 ${this._sentPage} 页）`)
-			else if (this._hooked) progressParts.push('同步未发出（检查是否已登录）')
+			const syncLine = this.buildSyncStatus()
+			if (syncLine) progressParts.push(syncLine)
 			if (progressParts.length) description = `${description}\n\n${progressParts.join(' · ')}`
 			const tagSections = {}
 			if (authors.length) tagSections['作者'] = authors
@@ -495,6 +513,12 @@ class Komga extends ComicSource {
 				this.finalizeReadBook(this._activeBookId)
 			}
 			this._activeBookId = bookId
+			// 同一章可能被重复 loadEp（客户端有章节缓存），只有真的换书才重置计时
+			if (this._lastOpenedBook !== bookId) {
+				this._openedAt = this._openedAt || {}
+				this._openedAt[bookId] = Date.now()
+				this._lastOpenedBook = bookId
+			}
 			const pages = await this.getJson(`/api/v1/books/${bookId}/pages`)
 			const list = Array.isArray(pages) ? pages : []
 			list.sort((a, b) => (a?.number ?? 0) - (b?.number ?? 0))
@@ -640,7 +664,26 @@ class Komga extends ComicSource {
 		const metadata = book.metadata || {}
 		const authors = this.collectAuthors(metadata.authors)
 		const tags = this.uniqueArray(Array.isArray(metadata.tags) ? metadata.tags : [])
-		const description = metadata.summary || '暂无简介'
+		// 单本书经常没有自己的 summary，简介记在所属系列上，回落到系列级简介
+		let summary = metadata.summary || ''
+		if (book.seriesId) {
+			try {
+				const series = await this.getJson(`/api/v1/series/${book.seriesId}`)
+				if (!summary) {
+					summary = series?.booksMetadata?.summary || series?.metadata?.summary || ''
+				}
+			} catch (_) {
+			}
+		}
+		// 记录页数：客户端命中章节缓存时不会再走 loadEp，结算需要靠这里
+		this.rememberBookPages(bookId, book?.media?.pagesCount || 0)
+		const readTag = book?.readProgress?.completed
+			? '本册已读完'
+			: (book?.readProgress ? `读到第 ${book.readProgress.page || 1} 页` : '未读')
+		const statusParts = [readTag]
+		const syncLine = this.buildSyncStatus()
+		if (syncLine) statusParts.push(syncLine)
+		const description = `${summary || '暂无简介'}\n\n${statusParts.join(' · ')}`
 		const tagSections = {}
 		if (authors.length) tagSections['作者'] = authors
 		if (tags.length) tagSections['标签'] = tags
@@ -792,15 +835,31 @@ class Komga extends ComicSource {
 	rememberBookPages(bookId, count) {
 		if (!bookId || !count) return
 		this._bookPages = this._bookPages || {}
+		if (this._bookPages[bookId] === count) return
 		this._bookPages[bookId] = count
-		// 落盘一份：映匣的章节列表带 30 分钟缓存，重启后不一定再走 loadEp
-		try {
-			const saved = this.loadData('book_pages') || {}
-			saved[bookId] = count
-			const keys = Object.keys(saved)
-			if (keys.length > 300) delete saved[keys[0]]
-			this.saveData('book_pages', saved)
-		} catch (_) {
+		// 落盘一份：映匣的章节列表带 30 分钟缓存，重启后不一定再走 loadEp。
+		// 详情页会一次传入几十本书，必须合并成一次写入，否则每本一次原生桥接调用。
+		this._pagesDirty = true
+		if (this._pagesTimer) return
+		const flush = () => {
+			this._pagesTimer = null
+			if (!this._pagesDirty) return
+			this._pagesDirty = false
+			try {
+				const saved = this.loadData('book_pages') || {}
+				for (const key of Object.keys(this._bookPages)) saved[key] = this._bookPages[key]
+				const keys = Object.keys(saved)
+				while (keys.length > 300) {
+					delete saved[keys.shift()]
+				}
+				this.saveData('book_pages', saved)
+			} catch (_) {
+			}
+		}
+		if (typeof setTimeout === 'function') {
+			this._pagesTimer = setTimeout(flush, 800)
+		} else {
+			flush()
 		}
 	}
 
@@ -835,14 +894,17 @@ class Komga extends ComicSource {
 	 */
 	trackPageFromImage(imageUrl, fallbackBookId) {
 		try {
-			if (this.loadSetting('page_sync') === false) return
-			if (!this.authToken) return
 			const parsed = this.parsePageFromImage(imageUrl)
 			if (!parsed) return
 			const bookId = parsed.bookId || fallbackBookId
 			if (!bookId) return
-
+			// 计数放在鉴权/开关检查之前：详情页要靠它区分「没收到事件」和「收到但没发」
 			this._hooked = (this._hooked || 0) + 1
+			this._hookedBook = this._hookedBook || {}
+			this._hookedBook[bookId] = (this._hookedBook[bookId] || 0) + 1
+			if (this.loadSetting('page_sync') === false) return
+			if (!this.authToken) return
+
 			const st = this.trackEntry(bookId)
 			const now = Date.now()
 			// 与上一批间隔超过 300ms → 上一批已经结束，先结算
@@ -984,6 +1046,35 @@ class Komga extends ComicSource {
 		}
 	}
 
+	/**
+	 * 详情页尾部的一行自检信息。用户看不懂代码，只能靠这行区分三种完全不同的故障：
+	 * 「没收到图片事件」= 客户端缓存命中 / 没打开过章节；
+	 * 「收到事件但没发出去」= 未登录或权限问题；
+	 * 「已同步 N 次」= 源确实在发，问题在服务端。
+	 */
+	buildSyncStatus() {
+		const parts = [`源 v${this.version}`]
+		if (!this.authToken) {
+			parts.push('未登录，进度不会同步')
+			return parts.join(' · ')
+		}
+		if (this.loadSetting('sync_progress') === false) {
+			parts.push('进度同步已关闭')
+			return parts.join(' · ')
+		}
+		if (this.loadSetting('page_sync') === false) parts.push('页级同步已关闭')
+		const hooked = this._hooked || 0
+		const sent = this._sent || 0
+		if (sent > 0) {
+			parts.push(`已同步 ${sent} 次${this._sentPage ? `（第 ${this._sentPage} 页）` : ''}`)
+		} else if (hooked > 0) {
+			parts.push(`收到 ${hooked} 次图片事件但未发出`)
+		} else {
+			parts.push('本次未收到图片事件（缓存命中或未开章）')
+		}
+		return parts.join(' · ')
+	}
+
 	// 记录「这本书的末页有没有被阅读器载入过」。只放内存：每次翻页都落盘会拖慢
 	// QuickJS 里的桥接调用（每次 save_data 都是一次原生调用），得不偿失。
 	recordSeenMax(bookId, page) {
@@ -1015,11 +1106,29 @@ class Komga extends ComicSource {
 			// 上一个窗口可能还没到 600ms 结算点，先落地，否则 max 还没记进 seenMax
 			if (pending && pending.count) this.flushTrackedPage(bookId, pending)
 			const seen = this.seenMax(bookId)
-			if (seen < total) return
 			const st = this._track && this._track[bookId]
 			const last = (st && st.last) || 0
-			if (last >= total) return
-			if (total - last > 12) return
+
+			// 主判据：末页进过阅读器缓存，且已知位置落在末尾窗口内
+			if (seen >= total) {
+				if (last >= total) return
+				if (total - last > 12) return
+				if (st) st.last = total
+				this.syncReadProgress(bookId, total, true)
+				return
+			}
+
+			// 兜底：映匣命中磁盘缓存时不会再回调 onImageLoad，整本书一次事件都收不到，
+			// 上面所有页码判据全部失效。此时退化为「停留时长」判断：在这本书上停留足够久
+			// 又切走了，就当作读完了。可在设置里关掉。
+			if (this.loadSetting('dwell_complete') === false) return
+			const hookedBook = (this._hookedBook && this._hookedBook[bookId]) || 0
+			if (hookedBook > 0) return
+			const openedAt = (this._openedAt && this._openedAt[bookId]) || 0
+			if (!openedAt) return
+			const dwell = Date.now() - openedAt
+			const threshold = 1000 * (Number(this.loadSetting('dwell_seconds')) || 20)
+			if (dwell < threshold) return
 			if (st) st.last = total
 			this.syncReadProgress(bookId, total, true)
 		} catch (_) {
