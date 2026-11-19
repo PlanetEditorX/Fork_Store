@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.4.1"
+	version = "1.4.2"
 
 	minAppVersion = "1.4.0"
 
@@ -667,16 +667,13 @@ class Komga extends ComicSource {
 		if (!book || !this.isSupportedBook(book)) return null
 		const metadata = book.metadata || {}
 		const title = metadata.title || book.name || book.id
-		const authors = this.collectAuthors(metadata.authors)
 		const tags = Array.isArray(metadata.tags) ? metadata.tags : []
 		const description = metadata.summary || ''
-		const subtitleParts = []
-		if (book.seriesTitle) subtitleParts.push(book.seriesTitle)
-		if (authors.length) subtitleParts.push(authors[0])
 		return new Comic({
 			id: `book:${book.id}`,
 			title,
-			subTitle: subtitleParts.join(' · '),
+			subtitle: '',
+			subTitle: '',
 			cover: this.buildUrl(`/api/v1/books/${book.id}/thumbnail`),
 			tags: this.uniqueArray(tags).slice(0, 12),
 			description,
@@ -739,7 +736,6 @@ class Komga extends ComicSource {
 		if (!series) return null
 		const metadata = series.metadata || {}
 		const title = metadata.title || series.name || series.id
-		const authors = this.collectAuthors(series?.booksMetadata?.authors)
 		const tags = []
 		if (Array.isArray(metadata.genres)) tags.push(...metadata.genres)
 		if (Array.isArray(series?.booksMetadata?.tags)) tags.push(...series.booksMetadata.tags)
@@ -747,7 +743,10 @@ class Komga extends ComicSource {
 		return new Comic({
 			id: series.id,
 			title,
-			subTitle: authors.slice(0, 2).join(', '),
+			// 映匣卡片会在标题下再显示一行 subtitle/subTitle，默认隐藏该行。
+			// 两个别名都置空，兼容 Venera 的 Comic 实现差异。
+			subtitle: '',
+			subTitle: '',
 			cover: this.buildUrl(`/api/v1/series/${series.id}/thumbnail`),
 			tags: this.uniqueArray(tags).slice(0, 12),
 			description,
