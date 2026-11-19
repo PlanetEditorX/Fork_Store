@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.3.1"
+	version = "1.4.0"
 
 	minAppVersion = "1.4.0"
 
@@ -169,7 +169,7 @@ class Komga extends ComicSource {
 							sort: ['metadata.lastModified,desc'],
 							library_id: [library.id]
 						})
-						if (list.comics.length) feeds[`书库 ${library.name}`] = list.comics
+						if (list.comics.length) feeds[library.name] = list.comics
 					}
 				}
 				if (!Object.keys(feeds).length) {
@@ -311,10 +311,15 @@ class Komga extends ComicSource {
 			const pageIndex = Math.max(0, (page || 1) - 1)
 			const defaultSort = category === 'all' ? 'created,desc' : 'metadata.lastModified,desc'
 			const sortValue = this.extractOption(options, 0, defaultSort)
+			const readStatus = this.extractOption(options, 1, 'all')
 			const query = {
 				page: pageIndex,
 				size: 30,
 				sort: [sortValue]
+			}
+			// Komga 原生按系列聚合阅读状态筛选，分页数量也由服务器返回。
+			if (['UNREAD', 'IN_PROGRESS', 'READ'].includes(readStatus)) {
+				query.read_status = [readStatus]
 			}
 			if (category === 'all') {
 				// const list = await this.fetchBookList('/api/v1/books', query)
@@ -375,6 +380,7 @@ class Komga extends ComicSource {
 		},
 		optionList: [
 			{
+				label: '排序',
 				options: [
 					'*created,desc-添加时间(新→旧)',
 					'created,asc-添加时间(旧→新)',
@@ -382,6 +388,17 @@ class Komga extends ComicSource {
 					'metadata.lastModified,asc-更新时间(旧→新)',
 					'metadata.titleSort,asc-标题(A-Z)',
 					'metadata.titleSort,desc-标题(Z-A)'
+				],
+				notShowWhen: null,
+				showWhen: null
+			},
+			{
+				label: '阅读状态',
+				options: [
+					'*all-全部',
+					'UNREAD-未读',
+					'IN_PROGRESS-继续阅读',
+					'READ-已读'
 				],
 				notShowWhen: null,
 				showWhen: null
