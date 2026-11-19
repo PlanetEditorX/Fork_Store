@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.0.4"
+	version = "1.1.0"
 
 	minAppVersion = "1.4.0"
 
@@ -16,6 +16,16 @@ class Komga extends ComicSource {
 			type: "input",
 			default: "http://192.168.1.10:25600",
 			validator: "^(https?:\\/\\/).+$"
+		},
+		sync_progress: {
+			title: "阅读进度同步到 Komga",
+			type: "switch",
+			default: true
+		},
+		mark_completed_on_open: {
+			title: "打开章节即标记为已读完",
+			type: "switch",
+			default: false
 		},
 		// default_username: {
 		// 	title: "默认账号",
@@ -433,7 +443,14 @@ class Komga extends ComicSource {
 			const authors = this.collectAuthors(series?.booksMetadata?.authors)
 			const genres = Array.isArray(metadata.genres) ? metadata.genres : []
 			const tags = Array.isArray(series?.booksMetadata?.tags) ? series.booksMetadata.tags : []
-			const description = summary || '暂无简介'
+			const readCount = readable.filter((book) => book?.readProgress?.completed).length
+			const inProgressCount = readable.filter((book) => book?.readProgress && !book.readProgress.completed).length
+			let description = summary || '暂无简介'
+			if (readable.length) {
+				const progressParts = [`已读 ${readCount}/${readable.length}`]
+				if (inProgressCount) progressParts.push(`在读 ${inProgressCount}`)
+				description = `${description}\n\n${progressParts.join(' · ')}`
+			}
 			const tagSections = {}
 			if (authors.length) tagSections['作者'] = authors
 			if (genres.length) tagSections['类型'] = this.uniqueArray(genres)
@@ -472,6 +489,7 @@ class Komga extends ComicSource {
 					const number = page?.number ?? 0
 					return this.buildUrl(`/api/v1/books/${bookId}/pages/${number}`, zeroBased ? { zero_based: true } : null)
 				})
+			await this.syncReadProgress(bookId)
 			return { images }
 		},
 		onImageLoad: (url) => {
@@ -746,6 +764,32 @@ class Komga extends ComicSource {
 			}
 		}
 		return parts.join('&')
+	}
+
+	async syncReadProgress(bookId) {
+		try {
+			if (!bookId) return
+			if (!this.authToken) return
+			if (this.loadSetting('sync_progress') === false) return
+			const completed = this.loadSetting('mark_completed_on_open') === true
+			const payload = completed
+				? JSON.stringify({ completed: true })
+				: JSON.stringify({ page: 1, completed: false })
+			const headers = {
+				"Accept": "application/json",
+				"Content-Type": "application/json",
+				"Authorization": `Basic ${this.authToken}`
+			}
+			const url = this.buildUrl(`/api/v1/books/${bookId}/read-progress`)
+			if (typeof Network.patch === 'function') {
+				await Network.patch(url, headers, payload)
+				return
+			}
+			if (typeof Network.sendRequest === 'function') {
+				await Network.sendRequest('PATCH', url, headers, payload)
+			}
+		} catch (_) {
+		}
 	}
 
 	// 纯 JS 实现的 UTF-8 -> Base64，避免依赖各客户端 Convert 桥接的差异
