@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.2.4"
+	version = "1.3.0"
 
 	minAppVersion = "1.4.0"
 
@@ -1090,47 +1090,51 @@ class Komga extends ComicSource {
 	}
 
 	/**
-	 * 离开一章时收尾：阅读器的预取只在「当前页之后」，末页之后的图不存在，
-	 * 所以读到结尾时我们发现的最大页码 = 总页数，而已上报页码会落后 3~6 页。
-	 * 只要末页进过缓存、且已知位置落在末尾窗口内，就把这章标记为读完。
+	 * 离开一章时收尾（切到下一章 / 退回详情页都会走到这里）。
+	 *
+	 * 为什么不能只看图片事件：映匣命中磁盘缓存时根本不再回调 onImageLoad，
+	 * 一本缓存过的书可能全程零事件，任何基于页码的判据都会失效——表现出来就是
+	 * 「第二本卡在剩余 23 页」「第三本完全未读」。所以这里用两条互相独立的判据：
+	 *   1) 末页确实进过缓存、且已知位置接近结尾（有图片事件时最准）
+	 *   2) 在这本书上停留足够久然后离开（缓存命中时唯一可用的信号）
+	 * 两条满足其一就标已读完；短暂停留的预取/误触只会标「在读」。
 	 */
 	finalizeReadBook(bookId) {
 		try {
 			if (!bookId) return
 			if (!this.authToken) return
 			if (this.loadSetting('sync_progress') === false) return
-			if (this.loadSetting('page_sync') === false) return
-			const total = this.bookPageCount(bookId)
-			if (!total) return
 			const pending = this._track && this._track[bookId]
 			// 上一个窗口可能还没到 600ms 结算点，先落地，否则 max 还没记进 seenMax
 			if (pending && pending.count) this.flushTrackedPage(bookId, pending)
-			const seen = this.seenMax(bookId)
+			const total = this.bookPageCount(bookId)
 			const st = this._track && this._track[bookId]
 			const last = (st && st.last) || 0
+			const seen = this.seenMax(bookId)
+			const openedAt = (this._openedAt && this._openedAt[bookId]) || 0
+			const dwell = openedAt ? Date.now() - openedAt : 0
+			const seconds = Number(this.loadSetting('dwell_seconds')) || 20
 
-			// 主判据：末页进过阅读器缓存，且已知位置落在末尾窗口内
-			if (seen >= total) {
-				if (last >= total) return
-				if (total - last > 12) return
-				if (st) st.last = total
-				this.syncReadProgress(bookId, total, true)
+			// 判据一：末页进过缓存，且已知位置距末尾不超过 25%（不再用固定的 12 页，
+			// 长漫画的预取缺口会超过 12，导致读完了也结算不了）
+			const nearEnd = total > 0 && seen >= total && last > 0 &&
+				(total - last) <= Math.max(12, Math.ceil(total * 0.25))
+			// 判据二：停留够久然后离开
+			const stayed = this.loadSetting('dwell_complete') !== false && dwell >= seconds * 1000
+			if (nearEnd || stayed) {
+				const page = total > 0 ? total : (last || 1)
+				if (st) st.last = page
+				this.syncReadProgress(bookId, page, true)
+			} else if (last === 0 && dwell >= 5000) {
+				// 打开过、也待了几秒，但一页都没上报过（多半全是缓存命中）：
+				// 至少标成「在读」，别让它一直显示未读。预取相邻章节停留极短，不会走到这里。
+				this.syncReadProgress(bookId, 1, false)
+			} else {
 				return
 			}
-
-			// 兜底：映匣命中磁盘缓存时不会再回调 onImageLoad，整本书一次事件都收不到，
-			// 上面所有页码判据全部失效。此时退化为「停留时长」判断：在这本书上停留足够久
-			// 又切走了，就当作读完了。可在设置里关掉。
-			if (this.loadSetting('dwell_complete') === false) return
-			const hookedBook = (this._hookedBook && this._hookedBook[bookId]) || 0
-			if (hookedBook > 0) return
-			const openedAt = (this._openedAt && this._openedAt[bookId]) || 0
-			if (!openedAt) return
-			const dwell = Date.now() - openedAt
-			const threshold = 1000 * (Number(this.loadSetting('dwell_seconds')) || 20)
-			if (dwell < threshold) return
-			if (st) st.last = total
-			this.syncReadProgress(bookId, total, true)
+			// 结算完清掉计时，下次重开这本书重新计
+			if (this._openedAt) delete this._openedAt[bookId]
+			if (this._lastOpenedBook === bookId) this._lastOpenedBook = null
 		} catch (_) {
 		}
 	}
