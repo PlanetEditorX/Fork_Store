@@ -4,7 +4,7 @@ class Komga extends ComicSource {
 
 	key = "komga"
 
-	version = "1.5.0"
+	version = "1.5.1"
 
 	minAppVersion = "1.4.0"
 
@@ -146,6 +146,7 @@ class Komga extends ComicSource {
 			this.deleteData('komga_meta_ts')
 			this.deleteData('komga_actions')
 			this.deleteData('komga_pending_deletes')
+			this.deleteData('komga_chapter_picks')
 			this.deleteData('komga_action_status')
 			this.deleteData('komga_hidden_series')
 			this.deleteData('komga_hidden_books')
@@ -426,7 +427,7 @@ class Komga extends ComicSource {
 	search = {
 		load: async (keyword, options, page) => {
 			// 详情页的“管理”标签在映匣里会打开搜索页；用精确关键词拦截成动作入口。
-			const management = await this.handleManagementKeyword(keyword)
+			const management = await this.handleManagementKeyword(keyword, page)
 			if (management) return management
 			const pageIndex = Math.max(0, (page || 1) - 1)
 			const sortValue = this.extractOption(options, 0, 'metadata.lastModified,desc')
@@ -481,6 +482,9 @@ class Komga extends ComicSource {
 			}
 			if (typeof id === 'string' && id.startsWith('komga-status:')) {
 				return this.managementResult(this.loadData('komga_action_status')?.[id.slice('komga-status:'.length)] || '该操作已经处理')
+			}
+			if (typeof id === 'string' && id.startsWith('komga-ask:')) {
+				return this.chapterDeleteConfirm(id.slice('komga-ask:'.length))
 			}
 			const bookId = this.extractBookId(id)
 			if (bookId && this.isHiddenBook(bookId)) {
@@ -538,20 +542,21 @@ class Komga extends ComicSource {
 			if (genres.length) tagSections['类型'] = this.uniqueArray(genres)
 			if (tags.length) tagSections['标签'] = this.uniqueArray(tags)
 			// 映匣不给源开放卡片长按菜单；详情页标签点击会进入搜索页，故用它承载管理动作。
-			const seriesActions = [
+			// 章节不在详情页逐条列标签：100 章就会撑出 100 行，这里只放一个按需展开的选择入口。
+			const managementActions = [
 				{ type: 'mark-unread-series', id, label: `标记未读《${seriesTitle}》`, cover: seriesCover },
 				{ type: 'mark-read-series', id, label: `标记已读《${seriesTitle}》`, cover: seriesCover },
 				{ type: 'delete-series', id, label: `删除系列《${seriesTitle}》`, cover: seriesCover }
 			]
-			const chapterActions = readable.map((book, index) => ({
-				type: 'delete-chapter',
-				id: book.id,
-				label: `删除章节《${this.formatBookTitle(book, index)}》`,
-				cover: this.buildUrl(`/api/v1/books/${book.id}/thumbnail`)
-			}))
-			const tokens = this.registerManagementActions(seriesActions.concat(chapterActions))
-			tagSections['管理'] = tokens.slice(0, seriesActions.length)
-			if (chapterActions.length) tagSections['章节管理'] = tokens.slice(seriesActions.length)
+			if (books.length) {
+				managementActions.push({
+					type: 'choose-delete-chapter',
+					id,
+					label: `删除章节…（共 ${books.length} 章）`,
+					cover: seriesCover
+				})
+			}
+			tagSections['管理'] = this.registerManagementActions(managementActions)
 			if (!readable.length && books.length) {
 				tagSections['提示'] = ['该系列包含的项目暂不支持阅读']
 			}
@@ -799,12 +804,91 @@ class Komga extends ComicSource {
 		return tokens
 	}
 
-	async handleManagementKeyword(keyword) {
+	// 章节选择页：按需拉取并分页展示，不在系列详情页为每个章节生成一行标签。
+	async buildChapterDeletePicker(action, page) {
+		const seriesId = action.id
+		let books = []
+		try {
+			const data = await this.getJson(`/api/v1/series/${encodeURIComponent(seriesId)}/books`, {
+				unpaged: true,
+				sort: ['metadata.numberSort,asc']
+			})
+			books = (Array.isArray(data?.content) ? data.content : [])
+				.filter((book) => book?.id && !this.isHiddenBook(book.id))
+			books.sort((a, b) => this.compareBooks(a, b))
+		} catch (error) {
+			return {
+				comics: [this.statusComic(this.saveManagementStatus(`读取章节列表失败：${error}`))],
+				maxPage: 1
+			}
+		}
+		const pageSize = 30
+		const pageIndex = Math.max(1, Number(page) || 1)
+		const maxPage = Math.max(1, Math.ceil(books.length / pageSize))
+		const slice = books.slice((pageIndex - 1) * pageSize, pageIndex * pageSize)
+		if (!slice.length) {
+			return {
+				comics: [this.statusComic(this.saveManagementStatus('没有可删除的章节'))],
+				maxPage: 1
+			}
+		}
+		const picks = this.loadData('komga_chapter_picks') || {}
+		const comics = slice.map((book, index) => {
+			const title = this.formatBookTitle(book, (pageIndex - 1) * pageSize + index)
+			const cover = this.buildUrl(`/api/v1/books/${book.id}/thumbnail`)
+			let nonce = this.hashString(`ask:${book.id}:${Date.now()}:${Math.random()}`)
+			while (picks[nonce]) nonce = this.hashString(`${nonce}:${Math.random()}`)
+			picks[nonce] = { id: String(book.id), title, cover, seriesId: String(seriesId) }
+			return new Comic({
+				id: `komga-ask:${nonce}`,
+				title: `选择删除｜${title}`,
+				subtitle: '',
+				subTitle: '',
+				cover,
+				description: '点击选择此章节；下一页还需要再点「确认删除」标签，才会真正删除服务器上的文件。返回即可取消。'
+			})
+		})
+		const keys = Object.keys(picks)
+		while (keys.length > 500) delete picks[keys.shift()]
+		this.saveData('komga_chapter_picks', picks)
+		return { comics, maxPage }
+	}
+
+	chapterDeleteConfirm(nonce) {
+		const picks = this.loadData('komga_chapter_picks') || {}
+		const pick = picks[nonce]
+		if (!pick) return this.managementResult('该章节选择已过期，请重新进入「删除章节…」入口')
+		const token = this.registerManagementActions([{
+			type: 'delete-chapter-confirm',
+			id: pick.id,
+			label: `确认删除《${pick.title}》`,
+			cover: pick.cover
+		}])[0]
+		return new ComicDetails({
+			title: `删除章节《${pick.title}》？`,
+			subTitle: '',
+			cover: pick.cover,
+			description: '警告：此操作非常危险，可能导致不可逆的数据丢失！\n\n选择章节本身不会删除任何文件；只有点击下方「确认删除」标签，才会调用 Komga 的删除文件接口永久删除服务器上的源文件。返回上一页即可取消。',
+			tags: { '确认删除': [token] },
+			chapters: new Map()
+		})
+	}
+
+	async handleManagementKeyword(keyword, page) {
 		const term = typeof keyword === 'string' ? keyword.trim() : ''
 		if (!term.startsWith('管理｜')) return null
 		const actions = this.loadData('komga_actions') || {}
 		const action = actions[term]
 		if (!action || !action.type || !action.id) return null
+		if (action.type === 'choose-delete-chapter') {
+			return await this.buildChapterDeletePicker(action, page)
+		}
+		if (action.type === 'delete-chapter-confirm' && this.isHiddenBook(action.id)) {
+			return {
+				comics: [this.statusComic(this.saveManagementStatus('该章节已提交删除，未重复发送删除请求'))],
+				maxPage: 1
+			}
+		}
 		if (action.type === 'delete-series' || action.type === 'delete-chapter') {
 			// 第一跳只生成确认卡片，不发出任何 DELETE 请求。
 			const nonce = this.hashString(`${term}:${Date.now()}:${Math.random()}`)
@@ -851,7 +935,8 @@ class Komga extends ComicSource {
 			'mark-unread-series': ['DELETE', `/api/v1/series/${id}/read-progress`],
 			'mark-read-series': ['POST', `/api/v1/series/${id}/read-progress`],
 			'delete-series': ['DELETE', `/api/v1/series/${id}/file`],
-			'delete-chapter': ['DELETE', `/api/v1/books/${id}/file`]
+			'delete-chapter': ['DELETE', `/api/v1/books/${id}/file`],
+			'delete-chapter-confirm': ['DELETE', `/api/v1/books/${id}/file`]
 		}
 		const route = routes[action.type]
 		if (!route) throw `未知管理动作 ${action.type}`
@@ -861,7 +946,7 @@ class Komga extends ComicSource {
 			this.markHidden('series', action.id)
 			return `${action.label}：删除请求已提交（HTTP ${res.status}）。Komga 可能异步处理并等待书库重新扫描；已从源列表隐藏。`
 		}
-		if (action.type === 'delete-chapter') {
+		if (action.type === 'delete-chapter' || action.type === 'delete-chapter-confirm') {
 			this.markHidden('book', action.id)
 			return `${action.label}：删除请求已提交（HTTP ${res.status}）。Komga 可能异步处理并等待书库重新扫描；已从章节列表隐藏。`
 		}
